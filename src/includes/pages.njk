@@ -1,0 +1,20 @@
+{% if pagination.hrefs.length > 1 %}
+    <nav>
+        <ul>
+            {% for pageEntry in pagination.pages %}
+                {% if page.url == pagination.hrefs[loop.index0] %}
+                    {% set current %}aria-current="page"{% endset %}
+                {% endif %}
+                <li>
+                    <a
+                        href="{{ pagination.hrefs[loop.index0] }}"
+                        aria-label="Page {{ loop.index }}"
+                        {{ current }}
+                    >
+                        {{ loop.index }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+{% endif %}

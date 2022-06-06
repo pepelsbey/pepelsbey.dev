@@ -1,0 +1,25 @@
+/* Page */
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+.page,
+.page__body {
+    height: 100%;
+}
+
+.page__body {
+    margin: auto;
+    padding-top: 30px;
+    width: 800px;
+    font-family: sans-serif;
+}
+
+.page__body--reasonable {
+    background-color: mediumpurple;
+}
+
+.page__body--wrong {
+    background-color: tomato;
+}

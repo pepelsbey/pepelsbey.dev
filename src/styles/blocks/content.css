@@ -1,0 +1,15 @@
+/* Content */
+
+.content code {
+    font-variant-ligatures: none;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.content img {
+    max-width: 100%;
+}
+
+.content iframe {
+    width: 100%;
+    border: none;
+}

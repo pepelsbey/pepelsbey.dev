@@ -1,0 +1,9 @@
+<header>
+    {% if r/^\/$|^\/page\/\d+\/$/.test(page.url) %}
+        <h1>Vadim Makeev</h1>
+    {% else %}
+        <p>
+            <a href="/">Vadim Makeev</a>
+        </p>
+    {% endif %}
+</header>

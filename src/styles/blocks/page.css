@@ -1,24 +1,11 @@
 /* Page */
 
-.page,
-.page__body {
-    height: 100%;
-}
-
 .page {
-    background-color: #22244b;
-    background-image: url('../../images/back.jpg');
-    background-image:
-        image-set(
-            url('../../images/back.webp') type('image/webp'),
-            url('../../images/back.jpg')
-        );
-    background-position: center;
-    background-size: cover;
+    line-height: 1.5;
+    font-family: sans-serif;
 }
 
 .page__body {
-    margin: 0;
-    display: grid;
-    place-items: center;
+    margin: auto;
+    max-width: 700px;
 }

@@ -1,0 +1,27 @@
+/* News */
+
+.news--first {
+    background-color: lightgreen;
+}
+
+.news--second {
+    background-color: peachpuff;
+}
+
+/* News Title */
+
+.news__title {
+    margin: 0;
+    padding: 15px;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+/* News Lead */
+
+.news__lead {
+    margin: 0;
+    padding: 15px;
+    padding-top: 0;
+    line-height: 1.4;
+}
