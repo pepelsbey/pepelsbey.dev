@@ -1,5 +1,6 @@
 const autoprefixer = require('autoprefixer');
 const csso = require('postcss-csso');
+const esbuild = require('esbuild');
 const htmlmin = require('html-minifier');
 const pimport = require('postcss-import');
 const postcss = require('postcss');
@@ -46,6 +47,30 @@ module.exports = (config) => {
         }
     });
 
+    // JavaScript
+
+    config.addTemplateFormats('js');
+
+    config.addExtension('js', {
+        outputFileExtension: 'js',
+        compile: async (content, inputPath) => {
+            if (inputPath !== './src/scripts/index.js') {
+                return;
+            }
+
+            return async () => {
+                let output = await esbuild.buildSync({
+                    entryPoints: [inputPath],
+                    minify: true,
+                    bundle: true,
+                    write: false,
+                }).outputFiles[0].text;
+
+                return output;
+            }
+        }
+    });
+
     // XML minification
 
     config.addTransform('xmlmin', (content, outputPath) => {
@@ -59,7 +84,6 @@ module.exports = (config) => {
     // Absolute links
 
     config.addFilter('absolute', (post) => {
-        console.log(post.url);
         const reg = /(src="[^(https:\/\/)])|(src="\/)|(href="[^(https:\/\/)])|(href="\/)/g;
         const prefix = 'https://pepelsbey.dev' + post.url;
         return post.templateContent.replace(reg, (match) => {
