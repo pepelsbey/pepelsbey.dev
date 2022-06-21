@@ -323,13 +323,13 @@ img, svg, div {
 
 And… it works! But only for the last icon, which is based on the same SVG placeholder we discussed earlier. That’s unfortunate, but it gives us a choice: we can use the same sprite for all applications and when we need to change the icon’s color fill, we’ll make sure to use the SVG placeholder.
 
-You might call this method a hack and this is probably fare. But it’s so basic that full browser compatibility for this goes back to 2015 or even earlier. Though I noticed some behavior in Firefox that migth require some fixing, but only for inline SVG placeholders.
+You might call this method a hack and this is probably fair. But it’s so basic that full browser compatibility for this goes back to 2015 or even earlier. Though I noticed some behavior in Firefox that might require some fixing, but only for inline SVG placeholders.
 
-You see, in HTML and CSS everything is a rectangle block, unless you specifically try to round it or clip some other clever way. But in SVG everything gets its unique shape and hover behavior based exactly on element’s shape. For some reason, inline SVG placeholders with SVG symbol libraries keep hover area rectangular too.
+You see, in HTML and CSS everything is a rectangle block unless you specifically try to round it or clip some other clever way. But in SVG everything gets its unique shape and hover behavior is based exactly on the element’s shape. For some reason, inline SVG placeholders with SVG symbol libraries keep the hover area rectangular too.
 
-But only in the case of SVG stack and only in Firefox the icon’s hover area in HTML is based on the linked SVG element’s shape, which is not ideal: your cursor falls into icon’s holes as you move it and the whole thing starts blinking. There’s pretty simple solution that some icon systems (like [Material Symbols](https://fonts.google.com/icons)) use anyway, but for a different reason.
+But only in the case of SVG stack and only in Firefox the icon’s hover area in HTML is based on the linked SVG element’s shape, which is not ideal: your cursor falls into the icon’s holes as you move it and the whole thing starts blinking. There’s a pretty simple solution that some icon systems (like [Material Symbols](https://fonts.google.com/icons)) use anyway, but for a different reason.
 
-We need to put some opaque rectangles in each icon to give it desirable hover area. They could be circles too, but rectangle would be more universal. That would be pretty easy to automate based on the icon’s `viewBox` attribute, in case you’d like to build such a sprite based on a folder of icons.
+We need to put some opaque rectangles in each icon to give it a desirable hover area. They could be circles too, but rectangles would be more universal. That would be pretty easy to automate based on the icon’s `viewBox` attribute, in case you’d like to build such a sprite based on a folder of icons.
 
 ```svg
 <svg id="account" viewBox="0 0 24 24">
