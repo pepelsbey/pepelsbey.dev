@@ -1,18 +1,11 @@
 ---
-eleventyComputed:
-  title: '{% if pagination.pageNumber > 0 %}Page {{ pagination.pageNumber + 1 }}{% else %}{{ data.title }}{% endif %}'
 layout: page.njk
-permalink: '{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}index.html'
-pagination:
-  data: collections.posts
-  size: 5
-  reverse: true
 ---
 
 {% include 'header.njk' %}
 
 <main>
-    {% for post in pagination.items %}
+    {% for post in collections.blog %}
         <article>
             <h2>
                 <a href="{{ post.url }}">

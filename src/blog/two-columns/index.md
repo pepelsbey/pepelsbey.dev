@@ -2,7 +2,7 @@
 title: '6+5 ways to make a two-column layout: from pretty reasonable to completely wrong'
 date: 2022-07-04
 layout: post.njk
-tags: posts
+tags: blog
 ---
 
 Imagine you need to create a two-column layout. Yes, the simplest one: a column on the left, a column on the right, and some gap in-between. There’s an obvious modern solution for that:

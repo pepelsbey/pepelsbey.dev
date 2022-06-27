@@ -99,7 +99,7 @@ module.exports = (config) => {
     // Passthrough copy
 
     config.addPassthroughCopy('src/images');
-    config.addPassthroughCopy('src/posts/**/*.!(md)');
+    config.addPassthroughCopy('src/blog/**/*.!(md)');
 
     // Config
 

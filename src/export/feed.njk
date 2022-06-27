@@ -10,12 +10,12 @@ permalink: /feed/index.xml
         <language>{{ data.language }}</language>
         <link>{{ data.domain }}/</link>
 
-        {% set lastArticle = collections.posts | last %}
+        {% set lastArticle = collections.blog | last %}
         <lastBuildDate>{{ lastArticle.date.toUTCString() }}</lastBuildDate>
 
         <atom:link href="{{ data.domain }}/feed/" rel="self" type="application/rss+xml"/>
 
-        {%- for post in collections.posts | reverse  %}
+        {%- for post in collections.blog | reverse  %}
             <item>
                 <title>{{ post.data.title }}</title>
                 <link>{{ data.domain }}{{ post.url }}</link>

@@ -2,7 +2,7 @@
 title: 'SVG sprites: old-school, modern, unknown, and forgotten'
 date: 2022-07-11
 layout: post.njk
-tags: posts
+tags: blog
 ---
 
 SVG sprites have been around for a while and are usually considered a default option for icons and vector graphics. I mean the ones that require inline SVG placeholders. And while they’re giving us some unique features, they also have major drawbacks that could affect both UX (user experience) and DX (developer experience).
