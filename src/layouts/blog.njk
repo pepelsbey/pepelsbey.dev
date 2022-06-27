@@ -12,6 +12,10 @@ pagination:
 {% include 'header.njk' %}
 
 <main>
+    <h1>
+        {{ title }}
+    </h1>
+    {{ content | safe }}
     {% for post in pagination.items %}
         <article>
             <h2>

@@ -1,0 +1,34 @@
+---
+layout: page.njk
+---
+
+{% include 'header.njk' %}
+
+<main>
+    <h1>
+        {{ title }}
+    </h1>
+    {{ content | safe }}
+    {% for post in collections.blog | reverse %}
+        {% if loop.index <= 5 %}
+            <article>
+                {% if post.data.permalink == false %}
+                    <h2>
+                        <a href="{{ post.data.url }}">
+                            {{ post.data.title }}
+                        </a>
+                    </h2>
+                {% else %}
+                    <h2>
+                        <a href="{{ post.url }}">
+                            {{ post.data.title }}
+                        </a>
+                    </h2>
+                {% endif %}
+                    <time>{{ post.date | date }}</time>
+            </article>
+        {% endif %}
+    {% endfor %}
+</main>
+
+{% include 'footer.njk' %}

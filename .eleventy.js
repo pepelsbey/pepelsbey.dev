@@ -6,7 +6,15 @@ const pimport = require('postcss-import');
 const postcss = require('postcss');
 const prettydata = require('pretty-data');
 
+const data = require('./src/data/data.js');
+
 module.exports = (config) => {
+    // Collections
+
+    config.addCollection('blog', (collectionApi) => {
+        return collectionApi.getFilteredByGlob('src/blog/*/index.md');
+    })
+
     // HTML minification
 
     config.addTransform('htmlmin', (content, outputPath) => {
@@ -85,7 +93,7 @@ module.exports = (config) => {
 
     config.addFilter('absolute', (post) => {
         const reg = /(src="[^(https:\/\/)])|(src="\/)|(href="[^(https:\/\/)])|(href="\/)/g;
-        const prefix = 'https://pepelsbey.dev' + post.url;
+        const prefix = data.domain + post.url;
         return post.templateContent.replace(reg, (match) => {
             if (match === 'src="/' || match === 'href="/') {
                 match = match.slice(0, -1);
@@ -95,6 +103,12 @@ module.exports = (config) => {
             }
         });
     });
+
+    config.addFilter('date', (value) => {
+        return value.toLocaleString('en', {
+            dateStyle: 'long',
+        });
+    })
 
     // Passthrough copy
 
