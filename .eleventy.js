@@ -6,7 +6,7 @@ const pimport = require('postcss-import');
 const postcss = require('postcss');
 const prettydata = require('pretty-data');
 
-const data = require('./src/data/data.js');
+const global = require('./src/data/global.js');
 
 module.exports = (config) => {
     // Collections
@@ -93,7 +93,7 @@ module.exports = (config) => {
 
     config.addFilter('absolute', (post) => {
         const reg = /(src="[^(https:\/\/)])|(src="\/)|(href="[^(https:\/\/)])|(href="\/)/g;
-        const prefix = data.domain + post.url;
+        const prefix = global.domain + post.url;
         return post.templateContent.replace(reg, (match) => {
             if (match === 'src="/' || match === 'href="/') {
                 match = match.slice(0, -1);

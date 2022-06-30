@@ -1,12 +1,12 @@
 ---
 eleventyComputed:
   title: '{% if pagination.pageNumber > 0 %}Page {{ pagination.pageNumber + 1 }}{% else %}{{ data.title }}{% endif %}'
-layout: page.njk
 permalink: 'blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html'
 pagination:
   data: collections.blog
   size: 5
   reverse: true
+layout: page.njk
 ---
 
 {% include 'header.njk' %}

@@ -1,0 +1,12 @@
+<nav>
+    {% for item in menu %}
+        {% if item.link == page.url %}
+            {% set current = 'aria-current="page"' %}
+        {% else %}
+            {% set current = '' %}
+        {% endif %}
+        <a href="{{ item.link }}" {{ current | safe }}>
+            {{-item.title-}}
+        </a>
+    {% endfor %}
+</nav>
