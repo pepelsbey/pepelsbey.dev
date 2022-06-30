@@ -3,13 +3,15 @@
         <ul>
             {% for pageEntry in pagination.pages %}
                 {% if page.url == pagination.hrefs[loop.index0] %}
-                    {% set current %}aria-current="page"{% endset %}
+                    {% set current = 'aria-current="page"' %}
+                {% else %}
+                    {% set current = '' %}
                 {% endif %}
                 <li>
                     <a
                         href="{{ pagination.hrefs[loop.index0] }}"
                         aria-label="Page {{ loop.index }}"
-                        {{ current }}
+                        {{ current | safe }}
                     >
                         {{ loop.index }}
                     </a>
