@@ -10,7 +10,7 @@
     "npm": "8"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0-canary.11",
+    "@11ty/eleventy": "^2.0.0-canary.12",
     "autoprefixer": "^10.4.7",
     "esbuild": "^0.14.43",
     "html-minifier": "^4.0.0",
