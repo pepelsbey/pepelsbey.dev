@@ -1,7 +1,8 @@
 ---
-title: 'Home'
+eleventyComputed:
+    title: '{{ global.title }}'
 layout: index.njk
 permalink: index.html
 ---
 
-This is the “Home” page.
+This is the main page.
