@@ -1,10 +1,10 @@
 module.exports = [{
     title: 'Blog',
-    link: '/blog/'
+    link: '/blog/',
 },{
     title: 'Projects',
-    link: '/projects/'
+    link: '/projects/',
 },{
     title: 'About',
-    link: '/about/'
+    link: '/about/',
 }]

@@ -9,6 +9,18 @@ layout: page.njk
         {{ title }}
     </h1>
     {{ content | safe }}
+    {% for section in projects %}
+        <h2>{{ section.title }}</h2>
+        <ul>
+            {% for link in section.links %}
+                <li>
+                    <a href="{{ link.url }}">
+                        {{ link.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
 </main>
 
 {% include 'footer.njk' %}
