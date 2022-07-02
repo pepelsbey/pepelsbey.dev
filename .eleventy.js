@@ -5,6 +5,7 @@ const htmlmin = require('html-minifier');
 const pimport = require('postcss-import');
 const postcss = require('postcss');
 const prettydata = require('pretty-data');
+const yaml = require('js-yaml');
 
 const global = require('./src/data/global.js');
 
@@ -99,6 +100,12 @@ module.exports = (config) => {
         }
 
         return content;
+    });
+
+    // YAML
+
+    config.addDataExtension('yml', (contents) => {
+        return yaml.load(contents);
     });
 
     // Absolute links
