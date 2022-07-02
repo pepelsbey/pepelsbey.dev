@@ -31,7 +31,7 @@ layout: page.njk
                     </a>
                 </h2>
             {% endif %}
-            <time>{{ post.date | date }}</time>
+            <time>{{ post.date | dateLong }}</time>
         </article>
     {% endfor %}
     {% include 'pages.njk' %}

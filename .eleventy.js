@@ -8,11 +8,23 @@ const prettydata = require('pretty-data');
 
 const global = require('./src/data/global.js');
 
+const collections = {
+    'blog': 'src/blog/*/index.md',
+    'pages': 'src/pages/*.md',
+};
+
 module.exports = (config) => {
     // Collections
 
     config.addCollection('blog', (collectionApi) => {
-        return collectionApi.getFilteredByGlob('src/blog/*/index.md');
+        return collectionApi.getFilteredByGlob(collections.blog);
+    })
+
+    config.addCollection('sitemap', (collectionApi) => {
+        return collectionApi.getFilteredByGlob([
+            collections.blog,
+            collections.pages,
+        ]);
     })
 
     // HTML minification
@@ -104,10 +116,16 @@ module.exports = (config) => {
         });
     });
 
-    config.addFilter('date', (value) => {
+    // Dates
+
+    config.addFilter('dateLong', (value) => {
         return value.toLocaleString('en', {
             dateStyle: 'long',
         });
+    })
+
+    config.addFilter('dateISO', (value) => {
+        return value.toISOString().split('T')[0];
     })
 
     // Passthrough copy
