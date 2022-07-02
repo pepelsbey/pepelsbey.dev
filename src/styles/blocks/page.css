@@ -3,6 +3,7 @@
 .page {
     line-height: 1.5;
     font-family: sans-serif;
+    color-scheme: light dark;
 }
 
 .page__body {
