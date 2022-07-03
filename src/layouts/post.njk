@@ -8,6 +8,10 @@ layout: page.njk
     <h1>
         {{ title }}
     </h1>
+    {% for tag in tags %}
+        {{ tag }}
+        {%-if not loop.last %},{% endif %}
+    {% endfor %}
     {{ content | safe }}
 </main>
 

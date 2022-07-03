@@ -1,6 +1,9 @@
 ---
 title: '6+5 ways to make a two-column layout: from pretty reasonable to completely wrong'
 date: 2022-07-04
+tags:
+    - html
+    - css
 layout: post.njk
 ---
 

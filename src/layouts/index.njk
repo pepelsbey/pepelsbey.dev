@@ -9,26 +9,47 @@ layout: page.njk
         {{ title }}
     </h1>
     {{ content | safe }}
-    {% for post in collections.blog | reverse %}
-        {% if loop.index <= 5 %}
+
+    <section>
+        <h2>Latest articles</h2>
+        {% for post in collections.blog | reverse %}
+            {% if loop.index <= 5 %}
+                <article>
+                    {% if post.data.permalink == false %}
+                        {% set postUrl = post.data.url %}
+                        {% set postArrow = '↑' %}
+                    {% else %}
+                        {% set postUrl = post.url %}
+                    {% endif %}
+                    <h2>
+                        <a href="{{ postUrl }}">
+                            {{ post.data.title-}}
+                        </a> {{ postArrow }}
+                    </h2>
+                    <p>
+                        {% for tag in post.data.tags %}
+                            {{ tag }}
+                            {%-if not loop.last %},{% endif %}
+                        {% endfor %} •
+                        <time>{{ post.date | dateLong }}</time>
+                    </p>
+                </article>
+            {% endif %}
+        {% endfor %}
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        {% for section in projects %}
             <article>
-                {% if post.data.permalink == false %}
-                    <h2>
-                        <a href="{{ post.data.url }}">
-                            {{ post.data.title }}
-                        </a>
-                    </h2>
-                {% else %}
-                    <h2>
-                        <a href="{{ post.url }}">
-                            {{ post.data.title }}
-                        </a>
-                    </h2>
-                {% endif %}
-                <time>{{ post.date | dateLong }}</time>
+                <h3>
+                    <a href="/projects/#{{ section.title | lower }}">
+                        {{ section.title }}
+                    </a>
+                </h3>
             </article>
-        {% endif %}
-    {% endfor %}
+        {% endfor %}
+    </section>
 </main>
 
 {% include 'footer.njk' %}

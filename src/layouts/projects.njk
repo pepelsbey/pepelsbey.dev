@@ -8,7 +8,9 @@ layout: page.njk
     <h1>
         {{ title }}
     </h1>
+
     {{ content | safe }}
+
     {% for section in projects %}
         <h2>{{ section.title }}</h2>
         <ul>

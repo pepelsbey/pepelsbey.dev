@@ -1,6 +1,8 @@
 ---
 title: 'SVG sprites: old-school, modern, unknown, and forgotten'
 date: 2022-07-11
+tags:
+    - svg
 layout: post.njk
 ---
 
