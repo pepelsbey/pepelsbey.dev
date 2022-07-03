@@ -25,7 +25,7 @@ A friend of mine challenged me once with a task from the job interview: how many
 But I’d like to call them 6+5 to split them into two groups:
 
 1. Six pretty reasonable ones, that make sense and could be used in a real production project (or used to).
-2. Five completely wrong ones, that have some quirks, look or behave in a weird way, but still accomplish the task.
+2. Five completely wrong ones, that have some quirks, look or behave weirdly, but still accomplish the task.
 
 By the way, the results look the same in all modern browsers, even the five weird ones.
 
@@ -108,7 +108,7 @@ Once we have both news in each table cell, the first ”reasonable“ layout is 
 
 ### Floats
 
-The next layout technique I learned were floats. They were invented for newspaper or magazine-like content layouts where text would “float” around pictures, quotes, or similar elements. I tried this first in Adobe PageMaker when laying out an actual newspaper and it was very nice to have floats available on the Web too.
+The next layout technique I learned were floats. They were invented for a newspaper or magazine-like content layouts where text would “float” around pictures, quotes, or similar elements. I tried this first in Adobe PageMaker when laying out an actual newspaper and it was very nice to have floats available on the Web too.
 
 Some clever people realized that if you’d get rid of text and float one box to the left and another to the right, that would make a layout! Though it’s important to make sure that floated elements won’t compete for space, otherwise they’d just start dropping down from the row.
 
@@ -219,7 +219,7 @@ That was the third way, the next three will finally start making sense, I promis
 
 ### Multi-columns
 
-It’s time for the first layout technique that was actually designed for layouts. Well, almost. Multi-columns can take any content and make it flow through the columns with some native gaps in-between. As seen in newspapers!
+It’s time for the first layout technique that was designed for layouts. Well, almost. Multi-columns can take any content and make it flow through the columns with some native gaps in-between. As seen in newspapers!
 
 ```css
 .columns {
@@ -287,7 +287,7 @@ Seriously, Grid Layout makes so much sense in almost every layout situation, eve
 
 The beauty of it is that the whole layout is defined by the container. Sure, in some cases you’ll need to apply some properties to the nested elements, but it’s possible to achieve basic layouts using just the container’s properties. It’s especially useful for making your layouts responsive with Media Queries.
 
-Also, because `grid-gap` and later just `gap` properties were the part of the initial Grid Layout implementations, you don’t have to worry about browser compatibility so much, compared to `gap` in Flexbox.
+Also, because `grid-gap` and later just `gap` properties were part of the initial Grid Layout implementations, you don’t have to worry about browser compatibility so much, compared to `gap` in Flexbox.
 
 That was _way too simple_ the sixth way of making a two-column layout. Don’t worry, we have some pretty weird things coming up.
 
@@ -295,7 +295,7 @@ That was _way too simple_ the sixth way of making a two-column layout. Don’t w
 
 There’s no historical order here. I just tried to list the options from the least weird to completely wrong. And what were the problems that made me split these methods into a special group?
 
-First of all, they’re not always playing nice with the content flow. On the Web, we used to a principle that the next content block would go right after the previous one, not on top of it. And once the previous block gets smaller or bigger, all the following blocks move up or down with it.
+First of all, they’re not always playing nice with the content flow. On the Web, we used a principle that the next content block would go right after the previous one, not on top of it. And once the previous block gets smaller or bigger, all the following blocks move up or down with it.
 
 If you ever hand-coded an SVG file, you probably know what I’m talking about. Imagine if every block would be absolutely positioned at the top left corner of the document. That would make our job much more difficult. It’s totally fine for the SVG as an image format, but not acceptable for a content layout.
 
@@ -426,7 +426,7 @@ To make it work, we need to position these foreign agents… sorry, I mean forei
 </foreignObject>
 ```
 
-Unfortunately, there’s no way for SVG wrapped content to influence the parent’s dimensions as HTML elements do. So we’ll have to set it ourselves: in our case, it takes the whole page’s height.
+Unfortunately, there’s no way for SVG-wrapped content to influence the parent’s dimensions as HTML elements do. So we’ll have to set it ourselves: in our case, it takes the whole page’s height.
 
 That’s the third weird two-column layout. Let’s explore a slightly more reasonable fourth one to prepare for the worst.
 
@@ -477,7 +477,7 @@ The fourth weird layout method wasn’t that bad compared to what’s coming nex
 
 ### Frames
 
-You might know what `<iframe>` is, but you probably haven’t used `<frame>` element much. It serves a similar purpose by giving you a “window” to another document. The main difference between them is that `<iframe>` is a standalone element, but `<frame>` elements come in sets called `<frameset>`. And those framesets have some layout capabilities!
+You might know what `<iframe>` is, but you probably haven’t used the `<frame>` element much. It serves a similar purpose by giving you a “window” to another document. The main difference between them is that `<iframe>` is a standalone element, but `<frame>` elements come in sets called `<frameset>`. And those framesets have some layout capabilities!
 
 To make the layout that we’re aiming for, we’ll need three frames in a set: two for columns and one in the middle for the gap. The exact widths for our frames could be specified in the `cols` attribute. It doesn’t matter that the total width exceeds 100%, browsers won’t overflow the set, just like they do with tables.
 
@@ -544,9 +544,9 @@ So let’s get the actual content the same way we did with the `<frameset>`: bar
 "></iframe>
 ```
 
-The same goes for the second news, the only difference is background color and content. And the thing that surprises me the most is that it actually works in Firefox, Chrome, and Safari, even though `<frameset>` and `<frame>` elements are deprecated for a long time.
+The same goes for the second news, the only difference is background color and content. And the thing that surprises me the most is that it works in Firefox, Chrome, and Safari, even though `<frameset>` and `<frame>` elements are deprecated for a long time.
 
-The only problem I couldn’t solve is `<frameset>` background color in Safari: for some reason, it’s white, though it’s transparent in other browsers. This behavior is not mentioned anywhere, [even in HTML spec](https://html.spec.whatwg.org/multipage/rendering.html#frames-and-framesets) that describes `<frame>` and `<frameset>` behavior in detail for compatibility reasons.
+The only problem I couldn’t solve is the `<frameset>` background color in Safari: for some reason, it’s white, though it’s transparent in other browsers. This behavior is not mentioned anywhere, [even in HTML spec](https://html.spec.whatwg.org/multipage/rendering.html#frames-and-framesets) that describes `<frame>` and `<frameset>` behavior in detail for compatibility reasons.
 
 ![](images/7-frames.png)
 

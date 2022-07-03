@@ -50,7 +50,7 @@ In the previous case, both icons were separate files, containing nothing but the
 </svg>
 ```
 
-Look at the `d` attributes of every `<path>` element, specifically on how they start: the number after the first M letter is the coordinate of the first point. As you can see, they’re far apart, meaning that all icons in this sprite are drawn exactly where they need to be. I’m not suggesting that you’re supposed to read the rest of the curve (a handful of people could do that), but it might become useful later.
+Look at the `d` attributes of every `<path>` element, specifically on how they start: the number after the first M letter is the coordinate of the first point. As you can see, they’re far apart: M19, M40, M60. It means that all icons in this sprite are drawn exactly where they need to be. I’m not suggesting that you’re supposed to read the rest of the curve (a handful of people could do that), but understanding where it starts might become useful later.
 
 Now we can put it in the background and move its position to a certain icon coordinate to show the needed icon. There’s no need to set `background-position` to `0 0`, but I like to keep defaults visible when they’re about to change.
 
@@ -74,7 +74,7 @@ But in the case of a similarly-sized icon sprite positioned in a single row, usi
 
 ### Images too
 
-Interestingly enough, you can use old-school sprites not only for a background but also for content images. It would be hard to create a useful alternative description for an icon that’s going to change, so let’s consider it a decorative and keep the `alt` empty.
+Interestingly enough, you can use old-school sprites not only for a background but also for content images. It would be hard to create a useful alternative description for an icon that’s going to change, so let’s consider it decorative and keep the `alt` empty.
 
 ```
 <img src="sprite.svg" alt="">
@@ -132,7 +132,9 @@ a:hover {
 }
 ```
 
-But just like I mentioned before, it’s not ideal. You can often rely on browser cache when it comes to your document’s resources: styles, scripts, graphics, etc. But the document itself is rarely cached, meaning that your inline icons will add substantial overhead to every load of every page. Even in the SPA case, it’s better to keep your icons out to reduce the JS bundle size.
+Don’t forget to add `aria-hidden="true"` to your inline SVG icons if you want to keep them under screen reader’s radar. But if you use them as content images, then `role="img"` would make them look like `<img>` element and `aria-label=""` would serve as the `alt` attribute in this case. Read more on that [in Marco Hengstenberg’s article](https://www.24a11y.com/2018/accessible-svg-icons-with-inline-sprites/).
+
+But just like I mentioned before, inline icons are not ideal. You can often rely on browser cache when it comes to your document’s resources: styles, scripts, graphics, etc. But the document itself is rarely cached, meaning that your inline icons will add substantial overhead to every load of every page. Even in the SPA case, it’s better to keep your icons out to reduce the JS bundle size.
 
 ### SVG sprites
 
@@ -144,7 +146,7 @@ To make all the paths _external_ to the document, we can put them together in a 
 </svg>
 ```
 
-How does this sprite.svg look like? It contains our SVG icons wrapped in `<symbol>` elements with a unique `id`, so we could address only the needed ones.
+How does this sprite.svg look like? It contains our SVG icons wrapped in `<symbol>` elements with a unique `id`, so we could request only the needed ones.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">
@@ -166,7 +168,7 @@ Compared to old-school sprite, this symbol library is much easier to prepare: yo
 
 The downside of it is that we can’t use such icons in background or content images, only with inline SVG placeholders. But the upside makes it worth all the trouble: we can control our icon’s color fill right from CSS.
 
-This method is a built-in SVG feature useful for organizing complex vector documents. It also happens to be useful as a sprite-like workaround when combined with HTML and CSS. But there’s another rather unknown SVG feature that can be used in a similar manner!
+This method is a built-in SVG feature useful for organizing complex vector documents. It also happens to be useful as a sprite-like workaround when combined with HTML and CSS. But there’s another rather unknown SVG feature that can be used similarly!
 
 ## Unknown fragments
 
@@ -182,7 +184,7 @@ div {
 }
 ```
 
-You know what? It’s possible! But you’d have to organize your SVG sprite in a different manner. Have a look and let’s unpack it.
+You know what? It’s possible! But you’d have to organize your SVG sprite differently. Have a look and let’s unpack it.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">
@@ -225,7 +227,7 @@ While we’re at it, there’s another syntax that might be convenient in some c
 <img src="sprite.svg#svgView(viewBox(24, 0, 24, 24))" alt="">
 ```
 
-This one will show the second icon because the 24 pixels shift. I know, it looks a bit ugly, but it’s going to work with any “true sprite”, even the old-school one. And there’s no need for IDs or some extra markup, just make sure that all icons will have their own place (naturally or via transform) and start moving your viewport!
+This one will show the second icon because the 24 pixels shift. I know, it looks a bit ugly, but it’s going to work with any “true sprite”, even the old-school one. And there’s no need for IDs or some extra markup, just make sure that all icons will have their place (naturally or via transform) and start moving your viewport!
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">
@@ -247,7 +249,7 @@ This one will show the second icon because the 24 pixels shift. I know, it looks
 </svg>
 ```
 
-It’s yet another feature from the [SVG specification](https://svgwg.org/svg2-draft/linking.html#ViewElement) that’s been forgotten for some reason. That’s a pity, because “Can I use” [looks pretty good](https://caniuse.com/svg-fragment) for fragment identifiers and they definitely deserve your attention.
+It’s yet another feature from the [SVG specification](https://svgwg.org/svg2-draft/linking.html#ViewElement) that’s been forgotten for some reason. That’s a pity, because “Can I use” [looks pretty good](https://caniuse.com/svg-fragment) for fragment identifiers and they deserve your attention.
 
 * * *
 
@@ -302,11 +304,11 @@ Let’s see how this thing works.
 </svg>
 ```
 
-There are three icons with IDs here. They don’t get their own place since they’re stacked on top of each other. Hence the name, I guess. Since it wouldn’t look nice, they are also hidden with `display: none`. But not just hidden, they’re hidden unless one of them is targeted by ID in the sprite’s URL. Just like in the SVG symbol library case.
+There are three icons with IDs here. They don’t get their place since they’re stacked on top of each other. Hence the name, I guess. Since it wouldn’t look nice, they are also hidden with `display: none`. But not just hidden, they’re hidden unless one of them is targeted by ID in the sprite’s URL. Just like in the SVG symbol library case.
 
 As for the `<svg>` wrappers for each icon, they serve an important role in making all that beautiful auto-scaling thanks to the `viewBox` attribute. That’s also why there’s a complicated `:root svg` selector: it says “affect only nested `<svg>` elements”, which makes sense since there’s a parent one too.
 
-You probably noticed that `fill` for icons is set to `currentcolor` which gives a hope that external styling might work in this case. Don’t hold your breath just yet, let’s try it: `darkslateblue` color for all elements by default and `seagreen` only on hover. The `:where` selector just makes you type less for applying the `:hover` pseudo-class.
+You probably noticed that `fill` for icons is set to `currentcolor` which gives hope that external styling might work in this case. Don’t hold your breath just yet, let’s try it: `darkslateblue` color for all elements by default and `seagreen` only on hover. The `:where` selector just makes you type less for applying the `:hover` pseudo-class.
 
 ```
 img, svg, div {
@@ -324,6 +326,8 @@ And… it works! But only for the last icon, which is based on the same SVG plac
 
 You might call this method a hack and this is probably fair. But it’s so basic that full browser compatibility for this goes back to 2015 or even earlier. Though I noticed some behavior in Firefox that might require some fixing, but only for inline SVG placeholders.
 
+### Firefix
+
 You see, in HTML and CSS everything is a rectangle block unless you specifically try to round it or clip some other clever way. But in SVG everything gets its unique shape and hover behavior is based exactly on the element’s shape. For some reason, inline SVG placeholders with SVG symbol libraries keep the hover area rectangular too.
 
 But only in the case of SVG stack and only in Firefox the icon’s hover area in HTML is based on the linked SVG element’s shape, which is not ideal: your cursor falls into the icon’s holes as you move it and the whole thing starts blinking. There’s a pretty simple solution that some icon systems (like [Material Symbols](https://fonts.google.com/icons)) use anyway, but for a different reason.
@@ -338,3 +342,9 @@ We need to put some opaque rectangles in each icon to give it a desirable hover 
 ```
 
 This behavior might be fixed in Firefox in the future too. I remember that at some point inline SVG icons used to behave similarly, but then it got fixed.
+
+## One sprite to rule them all?
+
+I think SVG stacks might finally help us not to use the full power of SVG sprites when we don’t need them. Instead of good old background images, you might often reach for SVG placeholders even if you don’t need to style your icons.
+
+With SVG stacks you can use the same sprite any way you want: for background images, for content images, or with SVG placeholders, if you need to style your icons right from CSS. This kind of flexibility will give you just enough complexity right when you need it.
