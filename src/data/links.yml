@@ -1,8 +1,17 @@
-- title: Twitter
-  link: https://twitter.com/pepelsbey_
-- title: YouTube
-  link: https://www.youtube.com/channel/UCb1TEvyOVETfzsLEkkw2aDw
-- title: GitHub
-  link: https://github.com/pepelsbey
-- title: LinkedIn
-  link: https://www.linkedin.com/in/pepelsbey
+# Social
+- title: Links
+  items:
+  - title: Twitter
+    link: https://twitter.com/pepelsbey_dev
+  - title: YouTube
+    link: https://www.youtube.com/channel/UCb1TEvyOVETfzsLEkkw2aDw
+  - title: GitHub
+    link: https://github.com/pepelsbey
+  - title: LinkedIn
+    link: https://www.linkedin.com/in/pepelsbey
+
+# Email
+- title: Email
+  items:
+  - title: hi@pepelsbey.dev
+    link: mailto:hi@pepelsbey.dev

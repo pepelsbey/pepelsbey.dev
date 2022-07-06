@@ -1,5 +1,27 @@
 <footer>
-    <p>
-        Vadim Makeev © {{ global.year }}<br>
-    </p>
+    {% for section in links %}
+        <h4>{{ section.title }}</h4>
+        <ul>
+            {% for item in section.items %}
+                <li>
+                    <a href="{{ item.link }}">
+                        {{-item.title-}}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+
+    <h4>Credits</h4>
+    <ul>
+        <li>
+            Designed by Mark Shakhov
+        </li>
+        <li>
+            Powered by
+            <a href="https://11ty.dev/">
+                Eleventy
+            </a>
+        </li>
+    </ul>
 </footer>

@@ -17,7 +17,7 @@ layout: page.njk
             {% for link in section.links %}
                 <li>
                     <a href="{{ link.url }}">
-                        {{ link.title }}
+                        {{-link.title-}}
                     </a>
                 </li>
             {% endfor %}

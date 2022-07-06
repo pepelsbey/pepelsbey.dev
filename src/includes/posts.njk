@@ -1,0 +1,36 @@
+{% macro posts(
+    source,
+    heading,
+    limit,
+    exclude
+) %}
+    {% for post in source | reverse %}
+        {% if loop.index <= limit %}
+            {% if exclude and post.url == exclude.url %}
+            {% else %}
+                <article>
+                    {% if post.data.permalink == false %}
+                        {% set postUrl = post.data.url %}
+                        {% set postArrow = '↑' %}
+                    {% else %}
+                        {% set postUrl = post.url %}
+                    {% endif %}
+
+                    <{{ heading }}}>
+                        <a href="{{ postUrl }}">
+                            {{ post.data.title }}
+                        </a> {{ postArrow }}
+                    </{{ heading }}}>
+
+                    <p>
+                        {% for tag in post.data.tags %}
+                            {{ tag }}
+                            {%-if not loop.last %},{% endif %}
+                        {% endfor %} •
+                        <time>{{ post.date | dateLong }}</time>
+                    </p>
+                </article>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endmacro %}

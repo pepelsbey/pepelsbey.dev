@@ -9,42 +9,28 @@ layout: page.njk
 
     <section>
         <h2>
-            Latest articles
-            <span>{{ collections.blog.length }}</span>
+            Articles
+            <span>3</span>
         </h2>
         <a href="/blog/">
             View all
             <span>articles</span>
         </a>
 
-        {% for post in collections.blog | reverse %}
-            {% if loop.index <= 5 %}
-                <article>
-                    {% if post.data.permalink == false %}
-                        {% set postUrl = post.data.url %}
-                        {% set postArrow = '↑' %}
-                    {% else %}
-                        {% set postUrl = post.url %}
-                    {% endif %}
-                    <h2>
-                        <a href="{{ postUrl }}">
-                            {{ post.data.title-}}
-                        </a> {{ postArrow }}
-                    </h2>
-                    <p>
-                        {% for tag in post.data.tags %}
-                            {{ tag }}
-                            {%-if not loop.last %},{% endif %}
-                        {% endfor %} •
-                        <time>{{ post.date | dateLong }}</time>
-                    </p>
-                </article>
-            {% endif %}
-        {% endfor %}
+        {% from 'posts.njk' import posts %}
+
+        {{ posts(
+            source=collections.blog,
+            heading='h3',
+            limit=5
+        ) }}
     </section>
 
     <section>
-        <h2>Projects</h2>
+        <h2>
+            Projects
+            <span>3</span>
+        </h2>
         <a href="/projects/">
             View all
             <span>projects</span>

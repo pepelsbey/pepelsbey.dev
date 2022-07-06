@@ -1,3 +1,4 @@
+# Tools
 - title: Tools
   links:
   - title: Shower presentation engine
@@ -6,6 +7,8 @@
     url: https://github.com/pepelsbey/prompter
   - title: Contenteditable browser extension
     url: https://github.com/pepelsbey/contenteditable
+
+# Podcasts
 - title: Podcasts
   links:
   - title: The F-Word occasional frontend news (En)
@@ -14,6 +17,8 @@
     url: https://web-standards.ru/podcast/
   - title: LP favorite music albums (Ru)
     url: https://3lp.me/
+
+# Websites
 - title: Websites
   links:
   - title: SVG vs PNG

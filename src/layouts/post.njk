@@ -15,4 +15,24 @@ layout: page.njk
     {{ content | safe }}
 </main>
 
+<aside>
+    <h2>
+        More articles
+        <span>4</span>
+    </h2>
+    <a href="/blog/">
+        View all
+        <span>articles</span>
+    </a>
+
+    {% from 'posts.njk' import posts %}
+
+    {{ posts(
+        source=collections.blog,
+        heading='h3',
+        limit=5,
+        exclude=page
+    ) }}
+</aside>
+
 {% include 'footer.njk' %}

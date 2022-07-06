@@ -15,25 +15,17 @@ layout: page.njk
     <h1>
         {{ title }}
     </h1>
+
     {{ content | safe }}
-    {% for post in pagination.items %}
-        <article>
-            {% if post.data.permalink == false %}
-                <h2>
-                    <a href="{{ post.data.url }}">
-                        {{ post.data.title }}
-                    </a>
-                </h2>
-            {% else %}
-                <h2>
-                    <a href="{{ post.url }}">
-                        {{ post.data.title }}
-                    </a>
-                </h2>
-            {% endif %}
-            <time>{{ post.date | dateLong }}</time>
-        </article>
-    {% endfor %}
+
+    {% from 'posts.njk' import posts %}
+
+    {{ posts(
+        source=collections.blog,
+        heading='h2',
+        limit=5
+    ) }}
+
     {% include 'pages.njk' %}
 </main>
 
