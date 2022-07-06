@@ -5,13 +5,18 @@ layout: page.njk
 {% include 'header.njk' %}
 
 <main>
-    <h1>
-        {{ title }}
-    </h1>
     {{ content | safe }}
 
     <section>
-        <h2>Latest articles</h2>
+        <h2>
+            Latest articles
+            <span>{{ collections.blog.length }}</span>
+        </h2>
+        <a href="/blog/">
+            View all
+            <span>articles</span>
+        </a>
+
         {% for post in collections.blog | reverse %}
             {% if loop.index <= 5 %}
                 <article>
@@ -40,6 +45,11 @@ layout: page.njk
 
     <section>
         <h2>Projects</h2>
+        <a href="/projects/">
+            View all
+            <span>projects</span>
+        </a>
+
         {% for section in projects %}
             <article>
                 <h3>
