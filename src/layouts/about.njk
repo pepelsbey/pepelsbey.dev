@@ -8,7 +8,24 @@ layout: page.njk
     <h1>
         {{ title }}
     </h1>
+
     {{ content | safe }}
+
+    <section>
+        <h2>
+            {{ about.skills.title }}
+        </h2>
+        <p>
+            {{ about.skills.desc }}
+        </p>
+        <ul>
+            {% for item in about.skills.list %}
+                <li>
+                    {{ item }}
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
 </main>
 
 {% include 'footer.njk' %}

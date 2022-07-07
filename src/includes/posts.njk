@@ -9,8 +9,12 @@
             {% if exclude and post.url == exclude.url %}
             {% else %}
                 {% if post.data.permalink == false %}
-                    {% set postUrl = post.data.url %}
-                    {% set postArrow = '↑' %}
+                    {% set postUrl = post.data.source.url %}
+                    {% set postLink %}
+                        <p>
+                            Read on {{ post.data.source.title }}
+                        </p>
+                    {% endset %}
                 {% else %}
                     {% set postUrl = post.url %}
                 {% endif %}
@@ -24,11 +28,13 @@
 
                     <{{ heading }}}>
                         <a href="{{ postUrl }}">
-                            {{ post.data.title }}
-                        </a> {{ postArrow }}
+                            {{-post.data.title-}}
+                        </a>
                     </{{ heading }}}>
 
                     <time>{{ post.date | dateLong }}</time>
+
+                    {{ postLink | safe }}
                 </article>
             {% endif %}
         {% endif %}

@@ -12,7 +12,7 @@ layout: page.njk
     {{ content | safe }}
 
     {% for section in projects %}
-        <section>
+        <section id="{{ section.title | lower }}">
             <h2>
                 {{ section.title }}
             </h2>
