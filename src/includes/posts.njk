@@ -8,13 +8,19 @@
         {% if loop.index <= limit %}
             {% if exclude and post.url == exclude.url %}
             {% else %}
-                <article>
-                    {% if post.data.permalink == false %}
-                        {% set postUrl = post.data.url %}
-                        {% set postArrow = '↑' %}
-                    {% else %}
-                        {% set postUrl = post.url %}
-                    {% endif %}
+                {% if post.data.permalink == false %}
+                    {% set postUrl = post.data.url %}
+                    {% set postArrow = '↑' %}
+                {% else %}
+                    {% set postUrl = post.url %}
+                {% endif %}
+
+                <article class="card">
+                    <p>
+                        {% for tag in post.data.tags %}
+                            {{ tag }}
+                        {% endfor %}
+                    </p>
 
                     <{{ heading }}}>
                         <a href="{{ postUrl }}">
@@ -22,13 +28,7 @@
                         </a> {{ postArrow }}
                     </{{ heading }}}>
 
-                    <p>
-                        {% for tag in post.data.tags %}
-                            {{ tag }}
-                            {%-if not loop.last %},{% endif %}
-                        {% endfor %} •
-                        <time>{{ post.date | dateLong }}</time>
-                    </p>
+                    <time>{{ post.date | dateLong }}</time>
                 </article>
             {% endif %}
         {% endif %}

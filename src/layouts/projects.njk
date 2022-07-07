@@ -12,16 +12,29 @@ layout: page.njk
     {{ content | safe }}
 
     {% for section in projects %}
-        <h2>{{ section.title }}</h2>
-        <ul>
-            {% for link in section.links %}
-                <li>
-                    <a href="{{ link.url }}">
-                        {{-link.title-}}
-                    </a>
-                </li>
+        <section>
+            <h2>
+                {{ section.title }}
+            </h2>
+            <p>
+                {{ section.desc }}
+            </p>
+
+            {% for project in section.projects %}
+                <article class="card">
+                    <p>
+                        {% for tag in project.tags %}
+                            {{ tag }}
+                        {% endfor %}
+                    </p>
+                    <h3>
+                        <a href="{{ project.url }}">
+                            {{-project.title-}}
+                        </a>
+                    </h3>
+                </article>
             {% endfor %}
-        </ul>
+        </section>
     {% endfor %}
 </main>
 
