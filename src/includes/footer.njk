@@ -4,27 +4,15 @@
         <ul>
             {% for item in section.items %}
                 <li>
-                    <a href="{{ item.url }}">
-                        {{- item.title -}}
-                    </a>
+                    {% if item.url %}
+                        <a href="{{ item.url }}">
+                            {{- item.title -}}
+                        </a>
+                    {% else %}
+                        {{ item.title | markdownInline | safe }}
+                    {% endif %}
                 </li>
             {% endfor %}
         </ul>
     {% endfor %}
-
-    <h4>Credits</h4>
-    <ul>
-        <li>
-            Designed by Mark Shakhov
-        </li>
-        <li>
-            Handcrafted by me
-        </li>
-        <li>
-            Powered by
-            <a href="https://11ty.dev/">
-                Eleventy
-            </a>
-        </li>
-    </ul>
 </footer>

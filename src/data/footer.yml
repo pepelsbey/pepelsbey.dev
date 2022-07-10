@@ -17,3 +17,11 @@
   items:
   - title: pepelsbey@gmail.com
     url: mailto:pepelsbey@gmail.com
+
+# Credits
+
+- title: Credits
+  items:
+  - title: Designed by Mark Shakhov
+  - title: Handcrafted by me
+  - title: Powered by [Eleventy](https://11ty.dev/)

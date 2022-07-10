@@ -2,6 +2,7 @@ const autoprefixer = require('autoprefixer');
 const csso = require('postcss-csso');
 const esbuild = require('esbuild');
 const htmlmin = require('html-minifier');
+const markdown = require('markdown-it')({ html: true });
 const pimport = require('postcss-import');
 const postcss = require('postcss');
 const prettydata = require('pretty-data');
@@ -27,6 +28,16 @@ module.exports = (config) => {
             collections.pages,
         ]);
     })
+
+    // Markdown
+
+    config.addFilter('markdown', (value) => {
+        return markdown.render(value);
+    });
+
+    config.addFilter('markdownInline', (value) => {
+        return markdown.renderInline(value);
+    });
 
     // HTML minification
 

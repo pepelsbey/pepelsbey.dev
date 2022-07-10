@@ -8,10 +8,11 @@ layout: page.njk
     <h1>
         {{ title }}
     </h1>
+
     {% for tag in tags %}
         {{ tag }}
-        {%-if not loop.last %},{% endif %}
     {% endfor %}
+
     {{ content | safe }}
 </main>
 
@@ -30,7 +31,7 @@ layout: page.njk
     {{ articles(
         source=collections.articles,
         heading='h3',
-        limit=5,
+        limit=4,
         exclude=page
     ) }}
 </aside>
