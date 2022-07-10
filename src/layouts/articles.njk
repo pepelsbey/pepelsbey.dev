@@ -1,9 +1,9 @@
 ---
 eleventyComputed:
   title: '{% if pagination.pageNumber > 0 %}Page {{ pagination.pageNumber + 1 }}{% else %}{{ title }}{% endif %}'
-permalink: 'blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html'
+permalink: 'articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html'
 pagination:
-  data: collections.blog
+  data: collections.articles
   size: 5
   reverse: true
 layout: page.njk
@@ -18,10 +18,10 @@ layout: page.njk
 
     {{ content | safe }}
 
-    {% from 'posts.njk' import posts %}
+    {% from 'articles.njk' import articles %}
 
-    {{ posts(
-        source=collections.blog,
+    {{ articles(
+        source=collections.articles,
         heading='h2',
         limit=5
     ) }}

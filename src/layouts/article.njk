@@ -20,15 +20,15 @@ layout: page.njk
         More articles
         <span>4</span>
     </h2>
-    <a href="/blog/">
+    <a href="/articles/">
         View all
         <span>articles</span>
     </a>
 
-    {% from 'posts.njk' import posts %}
+    {% from 'articles.njk' import articles %}
 
-    {{ posts(
-        source=collections.blog,
+    {{ articles(
+        source=collections.articles,
         heading='h3',
         limit=5,
         exclude=page

@@ -1,0 +1,42 @@
+{% macro articles(
+    source,
+    heading,
+    limit,
+    exclude
+) %}
+    {% for article in source | reverse %}
+        {% if loop.index <= limit %}
+            {% if exclude and article.url == exclude.url %}
+            {% else %}
+                {% if article.data.permalink == false %}
+                    {% set articleUrl = article.data.source.url %}
+                    {% set outerLink %}
+                        <p>
+                            Read on {{ article.data.source.title }}
+                        </p>
+                    {% endset %}
+                {% else %}
+                    {% set articleUrl = article.url %}
+                {% endif %}
+
+                <article>
+                    <p>
+                        {% for tag in article.data.tags %}
+                            {{ tag }}
+                        {% endfor %}
+                    </p>
+
+                    <{{ heading }}}>
+                        <a href="{{ articleUrl }}">
+                            {{-article.data.title-}}
+                        </a>
+                    </{{ heading }}}>
+
+                    <time>{{ article.date | dateLong }}</time>
+
+                    {{ outerLink | safe }}
+                </article>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endmacro %}

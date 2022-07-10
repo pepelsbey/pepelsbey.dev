@@ -10,20 +10,20 @@ const yaml = require('js-yaml');
 const global = require('./src/data/global.js');
 
 const collections = {
-    'blog': 'src/blog/*/index.md',
+    'articles': 'src/articles/*/index.md',
     'pages': 'src/pages/*.md',
 };
 
 module.exports = (config) => {
     // Collections
 
-    config.addCollection('blog', (collectionApi) => {
-        return collectionApi.getFilteredByGlob(collections.blog);
+    config.addCollection('articles', (collectionApi) => {
+        return collectionApi.getFilteredByGlob(collections.articles);
     })
 
     config.addCollection('sitemap', (collectionApi) => {
         return collectionApi.getFilteredByGlob([
-            collections.blog,
+            collections.articles,
             collections.pages,
         ]);
     })
@@ -138,7 +138,7 @@ module.exports = (config) => {
     // Passthrough copy
 
     config.addPassthroughCopy('src/images');
-    config.addPassthroughCopy('src/blog/**/*.!(md)');
+    config.addPassthroughCopy('src/articles/**/*.!(md)');
 
     // Config
 

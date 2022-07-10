@@ -1,5 +1,7 @@
-- title: Blog
-  link: /blog/
+- title: Home
+  link: /
+- title: Articles
+  link: /articles/
 - title: Projects
   link: /projects/
 - title: About

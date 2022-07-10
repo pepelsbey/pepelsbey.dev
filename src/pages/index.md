@@ -11,4 +11,4 @@ Hi, my name is
 
 I’m a frontend developer in love with the Web, browsers, bicycles and podcasting
 
-Here you can find my thoughts on web development, some of my tools, projects and personal information
+Here you can find my thoughts on web development, some of my projects and personal information
