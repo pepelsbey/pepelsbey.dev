@@ -1,11 +1,11 @@
 <footer class="footer">
-    {% for section in links %}
+    {% for section in footer %}
         <h4>{{ section.title }}</h4>
         <ul>
             {% for item in section.items %}
                 <li>
                     <a href="{{ item.url }}">
-                        {{-item.title-}}
+                        {{- item.title -}}
                     </a>
                 </li>
             {% endfor %}

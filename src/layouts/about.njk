@@ -13,15 +13,51 @@ layout: page.njk
 
     <section>
         <h2>
-            {{ about.skills.title }}
+            {{ skills.title }}
         </h2>
         <p>
-            {{ about.skills.desc }}
+            {{ skills.desc }}
         </p>
         <ul>
-            {% for item in about.skills.list %}
+            {% for item in skills.list %}
                 <li>
                     {{ item }}
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section>
+        <h2>
+            {{ work.title }}
+        </h2>
+        <p>
+            {{ work.desc }}
+        </p>
+        <ul>
+            {% for item in work.list %}
+                <li>
+                    {{ item.company }},
+                    {{ item.title }}
+                    {{ item.period }}
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section>
+        <h2>
+            {{ contacts.title }}
+        </h2>
+        <p>
+            {{ contacts.desc }}
+        </p>
+        <ul>
+            {% for item in contacts.list %}
+                <li>
+                    <a href="{{ item.url }}">
+                        {{- item.title -}}
+                    </a>
                 </li>
             {% endfor %}
         </ul>
