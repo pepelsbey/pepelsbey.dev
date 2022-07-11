@@ -5,13 +5,22 @@ layout: page.njk
 {% include 'header.njk' %}
 
 <main class="content" id="main">
+    <p>
+        {% for tag in tags %}
+            {{ tag }}
+        {% endfor %}
+    </p>
+
     <h1>
         {{ title }}
     </h1>
 
-    {% for tag in tags %}
-        {{ tag }}
-    {% endfor %}
+    <p>
+        Updated:
+        <time datetime="{{ date | dateISO }}">
+            {{ date | dateLong }}
+        </time>
+    </p>
 
     {{ content | safe }}
 </main>

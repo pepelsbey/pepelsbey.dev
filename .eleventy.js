@@ -10,13 +10,13 @@ const yaml = require('js-yaml');
 
 const global = require('./src/data/global.js');
 
-const collections = {
-    'articles': 'src/articles/*/index.md',
-    'pages': 'src/pages/*.md',
-};
-
 module.exports = (config) => {
     // Collections
+
+    const collections = {
+        'articles': 'src/articles/*/index.md',
+        'pages': 'src/pages/*.md',
+    };
 
     config.addCollection('articles', (collectionApi) => {
         return collectionApi.getFilteredByGlob(collections.articles);

@@ -32,7 +32,9 @@
                         </a>
                     </{{ heading }}}>
 
-                    <time>{{ article.date | dateLong }}</time>
+                    <time datetime="{{ article.date | dateISO }}">
+                        {{ article.date | dateLong }}
+                    </time>
 
                     {{ outerLink | safe }}
                 </article>
