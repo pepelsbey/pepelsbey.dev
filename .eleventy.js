@@ -58,12 +58,18 @@ module.exports = (config) => {
 
     // CSS build
 
+    const styles = [
+        './src/styles/index.css',
+        './src/styles/light.css',
+        './src/styles/dark.css',
+    ];
+
     config.addTemplateFormats('css');
 
     config.addExtension('css', {
         outputFileExtension: 'css',
         compile: async (inputContent, inputPath) => {
-            if (inputPath !== './src/styles/index.css') {
+            if (!styles.includes(inputPath)) {
                 return;
             }
 

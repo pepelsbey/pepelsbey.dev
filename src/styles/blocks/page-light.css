@@ -1,0 +1,8 @@
+/* Page Light */
+
+.page {
+    color-scheme: light;
+
+    --color-background: hsl(var(--color-white));
+    --color-text: hsl(var(--color-ebony));
+}

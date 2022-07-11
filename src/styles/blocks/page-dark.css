@@ -1,0 +1,8 @@
+/* Page Dark */
+
+.page {
+    color-scheme: dark;
+
+    --color-background: hsl(var(--color-ebony));
+    --color-text: hsl(var(--color-white));
+}

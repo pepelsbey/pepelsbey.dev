@@ -1,10 +1,34 @@
 /* Page */
 
+/* Colors */
+
 .page {
+    color-scheme: light dark;
+
+    --color-white: 0, 0%, 100%;
+    --color-ebony: 243, 45%, 8%;
+
+    --color-titan: 247, 100%, 97%;
+    --color-steel: 250, 20%, 17%;
+
+    --color-grey: 240, 7%, 40%;
+    --color-manatee: 231, 10%, 59%;
+
+    --color-lilac: 263, 52%, 64%;
+    --color-sulu: 84, 79%, 71%;
+    --color-coral: 16, 100%, 66%;
+}
+
+/* Basic */
+
+.page {
+    background-color: var(--color-background);
+    color: var(--color-text);
     line-height: 1.5;
     font-family: sans-serif;
-    color-scheme: light dark;
 }
+
+/* Body */
 
 .page__body {
     margin: auto;
