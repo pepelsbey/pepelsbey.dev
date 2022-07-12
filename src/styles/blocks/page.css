@@ -22,8 +22,8 @@
 /* Basic */
 
 .page {
-    background-color: var(--color-background);
-    color: var(--color-text);
+    background-color: var(--color-back-primary);
+    color: var(--color-text-primary);
     line-height: 1.5;
     font-family: sans-serif;
 }
