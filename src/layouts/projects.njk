@@ -17,7 +17,7 @@ layout: page.njk
                 {{ section.title }}
             </h2>
             <p>
-                {{ section.desc }}
+                {{ section.desc | markdownInline | safe }}
             </p>
 
             {% for project in section.projects %}
@@ -32,6 +32,9 @@ layout: page.njk
                             {{- project.title -}}
                         </a>
                     </h3>
+                    <p>
+                        {{ project.desc | markdownInline | safe }}
+                    </p>
                 </article>
             {% endfor %}
         </section>
