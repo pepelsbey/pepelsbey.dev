@@ -36,6 +36,10 @@
                         {{ article.date | dateLong }}
                     </time>
 
+                    <p>
+                        {{ article.data.desc }}
+                    </p>
+
                     {{ outerLink | safe }}
                 </article>
             {% endif %}
