@@ -19,7 +19,9 @@ module.exports = (config) => {
     };
 
     config.addCollection('articles', (collectionApi) => {
-        return collectionApi.getFilteredByGlob(collections.articles);
+        return collectionApi.getFilteredByGlob(
+            collections.articles
+        );
     })
 
     config.addCollection('sitemap', (collectionApi) => {
