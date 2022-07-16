@@ -1,5 +1,11 @@
 /* Content */
 
+.content h1 {
+    font-weight: normal;
+    font-family: 'Neue Machina', sans-serif;
+    text-transform: uppercase;
+}
+
 .content code {
     font-variant-ligatures: none;
     font-family: 'JetBrains Mono', monospace;

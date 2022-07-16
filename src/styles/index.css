@@ -1,5 +1,6 @@
 /* Blocks */
 
+@import 'blocks/fonts.css';
 @import 'blocks/box-model.css';
 @import 'blocks/page.css';
 @import 'blocks/card.css';

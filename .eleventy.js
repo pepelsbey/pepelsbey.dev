@@ -157,6 +157,7 @@ module.exports = (config) => {
     // Passthrough copy
 
     config.addPassthroughCopy('src/images');
+    config.addPassthroughCopy('src/fonts');
     config.addPassthroughCopy('src/articles/**/*.!(md)');
 
     // Config
