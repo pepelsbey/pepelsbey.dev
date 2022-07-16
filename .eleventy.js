@@ -7,6 +7,7 @@ const markdown = require('markdown-it')({ html: true });
 const pimport = require('postcss-import');
 const postcss = require('postcss');
 const prettydata = require('pretty-data');
+const rss = require('@11ty/eleventy-plugin-rss');
 const yaml = require('js-yaml');
 
 const global = yaml.load(
@@ -169,6 +170,10 @@ module.exports = (config) => {
     config.addPassthroughCopy('src/images');
     config.addPassthroughCopy('src/fonts');
     config.addPassthroughCopy('src/articles/**/*.!(md)');
+
+    // Plugins
+
+    config.addPlugin(rss);
 
     // Config
 

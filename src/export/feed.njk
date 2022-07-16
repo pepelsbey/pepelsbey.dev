@@ -2,29 +2,40 @@
 permalink: /feed/index.xml
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>{{ data.title }}</title>
-        <description>{{ data.description }}</description>
-        <copyright>{{ data.copyright }}</copyright>
-        <language>{{ data.language }}</language>
-        <link>{{ data.domain }}/</link>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ global.domain }}">
+    <title>{{ global.title }}</title>
+    <subtitle>{{ global.subtitle }}</subtitle>
+    <link href="{{ global.domain }}"/>
+    <link href="{{ global.domain + '/feed/' }}" rel="self"/>
+    <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+    <id>{{ global.domain }}/</id>
+    <author>
+        <name>{{ global.author }}</name>
+        <email>{{ global.email }}</email>
+    </author>
+    {%- for article in collections.articles | reverse %}
+        {% set external = article.data.permalink == false %}
 
-        {% set lastArticle = collections.articles | last %}
-        <lastBuildDate>{{ lastArticle.date.toUTCString() }}</lastBuildDate>
+        {% if external %}
+            {% set url = article.data.source.url %}
+            {% set title = article.data.source.title %}
+            {% set content %}
+                <p>{{ article.data.desc | markdownInline | safe }}</p>
+                <p><a href="{{ url }}">Read on {{ title }}</a></p>
+            {% endset %}
+        {% else %}
+            {% set url = article.url | url | absoluteUrl(global.domain) %}
+            {% set content = article.templateContent | htmlToAbsoluteUrls(url) %}
+        {% endif %}
 
-        <atom:link href="{{ data.domain }}/feed/" rel="self" type="application/rss+xml"/>
-
-        {%- for article in collections.articles | reverse  %}
-            <item>
-                <title>{{ article.data.title }}</title>
-                <link>{{ data.domain }}{{ article.url }}</link>
-                <description>
-                    <![CDATA[{{ article | absolute | trim | safe }}]]>
-                </description>
-                <pubDate>{{ article.date.toUTCString() }}</pubDate>
-                <guid>{{ data.domain }}{{ article.url }}</guid>
-            </item>
-        {%- endfor %}
-    </channel>
-</rss>
+        <entry>
+            <title>{{ article.data.title | trim }}</title>
+            <link href="{{ url }}"/>
+            <updated>{{ article.date | dateToRfc3339 }}</updated>
+                <id>{{ url }}</id>
+            <content type="html" xml:lang="{{ global.language }}">
+                {{- content | trim -}}
+            </content>
+        </entry>
+    {%- endfor %}
+</feed>
