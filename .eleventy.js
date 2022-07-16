@@ -1,3 +1,4 @@
+const fs = require('fs');
 const autoprefixer = require('autoprefixer');
 const csso = require('postcss-csso');
 const esbuild = require('esbuild');
@@ -8,7 +9,9 @@ const postcss = require('postcss');
 const prettydata = require('pretty-data');
 const yaml = require('js-yaml');
 
-const global = require('./src/data/global.js');
+const global = yaml.load(
+    fs.readFileSync('src/data/global.yml', 'utf8')
+);
 
 module.exports = (config) => {
     // Collections
