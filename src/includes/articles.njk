@@ -17,21 +17,21 @@
                 {% set articleUrl = article.url %}
             {% endif %}
 
-            <article>
+            <article class="card">
                 <p>
                     {% for tag in article.data.tags %}
                         {{ tag }}
                     {% endfor %}
                 </p>
 
-                <{{ heading }}}>
-                    <a href="{{ articleUrl }}">
+                <{{ heading }}} class="card__title">
+                    <a class="card__link" href="{{ articleUrl }}">
                         {{- article.data.title -}}
                     </a>
                 </{{ heading }}}>
 
                 <time datetime="{{ article.date | dateISO }}">
-                    {{ article.date | dateLong }}
+                    {{ article.date | dateShort }}
                 </time>
 
                 <p class="content">

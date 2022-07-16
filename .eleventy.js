@@ -153,6 +153,13 @@ module.exports = (config) => {
         });
     })
 
+    config.addFilter('dateShort', (value) => {
+        return value.toLocaleString('en', {
+            month: 'long',
+            day: 'numeric',
+        });
+    })
+
     config.addFilter('dateISO', (value) => {
         return value.toISOString().split('T')[0];
     })
