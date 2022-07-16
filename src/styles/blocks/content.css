@@ -1,8 +1,13 @@
 /* Content */
 
-.content h1 {
+.content h1,
+.content h2,
+.content h3 {
     font-weight: normal;
     font-family: 'Neue Machina', sans-serif;
+}
+
+.content h1 {
     text-transform: uppercase;
 }
 
