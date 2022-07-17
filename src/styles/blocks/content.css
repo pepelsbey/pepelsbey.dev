@@ -1,4 +1,4 @@
-/* Content */
+/* Headings */
 
 .content h1,
 .content h2,
@@ -11,14 +11,20 @@
     text-transform: uppercase;
 }
 
+/* Code */
+
 .content code {
     font-variant-ligatures: none;
     font-family: 'JetBrains Mono', monospace;
 }
 
+/* Images */
+
 .content img {
     max-width: 100%;
 }
+
+/* Frames */
 
 .content iframe {
     width: 100%;

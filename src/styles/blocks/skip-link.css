@@ -1,0 +1,14 @@
+.skip-link {
+    display: inline-block;
+    padding: 8px 0;
+}
+
+.skip-link:not(:active, :focus) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(-50%);
+    white-space: nowrap;
+}

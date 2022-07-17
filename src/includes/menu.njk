@@ -1,14 +1,16 @@
-<nav>
-    <p>
+<nav class="navigation">
+    <ul class="navigation__list">
         {% for item in menu %}
             {% if item.link == page.url %}
                 {% set current = 'aria-current="page"' %}
             {% else %}
                 {% set current = '' %}
             {% endif %}
-            <a href="{{ item.link }}" {{ current | safe }}>
-                {{- item.title -}}
-            </a>
+            <li class="navigation__item">
+                <a class="navigation__link" href="{{ item.link }}" {{ current | safe }}>
+                    {{- item.title -}}
+                </a>
+            </li>
         {% endfor %}
-    </p>
+    </ul>
 </nav>

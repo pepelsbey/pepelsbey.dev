@@ -1,8 +1,14 @@
-/* Blocks */
+/* Global */
 
 @import 'blocks/fonts.css';
 @import 'blocks/box-model.css';
-@import 'blocks/page.css';
+
+/* Blocks */
+
+@import 'blocks/page/index.css';
+@import 'blocks/skip-link.css';
+@import 'blocks/header.css';
+@import 'blocks/navigation.css';
 @import 'blocks/card.css';
 @import 'blocks/content.css';
 @import 'blocks/footer.css';

@@ -1,5 +1,3 @@
-/* Footer */
-
 .footer {
-    border-top: 2px solid;
+    border-top: 2px solid var(--color-text-primary);
 }
