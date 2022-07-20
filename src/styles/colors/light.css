@@ -1,4 +1,4 @@
-.page {
+:root {
     color-scheme: light;
 
     --color-back-primary: hsl(var(--color-white));

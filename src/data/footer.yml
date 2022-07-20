@@ -24,4 +24,5 @@
   items:
   - title: Designed by Mark Shakhov
   - title: Handcrafted by me
-  - title: Powered by [Eleventy](https://11ty.dev/)
+  - title: Powered by Eleventy
+    url: https://11ty.dev/

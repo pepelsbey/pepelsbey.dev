@@ -1,0 +1,21 @@
+/* Page */
+
+.page {
+    background-color: var(--color-back-primary);
+    color: var(--color-text-primary);
+    line-height: 1.5;
+    font-family: 'Inter', sans-serif
+}
+
+@supports (font-variation-settings: normal) {
+    .page {
+        font-family: 'Inter Variable', sans-serif;
+    }
+}
+
+/* Body */
+
+.page__body {
+    margin: auto;
+    max-width: 700px;
+}

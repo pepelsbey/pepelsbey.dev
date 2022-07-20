@@ -1,14 +1,18 @@
+/* List */
+
 .navigation__list {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
+/* Link */
+
 .navigation__link {
     color: var(--color-text-secondary);
 }
 
 .navigation__link[aria-current] {
-    background-color: hsl(var(--color-sulu));
-    color: hsl(var(--color-ebony));
+    background-color: var(--color-active-back);
+    color: var(--color-active-text);
 }

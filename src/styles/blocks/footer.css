@@ -1,3 +1,29 @@
+/* Footer */
+
 .footer {
     border-top: 2px solid var(--color-text-primary);
+    color: var(--color-text-secondary);
+}
+
+/* Title */
+
+.footer__title {
+    margin: 0;
+    color: var(--color-text-primary);
+    font-weight: normal;
+    font-family: 'Neue Machina', sans-serif;
+}
+
+/* List */
+
+.footer__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Link */
+
+.footer__link {
+    color: var(--color-text-secondary);
 }

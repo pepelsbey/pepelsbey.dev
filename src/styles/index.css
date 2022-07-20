@@ -1,11 +1,15 @@
 /* Global */
 
-@import 'blocks/fonts.css';
-@import 'blocks/box-model.css';
+@import 'global/fonts.css';
+@import 'global/box-model.css';
+
+/* Colors */
+
+@import 'colors/index.css';
 
 /* Blocks */
 
-@import 'blocks/page/index.css';
+@import 'blocks/page.css';
 @import 'blocks/skip-link.css';
 @import 'blocks/header.css';
 @import 'blocks/navigation.css';

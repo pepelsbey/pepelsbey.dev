@@ -1,4 +1,4 @@
-.page {
+:root {
     color-scheme: dark;
 
     --color-back-primary: hsl(var(--color-ebony));
