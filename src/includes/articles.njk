@@ -6,7 +6,10 @@
 ) %}
     {% for article in source | reverse %}
         {% if loop.index <= limit and article.url != exclude.url %}
-            {% if article.data.permalink == false %}
+            {% set external = article.data.source %}
+            {% set video = article.data.video %}
+
+            {% if external %}
                 {% set articleUrl = article.data.source.url %}
                 {% set outerLink %}
                     <p>
@@ -18,10 +21,22 @@
             {% endif %}
 
             <article class="card">
-                <p>
+                <p class="card__tags">
                     {% for tag in article.data.tags %}
-                        {{ tag }}
+                        <span class="card__tag">
+                            {{ tag }}
+                        </span>
                     {% endfor %}
+                </p>
+
+                <p class="card__types">
+                    <span class="card__text">Text</span>
+                    {% if video %}
+                        <span class="card__video">Video</span>
+                    {% endif %}
+                    {% if external %}
+                        <span class="card__external">External</span>
+                    {% endif %}
                 </p>
 
                 <{{ heading }}} class="card__title">

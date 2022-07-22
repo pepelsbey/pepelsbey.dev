@@ -25,15 +25,21 @@ layout: page.njk
     {{ content | safe }}
 </main>
 
-<aside>
-    <h2>
-        More articles
-        <span>4</span>
-    </h2>
-    <a href="/articles/">
-        View all
-        <span>articles</span>
-    </a>
+<aside class="archive">
+    <header class="archive__header">
+        <h2 class="archive__title">
+            More articles
+            <span class="archive__number">
+                4
+            </span>
+        </h2>
+        <a class="archive__link" href="/articles/">
+            View all
+            <span class="sr-only">
+                articles
+            </span>
+        </a>
+    </header>
 
     {% from 'articles.njk' import articles %}
 

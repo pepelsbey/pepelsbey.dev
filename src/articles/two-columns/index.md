@@ -1,12 +1,12 @@
 ---
 title: |
-    6+5 ways to make a two-column layout: from pretty reasonable to completely wrong
+    6+5 ways to make a two-column layout: from pretty reasonable to completely wrong
 desc: |
     You probably won’t ever need eleven ways of making columns, but you might learn something new while figuring them out.
 date: 2022-07-04
 tags:
-    - html
-    - css
+    - HTML
+    - CSS
 layout: article.njk
 ---
 
@@ -58,14 +58,14 @@ Tables were the first layout tool available in browsers. And I used them to crea
 
 ```html
 <table class="columns">
-<tr>
-    <td class="columns__item columns__item--first">
-        <!-- Left -->
-    </td>
-    <td class="columns__item columns__item--second">
-        <!-- Right -->
-    </td>
-</tr>
+    <tr>
+        <td class="columns__item columns__item--first">
+            <!-- Left -->
+        </td>
+        <td class="columns__item columns__item--second">
+            <!-- Right -->
+        </td>
+    </tr>
 </table>
 ```
 
@@ -122,12 +122,8 @@ In this case, we won’t need any special HTML elements to make it work, so let�
 
 ```html
 <div class="columns">
-    <div class="columns__item columns__item--first">
-
-    </div>
-    <div class="columns__item columns__item--second">
-
-    </div>
+    <div class="columns__item columns__item--first"></div>
+    <div class="columns__item columns__item--second"></div>
 </div>
 ```
 
@@ -465,12 +461,8 @@ Now it’s time for some magic. Only for this demo we have IDs for each news in 
 
 ```css
 .columns {
-    background-image:
-        -moz-element(#news-first),
-        -moz-element(#news-second);
-    background-position:
-        left top,
-        right top;
+    background-image: -moz-element(#news-first), -moz-element(#news-second);
+    background-position: left top, right top;
     background-repeat: no-repeat;
 }
 ```
@@ -490,9 +482,10 @@ To make the layout that we’re aiming for, we’ll need three frames in a set: 
 ```html
 <frameset cols="50%, 20, 50%" border="0">
     <frame frameborder="0" src="">
-    <frame frameborder="0" src="">
-    <frame frameborder="0" src="">
-<frameset>
+        <frame frameborder="0" src="">
+            <frame frameborder="0" src="">
+                <frameset></frameset></frame></frame></frame
+></frameset>
 ```
 
 Unlike the `<iframe>` elements where “i” stands for “inline”, `<frameset>` is supposed to take the whole window. Not only that, it is supposed to replace the `<body>` element. It would be impossible to use such a layout technique on a page with other elements. No problem! We can wrap it in another inline frame.
@@ -515,7 +508,9 @@ Let’s start with CSS for the `<iframe>`, nothing too fancy:
 And here comes the markup, the most exciting part. Instead of the URL of the file in `src` attribute, we have its content with the special `data:text/html,` prefix to let the browser know that it’s not a URL, but the “file” itself. The content starts with `<!DOCTYPE html>` to stay in [standards mode](https://developer.mozilla.org/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode), then follows the charset (just in case). I skipped the `<title>` element because I’m a bad person. Please don’t ever do it.
 
 ```html
-<iframe class="columns" src="data:text/html,
+<iframe
+    class="columns"
+    src="data:text/html,
     <!DOCTYPE html>
     <meta charset='utf-8'>
     <frameset cols='50%,20,50%' border='0'>
@@ -523,7 +518,8 @@ And here comes the markup, the most exciting part. Instead of the URL of the fil
         <frame frameborder='0' src='data:text/html,'>
         <frame frameborder='0' src='data:text/html,'>
     </frameset>
-"></iframe>
+"
+></iframe>
 ```
 
 Now we have three nested frames with empty files in `src` attributes. We’re going to keep the middle one empty because it’s just a gap. As for the other two, there will be our news documents. I usually have double quotes in my markup, but I had to switch to single ones in the nested document to make it work. On the next nesting level, I’ll just stop using them altogether.
@@ -531,7 +527,9 @@ Now we have three nested frames with empty files in `src` attributes. We’re go
 So let’s get the actual content the same way we did with the `<frameset>`: barebones HTML document, some styles, and the news. Unfortunately, I couldn’t make the `<link rel="stylesheet" href="news.css">` work, so I had to use inline styles. But I wouldn’t blame it for giving up in such a mess of a markup.
 
 ```html
-<iframe class="columns" src="data:text/html,
+<iframe
+    class="columns"
+    src="data:text/html,
     <!DOCTYPE html>
     <meta charset='utf-8'>
     <frameset cols='50%, 20, 50%' border='0'>
@@ -547,7 +545,8 @@ So let’s get the actual content the same way we did with the `<frameset>`: bar
             </article>
         '>
     </frameset>
-"></iframe>
+"
+></iframe>
 ```
 
 The same goes for the second news, the only difference is background color and content. And the thing that surprises me the most is that it works in Firefox, Chrome, and Safari, even though `<frameset>` and `<frame>` elements are deprecated for a long time.
@@ -558,7 +557,7 @@ The only problem I couldn’t solve is the `<frameset>` background color in Safa
 
 That was the last weird two-column technique I came up with. Was it practical? Hell no! Did I have a lot of fun building it? Definitely.
 
-* * *
+---
 
 I hope you’ve learned something new along the way. That’s the beauty of the Web platform: there are multiple ways of doing the same thing. And if you know all of them you’re practically unstoppable and ready to implement anything that life might challenge you with.
 

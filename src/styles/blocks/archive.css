@@ -1,0 +1,13 @@
+/* Header */
+
+.archive__header {
+    border-bottom: 2px solid var(--color-text-primary);
+}
+
+/* Title */
+
+.archive__title {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: 'Neue Machina', sans-serif;
+}

@@ -4,20 +4,24 @@ layout: page.njk
 
 {% include 'header.njk' %}
 
-<main class="content" id="main">
+<main id="main">
     {{ content | safe }}
 
-    <section>
-        <h2>
-            Articles
-            <span>
+    <section class="archive">
+        <header class="archive__header">
+            <h2 class="archive__title">
+                Articles
+            </h2>
+            <span class="archive__number">
                 {{ collections.articles.length }}
             </span>
-        </h2>
-        <a href="/articles/">
-            View all
-            <span>articles</span>
-        </a>
+            <a class="archive__link" href="/articles/">
+                View all
+                <span class="sr-only">
+                    articles
+                </span>
+            </a>
+        </header>
 
         {% from 'articles.njk' import articles %}
 
@@ -28,7 +32,7 @@ layout: page.njk
         ) }}
     </section>
 
-    <section>
+    <section class="archive">
         {% set projectsList = [] %}
 
         {% for section in projects %}
@@ -40,16 +44,20 @@ layout: page.njk
             {% endfor %}
         {% endfor %}
 
-        <h2>
-            Projects
-            <span>
+        <header class="archive__header">
+            <h2 class="archive__title">
+                Projects
+            </h2>
+            <span class="archive__number">
                 {{ projectsList.length }}
             </span>
-        </h2>
-        <a href="/projects/">
-            View all
-            <span>projects</span>
-        </a>
+            <a class="archive__link" href="/projects/">
+                View all
+                <span class="sr-only">
+                    projects
+                </span>
+            </a>
+        </header>
 
         {% for section in projects %}
             <article>

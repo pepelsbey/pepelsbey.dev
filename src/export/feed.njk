@@ -14,9 +14,7 @@ permalink: /feed/index.xml
         <email>{{ global.email }}</email>
     </author>
     {%- for article in collections.articles | reverse %}
-        {% set external = article.data.permalink == false %}
-
-        {% if external %}
+        {% if article.data.source %}
             {% set url = article.data.source.url %}
             {% set title = article.data.source.title %}
             {% set content %}

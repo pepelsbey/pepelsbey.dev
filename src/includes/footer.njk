@@ -9,7 +9,7 @@
                             {{- item.title -}}
                         </a>
                     {% else %}
-                        {{ item.title | markdownInline | safe }}
+                        {{ item.title }}
                     {% endif %}
                 </li>
             {% endfor %}
