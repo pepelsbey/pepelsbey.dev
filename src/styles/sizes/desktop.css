@@ -1,0 +1,10 @@
+@media (min-width: 1920px) {
+    :root {
+        --font-size-small: 1rem;
+        --font-size-normal: 1.25rem;
+        --font-size-large: 2rem;
+        --font-size-heading-3: 3.5rem;
+        --font-size-heading-2: 5rem;
+        --font-size-heading-1: 9rem;
+    }
+}

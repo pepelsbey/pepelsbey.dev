@@ -4,7 +4,7 @@
 .content h2,
 .content h3 {
     font-weight: normal;
-    font-family: 'Neue Machina', sans-serif;
+    font-family: var(--font-family-heading);
 }
 
 .content h1 {
@@ -15,7 +15,7 @@
 
 .content code {
     font-variant-ligatures: none;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-family-code);
 }
 
 /* Images */

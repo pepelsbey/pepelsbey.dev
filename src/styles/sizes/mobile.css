@@ -1,0 +1,10 @@
+@media (min-width: 360px) {
+    :root {
+        --font-size-small: 1rem;
+        --font-size-normal: 1rem;
+        --font-size-large: 1.5rem;
+        --font-size-heading-3: 2rem;
+        --font-size-heading-2: 2.5rem;
+        --font-size-heading-1: 4rem;
+    }
+}

@@ -2,7 +2,7 @@
 
 .card__title {
     font-weight: normal;
-    font-family: 'Neue Machina', sans-serif;
+    font-family: var(--font-family-heading);
 }
 
 /* Link */

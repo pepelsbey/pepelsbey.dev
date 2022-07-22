@@ -16,3 +16,9 @@
     background-color: var(--color-active-back);
     color: var(--color-active-text);
 }
+
+/* RSS */
+
+.navigation__rss {
+    color: var(--color-text-primary);
+}

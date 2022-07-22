@@ -11,7 +11,7 @@
     margin: 0;
     color: var(--color-text-primary);
     font-weight: normal;
-    font-family: 'Neue Machina', sans-serif;
+    font-family: var(--font-family-heading);
 }
 
 /* List */

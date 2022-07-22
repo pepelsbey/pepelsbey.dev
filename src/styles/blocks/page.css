@@ -3,14 +3,9 @@
 .page {
     background-color: var(--color-back-primary);
     color: var(--color-text-primary);
-    line-height: 1.5;
-    font-family: 'Inter', sans-serif
-}
-
-@supports (font-variation-settings: normal) {
-    .page {
-        font-family: 'Inter Variable', sans-serif;
-    }
+    line-height: 1.6;
+    font-size: var(--font-size-normal);
+    font-family: var(--font-family-text);
 }
 
 /* Body */

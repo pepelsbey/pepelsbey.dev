@@ -1,0 +1,26 @@
+/* Themes */
+
+.themes {
+    padding: 2px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 2px solid var(--color-text-primary);
+    border-radius: 5em;
+}
+
+/* Button */
+
+.themes__button {
+    margin: 0;
+    border: none;
+    border-radius: 5em;
+    background-color: transparent;
+    color: var(--color-text-primary);
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.themes__button[aria-pressed='true'] {
+    background-color: var(--color-text-primary);
+    color: var(--color-back-primary);
+}
