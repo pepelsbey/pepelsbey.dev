@@ -3,7 +3,7 @@
     padding: 8px 0;
 }
 
-.skip-link:not(:active, :focus) {
+.skip-link:not(:active, :focus-visible) {
     position: absolute;
     width: 1px;
     height: 1px;

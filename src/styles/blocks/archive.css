@@ -9,5 +9,18 @@
 .archive__title {
     text-transform: uppercase;
     font-weight: normal;
+    font-size: var(--font-size-heading-2);
     font-family: var(--font-family-heading);
+}
+
+/* Number */
+
+.archive__number {
+
+}
+
+/* Link */
+
+.archive__link {
+    color: var(--color-text-primary);
 }

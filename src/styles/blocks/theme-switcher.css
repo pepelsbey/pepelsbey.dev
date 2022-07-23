@@ -1,8 +1,8 @@
-/* Themes */
+/* theme */
 
-.themes {
+.theme-switcher {
     padding: 2px;
-    display: grid;
+    display: inline-grid;
     grid-template-columns: repeat(3, 1fr);
     border: 2px solid var(--color-text-primary);
     border-radius: 5em;
@@ -10,17 +10,25 @@
 
 /* Button */
 
-.themes__button {
+.theme-switcher__button {
     margin: 0;
+    padding: 0 1rem;
     border: none;
     border-radius: 5em;
     background-color: transparent;
     color: var(--color-text-primary);
+    line-height: inherit;
     font-size: inherit;
     font-family: inherit;
 }
 
-.themes__button[aria-pressed='true'] {
+.theme-switcher__button:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: -2px;
+}
+
+.theme-switcher__button[aria-pressed='true'] {
     background-color: var(--color-text-primary);
     color: var(--color-back-primary);
+    outline-offset: 2px;
 }

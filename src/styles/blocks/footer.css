@@ -26,4 +26,5 @@
 
 .footer__link {
     color: var(--color-text-secondary);
+    text-underline-offset: 3px;
 }

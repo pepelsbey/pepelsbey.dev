@@ -1,0 +1,16 @@
+/* Action */
+
+.action {
+    display: inline-flex;
+    column-gap: 0.4em;
+    align-items: center;
+}
+
+/* Icon */
+
+.action__icon {
+    display: block;
+    width: 1.2em;
+    height: 1.2em;
+    color: currentcolor;
+}

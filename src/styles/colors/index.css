@@ -20,4 +20,8 @@
 
     --color-active-back: hsl(var(--color-sulu));
     --color-active-text: hsl(var(--color-ebony));
+
+    /* Focus */
+
+    --color-focus: hsl(var(--color-lilac));
 }
