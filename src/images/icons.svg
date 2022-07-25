@@ -6,6 +6,9 @@
             }
         </style>
     </defs>
+    <svg id="logo" fill="currentcolor" viewBox="0 0 40 40">
+        <path d="M35.27 32.92a20.24 20.24 0 0 1-2.35 2.35 19.97 19.97 0 0 1-27.06-1.13A20 20 0 1 1 35.27 7.08l-7.12 7.13a10 10 0 0 1 0 11.58l7.12 7.13Zm-9.48-4.77a10 10 0 1 1 0-16.3l4.76-4.76a16.67 16.67 0 1 0 0 25.82l-4.76-4.76Zm-10.5-3.44a6.67 6.67 0 1 0 9.42-9.42 6.67 6.67 0 0 0-9.42 9.42Z"/><path d="M37.23 9.84a20.03 20.03 0 0 1 0 20.32l-2.45-2.45a16.7 16.7 0 0 0 0-15.42l2.45-2.45Z"/>
+    </svg>
     <svg id="cross" stroke-width="2" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round">
         <path d="M18 6L6 18M6 6L18 18"/>
     </svg>

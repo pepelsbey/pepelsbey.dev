@@ -1,11 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-label="Vadim Makeev’s logo">
-    <defs>
-        <linearGradient id="gradient" x1="103.59" x2="-29.62" y1="56.55" y2="189.76" gradientUnits="userSpaceOnUse">
-            <stop stop-color="#7244f3"/>
-            <stop offset="1" stop-color="#007ef5"/>
-        </linearGradient>
-    </defs>
-    <circle cx="80" cy="80" r="80" fill="#fff"/>
-    <path fill="url(#gradient)" d="M125.9 132.86A70 70 0 1 1 125.73 27l-21.91 21.91a39.17 39.17 0 1 0 .17 62.04l21.9 21.9Z"/>
-    <path fill="#00ebb0" d="m110.95 103.99 21.9 21.9a70 70 0 0 0-.14-91.95l-21.9 21.9a39.17 39.17 0 0 1 .14 48.15Z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160"><rect fill="#c1f07c" width="160" height="160" rx="80"/><path fill="#0c0b1d" d="M123.13 36.87a61.02 61.02 0 0 0-86.26 0 61 61 0 1 0 89.7 82.52l.6-.7-21.42-21.42c7-10.41 7-24.13 0-34.54l21.42-21.42-.6-.7a61.72 61.72 0 0 0-3.44-3.74Zm-77.78 8.48a49 49 0 0 1 64.8-3.98L97.27 54.25a31.01 31.01 0 1 0 0 51.5l12.88 12.88a49 49 0 0 1-64.8-73.28Zm87.2 3.66-.65-1.11-8.78 8.78.34.65a49.12 49.12 0 0 1 0 45.34l-.34.65 8.78 8.78.66-1.1a61.1 61.1 0 0 0 0-62ZM66.57 66.56a19 19 0 1 1 26.87 26.87 19 19 0 0 1-26.87-26.87Z"/></svg>
