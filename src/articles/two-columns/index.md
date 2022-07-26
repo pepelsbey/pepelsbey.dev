@@ -7,6 +7,7 @@ date: 2022-07-04
 tags:
     - HTML
     - CSS
+cover: true
 layout: article.njk
 ---
 

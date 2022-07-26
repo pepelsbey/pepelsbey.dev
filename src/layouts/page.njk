@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>
-        {{ title }}{% if page.url !== '/' %} — {{ global.title }}{% endif %}
+        {{ global.title if page.url == '/' else title + ' — ' + global.title }}
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,7 @@
     <meta name="description" content="{{ global.subtitle }}">
     <meta name="generator" content="{{ eleventy.generator }}">
 
-    {% include 'opengraph.njk' %}
+    {% include 'covers.njk' %}
 
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/light.css" media="(prefers-color-scheme: light)">

@@ -1,3 +1,8 @@
+---
+title: 'About'
+layout: about.njk
+permalink: about/index.html
+
 # Skills
 
 skills:
@@ -28,7 +33,7 @@ work:
     title: Courses author
     period: 2017—2020
   - company: Opera Software
-    title: Developer relations
+    title: Developer advocate
     period: 2009—2016
   - company: Yandex
     title: Frontend developer
@@ -45,3 +50,6 @@ contacts:
     url: mailto:pepelsbey@gmail.com
   - title: t.me/pepelsbey
     url: https://t.me/pepelsbey
+---
+
+I’m Vadim Makeev, a frontend developer based in Berlin, Germany

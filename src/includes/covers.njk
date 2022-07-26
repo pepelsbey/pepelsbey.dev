@@ -1,11 +1,19 @@
+{% set name = 'index' if page.url == '/' else page.fileSlug %}
+
+{% set slug =
+    global.domain + page.url + 'covers' if
+    cover else
+    global.domain + '/images/covers/' + name
+%}
+
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ global.title }}">
 <meta property="og:site_name" content="{{ global.subtitle }}">
 <meta property="og:url" content="{{ global.domain }}">
-<meta property="og:image" content="{{ global.domain }}/images/og/index/wide.png">
+<meta property="og:image" content="{{ slug }}/wide.png">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ global.title }}">
 <meta name="twitter:description" content="{{ global.subtitle }}">
 <meta name="twitter:site" content="{{ global.domain }}">
-<meta name="twitter:image" content="{{ global.domain }}/images/og/index/square.png">
+<meta name="twitter:image" content="{{ slug }}/square.png">
