@@ -1,5 +1,19 @@
+/* Header */
+
 .header {
     position: relative;
     padding: 28px 0;
     background-color: var(--color-back-primary);
+}
+
+/* Link */
+
+.header__link {
+    color: var(--color-text-primary);
+}
+
+/* Logo */
+
+.header__logo {
+    display: block;
 }
