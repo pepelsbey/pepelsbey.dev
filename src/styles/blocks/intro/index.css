@@ -1,0 +1,32 @@
+/* Intro */
+
+.intro {
+
+}
+
+/* Name */
+
+.intro__name {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-family: var(--font-family-heading);
+}
+
+/* Photo */
+
+.intro__photo {
+    display: block;
+    background-color: var(--intro-photo-back);
+}
+
+/* Who */
+
+.intro__who {
+    font-family: var(--font-family-heading);
+}
+
+/* What */
+
+.intro__what {
+
+}

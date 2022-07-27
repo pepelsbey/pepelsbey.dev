@@ -1,0 +1,55 @@
+/* Card */
+
+.card {
+
+}
+
+/* Box */
+
+.card__box {
+    background-color: var(--card-box-back);
+}
+
+/* Tags */
+
+.card__tags {
+
+}
+
+/* Tag */
+
+.card__tag {
+
+}
+
+/* Types */
+
+.card__types {
+    display: flex;
+    column-gap: 8px;
+}
+
+/* Type */
+
+.card__type {
+    display: block;
+}
+
+/* Title */
+
+.card__title {
+    font-weight: normal;
+    font-family: var(--font-family-heading);
+}
+
+/* Link */
+
+.card__link {
+    text-decoration: none;
+}
+
+/* Date */
+
+.card__date {
+
+}

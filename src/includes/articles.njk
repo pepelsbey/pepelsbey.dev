@@ -12,42 +12,53 @@
             {% if external %}
                 {% set articleUrl = article.data.source.url %}
                 {% set outerLink %}
-                    <p>
+                    <a class="action" href="{{ article.data.source.url }}">
                         Read on {{ article.data.source.title }}
-                    </p>
+                        <svg class="action__icon" width="24" height="24" aria-hidden="true">
+                            <use href="/images/icons.svg#external">
+                        </svg>
+                    </a>
                 {% endset %}
             {% else %}
                 {% set articleUrl = article.url %}
             {% endif %}
 
             <article class="card">
-                <p class="card__tags">
-                    {% for tag in article.data.tags %}
-                        <span class="card__tag">
-                            {{ tag }}
-                        </span>
-                    {% endfor %}
-                </p>
+                <div class="card__box">
+                    <p class="card__tags">
+                        {% for tag in article.data.tags %}
+                            <span class="card__tag">
+                                {{ tag }}
+                            </span>
+                        {% endfor %}
+                    </p>
 
-                <p class="card__types">
-                    <span class="card__text">Text</span>
-                    {% if video %}
-                        <span class="card__video">Video</span>
-                    {% endif %}
-                    {% if external %}
-                        <span class="card__external">External</span>
-                    {% endif %}
-                </p>
+                    <p class="card__types">
+                        <svg class="card__type" width="24" height="24" aria-hidden="true">
+                            <use href="/images/icons.svg#text">
+                        </svg>
+                        {% if video %}
+                            <svg class="card__type" width="24" height="24" aria-hidden="true">
+                                <use href="/images/icons.svg#video">
+                            </svg>
+                        {% endif %}
+                        {% if external %}
+                            <svg class="card__type" width="24" height="24" aria-hidden="true">
+                                <use href="/images/icons.svg#external">
+                            </svg>
+                        {% endif %}
+                    </p>
 
-                <{{ heading }}} class="card__title">
-                    <a class="card__link" href="{{ articleUrl }}">
-                        {{- article.data.title -}}
-                    </a>
-                </{{ heading }}}>
+                    <{{ heading }}} class="card__title">
+                        <a class="card__link" href="{{ articleUrl }}">
+                            {{- article.data.title -}}
+                        </a>
+                    </{{ heading }}}>
 
-                <time datetime="{{ article.date | dateISO }}">
-                    {{ article.date | dateShort }}
-                </time>
+                    <time class="card__date" datetime="{{ article.date | dateISO }}">
+                        {{ article.date | dateShort }}
+                    </time>
+                </div>
 
                 <p class="content">
                     {{ article.data.desc | markdownInline | safe }}

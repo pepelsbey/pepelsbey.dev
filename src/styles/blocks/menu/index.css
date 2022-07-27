@@ -1,0 +1,32 @@
+/* menu */
+
+.menu {
+    --menu-current-back: hsl(var(--color-sulu));
+    --menu-current-text: hsl(var(--color-ebony));
+}
+
+/* List */
+
+.menu__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Link */
+
+.menu__link {
+    color: var(--color-text-secondary);
+    text-underline-offset: 3px;
+}
+
+.menu__link:focus-visible {
+    border-radius: 2px;
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+.menu__link[aria-current] {
+    background-color: var(--menu-current-back);
+    color: var(--menu-current-text);
+}

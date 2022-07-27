@@ -1,13 +1,13 @@
-<nav class="navigation">
-    <ul class="navigation__list">
-        {% for item in navigation %}
+<nav class="menu">
+    <ul class="menu__list">
+        {% for item in menu %}
             {% if item.link == page.url %}
                 {% set current = 'aria-current="page"' %}
             {% else %}
                 {% set current = '' %}
             {% endif %}
-            <li class="navigation__item">
-                <a class="navigation__link" href="{{ item.link }}" {{ current | safe }}>
+            <li class="menu__item">
+                <a class="menu__link" href="{{ item.link }}" {{ current | safe }}>
                     {{- item.title -}}
                 </a>
             </li>

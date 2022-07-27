@@ -5,7 +5,25 @@ layout: page.njk
 {% include 'header.njk' %}
 
 <main id="main">
-    {{ content | safe }}
+    <div class="intro">
+        <p class="intro__greeting">
+            {{ intro[0] }}
+        </p>
+        <h1 class="intro__name">
+            {{ intro[1] }}
+        </h1>
+        <img class="intro__photo"
+            src="{{ intro[2] }}"
+            width="308" height="205"
+            alt="Black and white portrait on a colored background."
+        >
+        <p class="intro__who">
+            {{ intro[3] }}
+        </p>
+        <p class="intro__what">
+            {{ intro[4] }}
+        </p>
+    </div>
 
     <section class="archive">
         <header class="archive__header">

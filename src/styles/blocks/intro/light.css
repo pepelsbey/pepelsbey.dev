@@ -1,0 +1,5 @@
+/* Intro */
+
+.intro {
+    --intro-photo-back: hsl(var(--color-sulu));
+}
