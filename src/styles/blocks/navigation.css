@@ -23,16 +23,3 @@
     background-color: var(--color-active-back);
     color: var(--color-active-text);
 }
-
-/* RSS */
-
-.navigation__rss {
-    color: var(--color-text-primary);
-    text-underline-offset: 3px;
-}
-
-.navigation__rss:focus-visible {
-    border-radius: 2px;
-    outline: 2px solid var(--color-focus);
-    outline-offset: 2px;
-}
