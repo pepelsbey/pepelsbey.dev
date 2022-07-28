@@ -6,8 +6,8 @@
 ) %}
     {% for article in source | reverse %}
         {% if loop.index <= limit and article.url != exclude.url %}
-            {% set external = article.data.source %}
             {% set video = article.data.video %}
+            {% set external = article.data.source %}
 
             {% if external %}
                 {% set articleUrl = article.data.source.url %}
@@ -34,16 +34,16 @@
                     </p>
 
                     <p class="card__types">
-                        <svg class="card__type" width="24" height="24" aria-hidden="true">
-                            <use href="/images/icons.svg#text">
-                        </svg>
                         {% if video %}
-                            <svg class="card__type" width="24" height="24" aria-hidden="true">
+                            <svg class="card__type card__type--video" width="24" height="24" aria-hidden="true">
                                 <use href="/images/icons.svg#video">
                             </svg>
                         {% endif %}
+                        <svg class="card__type card__type--text" width="24" height="24" aria-hidden="true">
+                            <use href="/images/icons.svg#text">
+                        </svg>
                         {% if external %}
-                            <svg class="card__type" width="24" height="24" aria-hidden="true">
+                            <svg class="card__type card__type--external" width="24" height="24" aria-hidden="true">
                                 <use href="/images/icons.svg#external">
                             </svg>
                         {% endif %}

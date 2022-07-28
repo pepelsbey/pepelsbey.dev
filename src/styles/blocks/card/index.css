@@ -1,7 +1,8 @@
 /* Card */
 
 .card {
-
+    --card-type-text: hsl(var(--color-lilac));
+    --card-type-video: hsl(var(--color-coral));
 }
 
 /* Box */
@@ -33,6 +34,18 @@
 
 .card__type {
     display: block;
+}
+
+.card__type--text {
+    color: var(--card-type-text);
+}
+
+.card__type--video {
+    color: var(--card-type-video);
+}
+
+.card__type--external {
+    color: var(--color-text-primary);
 }
 
 /* Title */
