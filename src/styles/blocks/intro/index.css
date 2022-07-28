@@ -17,6 +17,13 @@
 .intro__photo {
     display: block;
     background-color: var(--intro-photo-back);
+    border-radius: 20px;
+}
+
+@media (min-width: 1024px) {
+    .intro__photo {
+        border-radius: 40px;
+    }
 }
 
 /* Who */

@@ -8,7 +8,14 @@
 /* Box */
 
 .card__box {
+    border-radius: 20px;
     background-color: var(--card-box-back);
+}
+
+@media (min-width: 1024px) {
+    .card__box {
+        border-radius: 40px;
+    }
 }
 
 /* Tags */
