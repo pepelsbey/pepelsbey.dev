@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+<svg xmlns="http://www.w3.org/2000/svg">
     <defs>
         <style>
             :root svg:not(:target) {
@@ -9,55 +9,55 @@
     <svg id="logo" fill="currentcolor" viewBox="0 0 40 40">
         <path d="M35.27 32.92a20.24 20.24 0 0 1-2.35 2.35 19.97 19.97 0 0 1-27.06-1.13A20 20 0 1 1 35.27 7.08l-7.12 7.13a10 10 0 0 1 0 11.58l7.12 7.13Zm-9.48-4.77a10 10 0 1 1 0-16.3l4.76-4.76a16.67 16.67 0 1 0 0 25.82l-4.76-4.76Zm-10.5-3.44a6.67 6.67 0 1 0 9.42-9.42 6.67 6.67 0 0 0-9.42 9.42Z"/><path d="M37.23 9.84a20.03 20.03 0 0 1 0 20.32l-2.45-2.45a16.7 16.7 0 0 0 0-15.42l2.45-2.45Z"/>
     </svg>
-    <svg id="cross" stroke-width="2" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round">
+    <svg id="cross" stroke-width="2" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
         <path d="M18 6L6 18M6 6L18 18"/>
     </svg>
-    <svg id="external" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <svg id="external" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
         <path d="M10 6H18V14"/>
         <path d="M6 18L18 6"/>
     </svg>
-    <svg id="filter" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <svg id="filter" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
         <path d="M2 4.6c0-.56 0-.84.1-1.05a1 1 0 0 1 .45-.44C2.76 3 3.04 3 3.6 3h16.8c.56 0 .84 0 1.05.1a1 1 0 0 1 .44.45c.11.21.11.49.11 1.05v.67c0 .27 0 .4-.03.53a1 1 0 0 1-.14.3c-.08.11-.18.2-.38.38l-6.4 5.54c-.2.18-.3.27-.38.37a1 1 0 0 0-.14.31c-.03.13-.03.26-.03.53v5.23c0 .2 0 .3-.03.38a.5.5 0 0 1-.13.2c-.07.05-.16.09-.34.16l-3.4 1.36c-.37.15-.55.22-.7.2a.5.5 0 0 1-.32-.22c-.08-.13-.08-.33-.08-.72v-6.59c0-.27 0-.4-.03-.53a1 1 0 0 0-.14-.3c-.08-.11-.18-.2-.38-.38l-6.4-5.54c-.2-.18-.3-.27-.38-.37a1 1 0 0 1-.14-.31C2 5.67 2 5.54 2 5.27V4.6Z"/>
     </svg>
-    <svg id="left" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <svg id="left" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
         <path d="M10 6L4 12L10 18"/>
         <path d="M20 12H4"/>
     </svg>
-    <svg id="linkedin" fill="currentcolor">
+    <svg id="linkedin" fill="currentcolor" viewBox="0 0 24 24">
         <path d="M20.47 2H3.53a1.45 1.45 0 0 0-1.47 1.43v17.14A1.45 1.45 0 0 0 3.53 22h16.94a1.45 1.45 0 0 0 1.47-1.43V3.43A1.45 1.45 0 0 0 20.47 2ZM8.09 18.74h-3v-9h3v9ZM6.59 8.48a1.56 1.56 0 0 1 0-3.12 1.57 1.57 0 1 1 0 3.12Zm12.32 10.26h-3v-4.83c0-1.21-.43-2-1.52-2A1.65 1.65 0 0 0 12.85 13a2 2 0 0 0-.1.73v5h-3v-9h3V11a3 3 0 0 1 2.71-1.5c2 0 3.45 1.29 3.45 4.06v5.18Z"/>
     </svg>
-    <svg id="location" fill="none" stroke="currentcolor" stroke-width="2" stroke-linejoin="round">
+    <svg id="location" fill="none" stroke="currentcolor" stroke-width="2" stroke-linejoin="round" viewBox="0 0 24 24">
         <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10Z"/>
         <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z"/>
         <path d="M2 12h20"/>
     </svg>
-    <svg id="mail" fill="none" stroke="currentcolor" stroke-width="2" stroke-linejoin="round">
+    <svg id="mail" fill="none" stroke="currentcolor" stroke-width="2" stroke-linejoin="round" viewBox="0 0 24 24">
         <path d="m4 6 8 6 8-6"/>
         <rect x="3" y="5" width="18" height="14" rx="2"/>
     </svg>
-    <svg id="menu" stroke="currentcolor" stroke-width="2" stroke-linecap="round">
+    <svg id="menu" stroke="currentcolor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24">
         <path d="M3 6h18M3 12h12M3 18h18"/>
     </svg>
-    <svg id="play" fill="none" stroke="currentcolor" stroke-width="2">
+    <svg id="play" fill="none" stroke="currentcolor" stroke-width="2" viewBox="0 0 24 24">
         <path d="M5 4.99c0-.97 0-1.46.2-1.72a1 1 0 0 1 .74-.4c.34-.02.74.25 1.55.79l10.51 7c.67.45 1 .68 1.12.96a1 1 0 0 1 0 .76c-.12.28-.45.5-1.12.95L7.5 20.34c-.81.54-1.21.81-1.55.79a1 1 0 0 1-.74-.4c-.2-.26-.2-.75-.2-1.72V4.99Z"/>
     </svg>
-    <svg id="right" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <svg id="right" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
         <path d="M14 6L20 12L14 18"/>
         <path d="M4 12H20"/>
     </svg>
-    <svg id="rss" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round">
+    <svg id="rss" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24">
         <path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16M5 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"/>
     </svg>
-    <svg id="text" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round">
+    <svg id="text" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24">
         <path d="M8 7h8m-8 4h6m-6 4h2M4 6.8c0-1.68 0-2.52.33-3.16a3 3 0 0 1 1.3-1.31C6.29 2 7.13 2 8.8 2h6.4c1.68 0 2.52 0 3.16.33a3 3 0 0 1 1.31 1.3c.33.65.33 1.49.33 3.17v10.4c0 1.68 0 2.52-.33 3.16a3 3 0 0 1-1.3 1.31c-.65.33-1.49.33-3.17.33H8.8c-1.68 0-2.52 0-3.16-.33a3 3 0 0 1-1.31-1.3C4 19.71 4 18.87 4 17.2V6.8Z"/>
     </svg>
-    <svg id="twitter" fill="currentcolor">
+    <svg id="twitter" fill="currentcolor" viewBox="0 0 24 24">
         <path d="M22 5.8a8.5 8.5 0 0 1-2.36.64 4.13 4.13 0 0 0 1.81-2.27 8.2 8.2 0 0 1-2.61 1 4.1 4.1 0 0 0-7 3.74 11.64 11.64 0 0 1-8.45-4.29 4.16 4.16 0 0 0-.07 4c.32.6.78 1.1 1.34 1.48a4.05 4.05 0 0 1-1.86-.51v.05a4.1 4.1 0 0 0 3.3 4 3.93 3.93 0 0 1-1.87.1 4.11 4.11 0 0 0 3.83 2.84A8.22 8.22 0 0 1 2 18.28a11.57 11.57 0 0 0 6.29 1.85A11.59 11.59 0 0 0 20 8.45v-.53a8.43 8.43 0 0 0 2-2.12Z"/>
     </svg>
-    <svg id="video" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <svg id="video" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
         <path d="M22 8.93c0-.6 0-.9-.12-1.05a.5.5 0 0 0-.42-.17c-.18.01-.4.23-.83.66L17 12l3.63 3.63c.43.43.65.65.83.66a.5.5 0 0 0 .42-.17c.12-.14.12-.45.12-1.05V8.93ZM2 9.8c0-1.68 0-2.52.33-3.16a3 3 0 0 1 1.3-1.31C4.29 5 5.13 5 6.8 5h5.4c1.68 0 2.52 0 3.16.33a3 3 0 0 1 1.31 1.3c.33.65.33 1.49.33 3.17v4.4c0 1.68 0 2.52-.33 3.16a3 3 0 0 1-1.3 1.31c-.65.33-1.49.33-3.17.33H6.8c-1.68 0-2.52 0-3.16-.33a3 3 0 0 1-1.31-1.3C2 16.71 2 15.87 2 14.2V9.8Z"/>
     </svg>
-    <svg id="youtube" fill="currentcolor">
+    <svg id="youtube" fill="currentcolor" viewBox="0 0 24 24">
         <path d="M23 9.71a8.5 8.5 0 0 0-.91-4.13 2.92 2.92 0 0 0-1.72-1A78.36 78.36 0 0 0 12 4.27a77.4 77.4 0 0 0-8.34.3c-.55.1-1.06.36-1.46.74-.9.83-1 2.25-1.1 3.45a48.29 48.29 0 0 0 0 6.48c.03.68.13 1.35.3 2 .12.5.36.97.71 1.36.4.4.93.68 1.49.78 2.16.27 4.33.38 6.5.33 3.5.05 6.57 0 10.2-.28.58-.1 1.11-.37 1.53-.78.28-.28.49-.62.61-1 .36-1.1.53-2.25.52-3.4.04-.56.04-3.94.04-4.54ZM9.74 14.85V8.66l5.92 3.11c-1.66.92-3.85 1.96-5.92 3.08Z"/>
     </svg>
 </svg>
