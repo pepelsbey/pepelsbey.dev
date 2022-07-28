@@ -27,7 +27,7 @@
 /* Tag */
 
 .card__tag {
-
+    font-size: var(--font-size-small);
 }
 
 /* Types */
@@ -59,12 +59,14 @@
 
 .card__title {
     font-weight: normal;
+    font-size: var(--font-size-large);
     font-family: var(--font-family-heading);
 }
 
 /* Link */
 
 .card__link {
+    color: var(--color-text-primary);
     text-decoration: none;
 }
 
