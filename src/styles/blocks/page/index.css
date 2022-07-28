@@ -11,6 +11,5 @@
 /* Body */
 
 .page__body {
-    margin: auto;
-    max-width: 700px;
+    margin: 0;
 }
