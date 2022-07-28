@@ -1,6 +1,7 @@
 /* Footer */
 
 .footer {
+    padding-inline: 20px;
     border-top: 2px solid var(--color-text-primary);
     color: var(--color-text-secondary);
 }

@@ -4,7 +4,7 @@ layout: page.njk
 
 {% include 'header.njk' %}
 
-<main id="main">
+<main class="main" id="main">
     <div class="intro">
         <p class="intro__greeting">
             {{ intro[0] }}
@@ -21,7 +21,7 @@ layout: page.njk
             {{ intro[3] }}
         </p>
         <p class="intro__what">
-            {{ intro[4] }}
+            {{ intro[4] | markdownInline | safe }}
         </p>
     </div>
 
@@ -44,13 +44,16 @@ layout: page.njk
             </a>
         </header>
 
-        {% from 'articles.njk' import articles %}
+        {% from 'card.njk' import card %}
 
-        {{ articles(
-            source=collections.articles,
-            heading='h3',
-            limit=5
-        ) }}
+        {% for article in collections.articles | reverse %}
+            {% if loop.index <= 5 and article.url != page.url %}
+                {{ card(
+                    article=article,
+                    heading='h3'
+                ) }}
+            {% endif %}
+        {% endfor %}
     </section>
 
     <section class="archive">

@@ -4,7 +4,7 @@ layout: page.njk
 
 {% include 'header.njk' %}
 
-<main class="content" id="main">
+<main class="main" id="main">
     <p>
         {% for tag in tags %}
             {{ tag }}
@@ -40,14 +40,17 @@ layout: page.njk
         </a>
     </header>
 
-    {% from 'articles.njk' import articles %}
+    {% from 'card.njk' import card %}
 
-    {{ articles(
-        source=collections.articles,
-        heading='h3',
-        limit=4,
-        exclude=page
-    ) }}
+    {% for article in collections.articles | reverse %}
+        {% if loop.index <= 4 and article.url != page.url %}
+            {{ card(
+                article=article,
+                heading='h3'
+            ) }}
+        {% endif %}
+    {% endfor %}
+
 </aside>
 
 {% include 'footer.njk' %}

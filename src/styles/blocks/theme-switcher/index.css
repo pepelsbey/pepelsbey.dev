@@ -12,7 +12,8 @@
 
 .theme-switcher__button {
     margin: 0;
-    padding: 0 1rem;
+    padding: 0;
+    padding-inline: 1rem;
     border: none;
     border-radius: 5em;
     background-color: transparent;

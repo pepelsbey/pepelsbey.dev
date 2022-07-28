@@ -3,7 +3,7 @@
 </a>
 
 <header class="header">
-    <a class="header__link" href="/">
+    <a class="header__link" href="/" aria-label="Home">
         <svg class="header__logo" width="40" height="40" aria-hidden="true">
             <use href="/images/icons.svg#logo"></use>
         </svg>
@@ -11,5 +11,9 @@
 
     {% include 'menu.njk' %}
 
-    {% include 'theme-switcher.njk' %}
+    <section class="theme-switcher" aria-label="Color theme switcher">
+        <button class="theme-switcher__button" aria-pressed="false" value="light">Light</button>
+        <button class="theme-switcher__button" aria-pressed="true" value="auto">Auto</button>
+        <button class="theme-switcher__button" aria-pressed="false" value="dark">Dark</button>
+    </section>
 </header>
