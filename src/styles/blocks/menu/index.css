@@ -9,10 +9,6 @@
     inset: 0;
     padding: 20px;
     display: grid;
-    grid-template-areas:
-        'close  feed'
-        'list   list'
-        'theme theme';
     grid-template-rows:
         min-content
         1fr
@@ -24,24 +20,15 @@
     display: none;
 }
 
-/* Button */
-
-.menu__button {
-    grid-area: close;
-    justify-self: start;
-}
-
 /* Feed */
 
 .menu__feed {
-    grid-area: feed;
     justify-self: end;
 }
 
 /* List */
 
 .menu__list {
-    grid-area: list;
     place-self: center;
     display: grid;
     justify-items: center;
@@ -72,6 +59,5 @@
 /* Theme */
 
 .menu__theme {
-    grid-area: theme;
     justify-self: center;
 }

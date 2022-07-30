@@ -5,11 +5,26 @@
 </p>
 
 <header class="header">
-    <button class="header__button action" type="button">
-        <svg class="action__icon" width="24" height="24" aria-hidden="true">
+    <button
+        class="header__button action"
+        type="button"
+        aria-expanded="false"
+        aria-controls="menu"
+        aria-label="Toggle menu"
+    >
+        <svg class="header__icon-menu action__icon" width="24" height="24" aria-hidden="true">
             <use href="/images/icons.svg#menu">
         </svg>
-        Menu
+        <span class="header__text-menu">
+            Menu
+        </span>
+
+        <svg class="header__icon-close action__icon" width="24" height="24" aria-hidden="true">
+            <use href="/images/icons.svg#close">
+        </svg>
+        <span class="header__text-close">
+            Close
+        </span>
     </button>
 
     <a class="header__link" href="/" aria-label="Home">

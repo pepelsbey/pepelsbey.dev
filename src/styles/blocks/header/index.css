@@ -9,6 +9,27 @@
     border-bottom: 2px solid var(--color-text-primary);
 }
 
+/* Button */
+
+.header__button {
+    position: relative;
+    z-index: 2;
+}
+
+.header__button[aria-expanded='false'] :is(
+    .header__icon-close,
+    .header__text-close
+) {
+    display: none;
+}
+
+.header__button[aria-expanded='true'] :is(
+    .header__icon-menu,
+    .header__text-menu
+) {
+    display: none;
+}
+
 /* Link */
 
 .header__link {

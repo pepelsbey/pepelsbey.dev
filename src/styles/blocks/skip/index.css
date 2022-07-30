@@ -2,6 +2,7 @@
 
 .skip {
     --skip-back: hsl(var(--color-sulu));
+    --skip-text: hsl(var(--color-ebony));
 
     margin: 0;
     background-color: var(--skip-back);
@@ -13,7 +14,7 @@
 .skip__link {
     display: inline-block;
     margin-block: 8px;
-    color: var(--color-text-primary);
+    color: var(--skip-text);
     text-underline-offset: 3px;
     outline: none;
 }
