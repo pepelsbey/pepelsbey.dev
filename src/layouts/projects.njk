@@ -21,20 +21,31 @@ layout: page.njk
             </p>
 
             {% for project in section.projects %}
-                <article>
-                    <p>
-                        {% for tag in project.tags %}
-                            {{ tag }}
-                        {% endfor %}
-                    </p>
-                    <h3>
-                        <a href="{{ project.url }}">
-                            {{- project.title -}}
-                        </a>
-                    </h3>
-                    <p>
-                        {{ project.desc | markdownInline | safe }}
-                    </p>
+                <article class="card">
+                    <div class="card__box">
+                        <p class="card__tags">
+                            {% for tag in project.tags %}
+                                <span class="card__tag">
+                                    {{ tag }}
+                                </span>
+                            {% endfor %}
+                        </p>
+                        <p class="card__types">
+                            <svg class="card__type card__type--external" width="24" height="24" aria-hidden="true">
+                                <use href="/images/icons.svg#external">
+                            </svg>
+                        </p>
+                        <h3 class="card__title">
+                            <a class="card__link" href="{{ project.url }}">
+                                {{- project.title -}}
+                            </a>
+                        </h3>
+                    </div>
+                    <div class="card__desc">
+                        <p class="card__text">
+                            {{ project.desc | markdownInline | safe }}
+                        </p>
+                    </div>
                 </article>
             {% endfor %}
         </section>

@@ -24,3 +24,10 @@
 .archive__link {
     color: var(--color-text-primary);
 }
+
+/* List */
+
+.archive__list {
+    display: grid;
+    row-gap: 40px;
+}

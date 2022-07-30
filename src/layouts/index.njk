@@ -5,7 +5,7 @@ layout: page.njk
 {% include 'header.njk' %}
 
 <main class="main" id="main">
-    <div class="intro">
+    <section class="intro">
         <p class="intro__greeting">
             {{ intro[0] }}
         </p>
@@ -23,7 +23,7 @@ layout: page.njk
         <p class="intro__what">
             {{ intro[4] | markdownInline | safe }}
         </p>
-    </div>
+    </section>
 
     <section class="archive">
         <header class="archive__header">
@@ -43,17 +43,18 @@ layout: page.njk
                 </svg>
             </a>
         </header>
+        <div class="archive__list">
+            {% from 'card.njk' import card %}
 
-        {% from 'card.njk' import card %}
-
-        {% for article in collections.articles | reverse %}
-            {% if loop.index <= 5 and article.url != page.url %}
-                {{ card(
-                    article=article,
-                    heading='h3'
-                ) }}
-            {% endif %}
-        {% endfor %}
+            {% for article in collections.articles | reverse %}
+                {% if loop.index <= 5 and article.url != page.url %}
+                    {{ card(
+                        article=article,
+                        heading='h3'
+                    ) }}
+                {% endif %}
+            {% endfor %}
+        </div>
     </section>
 
     <section class="archive">
@@ -85,16 +86,17 @@ layout: page.njk
                 </svg>
             </a>
         </header>
-
-        {% for section in projects %}
-            <article>
-                <h3>
-                    <a href="/projects/#{{ section.title | lower }}">
-                        {{ section.title }}
-                    </a>
-                </h3>
-            </article>
-        {% endfor %}
+        <div class="archive__list">
+            {% for section in projects %}
+                <article>
+                    <h3>
+                        <a href="/projects/#{{ section.title | lower }}">
+                            {{ section.title }}
+                        </a>
+                    </h3>
+                </article>
+            {% endfor %}
+        </div>
     </section>
 </main>
 

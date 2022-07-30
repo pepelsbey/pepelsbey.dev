@@ -2,7 +2,7 @@
 title: |
     6+5 ways to make a two-column layout: from pretty reasonable to completely wrong
 desc: |
-    You probably won’t ever need eleven ways of making columns, but you might learn something new while figuring them out.
+    You probably won’t ever need eleven ways of making columns, but you might learn something new while figuring them out.
 date: 2022-07-04
 tags:
     - HTML

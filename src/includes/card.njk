@@ -7,14 +7,6 @@
 
     {% if external %}
         {% set articleUrl = article.data.source.url %}
-        {% set outerLink %}
-            <a class="action" href="{{ article.data.source.url }}">
-                Read on {{ article.data.source.title }}
-                <svg class="action__icon" width="24" height="24" aria-hidden="true">
-                    <use href="/images/icons.svg#external">
-                </svg>
-            </a>
-        {% endset %}
     {% else %}
         {% set articleUrl = article.url %}
     {% endif %}
@@ -56,10 +48,19 @@
             </time>
         </div>
 
-        <p class="content">
-            {{ article.data.desc | markdownInline | safe }}
-        </p>
+        <div class="card__desc">
+            <p class="card__text">
+                {{ article.data.desc | markdownInline | safe }}
+            </p>
 
-        {{ outerLink | safe }}
+            {% if external %}
+                <a class="card__source action" href="{{ article.data.source.url }}">
+                    Read on {{ article.data.source.title }}
+                    <svg class="action__icon" width="24" height="24" aria-hidden="true">
+                        <use href="/images/icons.svg#external">
+                    </svg>
+                </a>
+            {% endif %}
+        </div>
     </article>
 {% endmacro %}

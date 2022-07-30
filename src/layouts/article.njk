@@ -24,33 +24,34 @@ layout: page.njk
     {{ content | safe }}
 </main>
 
-<aside class="archive">
-    <header class="archive__header">
-        <h2 class="archive__title">
-            More articles
-            <span class="archive__number">
-                4
-            </span>
-        </h2>
-        <a class="archive__link" href="/articles/">
-            View all
-            <span class="sr-only">
-                articles
-            </span>
-        </a>
-    </header>
+<aside class="aside">
+    <div class="archive">
+        <header class="archive__header">
+            <h2 class="archive__title">
+                More articles
+                <span class="archive__number">
+                    4
+                </span>
+            </h2>
+            <a class="archive__link" href="/articles/">
+                View all
+                <span class="sr-only">
+                    articles
+                </span>
+            </a>
+        </header>
 
-    {% from 'card.njk' import card %}
+        {% from 'card.njk' import card %}
 
-    {% for article in collections.articles | reverse %}
-        {% if loop.index <= 4 and article.url != page.url %}
-            {{ card(
-                article=article,
-                heading='h3'
-            ) }}
-        {% endif %}
-    {% endfor %}
-
+        {% for article in collections.articles | reverse %}
+            {% if loop.index <= 4 and article.url != page.url %}
+                {{ card(
+                    article=article,
+                    heading='h3'
+                ) }}
+            {% endif %}
+        {% endfor %}
+    </div>
 </aside>
 
 {% include 'footer.njk' %}

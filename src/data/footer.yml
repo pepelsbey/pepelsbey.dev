@@ -15,14 +15,14 @@
 
 - title: Email
   items:
-  - title: pepelsbey@gmail.com
-    url: mailto:pepelsbey@gmail.com
+  - title: hi@<wbr>pepelsbey.dev
+    url: mailto:hi@pepelsbey.dev
 
 # Credits
 
 - title: Credits
   items:
-  - title: Designed by Mark Shakhov
-  - title: Handcrafted by me
-  - title: Powered by Eleventy
+  - title: Handcrafted by me
+  - title: Designed by Mark Shakhov
+  - title: Powered by Eleventy
     url: https://11ty.dev/

@@ -2,7 +2,7 @@
 title: |
     When is a button not a button?
 desc: |
-    How to choose between link and button and why you should never try to recreate a native `<button>` with JS.
+    How to choose between link and button and why you should never try to recreate a native `<button>` with JS.
 date: 2019-02-25
 tags:
     - HTML

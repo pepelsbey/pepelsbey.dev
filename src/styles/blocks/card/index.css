@@ -8,6 +8,10 @@
 /* Box */
 
 .card__box {
+    position: relative;
+    display: grid;
+    row-gap: 20px;
+    grid-template-columns: auto min-content;
     padding: 20px;
     border-radius: 20px;
     background-color: var(--card-box-back);
@@ -22,6 +26,7 @@
 /* Tags */
 
 .card__tags {
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     column-gap: 8px;
@@ -32,13 +37,14 @@
 .card__tag {
     padding-inline: 1rem;
     border-radius: 5em;
-    border: 2px solid var(--color-text-primary);
+    border: 1.5px solid var(--color-text-primary);
     font-size: var(--font-size-small);
 }
 
 /* Types */
 
 .card__types {
+    margin: 0;
     display: flex;
     column-gap: 8px;
 }
@@ -64,6 +70,8 @@
 /* Title */
 
 .card__title {
+    grid-column: 1 / -1;
+    margin: 0;
     line-height: 1.25;
     font-weight: normal;
     font-size: var(--font-size-large);
@@ -77,8 +85,47 @@
     text-decoration: none;
 }
 
+.card__link:focus-visible {
+    outline: none;
+}
+
+.card__link::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    border-radius: 20px;
+}
+
+.card__link:focus-visible::before {
+    outline: 2px solid var(--color-focus);
+}
+
 /* Date */
 
 .card__date {
+    grid-column: 1 / -1;
+}
 
+/* Desc */
+
+.card__desc {
+    display: grid;
+    row-gap: 16px;
+    padding-inline: 20px;
+    padding-block: 16px;
+}
+
+/* Text */
+
+.card__text {
+    margin: 0;
+}
+
+/* Source */
+
+.card__source {
+    justify-self: start;
 }
