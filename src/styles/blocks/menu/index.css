@@ -1,13 +1,51 @@
-/* menu */
+/* Menu */
 
 .menu {
     --menu-current-back: hsl(var(--color-sulu));
     --menu-current-text: hsl(var(--color-ebony));
+
+    position: fixed;
+    z-index: 1;
+    inset: 0;
+    padding: 20px;
+    display: grid;
+    grid-template-areas:
+        'close  feed'
+        'list   list'
+        'theme theme';
+    grid-template-rows:
+        min-content
+        1fr
+        min-content;
+    background-color: var(--color-back-primary);
+}
+
+.menu[hidden] {
+    display: none;
+}
+
+/* Button */
+
+.menu__button {
+    grid-area: close;
+    justify-self: start;
+}
+
+/* Feed */
+
+.menu__feed {
+    grid-area: feed;
+    justify-self: end;
 }
 
 /* List */
 
 .menu__list {
+    grid-area: list;
+    place-self: center;
+    display: grid;
+    justify-items: center;
+    row-gap: 40px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -17,7 +55,7 @@
 
 .menu__link {
     color: var(--color-text-secondary);
-    text-underline-offset: 3px;
+    font-size: var(--font-size-large);
 }
 
 .menu__link:focus-visible {
@@ -29,4 +67,11 @@
 .menu__link[aria-current] {
     background-color: var(--menu-current-back);
     color: var(--menu-current-text);
+}
+
+/* Theme */
+
+.menu__theme {
+    grid-area: theme;
+    justify-self: center;
 }

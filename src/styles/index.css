@@ -26,6 +26,6 @@
 @import 'blocks/main/index.css';
 @import 'blocks/menu/index.css';
 @import 'blocks/page/index.css';
-@import 'blocks/skip-link/index.css';
+@import 'blocks/skip/index.css';
 @import 'blocks/sr-only/index.css';
-@import 'blocks/theme-switcher/index.css';
+@import 'blocks/switcher/index.css';

@@ -1,9 +1,12 @@
 /* Header */
 
 .header {
-    position: relative;
-    padding: 28px 0;
-    background-color: var(--color-back-primary);
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding-inline: 20px;
+    padding-block: 16px;
+    border-bottom: 2px solid var(--color-text-primary);
 }
 
 /* Link */

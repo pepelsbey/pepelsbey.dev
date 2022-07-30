@@ -1,2 +1,3 @@
-// import './modules/sticky-header.js';
-import './modules/theme-switcher.js';
+// import './modules/header.js';
+import './modules/menu.js';
+import './modules/switcher.js';

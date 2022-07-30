@@ -1,4 +1,18 @@
-<nav class="menu" aria-label="Primary">
+<nav class="menu" hidden aria-label="Primary">
+    <button class="menu__button action" type="button">
+        <svg class="action__icon" width="24" height="24" aria-hidden="true">
+            <use href="/images/icons.svg#cross">
+        </svg>
+        Close
+    </button>
+
+    <a class="menu__feed action" href="/feed/">
+        <svg class="action__icon" width="24" height="24" aria-hidden="true">
+            <use href="/images/icons.svg#rss">
+        </svg>
+        RSS
+    </a>
+
     <ul class="menu__list">
         {% for item in menu %}
             {% if item.link == page.url %}
@@ -13,22 +27,10 @@
             </li>
         {% endfor %}
     </ul>
-    <button class="action" type="button">
-        <svg class="action__icon" width="24" height="24" aria-hidden="true">
-            <use href="/images/icons.svg#menu">
-        </svg>
-        Menu
-    </button>
-    <button class="action" type="button">
-        <svg class="action__icon" width="24" height="24" aria-hidden="true">
-            <use href="/images/icons.svg#cross">
-        </svg>
-        Close
-    </button>
-    <a class="action" href="/feed/">
-        <svg class="action__icon" width="24" height="24" aria-hidden="true">
-            <use href="/images/icons.svg#rss">
-        </svg>
-        RSS
-    </a>
+
+    <section class="menu__theme theme-switcher" aria-label="Color theme switcher">
+        <button class="theme-switcher__button" aria-pressed="false" value="light">Light</button>
+        <button class="theme-switcher__button" aria-pressed="true" value="auto">Auto</button>
+        <button class="theme-switcher__button" aria-pressed="false" value="dark">Dark</button>
+    </section>
 </nav>
