@@ -24,7 +24,6 @@
     "postcss": "^8.4.13",
     "postcss-csso": "^6.0.0",
     "postcss-import": "^14.1.0",
-    "pretty-data": "^0.40.0",
-    "wicg-inert": "^3.1.2"
+    "pretty-data": "^0.40.0"
   }
 }
