@@ -8,6 +8,12 @@
     font-family: var(--font-family-text);
 }
 
+/* Clip */
+
+.page--clip {
+    overflow: hidden;
+}
+
 /* Body */
 
 .page__body {

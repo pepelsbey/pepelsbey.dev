@@ -1,5 +1,6 @@
 import { createFocusTrap } from 'focus-trap';
 
+const page = document.documentElement;
 const header = document.querySelector('.header');
 const headerButton = document.querySelector('.header__button');
 const headerLink = document.querySelector('.header__link');
@@ -16,6 +17,7 @@ function toggleMenu() {
     headerButton.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
     headerLink.setAttribute('tabindex', isOpen ? '0' : '-1');
     menu.toggleAttribute('hidden');
+    page.classList.toggle('page--clip');
 
     if (isOpen) {
         focusTrap.deactivate();
