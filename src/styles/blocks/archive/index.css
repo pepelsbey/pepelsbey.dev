@@ -1,3 +1,10 @@
+/* Archive */
+
+.archive {
+    display: grid;
+    row-gap: 40px;
+}
+
 /* Header */
 
 .archive__header {
@@ -27,14 +34,7 @@
 /* Link */
 
 .archive__link {
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     margin-left: auto;
     color: var(--color-text-primary);
-}
-
-/* List */
-
-.archive__list {
-    display: grid;
-    row-gap: 40px;
 }

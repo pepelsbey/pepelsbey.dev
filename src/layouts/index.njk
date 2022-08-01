@@ -39,18 +39,17 @@ layout: page.njk
                 </svg>
             </a>
         </header>
-        <div class="archive__list">
-            {% from 'card.njk' import card %}
 
-            {% for article in collections.articles | reverse %}
-                {% if loop.index <= 5 and article.url != page.url %}
-                    {{ card(
-                        article=article,
-                        heading='h3'
-                    ) }}
-                {% endif %}
-            {% endfor %}
-        </div>
+        {% from 'card.njk' import card %}
+
+        {% for article in collections.articles | reverse %}
+            {% if loop.index <= 5 and article.url != page.url %}
+                {{ card(
+                    article=article,
+                    heading='h3'
+                ) }}
+            {% endif %}
+        {% endfor %}
     </section>
 
     <section class="archive">
