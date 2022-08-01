@@ -1,12 +1,16 @@
 /* Header */
 
 .archive__header {
+    padding-block: 20px;
+    display: flex;
     border-bottom: 2px solid var(--color-text-primary);
 }
 
 /* Title */
 
 .archive__title {
+    margin: 0;
+    line-height: 1.1;
     text-transform: uppercase;
     font-weight: normal;
     font-size: var(--font-size-heading-2);
@@ -16,12 +20,15 @@
 /* Number */
 
 .archive__number {
-
+    margin-left: 4px;
+    line-height: 1.3;
 }
 
 /* Link */
 
 .archive__link {
+    margin-bottom: 4px;
+    margin-left: auto;
     color: var(--color-text-primary);
 }
 
