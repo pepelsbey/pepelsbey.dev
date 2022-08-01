@@ -1,0 +1,86 @@
+/* Chip */
+
+.chip {
+    --chip-back-tools: hsl(var(--color-lilac));
+    --chip-back-podcasts: hsl(var(--color-sulu));
+    --chip-back-websites: hsl(var(--color-coral));
+    --chip-text-primary: hsl(var(--color-ebony));
+
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    padding-inline: 20px;
+    padding-block: 40px;
+    min-height: 240px;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 200px;
+    color: var(--chip-text-primary);
+}
+
+@media (min-width: 1024px) {
+    .chip {
+        border-radius: 40px;
+    }
+}
+
+/* Types */
+
+.chip--tools {
+    background-color: var(--chip-back-tools);
+    background-image: url('/images/scribbles.svg#1-white-60');
+}
+
+.chip--podcasts {
+    background-color: var(--chip-back-podcasts);
+    background-image: url('/images/scribbles.svg#2-white-60');
+}
+
+.chip--websites {
+    background-color: var(--chip-back-websites);
+    background-image: url('/images/scribbles.svg#3-white-60');
+}
+
+/* Title */
+
+.chip__title {
+    margin: 0;
+    line-height: 1.25;
+    font-weight: normal;
+    font-size: var(--font-size-heading-3);
+    font-family: var(--font-family-heading);
+}
+
+/* Link */
+
+.chip__link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.chip__link:focus-visible {
+    outline: none;
+}
+
+.chip__link::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    border-radius: 20px;
+}
+
+.chip__link:focus-visible::before {
+    outline-offset: 2px;
+    outline: 2px solid var(--color-focus);
+}
+
+/* Icon */
+
+.chip__icon {
+    width: 36px;
+    height: 36px;
+}

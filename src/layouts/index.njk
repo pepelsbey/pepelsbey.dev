@@ -77,17 +77,18 @@ layout: page.njk
                 </svg>
             </a>
         </header>
-        <div class="archive__list">
-            {% for section in projects %}
-                <article>
-                    <h3>
-                        <a href="/projects/#{{ section.title | lower }}">
-                            {{ section.title }}
-                        </a>
-                    </h3>
-                </article>
-            {% endfor %}
-        </div>
+        {% for section in projects %}
+            <article class="chip chip--{{ section.title | lower }}">
+                <h3 class="chip__title">
+                    <a class="chip__link" href="/projects/#{{ section.title | lower }}">
+                        {{ section.title }}
+                    </a>
+                </h3>
+                <svg class="chip__icon" width="36" height="36" aria-hidden="true">
+                    <use href="/images/icons.svg#right"></use>
+                </svg>
+            </article>
+        {% endfor %}
     </section>
 </main>
 
