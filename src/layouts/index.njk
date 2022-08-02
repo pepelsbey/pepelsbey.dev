@@ -25,15 +25,15 @@ layout: page.njk
         </p>
     </section>
 
-    <section class="archive">
-        <header class="archive__header">
-            <h2 class="archive__title">
+    <section>
+        <header class="caption">
+            <h2 class="caption__title">
                 Articles
             </h2>
-            <span class="archive__number">
+            <span class="caption__number">
                 {{ collections.articles.length }}
             </span>
-            <a class="archive__link action" href="/articles/">
+            <a class="caption__link action" href="/articles/">
                 <svg class="action__icon" width="24" height="24" aria-hidden="true">
                     <use href="/images/icons.svg#right"></use>
                 </svg>
@@ -52,7 +52,7 @@ layout: page.njk
         {% endfor %}
     </section>
 
-    <section class="archive">
+    <section>
         {% set projectsList = [] %}
 
         {% for section in projects %}
@@ -64,19 +64,20 @@ layout: page.njk
             {% endfor %}
         {% endfor %}
 
-        <header class="archive__header">
-            <h2 class="archive__title">
+        <header class="caption">
+            <h2 class="caption__title">
                 Projects
             </h2>
-            <span class="archive__number">
+            <span class="caption__number">
                 {{ projectsList.length }}
             </span>
-            <a class="archive__link action" href="/projects/">
+            <a class="caption__link action" href="/projects/">
                 <svg class="action__icon" width="24" height="24" aria-hidden="true">
                     <use href="/images/icons.svg#right"></use>
                 </svg>
             </a>
         </header>
+
         {% for section in projects %}
             <article class="chip chip--{{ section.title | lower }}">
                 <h3 class="chip__title">

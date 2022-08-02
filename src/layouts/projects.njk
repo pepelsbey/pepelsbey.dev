@@ -5,9 +5,25 @@ layout: page.njk
 {% include 'header.njk' %}
 
 <main class="main" id="main">
-    <h1>
-        {{ title }}
-    </h1>
+    {% set projectsList = [] %}
+
+    {% for section in projects %}
+        {% for project in section.projects %}
+            {% set projectsList = (
+                projectsList.push(project),
+                projectsList
+            ) %}
+        {% endfor %}
+    {% endfor %}
+
+    <header class="caption">
+        <h2 class="caption__title">
+            {{ title }}
+        </h2>
+        <span class="caption__number">
+            {{ projectsList.length }}
+        </span>
+    </header>
 
     {{ content | safe }}
 

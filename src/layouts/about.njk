@@ -5,9 +5,11 @@ layout: page.njk
 {% include 'header.njk' %}
 
 <main class="main" id="main">
-    <h1>
-        {{ title }}
-    </h1>
+    <header class="caption">
+        <h1 class="caption__title">
+            {{ title }}
+        </h1>
+    </header>
 
     {{ content | safe }}
 
