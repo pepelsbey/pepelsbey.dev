@@ -28,7 +28,9 @@ layout: page.njk
     {{ content | safe }}
 
     {% for section in projects %}
-        <section id="{{ section.title | lower }}">
+        {% set id = section.title | lower %}
+
+        <section id="{{ id }}">
             <h2>
                 {{ section.title }}
             </h2>
@@ -38,7 +40,7 @@ layout: page.njk
 
             {% for project in section.projects %}
                 <article class="card">
-                    <div class="card__box">
+                    <div class="card__box card__box--project card__box--{{ id }}">
                         <h3 class="card__title">
                             <a class="card__link" href="{{ project.url }}">
                                 {{- project.title -}}
@@ -52,7 +54,7 @@ layout: page.njk
                             {% endfor %}
                         </p>
                         <p class="card__types">
-                            <svg class="card__type card__type--external" width="24" height="24" aria-hidden="true">
+                            <svg class="card__type" width="24" height="24" aria-hidden="true">
                                 <use href="/images/icons.svg#external">
                             </svg>
                         </p>

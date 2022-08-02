@@ -1,6 +1,10 @@
 /* Card */
 
 .card {
+    --card-tools-back: hsl(var(--color-lilac));
+    --card-podcasts-back: hsl(var(--color-sulu));
+    --card-websites-back: hsl(var(--color-coral));
+    --card-project-text: hsl(var(--color-ebony));
     --card-type-text: hsl(var(--color-lilac));
     --card-type-video: hsl(var(--color-coral));
     --card-radius: 20px;
@@ -24,6 +28,24 @@
     background-color: var(--card-box-back);
 }
 
+/* Projects */
+
+.card__box--project {
+    color: var(--card-project-text);
+}
+
+.card__box--tools {
+    background-color: var(--card-tools-back);
+}
+
+.card__box--podcasts {
+    background-color: var(--card-podcasts-back);
+}
+
+.card__box--websites {
+    background-color: var(--card-websites-back);
+}
+
 /* Tags */
 
 .card__tags {
@@ -38,7 +60,7 @@
 .card__tag {
     padding-inline: 1rem;
     border-radius: 5em;
-    border: 1.5px solid var(--color-text-primary);
+    border: 1.5px solid;
     font-size: var(--font-size-small);
 }
 
@@ -83,7 +105,7 @@
 /* Link */
 
 .card__link {
-    color: var(--color-text-primary);
+    color: inherit;
     text-decoration: none;
 }
 
