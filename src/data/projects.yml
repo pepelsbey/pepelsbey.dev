@@ -4,7 +4,7 @@
   desc: Handy little tools that I created for myself, but you might also find useful
   projects:
 
-  - title: Shower
+  - title: Shower presentation engine
     desc: Presentation engine for people who enjoy writing HTML and CSS
     url: https://shwr.me/
     tags:
@@ -12,14 +12,14 @@
     - CSS
     - JS
 
-  - title: Prompter
+  - title: Prompter script scroller
     desc: A thing that scrolls your text on a mirror so you can look right into the camera
     url: https://github.com/pepelsbey/prompter
     tags:
     - CSS
     - JS
 
-  - title: ContentEditable
+  - title: ContentEditable browser extension
     desc: Browser extension that makes any page editable by adding an attribute to the `<body>`
     url: https://github.com/pepelsbey/contenteditable
     tags:
