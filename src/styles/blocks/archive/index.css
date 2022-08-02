@@ -10,7 +10,7 @@
 .archive__header {
     padding-block: 20px;
     display: flex;
-    border-bottom: 2px solid var(--color-text-primary);
+    border-block-end: 2px solid var(--color-text-primary);
 }
 
 /* Title */
@@ -27,14 +27,14 @@
 /* Number */
 
 .archive__number {
-    margin-left: 4px;
+    margin-inline-start: 4px;
     line-height: 1.3;
 }
 
 /* Link */
 
 .archive__link {
-    margin-bottom: 8px;
-    margin-left: auto;
+    margin-block-end: 8px;
+    margin-inline-start: auto;
     color: var(--color-text-primary);
 }

@@ -11,7 +11,7 @@
 
 .page__body {
     margin: auto;
-    padding-top: 30px;
+    padding-block-start: 30px;
     width: 800px;
     font-family: sans-serif;
 }

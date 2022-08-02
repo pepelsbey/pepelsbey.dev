@@ -6,7 +6,7 @@
     align-content: center;
     padding-inline: 20px;
     padding-block: 16px;
-    border-bottom: 2px solid var(--color-text-primary);
+    border-block-end: 2px solid var(--color-text-primary);
 }
 
 /* Button */

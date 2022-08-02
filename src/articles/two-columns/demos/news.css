@@ -22,6 +22,6 @@
 .news__lead {
     margin: 0;
     padding: 15px;
-    padding-top: 0;
+    padding-block-start: 0;
     line-height: 1.4;
 }
