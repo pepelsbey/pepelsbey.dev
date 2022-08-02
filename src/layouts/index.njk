@@ -40,16 +40,18 @@ layout: page.njk
             </a>
         </header>
 
-        {% from 'card.njk' import card %}
+        <div class="card-list">
+            {% from 'card.njk' import card %}
 
-        {% for article in collections.articles | reverse %}
-            {% if loop.index <= 5 and article.url != page.url %}
-                {{ card(
-                    article=article,
-                    heading='h3'
-                ) }}
-            {% endif %}
-        {% endfor %}
+            {% for article in collections.articles | reverse %}
+                {% if loop.index <= 5 and article.url != page.url %}
+                    {{ card(
+                        article=article,
+                        heading='h3'
+                    ) }}
+                {% endif %}
+            {% endfor %}
+        </div>
     </section>
 
     <section>
@@ -78,18 +80,20 @@ layout: page.njk
             </a>
         </header>
 
-        {% for section in projects %}
-            <article class="chip chip--{{ section.title | lower }}">
-                <h3 class="chip__title">
-                    <a class="chip__link" href="/projects/#{{ section.title | lower }}">
-                        {{ section.title }}
-                    </a>
-                </h3>
-                <svg class="chip__icon" width="36" height="36" aria-hidden="true">
-                    <use href="/images/icons.svg#right"></use>
-                </svg>
-            </article>
-        {% endfor %}
+        <div class="chip-list">
+            {% for section in projects %}
+                <article class="chip chip--{{ section.title | lower }}">
+                    <h3 class="chip__title">
+                        <a class="chip__link" href="/projects/#{{ section.title | lower }}">
+                            {{ section.title }}
+                        </a>
+                    </h3>
+                    <svg class="chip__icon" width="36" height="36" aria-hidden="true">
+                        <use href="/images/icons.svg#right"></use>
+                    </svg>
+                </article>
+            {% endfor %}
+        </div>
     </section>
 </main>
 

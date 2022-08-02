@@ -1,0 +1,7 @@
+/* Card List */
+
+.card-list {
+    display: grid;
+    row-gap: 16px;
+    padding-block-start: 40px;
+}

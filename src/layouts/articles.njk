@@ -26,16 +26,18 @@ layout: page.njk
         </a>
     </header>
 
-    {% from 'card.njk' import card %}
+    <div class="card-list">
+        {% from 'card.njk' import card %}
 
-    {% for article in collections.articles | reverse %}
-        {% if loop.index <= 5 and article.url != page.url %}
-            {{ card(
-                article=article,
-                heading='h2'
-            ) }}
-        {% endif %}
-    {% endfor %}
+        {% for article in collections.articles | reverse %}
+            {% if loop.index <= 5 and article.url != page.url %}
+                {{ card(
+                    article=article,
+                    heading='h2'
+                ) }}
+            {% endif %}
+        {% endfor %}
+    </div>
 
     {% include 'pages.njk' %}
 </main>

@@ -41,6 +41,8 @@
 /* Link */
 
 .menu__link {
+    padding: 0.05em 0.08em;
+    border-radius: 0.1em;
     color: var(--color-text-secondary);
     font-size: var(--font-size-large);
 }

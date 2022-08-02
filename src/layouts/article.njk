@@ -4,51 +4,57 @@ layout: page.njk
 
 {% include 'header.njk' %}
 
-<main class="main" id="main">
-    <p>
-        {% for tag in tags %}
-            {{ tag }}
-        {% endfor %}
-    </p>
+<div class="main">
+    <main id="main">
+        <header>
+            <h1>
+                {{ title }}
+            </h1>
+            <p>
+                {% for tag in tags %}
+                    {{ tag }}
+                {% endfor %}
+            </p>
+            <p>
+                <time datetime="{{ date | dateISO }}">
+                    {{ date | dateLong }}
+                </time>
+            </p>
+        </header>
 
-    <h1>
-        {{ title }}
-    </h1>
+        <div class="content">
+            {{ content | safe }}
+        </div>
+    </main>
 
-    <p>
-        <time datetime="{{ date | dateISO }}">
-            {{ date | dateLong }}
-        </time>
-    </p>
+    <aside class="aside">
+        <header class="caption">
+            <h2 class="caption__title">
+                More
+            </h2>
+            <span class="caption__number">
+                4
+            </span>
+            <a class="caption__link action" href="/articles/">
+                <svg class="action__icon" width="24" height="24" aria-hidden="true">
+                    <use href="/images/icons.svg#right"></use>
+                </svg>
+            </a>
+        </header>
 
-    {{ content | safe }}
-</main>
+        <div class="card-list">
+            {% from 'card.njk' import card %}
 
-<aside class="aside">
-    <header class="caption">
-        <h2 class="caption__title">
-            More
-        </h2>
-        <span class="caption__number">
-            4
-        </span>
-        <a class="caption__link action" href="/articles/">
-            <svg class="action__icon" width="24" height="24" aria-hidden="true">
-                <use href="/images/icons.svg#right"></use>
-            </svg>
-        </a>
-    </header>
-
-    {% from 'card.njk' import card %}
-
-    {% for article in collections.articles | reverse %}
-        {% if loop.index <= 4 and article.url != page.url %}
-            {{ card(
-                article=article,
-                heading='h3'
-            ) }}
-        {% endif %}
-    {% endfor %}
-</aside>
+            {% for article in collections.articles | reverse %}
+                {% if loop.index <= 4 and article.url != page.url %}
+                    {{ card(
+                        article=article,
+                        heading='h3'
+                    ) }}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </aside>
+</div>
 
 {% include 'footer.njk' %}
