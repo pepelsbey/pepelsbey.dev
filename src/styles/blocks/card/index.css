@@ -11,7 +11,7 @@
     position: relative;
     display: grid;
     row-gap: 20px;
-    grid-template-columns: auto min-content;
+    grid-template-columns: 1fr min-content;
     padding: 20px;
     border-radius: 20px;
     background-color: var(--card-box-back);
