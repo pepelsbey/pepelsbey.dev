@@ -39,6 +39,11 @@ layout: page.njk
             {% for project in section.projects %}
                 <article class="card">
                     <div class="card__box">
+                        <h3 class="card__title">
+                            <a class="card__link" href="{{ project.url }}">
+                                {{- project.title -}}
+                            </a>
+                        </h3>
                         <p class="card__tags">
                             {% for tag in project.tags %}
                                 <span class="card__tag">
@@ -51,11 +56,6 @@ layout: page.njk
                                 <use href="/images/icons.svg#external">
                             </svg>
                         </p>
-                        <h3 class="card__title">
-                            <a class="card__link" href="{{ project.url }}">
-                                {{- project.title -}}
-                            </a>
-                        </h3>
                     </div>
                     <div class="card__desc">
                         <p class="card__text">

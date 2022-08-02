@@ -13,6 +13,12 @@
 
     <article class="card">
         <div class="card__box">
+            <{{ heading }}} class="card__title">
+                <a class="card__link" href="{{ articleUrl }}">
+                    {{- article.data.title -}}
+                </a>
+            </{{ heading }}}>
+
             <p class="card__tags">
                 {% for tag in article.data.tags %}
                     <span class="card__tag">
@@ -36,12 +42,6 @@
                     </svg>
                 {% endif %}
             </p>
-
-            <{{ heading }}} class="card__title">
-                <a class="card__link" href="{{ articleUrl }}">
-                    {{- article.data.title -}}
-                </a>
-            </{{ heading }}}>
 
             <time class="card__date" datetime="{{ article.date | dateISO }}">
                 {{ article.date | dateShort }}
