@@ -3,6 +3,13 @@
 .card {
     --card-type-text: hsl(var(--color-lilac));
     --card-type-video: hsl(var(--color-coral));
+    --card-radius: 20px;
+}
+
+@media (min-width: 1024px) {
+    .card {
+        --card-radius: 40px;
+    }
 }
 
 /* Box */
@@ -13,14 +20,8 @@
     row-gap: 20px;
     grid-template-columns: 1fr min-content;
     padding: 20px;
-    border-radius: 20px;
+    border-radius: var(--card-radius);
     background-color: var(--card-box-back);
-}
-
-@media (min-width: 1024px) {
-    .card__box {
-        border-radius: 40px;
-    }
 }
 
 /* Tags */
@@ -93,7 +94,7 @@
     position: absolute;
     inset: 0;
     content: '';
-    border-radius: 20px;
+    border-radius: var(--card-radius);
 }
 
 .card__link:focus-visible::before {

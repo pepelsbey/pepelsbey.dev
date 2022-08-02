@@ -5,6 +5,7 @@
     --chip-back-podcasts: hsl(var(--color-sulu));
     --chip-back-websites: hsl(var(--color-coral));
     --chip-text-primary: hsl(var(--color-ebony));
+    --chip-radius: 20px;
 
     position: relative;
     display: grid;
@@ -12,7 +13,7 @@
     padding-inline: 20px;
     padding-block: 40px;
     min-height: 240px;
-    border-radius: 20px;
+    border-radius: var(--chip-radius);
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: 200px;
@@ -21,7 +22,7 @@
 
 @media (min-width: 1024px) {
     .chip {
-        border-radius: 40px;
+        --chip-radius: 40px;
     }
 }
 
@@ -67,7 +68,7 @@
     position: absolute;
     inset: 0;
     content: '';
-    border-radius: 20px;
+    border-radius: var(--chip-radius);
 }
 
 .chip__link:focus-visible::before {
