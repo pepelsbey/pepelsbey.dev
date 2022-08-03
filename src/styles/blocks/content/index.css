@@ -1,6 +1,7 @@
 /* Content */
 
 .content {
+    padding-block-start: 40px;
     display: grid;
     row-gap: 20px;
 }

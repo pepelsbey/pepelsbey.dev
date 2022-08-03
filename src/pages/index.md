@@ -1,7 +1,7 @@
 ---
 layout: index.njk
 permalink: index.html
-intro:
+profile:
     - Hi, my name is
     - Vadim Makeev
     - /images/photo.png

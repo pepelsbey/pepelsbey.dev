@@ -13,4 +13,13 @@
     <use id="1-white-60" href="#1" fill="white" fill-opacity="0.6"/>
     <use id="2-white-60" href="#2" fill="white" fill-opacity="0.6"/>
     <use id="3-white-60" href="#3" fill="white" fill-opacity="0.6"/>
+
+    <use
+        id="1-manatee-5-flip"
+        href="#1"
+        fill="hsl(231 10% 59%)"
+        fill-opacity="0.05"
+        transform="scale(-1, 1)"
+        transform-origin="center"
+    />
 </svg>

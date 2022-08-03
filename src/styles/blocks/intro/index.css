@@ -1,39 +1,30 @@
 /* Intro */
 
 .intro {
-
+    display: grid;
+    row-gap: 20px;
+    padding-block: 40px;
+    padding-inline: 20px;
+    background-color: var(--intro-back);
+    background-image: url('/images/scribbles.svg#1-manatee-5-flip');
+    background-position: 50% 50%;
+    background-origin: content-box;
+    background-repeat: no-repeat;
 }
 
-/* Name */
+/* Tags */
 
-.intro__name {
+.intro__tags {
+    order: -1;
+}
+
+/* Title */
+
+.intro__title {
+    margin: 0;
     text-transform: uppercase;
+    line-height: 1.1;
     font-weight: normal;
     font-family: var(--font-family-heading);
-}
-
-/* Photo */
-
-.intro__photo {
-    display: block;
-    background-color: var(--intro-photo-back);
-    border-radius: 20px;
-}
-
-@media (min-width: 1024px) {
-    .intro__photo {
-        border-radius: 40px;
-    }
-}
-
-/* Who */
-
-.intro__who {
-    font-family: var(--font-family-heading);
-}
-
-/* What */
-
-.intro__what {
-
+    font-size: var(--font-size-h1);
 }

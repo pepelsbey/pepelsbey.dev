@@ -29,6 +29,8 @@
 @import 'blocks/main/index.css';
 @import 'blocks/menu/index.css';
 @import 'blocks/page/index.css';
+@import 'blocks/profile/index.css';
 @import 'blocks/skip/index.css';
 @import 'blocks/sr-only/index.css';
 @import 'blocks/switcher/index.css';
+@import 'blocks/tags/index.css';

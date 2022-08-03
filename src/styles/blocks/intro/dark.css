@@ -1,5 +1,5 @@
 /* Intro */
 
 .intro {
-    --intro-photo-back: hsl(var(--color-lilac));
+    --intro-back: hsl(var(--color-steel));
 }

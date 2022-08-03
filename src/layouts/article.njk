@@ -6,20 +6,18 @@ layout: page.njk
 
 <div class="main">
     <main id="main">
-        <header>
-            <h1>
+        <header class="main__intro intro">
+            <h1 class="intro__title">
                 {{ title }}
             </h1>
-            <p>
+            <p class="intro__tags tags">
                 {% for tag in tags %}
-                    {{ tag }}
+                    <span class="tags__item">{{ tag }}</span>
                 {% endfor %}
             </p>
-            <p>
-                <time datetime="{{ date | dateISO }}">
-                    {{ date | dateLong }}
-                </time>
-            </p>
+            <time class="intro__date" datetime="{{ date | dateISO }}">
+                {{ date | dateLong }}
+            </time>
         </header>
 
         <div class="content">
