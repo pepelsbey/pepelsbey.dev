@@ -1,0 +1,29 @@
+---
+layout: page.njk
+---
+
+{% include 'header.njk' %}
+
+<div class="main">
+    <main id="main">
+        <header class="caption">
+            <h1 class="caption__title">
+                {{ title }}
+            </h1>
+        </header>
+
+        <div class="content">
+            {{ content | safe }}
+        </div>
+    </main>
+
+    {% from 'aside.njk' import aside with context %}
+
+    {{ aside(
+        title='Articles',
+        number=4
+    ) }}
+
+</div>
+
+{% include 'footer.njk' %}
