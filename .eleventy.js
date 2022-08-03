@@ -167,9 +167,16 @@ module.exports = (config) => {
 
     // Passthrough copy
 
-    config.addPassthroughCopy('src/images');
-    config.addPassthroughCopy('src/fonts');
-    config.addPassthroughCopy('src/articles/**/*.!(md)');
+    copyPaths = [
+        'src/robots.txt',
+        'src/images',
+        'src/fonts',
+        'src/articles/**/*.!(md)',
+    ];
+
+    copyPaths.forEach(
+        path => config.addPassthroughCopy(path)
+    );
 
     // Plugins
 
