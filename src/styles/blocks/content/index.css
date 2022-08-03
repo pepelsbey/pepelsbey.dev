@@ -1,21 +1,60 @@
+/* Content */
+
+.content {
+    display: grid;
+    row-gap: 20px;
+}
+
 /* Headings */
 
 .content h1,
 .content h2,
 .content h3 {
+    margin: 0;
     font-weight: normal;
     font-family: var(--font-family-heading);
 }
 
-.content h1 {
-    text-transform: uppercase;
+.content h2 {
+    margin-block-start: 40px;
+    line-height: 1.25;
+    font-size: var(--font-size-h2);
 }
 
-/* Code */
+/* Block */
+
+.content p {
+    margin: 0;
+}
+
+.content ul {
+    margin: 0;
+}
+
+.content hr {
+    margin: 0;
+    border: none;
+    color: inherit;
+    text-align: center;
+}
+
+.content hr::before {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-h3);
+    content: '*  *  *';
+}
+
+/* Inline */
 
 .content code {
-    font-variant-ligatures: none;
     font-family: var(--font-family-code);
+}
+
+/* Pre */
+
+.content pre {
+    margin: 0;
+    overflow: scroll;
 }
 
 /* Images */
