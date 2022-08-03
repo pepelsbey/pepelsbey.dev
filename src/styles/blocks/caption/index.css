@@ -13,7 +13,7 @@
     line-height: 1.1;
     text-transform: uppercase;
     font-weight: normal;
-    font-size: var(--font-size-heading-2);
+    font-size: var(--font-size-h1);
     font-family: var(--font-family-heading);
 }
 

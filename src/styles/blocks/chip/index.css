@@ -49,7 +49,7 @@
     margin: 0;
     line-height: 1.25;
     font-weight: normal;
-    font-size: var(--font-size-heading-3);
+    font-size: var(--font-size-h2);
     font-family: var(--font-family-heading);
 }
 

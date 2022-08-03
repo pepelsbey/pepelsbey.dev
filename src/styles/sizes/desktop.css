@@ -2,9 +2,9 @@
     :root {
         --font-size-small: 1rem;
         --font-size-normal: 1.25rem;
-        --font-size-large: 2rem;
-        --font-size-heading-3: 3.5rem;
-        --font-size-heading-2: 5rem;
-        --font-size-heading-1: 9rem;
+        --font-size-h3: 2rem;
+        --font-size-h2: 3.5rem;
+        --font-size-h1: 5rem;
+        --font-size-shout: 9rem;
     }
 }

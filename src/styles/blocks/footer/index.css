@@ -29,7 +29,7 @@
     color: var(--color-text-primary);
     font-weight: normal;
     font-family: var(--font-family-heading);
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-h3);
 }
 
 /* List */
