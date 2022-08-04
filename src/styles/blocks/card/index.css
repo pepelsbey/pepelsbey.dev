@@ -46,24 +46,6 @@
     background-color: var(--card-websites-back);
 }
 
-/* Tags */
-
-.card__tags {
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 8px;
-}
-
-/* Tag */
-
-.card__tag {
-    padding-inline: 1rem;
-    border-radius: 5em;
-    border: 1.5px solid;
-    font-size: var(--font-size-small);
-}
-
 /* Types */
 
 .card__types {
