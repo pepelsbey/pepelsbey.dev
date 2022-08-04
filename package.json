@@ -24,6 +24,7 @@
     "postcss": "^8.4.13",
     "postcss-csso": "^6.0.0",
     "postcss-import": "^14.1.0",
+    "postcss-media-minmax": "^5.0.0",
     "pretty-data": "^0.40.0"
   }
 }

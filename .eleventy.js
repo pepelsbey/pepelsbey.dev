@@ -1,9 +1,10 @@
-const fs = require('fs');
 const autoprefixer = require('autoprefixer');
 const csso = require('postcss-csso');
 const esbuild = require('esbuild');
+const fs = require('fs');
 const htmlmin = require('html-minifier');
 const markdown = require('markdown-it')({ html: true });
+const minmax = require('postcss-media-minmax');
 const pimport = require('postcss-import');
 const postcss = require('postcss');
 const prettydata = require('pretty-data');
@@ -82,6 +83,7 @@ module.exports = (config) => {
             return async () => {
                 let output = await postcss([
                     pimport,
+                    minmax,
                     autoprefixer,
                     csso
                 ]).process(inputContent, { from: inputPath });
