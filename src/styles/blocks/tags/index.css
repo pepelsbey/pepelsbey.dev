@@ -1,15 +1,21 @@
 /* Tags */
 
 .tags {
+    --tags-gap: 8px;
+
     margin: 0;
+    margin-block-end: calc(
+        -1 * var(--tags-gap)
+    );
     display: flex;
     flex-wrap: wrap;
-    column-gap: 8px;
+    column-gap: var(--tags-gap);
 }
 
 /* Item */
 
 .tags__item {
+    margin-block-end: var(--tags-gap);
     padding-inline: 1rem;
     border-radius: 5em;
     border: 1.5px solid;
