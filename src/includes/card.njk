@@ -15,7 +15,7 @@
         <div class="card__box">
             <{{ heading }}} class="card__title">
                 <a class="card__link" href="{{ articleUrl }}">
-                    {{- article.data.title -}}
+                    {{- article.data.title | safe -}}
                 </a>
             </{{ heading }}}>
 

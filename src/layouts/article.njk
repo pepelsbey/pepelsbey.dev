@@ -8,7 +8,7 @@ layout: page.njk
     <main id="main">
         <header class="main__intro intro">
             <h1 class="intro__title">
-                {{ title }}
+                {{ title | safe }}
             </h1>
             <p class="intro__tags tags">
                 {% for tag in tags %}
