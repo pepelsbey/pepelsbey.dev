@@ -1,7 +1,6 @@
 /* Content */
 
 .content {
-    padding-block-start: 40px;
     display: grid;
     row-gap: 20px;
 }
@@ -26,6 +25,7 @@
 
 .content p {
     margin: 0;
+    hyphens: auto;
 }
 
 .content ul {
