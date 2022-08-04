@@ -5,7 +5,6 @@
     --chip-back-podcasts: hsl(var(--color-sulu));
     --chip-back-websites: hsl(var(--color-coral));
     --chip-text-primary: hsl(var(--color-ebony));
-    --chip-radius: 20px;
 
     position: relative;
     display: grid;
@@ -13,17 +12,11 @@
     padding-inline: 20px;
     padding-block: 40px;
     min-height: 240px;
-    border-radius: var(--chip-radius);
+    border-radius: var(--radius);
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: 200px;
     color: var(--chip-text-primary);
-}
-
-@media (min-width: 1024px) {
-    .chip {
-        --chip-radius: 40px;
-    }
 }
 
 /* Types */
@@ -68,7 +61,7 @@
     position: absolute;
     inset: 0;
     content: '';
-    border-radius: var(--chip-radius);
+    border-radius: var(--radius);
 }
 
 .chip__link:focus-visible::before {

@@ -1,0 +1,11 @@
+/* Radius */
+
+.radius {
+    --radius: 20px;
+}
+
+@media (width >= 1024px) {
+    .radius {
+        --radius: 40px;
+    }
+}

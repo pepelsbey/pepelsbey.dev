@@ -11,13 +11,7 @@
 .profile__photo {
     display: block;
     background-color: var(--profile-photo-back);
-    border-radius: 20px;
-}
-
-@media (min-width: 1024px) {
-    .profile__photo {
-        border-radius: 40px;
-    }
+    border-radius: var(--radius);
 }
 
 /* Who */

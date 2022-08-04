@@ -12,7 +12,7 @@ layout: page.njk
         <h1 class="profile__name">
             {{ profile[1] }}
         </h1>
-        <img class="profile__photo"
+        <img class="profile__photo radius"
             src="{{ profile[2] }}"
             width="308" height="205"
             alt="Black and white portrait on a colored background."
@@ -82,7 +82,7 @@ layout: page.njk
 
         <div class="chip-list">
             {% for section in projects %}
-                <article class="chip chip--{{ section.title | lower }}">
+                <article class="chip chip--{{ section.title | lower }} radius">
                     <h3 class="chip__title">
                         <a class="chip__link" href="/projects/#{{ section.title | lower }}">
                             {{ section.title }}
