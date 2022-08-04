@@ -1,26 +1,26 @@
 # Tools
 
 - title: Tools
-  desc: Handy little tools that I created for myself, but you might also find useful
+  desc: Handy little tools that I created for myself, but you might also find useful.
   projects:
 
-  - title: Shower presentation engine
-    desc: Presentation engine for people who enjoy writing HTML and CSS
+  - title: Shower, presentation engine
+    desc: Presentation engine for people who enjoy writing HTML and CSS.
     url: https://shwr.me/
     tags:
     - HTML
     - CSS
     - JS
 
-  - title: Prompter script scroller
-    desc: A thing that scrolls your text on a mirror so you can look right into the camera
+  - title: Prompter, script scroller
+    desc: A thing that scrolls your text on a mirror so you can look right into the camera.
     url: https://github.com/pepelsbey/prompter
     tags:
     - CSS
     - JS
 
-  - title: ContentEditable browser extension
-    desc: Browser extension that makes any page editable by adding an attribute to the `<body>`
+  - title: ContentEditable, browser extension
+    desc: Browser extension that makes any page editable by adding an attribute to the `<body>`.
     url: https://github.com/pepelsbey/contenteditable
     tags:
     - Extension
@@ -29,23 +29,23 @@
 # Podcasts
 
 - title: Podcasts
-  desc: Shows that I co-host, produce, record, and edit, mostly Russian-speaking
+  desc: Shows that I co-host, produce, record, and edit, mostly Russian-speaking.
   projects:
 
-  - title: Web Standards
-    desc: Weekly frontend news from the Russian community, on-air since 2016
+  - title: Web Standards, weekly news
+    desc: Weekly frontend news for the Russian-speaking community, on-air since 2016.
     url: https://web-standards.ru/podcast/
     tags:
     - Ru
 
-  - title: LP
-    desc: Three friends discussing favorite music albums and telling cool stories
+  - title: LP, favorite music
+    desc: Three friends discussing favorite music albums and telling cool stories.
     url: https://3lp.me/
     tags:
     - Ru
 
-  - title: The F-Word
-    desc: Occasional frontend news, co-hosted with [Bruce Lawson](https://twitter.com/brucel)
+  - title: The F-Word, occasional news
+    desc: Occasional frontend news, co-hosted with [Bruce Lawson](https://twitter.com/brucel).
     url: https://f-word.dev/
     tags:
     - En
@@ -53,23 +53,23 @@
 # Websites
 
 - title: Websites
-  desc: Mostly useless, but funny or nostalgic enough to be worth paying for a domain name
+  desc: Mostly useless, but funny or nostalgic enough to be worth paying for a domain name.
   projects:
 
-  - title: SVG vs PNG
-    desc: Single frame comics that make you think about image formats since 2010
+  - title: SVG vs PNG, silly comics
+    desc: Single frame comics that make you think about image formats since 2010.
     url: https://svgvspng.com/
     tags:
     - SVG
 
-  - title: Is Geolocation part of HTML5?
-    desc: A question that didn’t age well, but back in 2010 I had to give it a definitive answer
+  - title: Is Geolocation part of HTML5? Perhaps…
+    desc: A question that didn’t age well, but back in 2010 I had to give it a definitive answer.
     url: https://isgeolocationpartofhtml5.com/
     tags:
     - JS
 
-  - title: <blink> is Back!
-    desc: In case you ever need to make your `<blink>` element work like it used to
+  - title: <blink> is Back! But no one’s waiting
+    desc: In case you ever need to make your `<blink>` element work like it used to.
     url: https://blink-is-back.com/
     tags:
     - HTML
