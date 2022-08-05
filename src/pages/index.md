@@ -2,9 +2,10 @@
 layout: index.njk
 permalink: index.html
 profile:
-    - Hi, my name is
-    - Vadim Makeev
-    - /images/photo.png
-    - I’m a frontend developer in love with the Web, browsers, bicycles and podcasting
-    - Here you can find [my thoughts](/articles/) on web development, some of [my projects](/projects/) and information [about me](/about/)
+    intro: Hi, my name is
+    name: Vadim Makeev
+    photo: /images/photo.png
+    alt: Black and white portrait on a colored background.
+    who: I’m a frontend developer in love with the Web, browsers, bicycles, and podcasting
+    what: Here you can find [my thoughts](/articles/) on web development, some of [my projects](/projects/), and information [about me](/about/)
 ---

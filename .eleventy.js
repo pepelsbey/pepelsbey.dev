@@ -46,6 +46,8 @@ module.exports = (config) => {
         return markdown.renderInline(value);
     });
 
+    config.setLibrary('md', markdown);
+
     // HTML minification
 
     config.addTransform('htmlmin', (content, outputPath) => {

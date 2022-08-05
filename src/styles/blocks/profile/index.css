@@ -1,8 +1,26 @@
+/* Profile */
+
+.profile {
+    display: grid;
+    row-gap: 20px;
+    padding-block-end: 80px;
+}
+
+/* Intro */
+
+.profile__intro {
+    margin: 0;
+}
+
 /* Name */
 
 .profile__name {
+    margin: 0;
+    margin-block-start: -12px;
     text-transform: uppercase;
+    line-height: 1.125;
     font-weight: normal;
+    font-size: var(--font-size-shout);
     font-family: var(--font-family-heading);
 }
 
@@ -10,6 +28,8 @@
 
 .profile__photo {
     display: block;
+    max-width: 100%;
+    height: auto;
     background-color: var(--profile-photo-back);
     border-radius: var(--radius);
 }
@@ -17,5 +37,14 @@
 /* Who */
 
 .profile__who {
+    margin: 0;
+    line-height: 1.25;
+    font-size: var(--font-size-h2);
     font-family: var(--font-family-heading);
+}
+
+/* What */
+
+.profile__what {
+    margin: 0;
 }

@@ -6,22 +6,23 @@ layout: page.njk
 
 <main class="main" id="main">
     <section class="profile">
-        <p class="profile__greeting">
-            {{ profile[0] }}
+        <p class="profile__intro">
+            {{ profile.intro }}
         </p>
         <h1 class="profile__name">
-            {{ profile[1] }}
+            {{ profile.name }}
         </h1>
-        <img class="profile__photo radius"
-            src="{{ profile[2] }}"
+        <img
+            class="profile__photo radius"
+            src="{{ profile.photo }}"
             width="308" height="205"
-            alt="Black and white portrait on a colored background."
+            alt="{{ profile.alt }}"
         >
         <p class="profile__who">
-            {{ profile[3] }}
+            {{ profile.who }}
         </p>
         <p class="profile__what">
-            {{ profile[4] | markdownInline | safe }}
+            {{ profile.what | markdownInline | safe }}
         </p>
     </section>
 
