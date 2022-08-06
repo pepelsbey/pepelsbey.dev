@@ -1,0 +1,5 @@
+/* Content Block */
+
+.content-block {
+    --content-code-back: hsl(var(--color-titan));
+}

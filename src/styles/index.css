@@ -22,7 +22,8 @@
 @import 'blocks/card/index.css';
 @import 'blocks/chip-list/index.css';
 @import 'blocks/chip/index.css';
-@import 'blocks/content/index.css';
+@import 'blocks/content-block/index.css';
+@import 'blocks/content-inline/index.css';
 @import 'blocks/footer/index.css';
 @import 'blocks/header/index.css';
 @import 'blocks/intro/index.css';

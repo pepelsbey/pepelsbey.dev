@@ -1,0 +1,35 @@
+/* Content Inline */
+
+/* Links */
+
+.content-inline a {
+    color: var(--color-text-primary);
+    text-underline-offset: 0.1em;
+}
+
+.content-inline a:focus-visible {
+    border-radius: 2px;
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+/* Code */
+
+.content-inline code {
+    padding: 0.1em 0.2em;
+    border-radius: 0.1em;
+    box-decoration-break: clone;
+    background-color: var(--content-code-back);
+    hyphens: none;
+    font-family: var(--font-family-code);
+}
+
+/* Emphasis */
+
+.content-inline em {
+    font-style: oblique 10deg;
+}
+
+.content-inline strong {
+    font-weight: 600;
+}
