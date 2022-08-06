@@ -1,9 +1,10 @@
 /* Caption */
 
 .caption {
+    display: flex;
     padding-block: 20px;
     border-block-end: 2px solid var(--color-text-primary);
-    display: flex;
+    align-items: center;
 }
 
 /* Title */
@@ -20,6 +21,7 @@
 /* Number */
 
 .caption__number {
+    align-self: start;
     margin-inline-start: 4px;
     line-height: 1.3;
 }

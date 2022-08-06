@@ -15,7 +15,7 @@
     display: inline-block;
     margin-block: 8px;
     color: var(--skip-text);
-    text-underline-offset: 3px;
+    text-underline-offset: 0.1em;
     outline: none;
 }
 
