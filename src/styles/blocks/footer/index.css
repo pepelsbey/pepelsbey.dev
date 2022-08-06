@@ -3,7 +3,8 @@
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px 20px;
+    row-gap: 40px;
+    column-gap: 20px;
     padding-block: 40px;
     padding-inline: 20px;
     border-block-start: 2px solid var(--color-text-primary);
@@ -46,12 +47,12 @@
 
 .footer__link {
     color: var(--color-text-secondary);
-    text-underline-offset: 3px;
+    text-underline-offset: 0.1em;
     box-decoration-break: clone;
 }
 
 .footer__link:focus-visible {
-    border-radius: 2px;
+    border-radius: 0.125rem;
     outline: 2px solid var(--color-focus);
     outline-offset: 2px;
 }

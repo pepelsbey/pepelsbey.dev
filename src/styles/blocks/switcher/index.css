@@ -1,11 +1,11 @@
 /* theme */
 
 .theme-switcher {
-    padding: 2px;
+    padding: 0.125rem;
     display: inline-grid;
     grid-template-columns: repeat(3, 1fr);
     border: 2px solid var(--color-text-primary);
-    border-radius: 5em;
+    border-radius: 5rem;
 }
 
 /* Button */
@@ -15,7 +15,7 @@
     padding: 0;
     padding-inline: 1rem;
     border: none;
-    border-radius: 5em;
+    border-radius: 5rem;
     background-color: transparent;
     color: var(--color-text-primary);
     line-height: inherit;

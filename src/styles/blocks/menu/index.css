@@ -41,14 +41,15 @@
 /* Link */
 
 .menu__link {
-    padding: 0.05em 0.08em;
-    border-radius: 0.1em;
+    padding: 0.05rem 0.08rem;
+    border-radius: 0.125rem;
+    text-underline-offset: 0.1em;
     color: var(--color-text-secondary);
     font-size: var(--font-size-h3);
 }
 
 .menu__link:focus-visible {
-    border-radius: 2px;
+    border-radius: 0.125rem;
     outline: 2px solid var(--color-focus);
     outline-offset: 2px;
 }
