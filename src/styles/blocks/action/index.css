@@ -1,22 +1,30 @@
 /* Action */
 
 .action {
+    --action-hover-back: hsl(var(--color-sulu));
+    --action-hover-text: hsl(var(--color-ebony));
+
     margin: 0;
-    padding: 0;
+    padding: 0.05rem 0.08rem;
     display: inline-flex;
     column-gap: 0.4em;
     align-items: center;
     border: none;
+    border-radius: 0.125rem;
     background-color: transparent;
     color: var(--color-text-primary);
-    text-underline-offset: 3px;
+    text-underline-offset: 0.1em;
     line-height: inherit;
     font-family: inherit;
     font-size: inherit;
 }
 
+.action:hover {
+    background-color: var(--action-hover-back);
+    color: var(--action-hover-text);
+}
+
 .action:focus-visible {
-    border-radius: 2px;
     outline: 2px solid var(--color-focus);
     outline-offset: 2px;
 }
