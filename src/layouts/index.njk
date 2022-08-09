@@ -82,6 +82,7 @@ layout: page.njk
         </header>
 
         <div class="chip-list">
+            {% set scribbles = cycler(1, 2, 3) %}
             {% for section in projects %}
                 <article class="chip chip--{{ section.title | lower }} radius">
                     <h3 class="chip__title">
@@ -91,6 +92,9 @@ layout: page.njk
                     </h3>
                     <svg class="chip__icon" width="36" height="36" aria-hidden="true">
                         <use href="/images/icons.svg#right"></use>
+                    </svg>
+                    <svg class="chip__scribble" width="186" height="189" aria-hidden="true">
+                        <use href="/images/scribbles.svg#{{ scribbles.next() }}"></use>
                     </svg>
                 </article>
             {% endfor %}

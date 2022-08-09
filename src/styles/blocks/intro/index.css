@@ -1,10 +1,14 @@
 /* Intro */
 
 .intro {
+    --intro-block-padding: 40px;
+    --intro-inline-padding: 20px;
+
+    position: relative;
     display: grid;
     row-gap: 20px;
-    padding-block: 40px;
-    padding-inline: 20px;
+    padding-block: var(--intro-block-padding);
+    padding-inline: var(--intro-inline-padding);
     background-color: var(--intro-back);
     background-position: 50% 50%;
     background-origin: content-box;
@@ -26,4 +30,21 @@
     font-weight: normal;
     font-family: var(--font-family-heading);
     font-size: var(--font-size-h1);
+}
+
+/* Scribble */
+
+.intro__scribble {
+    position: absolute;
+    transform: scaleX(-1);
+    inset: 0;
+    margin: auto;
+    inline-size: calc(
+        100% - var(--intro-inline-padding) * 2
+    );
+    block-size: calc(
+        100% - var(--intro-block-padding) * 2
+    );
+    color: var(--intro-scribble-fill);
+    pointer-events: none;
 }

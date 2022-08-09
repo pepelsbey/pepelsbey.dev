@@ -1,0 +1,5 @@
+/* Chip */
+
+.chip {
+    --chip-scribble-fill: hsl(var(--color-white) / 1);
+}

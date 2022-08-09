@@ -5,6 +5,7 @@
 /* Blocks */
 
 @import 'blocks/card/light.css';
+@import 'blocks/chip/light.css';
 @import 'blocks/content/light.css';
 @import 'blocks/intro/light.css';
 @import 'blocks/profile/light.css';

@@ -2,6 +2,5 @@
 
 .intro {
     --intro-back: hsl(var(--color-titan));
-
-    background-image: url('/images/scribbles.svg#1-grey-10-flip');
+    --intro-scribble-fill: hsl(var(--color-grey) / 0.1);
 }

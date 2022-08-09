@@ -14,8 +14,9 @@
     min-height: 240px;
     border-radius: var(--radius);
     background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: 200px;
+    background-position:
+        right 8px
+        bottom 8px;
     color: var(--chip-text-primary);
 }
 
@@ -23,22 +24,20 @@
 
 .chip--tools {
     background-color: var(--chip-back-tools);
-    background-image: url('/images/scribbles.svg#1-white-60');
 }
 
 .chip--podcasts {
     background-color: var(--chip-back-podcasts);
-    background-image: url('/images/scribbles.svg#2-white-60');
 }
 
 .chip--websites {
     background-color: var(--chip-back-websites);
-    background-image: url('/images/scribbles.svg#3-white-60');
 }
 
 /* Title */
 
 .chip__title {
+    z-index: 1;
     margin: 0;
     line-height: 1.25;
     font-weight: normal;
@@ -72,6 +71,17 @@
 /* Icon */
 
 .chip__icon {
+    z-index: 1;
     width: 36px;
     height: 36px;
+}
+
+/* Scribble */
+
+.chip__scribble {
+    position: absolute;
+    inset-block-end: 8px;
+    inset-inline-end: 8px;
+    pointer-events: none;
+    color: var(--chip-scribble-fill);
 }
