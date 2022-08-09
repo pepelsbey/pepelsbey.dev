@@ -14,10 +14,13 @@ function setupSwitcher() {
     }
 
     themeSwitcher.addEventListener('click', (event) => {
-        if (event.target.tagName === 'BUTTON') {
-            pressButton(event.target, true);
-            setScheme(event.target.value);
-        }
+        const isButton = event.target.tagName === 'BUTTON';
+        const isPressed = event.target.getAttribute('aria-pressed') === 'true';
+
+        if (!isButton || isPressed) return;
+
+        pressButton(event.target, true);
+        setScheme(event.target.value);
     });
 }
 
