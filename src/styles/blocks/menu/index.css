@@ -48,8 +48,10 @@
     font-size: var(--font-size-h3);
 }
 
-.menu__link:hover {
-    color: var(--color-text-primary);
+@media (hover: hover) and (pointer: fine) {
+    .menu__link:hover {
+        color: var(--color-text-primary);
+    }
 }
 
 .menu__link:focus-visible {

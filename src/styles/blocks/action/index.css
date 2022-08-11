@@ -19,9 +19,11 @@
     font-size: inherit;
 }
 
-.action:hover {
-    background-color: var(--action-hover-back);
-    color: var(--action-hover-text);
+@media (hover: hover) and (pointer: fine) {
+    .action:hover {
+        background-color: var(--action-hover-back);
+        color: var(--action-hover-text);
+    }
 }
 
 .action:focus-visible {
