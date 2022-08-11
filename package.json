@@ -21,6 +21,7 @@
     "focus-trap": "^6.9.4",
     "html-minifier": "^4.0.0",
     "js-yaml": "^4.1.0",
+    "linkedom": "^0.14.12",
     "postcss": "^8.4.13",
     "postcss-csso": "^6.0.0",
     "postcss-import": "^14.1.0",

@@ -1,5 +1,6 @@
 const autoprefixer = require('autoprefixer');
 const csso = require('postcss-csso');
+const dom = require('linkedom');
 const esbuild = require('esbuild');
 const fs = require('fs');
 const htmlmin = require('html-minifier');
@@ -48,10 +49,10 @@ module.exports = (config) => {
 
     config.setLibrary('md', markdown);
 
-    // HTML minification
+    // HTML
 
-    config.addTransform('htmlmin', (content, outputPath) => {
-        if (outputPath && outputPath.endsWith('.html')) {
+    config.addTransform('html-minify', (content, path) => {
+        if (path && path.endsWith('.html')) {
             const result = htmlmin.minify(
                 content, {
                     removeComments: true,
@@ -65,7 +66,27 @@ module.exports = (config) => {
         return content;
     });
 
-    // CSS build
+    const demosTransform = require('./src/transforms/demos.js')
+
+    const htmlTransforms = [
+        demosTransform
+    ];
+
+    config.addTransform('html-transform', async (content, path) => {
+        if (path && path.endsWith('.html')) {
+            const window = dom.parseHTML(content);
+
+            for (const transform of htmlTransforms) {
+                await transform(window, content, path);
+            }
+
+            return window.document.toString();
+        }
+
+        return content
+    })
+
+    // CSS
 
     const styles = [
         './src/styles/index.css',
@@ -87,9 +108,9 @@ module.exports = (config) => {
                     pimport,
                     minmax,
                     autoprefixer,
-                    csso
+                    csso,
                 ]).process(content, {
-                    from: path
+                    from: path,
                 });
 
                 return output.css;
@@ -103,14 +124,14 @@ module.exports = (config) => {
                 pimport,
                 minmax,
                 autoprefixer,
-                csso
+                csso,
             ]).process(content, {
                 from: path,
             }).then((output) => {
                 callback(null, output.css)
             });
         });
-    })
+    });
 
     // JavaScript
 
@@ -118,14 +139,14 @@ module.exports = (config) => {
 
     config.addExtension('js', {
         outputFileExtension: 'js',
-        compile: async (content, inputPath) => {
-            if (inputPath !== './src/scripts/index.js') {
+        compile: async (content, path) => {
+            if (path !== './src/scripts/index.js') {
                 return;
             }
 
             return async () => {
                 let output = await esbuild.buildSync({
-                    entryPoints: [inputPath],
+                    entryPoints: [path],
                     minify: true,
                     bundle: true,
                     write: false,
@@ -138,8 +159,8 @@ module.exports = (config) => {
 
     // XML minification
 
-    config.addTransform('xmlmin', (content, outputPath) => {
-        if (outputPath && outputPath.endsWith('.xml')) {
+    config.addTransform('xmlmin', (content, path) => {
+        if (path && path.endsWith('.xml')) {
             return prettydata.pd.xmlmin(content);
         }
 
@@ -173,18 +194,18 @@ module.exports = (config) => {
         return value.toLocaleString('en', {
             dateStyle: 'long',
         });
-    })
+    });
 
     config.addFilter('dateShort', (value) => {
         return value.toLocaleString('en', {
             month: 'long',
             day: 'numeric',
         });
-    })
+    });
 
     config.addFilter('dateISO', (value) => {
         return value.toISOString().split('T')[0];
-    })
+    });
 
     // Passthrough copy
 
@@ -193,9 +214,7 @@ module.exports = (config) => {
         'src/images',
         'src/fonts',
         'src/articles/**/*.!(md)',
-    ];
-
-    copyPaths.forEach(
+    ].forEach(
         path => config.addPassthroughCopy(path)
     );
 

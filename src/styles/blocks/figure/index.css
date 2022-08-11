@@ -1,0 +1,11 @@
+/* Figure */
+
+.figure {
+    margin: 0;
+}
+
+/* Caption */
+
+.figure__caption {
+    text-align: center;
+}
