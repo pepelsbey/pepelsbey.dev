@@ -15,8 +15,13 @@
     {% include 'covers.njk' %}
 
     <link rel="stylesheet" href="/styles/index.css">
-    <link rel="stylesheet" href="/styles/light.css" media="(prefers-color-scheme: light)">
-    <link rel="stylesheet" href="/styles/dark.css" media="(prefers-color-scheme: dark)">
+
+    <style media="(prefers-color-scheme: light)">
+        {{ 'src/styles/light.css' | css }}
+    </style>
+    <style media="(prefers-color-scheme: dark)">
+        {{ 'src/styles/dark.css' | css }}
+    </style>
 
     <link rel="preload" href="/fonts/inter-variable.woff2" crossorigin as="font" type="font/woff2">
     <link rel="preload" href="/fonts/neue-machina.woff2" crossorigin as="font" type="font/woff2">

@@ -77,8 +77,8 @@ module.exports = (config) => {
 
     config.addExtension('css', {
         outputFileExtension: 'css',
-        compile: async (inputContent, inputPath) => {
-            if (!styles.includes(inputPath)) {
+        compile: async (content, path) => {
+            if (!styles.includes(path)) {
                 return;
             }
 
@@ -88,12 +88,29 @@ module.exports = (config) => {
                     minmax,
                     autoprefixer,
                     csso
-                ]).process(inputContent, { from: inputPath });
+                ]).process(content, {
+                    from: path
+                });
 
                 return output.css;
             }
         }
     });
+
+    config.addNunjucksAsyncFilter('css', (path, callback) => {
+        fs.readFile(path, 'utf8', (error, content) => {
+            postcss([
+                pimport,
+                minmax,
+                autoprefixer,
+                csso
+            ]).process(content, {
+                from: path,
+            }).then((output) => {
+                callback(null, output.css)
+            });
+        });
+    })
 
     // JavaScript
 
