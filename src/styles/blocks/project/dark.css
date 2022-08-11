@@ -1,0 +1,5 @@
+/* Project */
+
+.project {
+    --project-scribble-fill: hsl(var(--color-manatee) / 0.2);
+}
