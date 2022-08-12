@@ -49,7 +49,7 @@ The idea is to have a columns component that could be filled with the real conte
 
 The news component will always stay the same, we’re going to play with the columns component only. The first news will have a `lightgreen` background, the second one — the famous `peachpuff`.
 
-## Reasonable 6
+## Reasonable six
 
 How would you sort the list of reasonable options? Well, probably not alphabetically. From the best to the worst? They’re all good at certain situations and have some unique advantages. So I decided to go with the historical order: I’ll start with the ones that I’ve learned first and finish with the modern ones.
 
@@ -294,7 +294,7 @@ Also, because `grid-gap` and later just `gap` properties were part of the initia
 
 That was _way too simple_ the sixth way of making a two-column layout. Don’t worry, we have some pretty weird things coming up.
 
-## Weird 5
+## Weird five
 
 There’s no historical order here. I just tried to list the options from the least weird to completely wrong. And what were the problems that made me split these methods into a special group?
 
