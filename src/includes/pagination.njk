@@ -2,7 +2,8 @@
     <ul class="pagination">
         {% if pagination.href.previous %}
             <li class="pagination__arrow">
-                <a class="pagination__link"
+                <a
+                    class="pagination__link"
                     href="{{ pagination.href.previous }}"
                     aria-label="Previous page"
                 >
@@ -19,7 +20,8 @@
                 {% set current = '' %}
             {% endif %}
             <li class="pagination__number">
-                <a class="pagination__link"
+                <a
+                    class="pagination__link"
                     href="{{ pagination.hrefs[loop.index0] }}"
                     aria-label="Page {{ loop.index }}"
                     {{ current | safe }}
@@ -30,7 +32,8 @@
         {% endfor %}
         {% if pagination.href.next %}
             <li class="pagination__arrow">
-                <a class="pagination__link"
+                <a
+                    class="pagination__link"
                     href="{{ pagination.href.next }}"
                     aria-label="Next page"
                 >
