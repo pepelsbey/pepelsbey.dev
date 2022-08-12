@@ -3,6 +3,14 @@ title: 'About'
 layout: about.njk
 permalink: about/index.html
 
+# Profile
+
+profile:
+  photo: /images/photo.png
+  alt: Black and white portrait on a colored background.
+  who: I’m Vadim Makeev, frontend developer based in Berlin, Germany
+  what: Here you can find [my thoughts](/articles/) on web development, some of [my projects](/projects/), and information [about me](/about/)
+
 # Skills
 
 skills:
@@ -49,5 +57,3 @@ contacts:
   - title: t.me/pepelsbey
     url: https://t.me/pepelsbey
 ---
-
-I’m Vadim Makeev, a frontend developer based in Berlin, Germany

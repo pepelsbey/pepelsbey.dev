@@ -11,7 +11,20 @@ layout: page.njk
         </h1>
     </header>
 
-    {{ content | safe }}
+    <section class="profile">
+        <img
+            class="profile__photo radius"
+            src="{{ profile.photo }}"
+            width="308" height="205"
+            alt="{{ profile.alt }}"
+        >
+        <p class="profile__who">
+            {{ profile.who }}
+        </p>
+        <p class="profile__what content content-inline">
+            {{ profile.what | markdownInline | safe }}
+        </p>
+    </section>
 
     <section>
         <h2>

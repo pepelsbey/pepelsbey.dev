@@ -28,7 +28,7 @@
 
 .profile__photo {
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
     background-color: var(--profile-photo-back);
     border-radius: var(--radius);
