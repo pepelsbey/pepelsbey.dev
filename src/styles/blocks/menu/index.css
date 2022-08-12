@@ -43,7 +43,6 @@
 .menu__link {
     padding: 0.05rem 0.08rem;
     border-radius: 0.125rem;
-    text-underline-offset: 0.1em;
     color: var(--color-text-secondary);
     font-size: var(--font-size-h3);
 }

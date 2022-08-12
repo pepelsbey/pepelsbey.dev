@@ -4,7 +4,6 @@
 
 .content-inline a {
     color: var(--color-text-primary);
-    text-underline-offset: 0.1em;
 }
 
 .content-inline a:focus-visible {

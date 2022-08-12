@@ -13,7 +13,6 @@
     border-radius: 0.125rem;
     background-color: transparent;
     color: var(--color-text-primary);
-    text-underline-offset: 0.1em;
     line-height: inherit;
     font-family: inherit;
     font-size: inherit;
