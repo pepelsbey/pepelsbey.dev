@@ -20,8 +20,7 @@ skills:
 
 work:
   title: Work
-  desc: |
-    I’ve been building stuff on the web for the last 15 years, working with clients across various countries and industries.
+  desc: 'I’ve been building stuff on the web for the last 15 years, working with clients across various countries and industries.'
   list:
   - company: Gorillas
     title: Software engineer
@@ -43,8 +42,7 @@ work:
 
 contacts:
   title: Contacts
-  desc: |
-    You can get in touch with me via email or Telegram
+  desc: 'You can get in touch with me via email or Telegram'
   list:
   - title: pepelsbey@gmail.com
     url: mailto:pepelsbey@gmail.com

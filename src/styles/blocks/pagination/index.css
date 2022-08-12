@@ -1,0 +1,42 @@
+/* Pagination */
+
+.pagination {
+    --pagination-current-back: hsl(var(--color-sulu));
+    --pagination-current-text: hsl(var(--color-ebony));
+
+    margin: 0;
+    padding: 0;
+    display: flex;
+    column-gap: 8px;
+    list-style: none;
+}
+
+/* Link */
+
+.pagination__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    border-radius: 0.125rem;
+    color: var(--color-text-primary);
+    text-align: center;
+    line-height: 1;
+}
+
+.pagination__link[aria-current] {
+    background-color: var(--pagination-current-back);
+    color: var(--pagination-current-text);
+}
+
+.pagination__link:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+/* Icon */
+
+.pagination__icon {
+    display: block;
+}
