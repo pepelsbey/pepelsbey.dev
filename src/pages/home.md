@@ -1,5 +1,5 @@
 ---
-layout: index.njk
+layout: home.njk
 permalink: index.html
 profile:
     intro: Hi, my name is
