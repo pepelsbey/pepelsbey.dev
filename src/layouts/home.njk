@@ -26,34 +26,15 @@ layout: page.njk
         </p>
     </section>
 
-    <section id="articles">
-        <header class="caption">
-            <h2 class="caption__title">
-                Articles
-            </h2>
-            <span class="caption__number">
-                {{ collections.articles.length }}
-            </span>
-            <a class="caption__link action" href="/articles/">
-                <svg class="action__icon" width="24" height="24" aria-hidden="true">
-                    <use href="/images/icons.svg#right"></use>
-                </svg>
-            </a>
-        </header>
+    {% from 'archive.njk' import archive with context %}
 
-        <div class="card-list">
-            {% from 'card.njk' import card %}
-
-            {% for article in collections.articles | reverse %}
-                {% if loop.index <= 5 and article.url != page.url %}
-                    {{ card(
-                        article=article,
-                        heading='h3'
-                    ) }}
-                {% endif %}
-            {% endfor %}
-        </div>
-    </section>
+    {{ archive(
+        as='section',
+        title='Articles',
+        collection=collections.articles,
+        limit=5,
+        link='articles'
+    ) }}
 
     <section id="projects">
         {% set projectsList = [] %}

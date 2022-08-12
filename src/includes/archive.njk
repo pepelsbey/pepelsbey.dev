@@ -1,0 +1,43 @@
+{% macro archive(
+    as,
+    title,
+    collection,
+    limit,
+    link
+) %}
+    <{{ as }} class="archive">
+        <header class="caption">
+            <h2 class="caption__title">
+                {{ title }}
+            </h2>
+            <span class="caption__number">
+                {{ collections.articles.length }}
+            </span>
+            {% if link == 'articles' %}
+                <a class="caption__link action" href="/articles/">
+                    <svg class="action__icon" width="24" height="24" aria-hidden="true">
+                        <use href="/images/icons.svg#right"></use>
+                    </svg>
+                </a>
+            {% endif %}
+            {% if link == 'feed' %}
+                <a class="caption__link action" href="/feed/" aria-label="RSS">
+                    <svg class="action__icon" width="24" height="24" aria-hidden="true">
+                        <use href="/images/icons.svg#rss">
+                    </svg>
+                </a>
+            {% endif %}
+        </header>
+        <div class="archive__list">
+            {% from 'card.njk' import card %}
+            {% for article in collection | reverse %}
+                {% if loop.index <= limit and article.url != page.url %}
+                    {{ card(
+                        article=article,
+                        heading='h3'
+                    ) }}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </{{ as }}>
+{% endmacro %}

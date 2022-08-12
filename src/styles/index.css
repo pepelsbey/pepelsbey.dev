@@ -16,9 +16,9 @@
 /* Blocks */
 
 @import 'blocks/action/index.css';
+@import 'blocks/archive/index.css';
 @import 'blocks/aside/index.css';
 @import 'blocks/caption/index.css';
-@import 'blocks/card-list/index.css';
 @import 'blocks/card/index.css';
 @import 'blocks/chip-list/index.css';
 @import 'blocks/chip/index.css';

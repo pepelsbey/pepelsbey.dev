@@ -17,11 +17,14 @@ layout: page.njk
         </div>
     </main>
 
-    {% from 'aside.njk' import aside with context %}
+    {% from 'archive.njk' import archive with context %}
 
-    {{ aside(
+    {{ archive(
+        as='aside',
         title='Articles',
-        number=4
+        collection=collections.articles,
+        limit=4,
+        link='articles'
     ) }}
 
 </div>
