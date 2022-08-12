@@ -3,7 +3,6 @@
 .profile {
     display: grid;
     row-gap: 20px;
-    padding-block-end: 80px;
 }
 
 /* Intro */
