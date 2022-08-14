@@ -41,10 +41,10 @@ permalink: projects/index.html
 
                 <div class="project-section__list">
                     {% for project in section.projects %}
-                        <article class="article-card radius">
-                            <div class="article-card__box article-card__box--project article-card__box--{{ id }}">
-                                <h3 class="article-card__title">
-                                    <a class="article-card__link" href="{{ project.url }}">
+                        <article class="project-card radius">
+                            <div class="project-card__box project-card__box--{{ id }}">
+                                <h3 class="project-card__title">
+                                    <a class="project-card__link" href="{{ project.url }}">
                                         {{- project.title -}}
                                     </a>
                                 </h3>
@@ -55,17 +55,13 @@ permalink: projects/index.html
                                         </span>
                                     {% endfor %}
                                 </p>
-                                <p class="article-card__types">
-                                    <svg class="article-card__type" width="24" height="24" aria-hidden="true">
-                                        <use href="/images/icons.svg#external">
-                                    </svg>
-                                </p>
+                                <svg width="24" height="24" aria-hidden="true">
+                                    <use href="/images/icons.svg#external">
+                                </svg>
                             </div>
-                            <div class="article-card__desc">
-                                <p class="article-card__text content content-inline">
-                                    {{ project.desc | markdownInline | safe }}
-                                </p>
-                            </div>
+                            <p class="project-card__desc content content-inline">
+                                {{ project.desc | markdownInline | safe }}
+                            </p>
                         </article>
                     {% endfor %}
                 </div>
