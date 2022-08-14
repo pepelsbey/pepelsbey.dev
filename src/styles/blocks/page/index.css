@@ -3,7 +3,7 @@
 .page {
     background-color: var(--color-back-primary);
     color: var(--color-text-primary);
-    line-height: 1.6;
+    line-height: 1.5;
     font-size: var(--font-size-normal);
     font-family: var(--font-family-text);
 }
