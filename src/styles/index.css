@@ -32,8 +32,8 @@
 @import 'blocks/page/index.css';
 @import 'blocks/pagination/index.css';
 @import 'blocks/profile/index.css';
-@import 'blocks/project-card-list/index.css';
-@import 'blocks/project-card/index.css';
+@import 'blocks/project-feature-list/index.css';
+@import 'blocks/project-feature/index.css';
 @import 'blocks/project-section-list/index.css';
 @import 'blocks/project-section/index.css';
 @import 'blocks/radius/index.css';

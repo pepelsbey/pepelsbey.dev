@@ -75,19 +75,19 @@ layout: page.njk
             </a>
         </header>
 
-        <div class="project-card-list">
+        <div class="project-feature-list">
             {% set scribbles = cycler(1, 2, 3) %}
             {% for section in projects %}
-                <article class="project-card project-card--{{ section.title | lower }} radius">
-                    <h3 class="project-card__title">
-                        <a class="project-card__link" href="/projects/#{{ section.title | lower }}">
+                <article class="project-feature project-feature--{{ section.title | lower }} radius">
+                    <h3 class="project-feature__title">
+                        <a class="project-feature__link" href="/projects/#{{ section.title | lower }}">
                             {{ section.title }}
                         </a>
                     </h3>
-                    <svg class="project-card__icon" width="36" height="36" aria-hidden="true">
+                    <svg class="project-feature__icon" width="36" height="36" aria-hidden="true">
                         <use href="/images/icons.svg#right"></use>
                     </svg>
-                    <svg class="project-card__scribble" width="200" height="200" aria-hidden="true">
+                    <svg class="project-feature__scribble" width="200" height="200" aria-hidden="true">
                         <use href="/images/scribbles.svg#{{ scribbles.next() }}"></use>
                     </svg>
                 </article>
