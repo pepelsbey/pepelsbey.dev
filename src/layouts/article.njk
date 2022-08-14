@@ -4,7 +4,30 @@ layout: page.njk
 
 {% include 'header.njk' %}
 
-<div class="main">
+<main class="main">
+    <header class="main__lead lead">
+        <h1 class="lead__title">
+            {{ title | safe }}
+        </h1>
+        <p class="lead__tags tags">
+            {% for tag in tags %}
+                <span class="tags__item">{{ tag }}</span>
+            {% endfor %}
+        </p>
+        <time class="lead__date" datetime="{{ date | dateISO }}">
+            {{ date | dateLong }}
+        </time>
+        <svg class="lead__scribble" width="200" height="200" aria-hidden="true">
+            <use href="/images/scribbles.svg#1"></use>
+        </svg>
+    </header>
+</main>
+<aside>
+    <h2>articles</h2>
+</aside>
+
+
+{# <div class="main">
     <main id="main">
         <header class="main__lead lead">
             <h1 class="lead__title">
@@ -37,6 +60,6 @@ layout: page.njk
         limit=4,
         link='articles'
     ) }}
-</div>
+</div> #}
 
 {% include 'footer.njk' %}

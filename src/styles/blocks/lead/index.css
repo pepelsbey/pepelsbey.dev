@@ -10,9 +10,6 @@
     padding-block: var(--lead-block-padding);
     padding-inline: var(--lead-inline-padding);
     background-color: var(--lead-back);
-    background-position: 50% 50%;
-    background-origin: content-box;
-    background-repeat: no-repeat;
 }
 
 /* Tags */

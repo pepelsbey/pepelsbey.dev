@@ -6,7 +6,29 @@ permalink: projects/index.html
 
 {% include 'header.njk' %}
 
-<main class="main" id="main">
+{% set projectsList = [] %}
+
+{% for section in projects %}
+    {% for project in section.projects %}
+        {% set projectsList = (
+            projectsList.push(project),
+            projectsList
+        ) %}
+    {% endfor %}
+{% endfor %}
+
+<main>
+    <header class="heading">
+        <h1 class="heading__title">
+            {{ title }}
+        </h1>
+        <span class="heading__number">
+            {{ projectsList.length }}
+        </span>
+    </header>
+</main>
+
+{# <main class="main" id="main">
     {% set projectsList = [] %}
 
     {% for section in projects %}
@@ -17,15 +39,6 @@ permalink: projects/index.html
             ) %}
         {% endfor %}
     {% endfor %}
-
-    <header class="caption">
-        <h1 class="caption__title">
-            {{ title }}
-        </h1>
-        <span class="caption__number">
-            {{ projectsList.length }}
-        </span>
-    </header>
 
     {{ content | safe }}
 
@@ -79,6 +92,6 @@ permalink: projects/index.html
             </section>
         {% endfor %}
     </div>
-</main>
+</main> #}
 
 {% include 'footer.njk' %}

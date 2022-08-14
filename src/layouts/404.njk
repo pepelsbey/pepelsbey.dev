@@ -4,7 +4,15 @@ layout: page.njk
 
 {% include 'header.njk' %}
 
-<div class="main">
+<main>
+    <header class="heading">
+        <h1 class="heading__title">
+            {{ title }}
+        </h1>
+    </header>
+</main>
+
+{# <div class="main">
     <main id="main">
         <header class="caption">
             <h1 class="caption__title">
@@ -27,6 +35,6 @@ layout: page.njk
         link='articles'
     ) }}
 
-</div>
+</div> #}
 
 {% include 'footer.njk' %}

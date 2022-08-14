@@ -1,15 +1,22 @@
-/* Caption */
+/* Heading */
 
-.caption {
+.heading {
     display: flex;
-    padding-block: 20px;
-    border-block-end: 2px solid var(--color-text-primary);
+    padding-block: 20px 60px;
+    background-image: linear-gradient(
+        to top,
+        var(--color-text-primary) 2px,
+        transparent 2px
+    );
+    background-position:
+        left 0
+        bottom 40px;
     align-items: center;
 }
 
 /* Title */
 
-.caption__title {
+.heading__title {
     margin: 0;
     line-height: 1.1;
     text-transform: uppercase;
@@ -20,7 +27,7 @@
 
 /* Number */
 
-.caption__number {
+.heading__number {
     align-self: start;
     margin-inline-start: 4px;
     line-height: 1.3;
@@ -28,7 +35,7 @@
 
 /* Link */
 
-.caption__link {
+.heading__link {
     margin-block-end: 8px;
     margin-inline-start: auto;
     color: var(--color-text-primary);
