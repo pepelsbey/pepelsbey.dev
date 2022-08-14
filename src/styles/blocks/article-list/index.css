@@ -1,0 +1,6 @@
+/* Article List */
+
+.article-list {
+    display: grid;
+    row-gap: 16px;
+}

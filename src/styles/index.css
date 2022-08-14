@@ -16,10 +16,9 @@
 /* Blocks */
 
 @import 'blocks/action/index.css';
-@import 'blocks/archive/index.css';
+@import 'blocks/article-card/index.css';
+@import 'blocks/article-list/index.css';
 @import 'blocks/aside/index.css';
-@import 'blocks/heading/index.css';
-@import 'blocks/card/index.css';
 @import 'blocks/chip-list/index.css';
 @import 'blocks/chip/index.css';
 @import 'blocks/content-block/index.css';
@@ -27,6 +26,7 @@
 @import 'blocks/figure/index.css';
 @import 'blocks/footer/index.css';
 @import 'blocks/header/index.css';
+@import 'blocks/heading/index.css';
 @import 'blocks/intro/index.css';
 @import 'blocks/lead/index.css';
 @import 'blocks/main/index.css';

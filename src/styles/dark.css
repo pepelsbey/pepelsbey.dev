@@ -4,7 +4,7 @@
 
 /* Blocks */
 
-@import 'blocks/card/dark.css';
+@import 'blocks/article-card/dark.css';
 @import 'blocks/chip/dark.css';
 @import 'blocks/content/dark.css';
 @import 'blocks/intro/dark.css';

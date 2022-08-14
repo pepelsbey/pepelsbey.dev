@@ -1,0 +1,128 @@
+/* Article Card */
+
+.article-card {
+    --article-card-tools-back: hsl(var(--color-lilac));
+    --article-card-podcasts-back: hsl(var(--color-sulu));
+    --article-card-websites-back: hsl(var(--color-coral));
+    --article-card-project-text: hsl(var(--color-ebony));
+    --article-card-type-text: hsl(var(--color-lilac));
+    --article-card-type-video: hsl(var(--color-coral));
+}
+
+/* Box */
+
+.article-card__box {
+    position: relative;
+    display: grid;
+    row-gap: 20px;
+    grid-template-columns: 1fr min-content;
+    padding: 20px;
+    border-radius: var(--radius);
+    background-color: var(--article-card-box-back);
+}
+
+/* Projects */
+
+.article-card__box--project {
+    color: var(--article-card-project-text);
+}
+
+.article-card__box--tools {
+    background-color: var(--article-card-tools-back);
+}
+
+.article-card__box--podcasts {
+    background-color: var(--article-card-podcasts-back);
+}
+
+.article-card__box--websites {
+    background-color: var(--article-card-websites-back);
+}
+
+/* Types */
+
+.article-card__types {
+    margin: 0;
+    display: flex;
+    column-gap: 8px;
+}
+
+/* Type */
+
+.article-card__type {
+    display: block;
+}
+
+.article-card__type--text {
+    color: var(--article-card-type-text);
+}
+
+.article-card__type--video {
+    color: var(--article-card-type-video);
+}
+
+.article-card__type--external {
+    color: var(--color-text-primary);
+}
+
+/* Title */
+
+.article-card__title {
+    grid-row: 2 / auto;
+    grid-column: 1 / -1;
+    margin: 0;
+    line-height: 1.25;
+    font-weight: normal;
+    font-size: var(--font-size-h3);
+    font-family: var(--font-family-heading);
+}
+
+/* Link */
+
+.article-card__link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.article-card__link:focus-visible {
+    outline: none;
+}
+
+.article-card__link::before {
+    position: absolute;
+    inset: 0;
+    content: '';
+    border-radius: var(--radius);
+}
+
+.article-card__link:focus-visible::before {
+    outline-offset: 2px;
+    outline: 2px solid var(--color-focus);
+}
+
+/* Date */
+
+.article-card__date {
+    grid-column: 1 / -1;
+}
+
+/* Desc */
+
+.article-card__desc {
+    display: grid;
+    row-gap: 16px;
+    padding-inline: 20px;
+    padding-block: 16px;
+}
+
+/* Text */
+
+.article-card__text {
+    margin: 0;
+}
+
+/* Source */
+
+.article-card__source {
+    justify-self: start;
+}

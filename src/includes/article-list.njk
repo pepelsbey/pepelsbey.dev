@@ -1,0 +1,16 @@
+{% macro articleList(
+    collection,
+    limit
+) %}
+    <div class="article-list">
+        {% from 'article-card.njk' import articleCard %}
+        {% for article in collection | reverse %}
+            {% if loop.index <= limit and article.url != page.url %}
+                {{ articleCard(
+                    article=article,
+                    heading='h3'
+                ) }}
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endmacro %}

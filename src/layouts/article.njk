@@ -4,28 +4,52 @@ layout: page.njk
 
 {% include 'header.njk' %}
 
-<main class="main">
-    <header class="main__lead lead">
-        <h1 class="lead__title">
-            {{ title | safe }}
-        </h1>
-        <p class="lead__tags tags">
-            {% for tag in tags %}
-                <span class="tags__item">{{ tag }}</span>
-            {% endfor %}
-        </p>
-        <time class="lead__date" datetime="{{ date | dateISO }}">
-            {{ date | dateLong }}
-        </time>
-        <svg class="lead__scribble" width="200" height="200" aria-hidden="true">
-            <use href="/images/scribbles.svg#1"></use>
-        </svg>
-    </header>
-</main>
-<aside>
-    <h2>articles</h2>
-</aside>
+<div class="main">
+    <main>
+        <header class="main__lead lead">
+            <h1 class="lead__title">
+                {{ title | safe }}
+            </h1>
+            <p class="lead__tags tags">
+                {% for tag in tags %}
+                    <span class="tags__item">{{ tag }}</span>
+                {% endfor %}
+            </p>
+            <time class="lead__date" datetime="{{ date | dateISO }}">
+                {{ date | dateLong }}
+            </time>
+            <svg class="lead__scribble" width="200" height="200" aria-hidden="true">
+                <use href="/images/scribbles.svg#1"></use>
+            </svg>
+        </header>
 
+        <div class="content content-block content-inline">
+            {{ content | safe }}
+        </div>
+    </main>
+    <aside>
+        <header class="heading">
+            <h2 class="heading__title">
+                More
+            </h2>
+            <span class="heading__number">
+                {{ collections.articles.length }}
+            </span>
+            <a class="heading__link action" href="/articles/">
+                <svg class="action__icon" width="24" height="24" aria-hidden="true">
+                    <use href="/images/icons.svg#right"></use>
+                </svg>
+            </a>
+        </header>
+
+        {% from 'article-list.njk' import articleList with context %}
+
+        {{ articleList(
+            collection=collections.articles,
+            limit=5
+        ) }}
+    </aside>
+</div>
 
 {# <div class="main">
     <main id="main">

@@ -1,0 +1,5 @@
+/* Article Card */
+
+.article-card {
+    --article-card-box-back: hsl(var(--color-titan));
+}

@@ -10,7 +10,7 @@ permalink: 'articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber 
 
 {% include 'header.njk' %}
 
-<main>
+<main class="main">
     <header class="heading">
         <h2 class="heading__title">
             {{ title }}
@@ -24,6 +24,13 @@ permalink: 'articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber 
             </svg>
         </a>
     </header>
+
+    {% from 'article-list.njk' import articleList with context %}
+
+    {{ articleList(
+        collection=collections.articles,
+        limit=5
+    ) }}
 </main>
 
 {# <main class="main" id="main">
