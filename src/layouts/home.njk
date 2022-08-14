@@ -4,7 +4,7 @@ layout: page.njk
 
 {% include 'header.njk' %}
 
-<main class="main">
+<main class="main gaps">
     <div class="intro">
         <p class="intro__hi">
             {{ intro.hi }}
@@ -49,18 +49,18 @@ layout: page.njk
         ) }}
     </section>
 
-    {% set projectsList = [] %}
-
-    {% for section in projects %}
-        {% for project in section.projects %}
-            {% set projectsList = (
-                projectsList.push(project),
-                projectsList
-            ) %}
-        {% endfor %}
-    {% endfor %}
-
     <section>
+        {% set projectsList = [] %}
+
+        {% for section in projects %}
+            {% for project in section.projects %}
+                {% set projectsList = (
+                    projectsList.push(project),
+                    projectsList
+                ) %}
+            {% endfor %}
+        {% endfor %}
+
         <header class="heading">
             <h2 class="heading__title">
                 Projects

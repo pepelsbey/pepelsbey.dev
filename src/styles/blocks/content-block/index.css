@@ -44,7 +44,7 @@
 }
 
 .content-block li {
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 /* Ordered */
@@ -93,6 +93,11 @@
     overflow: scroll;
     border-radius: 20px;
     background-color: var(--content-code-back);
+}
+
+.content-block pre:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
 }
 
 .content-block pre code {

@@ -10,34 +10,29 @@ layout: page.njk
             {{ title }}
         </h1>
     </header>
-</main>
-
-{# <main class="main" id="main">
-
-    <section class="intro">
-        <img
-            class="intro__photo radius"
-            src="{{ intro.photo }}"
-            width="308" height="205"
-            alt="{{ intro.alt }}"
-        >
-        <p class="intro__who">
-            {{ intro.who }}
-        </p>
-        <p class="intro__what content content-inline">
-            {{ intro.what | markdownInline | safe }}
-        </p>
-    </section>
-
-    <div class="profile">
-        <section class="profile__item">
-            <h2 class="profile__title">
+    <div class="about gaps">
+        <section class="intro">
+            <img
+                class="intro__photo radius"
+                src="{{ intro.photo }}"
+                width="308" height="205"
+                alt="{{ intro.alt }}"
+            >
+            <p class="intro__who">
+                {{ intro.who }}
+            </p>
+            <p class="intro__what content content-inline">
+                {{ intro.what | markdownInline | safe }}
+            </p>
+        </section>
+        <section class="about__item">
+            <h2 class="about__title">
                 {{ skills.title }}
             </h2>
-            <p class="profile__desc">
+            <p class="about__desc">
                 {{ skills.desc }}
             </p>
-            <ul class="profile__columns">
+            <ul class="about__columns">
                 {% for item in skills.list %}
                     <li>
                         {{ item }}
@@ -45,43 +40,45 @@ layout: page.njk
                 {% endfor %}
             </ul>
         </section>
-        <section class="profile__item">
-            <h2 class="profile__title">
+        <section class="about__item">
+            <h2 class="about__title">
                 {{ work.title }}
             </h2>
-            <p class="profile__desc">
+            <p class="about__desc">
                 {{ work.desc }}
             </p>
-            <ol class="work" reversed>
+            <ol class="about-work" reversed>
                 {% for item in work.list %}
-                    <li class="work__item">
-                        <time class="work__period">{{ item.period }}</time>
-                        <span class="work__company">{{ item.company }}</span>
-                        <span class="work__title">{{ item.title }}</span>
+                    <li class="about-work__item">
+                        <time class="about-work__period">{{ item.period }}</time>
+                        <span class="about-work__company">{{ item.company }}</span>
+                        <span class="about-work__title">{{ item.title }}</span>
                     </li>
                 {% endfor %}
             </ol>
         </section>
-        <section class="profile__item">
-            <h2 class="profile__title">
+        <section class="about__item">
+            <h2 class="about__title">
                 {{ contacts.title }}
             </h2>
-            <p class="profile__desc">
+            <p class="about__desc">
                 {{ contacts.desc }}
             </p>
-            <div class="content content-block content-inline">
-                <ul>
-                    {% for item in contacts.list %}
-                        <li>
-                            <a href="{{ item.url }}">
-                                {{- item.title -}}
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
+            <ul class="about__links">
+                {% set icons = cycler('mail', 'telegram') %}
+                {% for item in contacts.list %}
+                    <li class="about-links__item">
+                        <a class="about-links__link action" href="{{ item.url }}">
+                            <svg class="action__icon" width="24" height="24" aria-hidden="true">
+                                <use href="/images/icons.svg#{{ icons.next() }}"></use>
+                            </svg>
+                            {{- item.title -}}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
         </section>
     </div>
-</main> #}
+</main>
 
 {% include 'footer.njk' %}

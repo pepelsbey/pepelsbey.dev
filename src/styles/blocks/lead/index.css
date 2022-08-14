@@ -7,6 +7,12 @@
     position: relative;
     display: grid;
     row-gap: 20px;
+    margin-block-start: calc(
+        -1 * var(--lead-block-padding)
+    );
+    margin-inline: calc(
+        -1 * var(--lead-inline-padding)
+    );
     padding-block: var(--lead-block-padding);
     padding-inline: var(--lead-inline-padding);
     background-color: var(--lead-back);

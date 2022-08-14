@@ -4,10 +4,3 @@
     padding-block: 40px 100px;
     padding-inline: 20px;
 }
-
-/* Intro */
-
-.main__lead {
-    margin-block-start: -40px;
-    margin-inline: -20px;
-}

@@ -15,14 +15,17 @@
 
 /* Blocks */
 
+@import 'blocks/about-work/index.css';
+@import 'blocks/about/index.css';
 @import 'blocks/action/index.css';
-@import 'blocks/article-card/index.css';
 @import 'blocks/article-card-list/index.css';
+@import 'blocks/article-card/index.css';
 @import 'blocks/aside/index.css';
 @import 'blocks/content-block/index.css';
 @import 'blocks/content-inline/index.css';
 @import 'blocks/figure/index.css';
 @import 'blocks/footer/index.css';
+@import 'blocks/gaps/index.css';
 @import 'blocks/header/index.css';
 @import 'blocks/heading/index.css';
 @import 'blocks/intro/index.css';
@@ -31,7 +34,6 @@
 @import 'blocks/menu/index.css';
 @import 'blocks/page/index.css';
 @import 'blocks/pagination/index.css';
-@import 'blocks/profile/index.css';
 @import 'blocks/project-card/index.css';
 @import 'blocks/project-feature-list/index.css';
 @import 'blocks/project-feature/index.css';
@@ -42,4 +44,3 @@
 @import 'blocks/sr-only/index.css';
 @import 'blocks/switcher/index.css';
 @import 'blocks/tags/index.css';
-@import 'blocks/work/index.css';

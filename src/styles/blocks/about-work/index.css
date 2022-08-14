@@ -1,6 +1,6 @@
-/* Work */
+/* About Work */
 
-.work {
+.about-work {
     display: grid;
     row-gap: 32px;
     margin: 0;
@@ -10,7 +10,7 @@
 
 /* Item */
 
-.work__item {
+.about-work__item {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
@@ -18,12 +18,12 @@
 
 /* Period */
 
-.work__period {
+.about-work__period {
     grid-row: span 2;
 }
 
 /* Title */
 
-.work__title {
+.about-work__title {
     color: var(--color-text-secondary);
 }

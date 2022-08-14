@@ -33,18 +33,4 @@ permalink: 'articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber 
     ) }}
 </main>
 
-{# <main class="main" id="main">
-    {% from 'archive.njk' import archive with context %}
-
-    {{ archive(
-        as='div',
-        title='Articles',
-        collection=pagination.items,
-        limit=4,
-        link='feed'
-    ) }}
-
-    {% include 'pagination.njk' %}
-</main> #}
-
 {% include 'footer.njk' %}

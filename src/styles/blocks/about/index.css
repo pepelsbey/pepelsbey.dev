@@ -1,20 +1,20 @@
-/* Profile */
+/* About */
 
-.profile {
+.about {
     display: grid;
     row-gap: 80px;
 }
 
 /* Item */
 
-.profile__item {
+.about__item {
     display: grid;
     row-gap: 20px;
 }
 
 /* Title */
 
-.profile__title {
+.about__title {
     margin: 0;
     font-weight: normal;
     font-size: var(--font-size-h2);
@@ -23,7 +23,7 @@
 
 /* Desc */
 
-.profile__desc {
+.about__desc {
     margin: 0;
     padding-block-end: 20px;
     border-block-end: 2px solid var(--color-text-primary);
@@ -31,10 +31,20 @@
 
 /* Columns */
 
-.profile__columns {
+.about__columns {
     margin: 0;
     padding: 0;
     list-style: none;
     column-count: 2;
     column-gap: 20px;
+}
+
+/* Links */
+
+.about__links {
+    display: grid;
+    row-gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
