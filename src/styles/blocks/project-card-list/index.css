@@ -1,0 +1,6 @@
+/* Project Card List */
+
+.project-card-list {
+    display: grid;
+    row-gap: 20px;
+}

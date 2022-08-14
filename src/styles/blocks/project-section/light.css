@@ -1,0 +1,5 @@
+/* Project Section */
+
+.project-section {
+    --project-section-scribble-fill: hsl(var(--color-titan));
+}

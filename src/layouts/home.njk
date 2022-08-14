@@ -75,7 +75,7 @@ layout: page.njk
             </a>
         </header>
 
-        <div class="project-list">
+        <div class="project-card-list">
             {% set scribbles = cycler(1, 2, 3) %}
             {% for section in projects %}
                 <article class="project-card project-card--{{ section.title | lower }} radius">

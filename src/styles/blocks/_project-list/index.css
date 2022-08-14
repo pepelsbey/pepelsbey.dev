@@ -1,7 +1,0 @@
-/* Project List */
-
-.project-list {
-    display: grid;
-    row-gap: 60px;
-    padding-block-start: 38px;
-}
