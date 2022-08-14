@@ -1,8 +1,8 @@
 ---
 layout: home.njk
 permalink: index.html
-profile:
-    intro: Hi, my name is
+intro:
+    hi: Hi, my name is
     name: Vadim Makeev
     photo: /images/photo.png
     alt: Black and white portrait on a colored background.

@@ -5,24 +5,24 @@ layout: page.njk
 {% include 'header.njk' %}
 
 <main class="main" id="main">
-    <section class="profile">
-        <p class="profile__intro">
-            {{ profile.intro }}
+    <section class="intro">
+        <p class="intro__hi">
+            {{ intro.hi }}
         </p>
-        <h1 class="profile__name">
-            {{ profile.name }}
+        <h1 class="intro__name">
+            {{ intro.name }}
         </h1>
         <img
-            class="profile__photo radius"
-            src="{{ profile.photo }}"
+            class="intro__photo radius"
+            src="{{ intro.photo }}"
             width="308" height="205"
-            alt="{{ profile.alt }}"
+            alt="{{ intro.alt }}"
         >
-        <p class="profile__who">
-            {{ profile.who }}
+        <p class="intro__who">
+            {{ intro.who }}
         </p>
-        <p class="profile__what content content-inline">
-            {{ profile.what | markdownInline | safe }}
+        <p class="intro__what content content-inline">
+            {{ intro.what | markdownInline | safe }}
         </p>
     </section>
 

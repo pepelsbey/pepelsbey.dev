@@ -1,19 +1,19 @@
-/* Profile */
+/* Intro */
 
-.profile {
+.intro {
     display: grid;
     row-gap: 20px;
 }
 
-/* Intro */
+/* Hi */
 
-.profile__intro {
+.intro__hi {
     margin: 0;
 }
 
 /* Name */
 
-.profile__name {
+.intro__name {
     margin: 0;
     margin-block-start: -12px;
     text-transform: uppercase;
@@ -25,17 +25,17 @@
 
 /* Photo */
 
-.profile__photo {
+.intro__photo {
     display: block;
     width: 100%;
     height: auto;
-    background-color: var(--profile-photo-back);
+    background-color: var(--intro-photo-back);
     border-radius: var(--radius);
 }
 
 /* Who */
 
-.profile__who {
+.intro__who {
     margin: 0;
     line-height: 1.25;
     font-size: var(--font-size-h2);
@@ -44,6 +44,6 @@
 
 /* What */
 
-.profile__what {
+.intro__what {
     margin: 0;
 }

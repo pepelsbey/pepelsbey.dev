@@ -27,12 +27,12 @@
 @import 'blocks/figure/index.css';
 @import 'blocks/footer/index.css';
 @import 'blocks/header/index.css';
+@import 'blocks/intro/index.css';
 @import 'blocks/lead/index.css';
 @import 'blocks/main/index.css';
 @import 'blocks/menu/index.css';
 @import 'blocks/page/index.css';
 @import 'blocks/pagination/index.css';
-@import 'blocks/profile/index.css';
 @import 'blocks/project-list/index.css';
 @import 'blocks/project/index.css';
 @import 'blocks/radius/index.css';
