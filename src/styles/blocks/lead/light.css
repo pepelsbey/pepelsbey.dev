@@ -1,0 +1,6 @@
+/* Lead */
+
+.lead {
+    --lead-back: hsl(var(--color-titan));
+    --lead-scribble-fill: hsl(var(--color-grey) / 0.1);
+}

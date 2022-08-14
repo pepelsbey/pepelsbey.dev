@@ -1,6 +1,0 @@
-/* Intro */
-
-.intro {
-    --intro-back: hsl(var(--color-steel));
-    --intro-scribble-fill: hsl(var(--color-manatee) / 0.05);
-}
