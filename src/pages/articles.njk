@@ -25,9 +25,9 @@ permalink: 'articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber 
         </a>
     </header>
 
-    {% from 'article-list.njk' import articleList with context %}
+    {% from 'article-card-list.njk' import articleCardList with context %}
 
-    {{ articleList(
+    {{ articleCardList(
         collection=collections.articles,
         limit=5
     ) }}
