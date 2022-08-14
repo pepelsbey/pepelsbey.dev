@@ -4,10 +4,17 @@
     --pagination-current-back: hsl(var(--color-sulu));
     --pagination-current-text: hsl(var(--color-ebony));
 
-    margin: 0;
-    padding: 0;
     display: flex;
     column-gap: 8px;
+}
+
+/* List */
+
+.pagination__list {
+    display: flex;
+    column-gap: 8px;
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -33,10 +40,4 @@
 .pagination__link:focus-visible {
     outline: 2px solid var(--color-focus);
     outline-offset: 2px;
-}
-
-/* Icon */
-
-.pagination__icon {
-    display: block;
 }
