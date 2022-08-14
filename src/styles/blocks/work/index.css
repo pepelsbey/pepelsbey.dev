@@ -1,0 +1,29 @@
+/* Work */
+
+.work {
+    display: grid;
+    row-gap: 32px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Item */
+
+.work__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+
+/* Period */
+
+.work__period {
+    grid-row: span 2;
+}
+
+/* Title */
+
+.work__title {
+    color: var(--color-text-secondary);
+}

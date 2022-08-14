@@ -11,72 +11,74 @@ layout: page.njk
         </h1>
     </header>
 
-    <section class="profile">
+    <section class="intro">
         <img
-            class="profile__photo radius"
-            src="{{ profile.photo }}"
+            class="intro__photo radius"
+            src="{{ intro.photo }}"
             width="308" height="205"
-            alt="{{ profile.alt }}"
+            alt="{{ intro.alt }}"
         >
-        <p class="profile__who">
-            {{ profile.who }}
+        <p class="intro__who">
+            {{ intro.who }}
         </p>
-        <p class="profile__what content content-inline">
-            {{ profile.what | markdownInline | safe }}
+        <p class="intro__what content content-inline">
+            {{ intro.what | markdownInline | safe }}
         </p>
     </section>
 
-    <section>
-        <h2>
-            {{ skills.title }}
-        </h2>
-        <p>
-            {{ skills.desc }}
-        </p>
-        <ul>
-            {% for item in skills.list %}
-                <li>
-                    {{ item }}
-                </li>
-            {% endfor %}
-        </ul>
-    </section>
-
-    <section>
-        <h2>
-            {{ work.title }}
-        </h2>
-        <p>
-            {{ work.desc }}
-        </p>
-        <ul>
-            {% for item in work.list %}
-                <li>
-                    {{ item.company }},
-                    {{ item.title }}
-                    {{ item.period }}
-                </li>
-            {% endfor %}
-        </ul>
-    </section>
-
-    <section>
-        <h2>
-            {{ contacts.title }}
-        </h2>
-        <p>
-            {{ contacts.desc }}
-        </p>
-        <ul>
-            {% for item in contacts.list %}
-                <li>
-                    <a href="{{ item.url }}">
-                        {{- item.title -}}
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    </section>
+    <div class="profile">
+        <section class="profile__item">
+            <h2 class="profile__title">
+                {{ skills.title }}
+            </h2>
+            <p class="profile__desc">
+                {{ skills.desc }}
+            </p>
+            <ul class="profile__columns">
+                {% for item in skills.list %}
+                    <li>
+                        {{ item }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+        <section class="profile__item">
+            <h2 class="profile__title">
+                {{ work.title }}
+            </h2>
+            <p class="profile__desc">
+                {{ work.desc }}
+            </p>
+            <ol class="work" reversed>
+                {% for item in work.list %}
+                    <li class="work__item">
+                        <time class="work__period">{{ item.period }}</time>
+                        <span class="work__company">{{ item.company }}</span>
+                        <span class="work__title">{{ item.title }}</span>
+                    </li>
+                {% endfor %}
+            </ol>
+        </section>
+        <section class="profile__item">
+            <h2 class="profile__title">
+                {{ contacts.title }}
+            </h2>
+            <p class="profile__desc">
+                {{ contacts.desc }}
+            </p>
+            <div class="content content-block content-inline">
+                <ul>
+                    {% for item in contacts.list %}
+                        <li>
+                            <a href="{{ item.url }}">
+                                {{- item.title -}}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
+    </div>
 </main>
 
 {% include 'footer.njk' %}

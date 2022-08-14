@@ -3,9 +3,9 @@ title: 'About'
 layout: about.njk
 permalink: about/index.html
 
-# Profile
+# Intro
 
-profile:
+intro:
   photo: /images/photo.png
   alt: Black and white portrait on a colored background.
   who: I’m Vadim Makeev, frontend developer based in Berlin, Germany
@@ -32,19 +32,19 @@ work:
   list:
   - company: Gorillas
     title: Software engineer
-    period: 2022—
+    period: 2022–
   - company: Doka
     title: Team lead and chief editor
-    period: 2021—2022
+    period: 2021–2022
   - company: HTML Academy
     title: Courses author
-    period: 2017—2020
+    period: 2017–2020
   - company: Opera Software
     title: Developer advocate
-    period: 2009—2016
+    period: 2009–2016
   - company: Yandex
     title: Frontend developer
-    period: 2008—2009
+    period: 2008–2009
 
 # Contacts
 
@@ -52,8 +52,8 @@ contacts:
   title: Contacts
   desc: 'You can get in touch with me via email or Telegram'
   list:
-  - title: pepelsbey@gmail.com
-    url: mailto:pepelsbey@gmail.com
+  - title: hi@pepelsbey.dev
+    url: mailto:hi@pepelsbey.dev
   - title: t.me/pepelsbey
     url: https://t.me/pepelsbey
 ---

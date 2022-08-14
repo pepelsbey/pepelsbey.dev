@@ -1,0 +1,40 @@
+/* Profile */
+
+.profile {
+    display: grid;
+    row-gap: 80px;
+}
+
+/* Item */
+
+.profile__item {
+    display: grid;
+    row-gap: 20px;
+}
+
+/* Title */
+
+.profile__title {
+    margin: 0;
+    font-weight: normal;
+    font-size: var(--font-size-h2);
+    font-family: var(--font-family-heading);
+}
+
+/* Desc */
+
+.profile__desc {
+    margin: 0;
+    padding-block-end: 20px;
+    border-block-end: 2px solid var(--color-text-primary);
+}
+
+/* Columns */
+
+.profile__columns {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    column-count: 2;
+    column-gap: 20px;
+}

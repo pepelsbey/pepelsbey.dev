@@ -33,6 +33,7 @@
 @import 'blocks/menu/index.css';
 @import 'blocks/page/index.css';
 @import 'blocks/pagination/index.css';
+@import 'blocks/profile/index.css';
 @import 'blocks/project-list/index.css';
 @import 'blocks/project/index.css';
 @import 'blocks/radius/index.css';
@@ -40,3 +41,4 @@
 @import 'blocks/sr-only/index.css';
 @import 'blocks/switcher/index.css';
 @import 'blocks/tags/index.css';
+@import 'blocks/work/index.css';
