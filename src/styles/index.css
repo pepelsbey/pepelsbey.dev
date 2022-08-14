@@ -19,8 +19,6 @@
 @import 'blocks/article-card/index.css';
 @import 'blocks/article-list/index.css';
 @import 'blocks/aside/index.css';
-@import 'blocks/chip-list/index.css';
-@import 'blocks/chip/index.css';
 @import 'blocks/content-block/index.css';
 @import 'blocks/content-inline/index.css';
 @import 'blocks/figure/index.css';
@@ -34,11 +32,13 @@
 @import 'blocks/page/index.css';
 @import 'blocks/pagination/index.css';
 @import 'blocks/profile/index.css';
+@import 'blocks/project-card/index.css';
 @import 'blocks/project-list/index.css';
-@import 'blocks/project/index.css';
 @import 'blocks/radius/index.css';
 @import 'blocks/skip/index.css';
 @import 'blocks/sr-only/index.css';
 @import 'blocks/switcher/index.css';
 @import 'blocks/tags/index.css';
 @import 'blocks/work/index.css';
+/* @import 'blocks/project-list/index.css'; */
+/* @import 'blocks/project/index.css'; */

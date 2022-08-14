@@ -1,0 +1,5 @@
+/* Project Card */
+
+.project-card {
+    --project-card-scribble-fill: hsl(var(--color-white) / 1);
+}

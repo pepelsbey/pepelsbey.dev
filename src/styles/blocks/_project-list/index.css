@@ -2,5 +2,6 @@
 
 .project-list {
     display: grid;
-    row-gap: 20px;
+    row-gap: 60px;
+    padding-block-start: 38px;
 }

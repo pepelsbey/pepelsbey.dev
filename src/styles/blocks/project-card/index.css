@@ -1,10 +1,10 @@
-/* Chip */
+/* Project Card */
 
-.chip {
-    --chip-back-tools: hsl(var(--color-lilac));
-    --chip-back-podcasts: hsl(var(--color-sulu));
-    --chip-back-websites: hsl(var(--color-coral));
-    --chip-text-primary: hsl(var(--color-ebony));
+.project-card {
+    --project-card-back-tools: hsl(var(--color-lilac));
+    --project-card-back-podcasts: hsl(var(--color-sulu));
+    --project-card-back-websites: hsl(var(--color-coral));
+    --project-card-text-primary: hsl(var(--color-ebony));
 
     position: relative;
     display: grid;
@@ -17,26 +17,26 @@
     background-position:
         right 8px
         bottom 8px;
-    color: var(--chip-text-primary);
+    color: var(--project-card-text-primary);
 }
 
 /* Types */
 
-.chip--tools {
-    background-color: var(--chip-back-tools);
+.project-card--tools {
+    background-color: var(--project-card-back-tools);
 }
 
-.chip--podcasts {
-    background-color: var(--chip-back-podcasts);
+.project-card--podcasts {
+    background-color: var(--project-card-back-podcasts);
 }
 
-.chip--websites {
-    background-color: var(--chip-back-websites);
+.project-card--websites {
+    background-color: var(--project-card-back-websites);
 }
 
 /* Title */
 
-.chip__title {
+.project-card__title {
     z-index: 1;
     margin: 0;
     line-height: 1.25;
@@ -47,30 +47,30 @@
 
 /* Link */
 
-.chip__link {
+.project-card__link {
     color: inherit;
     text-decoration: none;
 }
 
-.chip__link:focus-visible {
+.project-card__link:focus-visible {
     outline: none;
 }
 
-.chip__link::before {
+.project-card__link::before {
     position: absolute;
     inset: 0;
     content: '';
     border-radius: var(--radius);
 }
 
-.chip__link:focus-visible::before {
+.project-card__link:focus-visible::before {
     outline-offset: 2px;
     outline: 2px solid var(--color-focus);
 }
 
 /* Icon */
 
-.chip__icon {
+.project-card__icon {
     z-index: 1;
     width: 36px;
     height: 36px;
@@ -78,10 +78,10 @@
 
 /* Scribble */
 
-.chip__scribble {
+.project-card__scribble {
     position: absolute;
     inset-block-end: 8px;
     inset-inline-end: 8px;
     pointer-events: none;
-    color: var(--chip-scribble-fill);
+    color: var(--project-card-scribble-fill);
 }
