@@ -66,10 +66,8 @@ module.exports = (config) => {
         return content;
     });
 
-    const demosTransform = require('./src/transforms/demos.js')
-
     const htmlTransforms = [
-        demosTransform
+        require('./src/transforms/demos.js'),
     ];
 
     config.addTransform('html-transform', async (content, path) => {

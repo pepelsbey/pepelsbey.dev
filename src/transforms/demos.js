@@ -2,7 +2,7 @@ module.exports = function (window, content) {
     const articleContent = window.document.querySelector('.main__content');
 
     if (!articleContent) {
-      return;
+        return;
     }
 
     const iframes = articleContent.querySelectorAll('iframe');
@@ -27,6 +27,6 @@ module.exports = function (window, content) {
                     </a>
                 </figcaption>
             `;
-        iframe.replaceWith(wrapper);
-      })
-  }
+            iframe.replaceWith(wrapper);
+        });
+}
