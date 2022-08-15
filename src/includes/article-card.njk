@@ -7,6 +7,7 @@
 
     {% if external %}
         {% set articleUrl = article.data.source.url %}
+        {% set targetBlank = 'target="_blank"' %}
     {% else %}
         {% set articleUrl = article.url %}
     {% endif %}
@@ -14,7 +15,7 @@
     <article class="article-card radius">
         <div class="article-card__box">
             <{{ heading }}} class="article-card__title">
-                <a class="article-card__link" href="{{ articleUrl }}">
+                <a class="article-card__link" href="{{ articleUrl }}" {{ targetBlank }}>
                     {{- article.data.title | safe -}}
                 </a>
             </{{ heading }}}>
@@ -54,7 +55,7 @@
             </p>
 
             {% if external %}
-                <a class="article-card__source action" href="{{ article.data.source.url }}">
+                <a class="article-card__source action" href="{{ article.data.source.url }}" {{ targetBlank }}>
                     Read on {{ article.data.source.title }}
                     <svg class="action__icon" width="24" height="24" aria-hidden="true">
                         <use href="/images/icons.svg#external">
