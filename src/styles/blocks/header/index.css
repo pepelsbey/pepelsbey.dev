@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-content: center;
+    align-items: center;
     padding-inline: 20px;
     padding-block: 16px;
     border-block-end: 2px solid var(--color-text-primary);
