@@ -1,9 +1,6 @@
 /* Menu */
 
 .menu {
-    --menu-current-back: hsl(var(--color-sulu));
-    --menu-current-text: hsl(var(--color-ebony));
-
     position: fixed;
     z-index: 1;
     inset: 0;
@@ -60,8 +57,8 @@
 }
 
 .menu__link[aria-current] {
-    background-color: var(--menu-current-back);
-    color: var(--menu-current-text);
+    background-color: var(--color-current-back);
+    color: var(--color-current-text);
 }
 
 /* Theme */

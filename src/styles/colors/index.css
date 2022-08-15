@@ -16,6 +16,11 @@
     --color-sulu: 84 79% 71%;
     --color-coral: 16 100% 66%;
 
+    /* Current */
+
+    --color-current-text: hsl(var(--color-ebony));
+    --color-current-back: hsl(var(--color-sulu));
+
     /* Focus */
 
     --color-focus: hsl(var(--color-lilac));

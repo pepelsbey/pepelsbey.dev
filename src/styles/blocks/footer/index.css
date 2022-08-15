@@ -50,6 +50,10 @@
     box-decoration-break: clone;
 }
 
+.footer__link:hover {
+    color: var(--color-text-primary);
+}
+
 .footer__link:focus-visible {
     border-radius: 0.125rem;
     outline: 2px solid var(--color-focus);

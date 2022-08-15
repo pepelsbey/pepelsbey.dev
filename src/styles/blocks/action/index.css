@@ -1,11 +1,8 @@
 /* Action */
 
 .action {
-    --action-hover-back: hsl(var(--color-sulu));
-    --action-hover-text: hsl(var(--color-ebony));
-
     margin: 0;
-    padding: 0.05rem 0.08rem;
+    padding: 0;
     display: inline-flex;
     column-gap: 0.4em;
     align-items: center;
@@ -13,21 +10,23 @@
     border-radius: 0.125rem;
     background-color: transparent;
     color: var(--color-text-primary);
-    line-height: inherit;
+    line-height: 1;
     font-family: inherit;
     font-size: inherit;
-}
-
-@media (hover: hover) and (pointer: fine) {
-    .action:hover {
-        background-color: var(--action-hover-back);
-        color: var(--action-hover-text);
-    }
 }
 
 .action:focus-visible {
     outline: 2px solid var(--color-focus);
     outline-offset: 2px;
+}
+
+/* Hover */
+
+@media (hover: hover) and (pointer: fine) {
+    .action--hover:hover {
+        background-color: var(--color-current-back);
+        color: var(--color-current-text);
+    }
 }
 
 /* Icon */
