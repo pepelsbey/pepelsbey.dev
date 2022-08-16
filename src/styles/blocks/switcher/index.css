@@ -23,9 +23,11 @@
     font-family: inherit;
 }
 
-.theme-switcher__button:hover {
-    background-color: var(--color-current-back);
-    color: var(--color-current-text);
+@media (hover: hover) and (pointer: fine) {
+    .theme-switcher__button:hover {
+        background-color: var(--color-current-back);
+        color: var(--color-current-text);
+    }
 }
 
 .theme-switcher__button:focus-visible {
