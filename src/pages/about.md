@@ -1,5 +1,5 @@
 ---
-title: 'About'
+title: About
 layout: about.njk
 permalink: about/index.html
 
@@ -8,33 +8,35 @@ permalink: about/index.html
 intro:
   photo: /images/photo.png
   alt: Black and white portrait on a colored background.
-  who: I’m Vadim Makeev, frontend developer based in Berlin, Germany
-  what: Here you can find [my thoughts](/articles/) on web development, some of [my projects](/projects/), and information [about me](/about/)
+  who: I’m Vadim Makeev, frontend developer based in Berlin
+  what: I started my career back in 2004 as a frontend developed, then switched to developer advocacy, public speaking, got involved in community, conferences, meetups, open-source, education, learned how to do podcasting and video. But on every step of the way it has always been about the Web.
 
 # Skills
 
 skills:
   title: Skills
-  desc: Here are a few technologies I usully deal with
+  desc: Some of my favorite technologies, tools, or topics that I worked with
   list:
   - HTML
   - CSS
   - SVG
   - JavaScript
-  - Eleventy
   - Accessibility
+  - Typography
+  - Eleventy
+  - Figma
 
 # Work
 
 work:
   title: Work
-  desc: 'I’ve been building stuff on the web for the last 15 years, working with clients across various countries and industries.'
+  desc: Mostly frontend development and developer advocacy, but also project management and team leading
   list:
   - company: Gorillas
-    title: Software engineer
+    title: Frontend developer
     period: 2022–
   - company: Doka
-    title: Team lead and chief editor
+    title: Chief editor
     period: 2021–2022
   - company: HTML Academy
     title: Courses author
@@ -45,15 +47,32 @@ work:
   - company: Yandex
     title: Frontend developer
     period: 2008–2009
+  - company: SUP Fabrique
+    title: Frontend team lead
+    period: 2007–2008
+  - company: Newmedia Stars
+    title: Frontend team lead
+    period: 2006–2007
+  - company: StarSoft
+    title: Frontend developer
+    period: 2005–2006
+  - company: Trinet
+    title: Frontend developer
+    period: 2004–2005
 
 # Contacts
 
 contacts:
   title: Contacts
-  desc: 'You can get in touch with me via email or Telegram'
+  desc: You can get in touch with me via email, Telegram or Twitter
   list:
   - title: hi@pepelsbey.dev
     url: mailto:hi@pepelsbey.dev
+    icon: mail
   - title: t.me/pepelsbey
     url: https://t.me/pepelsbey
+    icon: telegram
+  - title: '@pepelsbey_dev'
+    url: https://twitter.com/pepelsbey_dev
+    icon: twitter
 ---

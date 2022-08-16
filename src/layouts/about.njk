@@ -65,12 +65,11 @@ layout: page.njk
                 {{ contacts.desc }}
             </p>
             <ul class="about__links">
-                {% set icons = cycler('mail', 'telegram') %}
                 {% for item in contacts.list %}
                     <li class="about-links__item">
                         <a class="about-links__link action" href="{{ item.url }}">
                             <svg class="action__icon" width="24" height="24" aria-hidden="true">
-                                <use href="/images/icons.svg#{{ icons.next() }}"></use>
+                                <use href="/images/icons.svg#{{ item.icon }}"></use>
                             </svg>
                             {{- item.title -}}
                         </a>
