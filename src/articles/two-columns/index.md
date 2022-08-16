@@ -367,7 +367,7 @@ See, this already looks like a layout! But some things need to be fixed to make 
 
 Unfortunately, there’s no way for us to use the `gap` property outside of Flexbox or Grid Layout. So let’s use the good old trick: a column followed by another column will get the right margin.
 
-```
+```css
 .columns__item + .columns__item {
     margin-right: 20px;
 }

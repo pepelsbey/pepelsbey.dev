@@ -10,6 +10,7 @@ const pimport = require('postcss-import');
 const postcss = require('postcss');
 const prettydata = require('pretty-data');
 const rss = require('@11ty/eleventy-plugin-rss');
+const highlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const yaml = require('js-yaml');
 
 const global = yaml.load(
@@ -68,6 +69,7 @@ module.exports = (config) => {
 
     const htmlTransforms = [
         require('./src/transforms/demos.js'),
+        require('./src/transforms/prism.js'),
     ];
 
     config.addTransform('html-transform', async (content, path) => {
@@ -219,6 +221,7 @@ module.exports = (config) => {
     // Plugins
 
     config.addPlugin(rss);
+    config.addPlugin(highlight);
 
     // Config
 

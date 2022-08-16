@@ -85,25 +85,6 @@
     content: '*  *  *';
 }
 
-/* Code */
-
-.content-block pre {
-    margin: 0;
-    padding: 20px;
-    overflow: scroll;
-    border-radius: 20px;
-    background-color: var(--content-code-back);
-}
-
-.content-block pre:focus-visible {
-    outline: 2px solid var(--color-focus);
-    outline-offset: 2px;
-}
-
-.content-block pre code {
-    padding: 0;
-}
-
 /* Images */
 
 .content-block img {
