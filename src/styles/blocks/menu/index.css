@@ -11,10 +11,16 @@
         1fr
         min-content;
     background-color: var(--color-back-primary);
+    transform: translateX(-100%);
+    transition: transform 0.3s;
 }
 
 .menu[hidden] {
     display: none;
+}
+
+.menu--open {
+    transform: translateX(0);
 }
 
 /* Feed */
