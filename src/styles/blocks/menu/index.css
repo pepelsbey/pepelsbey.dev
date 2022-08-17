@@ -11,8 +11,8 @@
         1fr
         min-content;
     background-color: var(--color-back-primary);
-    transform: translateX(-100%);
-    transition: transform 0.3s;
+    transform: translateX(-100%) scaleX(0.3);
+    transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 .menu[hidden] {
@@ -20,7 +20,7 @@
 }
 
 .menu--open {
-    transform: translateX(0);
+    transform: translateX(0) scaleX(1);
 }
 
 /* Feed */
