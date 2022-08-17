@@ -4,6 +4,7 @@
     position: relative;
     display: grid;
     row-gap: 20px;
+    scroll-margin-block-start: 84px;
 }
 
 /* Title */
