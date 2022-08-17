@@ -1,6 +1,9 @@
 /* Header */
 
 .header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -8,6 +11,7 @@
     padding-inline: 20px;
     padding-block: 16px;
     border-block-end: 2px solid var(--color-text-primary);
+    background-color: var(--color-back-primary);
 }
 
 /* Button */
