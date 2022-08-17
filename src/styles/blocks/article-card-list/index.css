@@ -2,5 +2,5 @@
 
 .article-card-list {
     display: grid;
-    row-gap: 16px;
+    row-gap: 24px;
 }
