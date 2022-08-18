@@ -13,7 +13,7 @@
 .theme-switcher__button {
     margin: 0;
     padding: 0;
-    padding-inline: 1rem;
+    padding-inline: 0.8rem;
     border: none;
     border-radius: 5rem;
     background-color: transparent;
