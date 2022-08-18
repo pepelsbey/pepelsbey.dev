@@ -1,55 +1,6 @@
 /* Header */
 
-.header {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
-    padding-inline: 20px;
-    padding-block: 16px;
-    border-block-end: 2px solid var(--color-text-primary);
-    background-color: var(--color-back-primary);
-}
-
-/* Button */
-
-.header__button {
-    position: relative;
-    z-index: 2;
-}
-
-.header__button[aria-expanded='false'] :is(
-    .header__icon-close,
-    .header__text-close
-) {
-    display: none;
-}
-
-.header__button[aria-expanded='true'] :is(
-    .header__icon-menu,
-    .header__text-menu
-) {
-    display: none;
-}
-
-/* Link */
-
-.header__link {
-    display: inline-block;
-    border-radius: 50%;
-    color: var(--color-text-primary);
-}
-
-.header__link:focus-visible {
-    outline: 2px solid var(--color-focus);
-    outline-offset: 2px;
-}
-
-/* Logo */
-
-.header__logo {
-    display: block;
-}
+@import 'base.css';
+@import 'mobile.css';
+@import 'tablet.css';
+@import 'desktop.css';

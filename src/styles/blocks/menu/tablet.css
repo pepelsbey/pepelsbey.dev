@@ -1,0 +1,22 @@
+@media (1024px <= width < 1920px) {
+
+/* Menu */
+
+    .menu {
+        display: grid;
+        grid-template-columns:
+            1fr
+            max-content
+            max-content;
+        align-items: center;
+        column-gap: 40px;
+    }
+
+/* List */
+
+    .menu__list {
+        display: flex;
+        column-gap: 40px;
+    }
+
+}

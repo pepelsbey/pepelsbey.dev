@@ -1,0 +1,38 @@
+/* Menu */
+
+.menu {
+    background-color: var(--color-back-primary);
+}
+
+/* List */
+
+.menu__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Link */
+
+.menu__link {
+    padding: 0.1em;
+    border-radius: 0.125em;
+    color: var(--color-text-secondary);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .menu__link:hover {
+        color: var(--color-text-primary);
+    }
+}
+
+.menu__link:focus-visible {
+    border-radius: 0.125em;
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+.menu__link[aria-current] {
+    background-color: var(--color-current-back);
+    color: var(--color-current-text);
+}

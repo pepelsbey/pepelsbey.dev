@@ -1,0 +1,28 @@
+/* Header */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    border-block-end: 2px solid var(--color-text-primary);
+    background-color: var(--color-back-primary);
+}
+
+/* Link */
+
+.header__link {
+    display: inline-block;
+    border-radius: 50%;
+    color: var(--color-text-primary);
+}
+
+.header__link:focus-visible {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+}
+
+/* Logo */
+
+.header__logo {
+    display: block;
+}

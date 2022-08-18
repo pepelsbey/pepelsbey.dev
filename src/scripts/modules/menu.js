@@ -21,7 +21,7 @@ function toggleMenu() {
     if (isOpen) {
         menu.classList.toggle('menu--open');
     } else {
-        menu.toggleAttribute('hidden');
+        menu.classList.toggle('menu--closed');
         setTimeout(() => menu.classList.toggle('menu--open'), 0);
     }
 
@@ -34,7 +34,7 @@ function toggleMenu() {
 
 menu.addEventListener('transitionend', () => {
     if (!isMenuOpen()) {
-        menu.toggleAttribute('hidden');
+        menu.classList.toggle('menu--closed');
     }
 });
 

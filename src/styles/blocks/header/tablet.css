@@ -1,0 +1,26 @@
+@media (1024px <= width < 1920px) {
+
+/* Header */
+
+    .header {
+        display: grid;
+        grid-template-columns: min-content auto;
+        column-gap: 40px;
+        padding-inline: 42px;
+        padding-block: 24px;
+    }
+
+/* Button */
+
+    .header__button {
+        display: none;
+    }
+
+/* Logo */
+
+    .header__logo {
+        inline-size: 40px;
+        block-size: 40px;
+    }
+
+}
