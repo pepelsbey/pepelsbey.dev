@@ -1,0 +1,10 @@
+@media (width < 1024px) {
+
+    /* Main */
+
+    .main {
+        padding-block: 40px 100px;
+        padding-inline: 20px;
+    }
+
+}

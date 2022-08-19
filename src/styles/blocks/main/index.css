@@ -1,6 +1,5 @@
 /* Main */
 
-.main {
-    padding-block: 40px 100px;
-    padding-inline: 20px;
-}
+@import 'mobile.css';
+@import 'tablet.css';
+@import 'desktop.css';

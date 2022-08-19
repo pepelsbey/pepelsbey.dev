@@ -1,0 +1,10 @@
+@media (1024px <= width < 1760px) {
+
+    /* Main */
+
+    .main {
+        padding-block: 48px 144px;
+        padding-inline: 42px;
+    }
+
+}

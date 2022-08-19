@@ -1,0 +1,11 @@
+@media (width >= 1760px) {
+
+    /* Main */
+
+    .main {
+        margin-inline: auto;
+        padding-block: 48px 152px;
+        max-width: 1676px;
+    }
+
+}
