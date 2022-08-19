@@ -14,12 +14,12 @@
     "not dead"
   ],
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0-canary.14",
+    "@11ty/eleventy": "^2.0.0-canary.15",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
     "autoprefixer": "^10.4.7",
     "esbuild": "^0.15.1",
-    "focus-trap": "^6.9.4",
+    "focus-trap": "^7.0.0",
     "html-minifier": "^4.0.0",
     "js-yaml": "^4.1.0",
     "linkedom": "^0.14.12",
