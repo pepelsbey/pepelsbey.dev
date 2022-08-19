@@ -1,9 +1,11 @@
-@media (width >= 1920px) {
+@media (width >= 1760px) {
 
 /* Footer */
 
     .footer {
-
+        padding-inline: calc(
+            (100% - 1676px) / 2
+        );
     }
 
 }

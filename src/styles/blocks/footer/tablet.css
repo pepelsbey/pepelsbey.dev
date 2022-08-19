@@ -1,11 +1,9 @@
-@media (1024px <= width < 1920px) {
+@media (width >= 1024px) {
 
 /* Footer */
 
     .footer {
-        display: grid;
         grid-template-columns: repeat(8, 1fr);
-        column-gap: 20px;
         padding-inline: 42px;
         padding-block: 80px;
     }
@@ -14,13 +12,11 @@
 
     .footer__section {
         grid-column: span 2;
-        display: grid;
         grid-template-rows: 1fr min-content;
     }
 
     .footer__section:last-child {
-        grid-column: span 4;
-        grid-column-end: -1;
+        grid-column: span 4 / -1;
         text-align: right;
     }
 

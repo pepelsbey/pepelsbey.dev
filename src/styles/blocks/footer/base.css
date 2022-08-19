@@ -1,8 +1,16 @@
 /* Footer */
 
 .footer {
+    display: grid;
+    column-gap: 20px;
     border-block-start: 2px solid var(--color-text-primary);
     color: var(--color-text-secondary);
+}
+
+/* Section */
+
+.footer__section {
+    display: grid;
 }
 
 /* Title */
@@ -18,6 +26,8 @@
 /* List */
 
 .footer__list {
+    display: grid;
+    row-gap: 8px;
     margin: 0;
     padding: 0;
     list-style: none;

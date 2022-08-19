@@ -3,10 +3,8 @@
 /* Footer */
 
     .footer {
-        display: grid;
         grid-template-columns: 1fr 1fr;
         row-gap: 40px;
-        column-gap: 20px;
         padding-block: 40px;
         padding-inline: 20px;
     }
@@ -14,20 +12,12 @@
 /* Section */
 
     .footer__section {
-        display: grid;
         row-gap: 20px;
         align-content: start;
     }
 
     .footer__section:last-child {
         grid-column: 1 / -1;
-    }
-
-/* List */
-
-    .footer__list {
-        display: grid;
-        row-gap: 8px;
     }
 
 }

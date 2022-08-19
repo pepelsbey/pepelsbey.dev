@@ -33,3 +33,9 @@
     }
 
 }
+
+@media (width < 1760px) {
+    .header {
+        border-block-end: 2px solid var(--color-text-primary);
+    }
+}
