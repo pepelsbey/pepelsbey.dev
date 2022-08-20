@@ -36,6 +36,6 @@
 
 @media (width < 1760px) {
     .header {
-        border-block-end: 2px solid var(--color-text-primary);
+        box-shadow: 0 2px 0 var(--color-text-primary);
     }
 }
