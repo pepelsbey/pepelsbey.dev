@@ -5,8 +5,8 @@ layout: page.njk
 {% include 'header.njk' %}
 
 <div class="main">
-    <div class="main__gaps">
-        <main class="main__wrapper">
+    <div class="main__wrapper main__gaps">
+        <main>
             <header class="heading">
                 <h1 class="heading__title">
                     {{ title }}
@@ -16,7 +16,7 @@ layout: page.njk
                 {{ content | safe }}
             </div>
         </main>
-        <aside class="main__wrapper">
+        <aside>
             <header class="heading">
                 <h2 class="heading__title">
                     Articles
