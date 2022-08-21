@@ -1,0 +1,69 @@
+@media (1024px <= width < 1760px) {
+
+    /* Name */
+
+    .intro__name {
+        padding-block-end: 40px;
+    }
+
+    /* Photo */
+
+    .intro__photo {
+        grid-row-start: 3;
+        grid-column: 1 / span 5;
+    }
+
+    /* Who */
+
+    .intro__who {
+        grid-row-start: 3;
+        grid-column: 5 / -1;
+        align-self: center;
+        font-size: 4.5vw;
+    }
+
+    /* What */
+
+    .intro__what {
+        grid-column: 6 / -1;
+    }
+
+}
+
+@media (width >= 1024px) {
+
+    /* Intro */
+
+    .intro {
+        grid-template-columns: repeat(8, 1fr);
+        column-gap: 20px;
+        margin-block-start: -45px;
+    }
+
+    /* Hi */
+
+    .intro__hi {
+        grid-column: 2 / -1;
+        padding-block-end: 16px;
+    }
+
+    /* Name */
+
+    .intro__name {
+        grid-column: 1 / -1;
+        line-height: 1.1;
+    }
+
+    /* Photo */
+
+    .intro__photo {
+        border-radius: 40px;
+    }
+
+    /* Who */
+
+    .intro__who {
+        line-height: 1.1;
+    }
+
+}

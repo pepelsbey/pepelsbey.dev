@@ -1,0 +1,44 @@
+/* Intro */
+
+.intro {
+    display: grid;
+}
+
+/* Hi */
+
+.intro__hi {
+    margin: 0;
+}
+
+/* Name */
+
+.intro__name {
+    margin: 0;
+    margin-block-start: -12px;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: var(--font-size-shout);
+    font-family: var(--font-family-heading);
+}
+
+/* Photo */
+
+.intro__photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: var(--intro-photo-back);
+}
+
+/* Who */
+
+.intro__who {
+    margin: 0;
+    font-family: var(--font-family-heading);
+}
+
+/* What */
+
+.intro__what {
+    margin: 0;
+}

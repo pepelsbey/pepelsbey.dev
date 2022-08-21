@@ -1,0 +1,28 @@
+@media (width < 1024px) {
+
+    /* Intro */
+
+    .intro {
+        row-gap: 20px;
+    }
+
+    /* Name */
+
+    .intro__name {
+        line-height: 1.25;
+    }
+
+    /* Photo */
+
+    .intro__photo {
+        border-radius: 20px;
+    }
+
+    /* Who */
+
+    .intro__who {
+        line-height: 1.25;
+        font-size: var(--font-size-h2);
+    }
+
+}

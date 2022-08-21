@@ -1,49 +1,6 @@
 /* Intro */
 
-.intro {
-    display: grid;
-    row-gap: 20px;
-}
-
-/* Hi */
-
-.intro__hi {
-    margin: 0;
-}
-
-/* Name */
-
-.intro__name {
-    margin: 0;
-    margin-block-start: -12px;
-    text-transform: uppercase;
-    line-height: 1.125;
-    font-weight: normal;
-    font-size: var(--font-size-shout);
-    font-family: var(--font-family-heading);
-}
-
-/* Photo */
-
-.intro__photo {
-    display: block;
-    width: 100%;
-    height: auto;
-    background-color: var(--intro-photo-back);
-    border-radius: var(--radius);
-}
-
-/* Who */
-
-.intro__who {
-    margin: 0;
-    line-height: 1.25;
-    font-size: var(--font-size-h2);
-    font-family: var(--font-family-heading);
-}
-
-/* What */
-
-.intro__what {
-    margin: 0;
-}
+@import 'base.css';
+@import 'mobile.css';
+@import 'tablet.css';
+@import 'desktop.css';
