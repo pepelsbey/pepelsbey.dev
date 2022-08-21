@@ -1,0 +1,9 @@
+@media (width >= 1760px) {
+
+    /* Radius */
+
+    .radius {
+        --radius: 40px;
+    }
+
+}
