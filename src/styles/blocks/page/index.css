@@ -3,9 +3,6 @@
 .page {
     background-color: var(--color-back-primary);
     color: var(--color-text-primary);
-    line-height: 1.5;
-    font-size: var(--font-size-normal);
-    font-family: var(--font-family-text);
 }
 
 /* Clip */
@@ -18,4 +15,7 @@
 
 .page__body {
     margin: 0;
+    line-height: 1.5;
+    font-size: var(--font-size-normal);
+    font-family: var(--font-family-text);
 }
