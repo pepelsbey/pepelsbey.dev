@@ -22,4 +22,10 @@
         margin-block-start: -80px;
     }
 
+    /* Gaps */
+
+    .main__gaps {
+        row-gap: 120px;
+    }
+
 }
