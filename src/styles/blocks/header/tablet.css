@@ -1,6 +1,6 @@
 @media (width >= 1024px) {
 
-/* Header */
+    /* Header */
 
     .header {
         display: grid;
@@ -10,13 +10,13 @@
         padding-block: 24px;
     }
 
-/* Button */
+    /* Button */
 
     .header__button {
         display: none;
     }
 
-/* Logo */
+    /* Logo */
 
     .header__logo {
         inline-size: 40px;

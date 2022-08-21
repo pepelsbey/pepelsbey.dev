@@ -1,6 +1,6 @@
 @media (width >= 1024px) {
 
-/* Menu */
+    /* Menu */
 
     .menu {
         display: grid;
@@ -12,7 +12,7 @@
         column-gap: 40px;
     }
 
-/* List */
+    /* List */
 
     .menu__list {
         display: flex;

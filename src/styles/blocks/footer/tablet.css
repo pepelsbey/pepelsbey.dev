@@ -1,6 +1,6 @@
 @media (width >= 1024px) {
 
-/* Footer */
+    /* Footer */
 
     .footer {
         grid-template-columns: repeat(8, 1fr);
@@ -8,7 +8,7 @@
         padding-block: 80px;
     }
 
-/* Section */
+    /* Section */
 
     .footer__section {
         grid-column: span 2;

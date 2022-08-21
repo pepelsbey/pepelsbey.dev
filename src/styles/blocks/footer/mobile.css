@@ -1,6 +1,6 @@
 @media (width < 1024px) {
 
-/* Footer */
+    /* Footer */
 
     .footer {
         grid-template-columns: 1fr 1fr;
@@ -9,7 +9,7 @@
         padding-inline: 20px;
     }
 
-/* Section */
+    /* Section */
 
     .footer__section {
         row-gap: 20px;

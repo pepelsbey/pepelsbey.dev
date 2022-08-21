@@ -1,6 +1,6 @@
 @media (width < 1024px) {
 
-/* Menu */
+    /* Menu */
 
     .menu {
         position: fixed;
@@ -24,14 +24,14 @@
         transform: translateX(0) scaleX(1);
     }
 
-/* Feed */
+    /* Feed */
 
     .menu__feed {
         order: -1;
         justify-self: end;
     }
 
-/* List */
+    /* List */
 
     .menu__list {
         place-self: center;
@@ -40,13 +40,13 @@
         row-gap: 40px;
     }
 
-/* Link */
+    /* Link */
 
     .menu__link {
         font-size: var(--font-size-h3);
     }
 
-/* Theme */
+    /* Theme */
 
     .menu__theme {
         justify-self: center;

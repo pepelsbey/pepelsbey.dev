@@ -1,6 +1,6 @@
 @media (width < 1024px) {
 
-/* Header */
+    /* Header */
 
     .header {
         display: flex;
@@ -12,7 +12,7 @@
         box-shadow: 0 2px 0 var(--color-text-primary);
     }
 
-/* Button */
+    /* Button */
 
     .header__button {
         position: relative;
