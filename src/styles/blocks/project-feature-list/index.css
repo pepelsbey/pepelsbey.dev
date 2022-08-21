@@ -1,6 +1,5 @@
 /* Project Feature List */
 
-.project-feature-list {
-    display: grid;
-    row-gap: 20px;
-}
+@import 'base.css';
+@import 'tablet.css';
+@import 'desktop.css';

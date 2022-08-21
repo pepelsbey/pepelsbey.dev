@@ -1,0 +1,9 @@
+@media (width >= 1760px) {
+
+    /* Project Feature List */
+
+    .project-feature-list {
+        grid-template-columns: 3fr 3fr 2fr;
+    }
+
+}

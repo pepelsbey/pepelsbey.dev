@@ -1,0 +1,16 @@
+@media (width < 1024px) {
+
+    /* Project Feature */
+
+    .project-feature {
+        --project-feature-size: 240px;
+        --project-feature-scribble-size: 200px;
+    }
+
+    /* Icon */
+
+    .project-feature__icon {
+        width: 36px;
+        height: 36px;
+    }
+}
