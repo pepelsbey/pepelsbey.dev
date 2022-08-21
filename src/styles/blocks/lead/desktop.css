@@ -6,7 +6,9 @@
         --lead-block-padding: 80px;
         --lead-inline-padding: 0;
 
-        margin-block-start: -80px;
+        padding-inline: calc(
+            (100% - 1676px) / 2
+        );
     }
 
 }

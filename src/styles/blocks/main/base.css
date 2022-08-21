@@ -1,6 +1,6 @@
 /* Gaps */
 
-.gaps {
+.main__gaps {
     display: grid;
     row-gap: 80px;
 }

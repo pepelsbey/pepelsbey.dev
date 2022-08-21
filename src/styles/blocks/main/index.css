@@ -1,5 +1,6 @@
 /* Main */
 
+@import 'base.css';
 @import 'mobile.css';
 @import 'tablet.css';
 @import 'desktop.css';

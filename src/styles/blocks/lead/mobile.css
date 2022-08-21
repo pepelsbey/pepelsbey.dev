@@ -5,9 +5,6 @@
     .lead {
         --lead-block-padding: 40px;
         --lead-inline-padding: 20px;
-
-        margin-block-start: -40px;
-        margin-inline: -20px;
     }
 
 }

@@ -1,8 +1,8 @@
 @media (width >= 1760px) {
 
-    /* Main */
+    /* Wrapper */
 
-    .main {
+    .main__wrapper {
         margin-inline: auto;
         max-width: 1676px;
     }

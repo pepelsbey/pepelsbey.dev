@@ -1,8 +1,8 @@
 @media (1024px <= width < 1760px) {
 
-    /* Main */
+    /* Wrapper */
 
-    .main {
+    .main__wrapper {
         padding-inline: 42px;
     }
 
@@ -14,6 +14,12 @@
 
     .main {
         padding-block: 80px 192px;
+    }
+
+    /* Lead */
+
+    .main__lead {
+        margin-block-start: -80px;
     }
 
 }
