@@ -1,4 +1,4 @@
-@media (width >= 1024px) {
+@media (1024px <= width < 1760px) {
     :root {
         --font-size-small: 1rem;
         --font-size-normal: 1.25rem;
