@@ -1,0 +1,10 @@
+@media (1024px <= width < 1760px) {
+
+    /* Article Card List */
+
+    .article-card-list {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 60px;
+    }
+
+}

@@ -1,0 +1,6 @@
+/* Article Card List */
+
+.article-card-list {
+    display: grid;
+    column-gap: 20px;
+}

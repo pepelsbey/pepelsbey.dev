@@ -1,0 +1,9 @@
+@media (width < 1024px) {
+
+    /* Article Card List */
+
+    .article-card-list {
+        row-gap: 40px;
+    }
+
+}

@@ -1,0 +1,9 @@
+@media (width >= 1024px) {
+
+    /* Box */
+
+    .article-card__box {
+        padding-block: 40px;
+    }
+
+}
