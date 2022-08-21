@@ -4,6 +4,7 @@
     position: relative;
     display: grid;
     row-gap: 20px;
+    overflow: hidden;
     background-color: var(--lead-back);
     padding-block: var(--lead-block-padding);
     padding-inline: var(--lead-inline-padding);
@@ -23,7 +24,6 @@
     line-height: 1.1;
     font-weight: normal;
     font-family: var(--font-family-heading);
-    font-size: var(--font-size-h1);
 }
 
 /* Scribble */
@@ -31,14 +31,6 @@
 .lead__scribble {
     position: absolute;
     transform: scaleX(-1);
-    inset: 0;
-    margin: auto;
-    inline-size: calc(
-        100% - var(--lead-inline-padding) * 2
-    );
-    block-size: calc(
-        100% - var(--lead-block-padding) * 2
-    );
     color: var(--lead-scribble-fill);
     pointer-events: none;
 }

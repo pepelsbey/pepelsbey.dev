@@ -11,4 +11,21 @@
         );
     }
 
+    /* Title */
+
+    .lead__title {
+        letter-spacing: -0.01em;
+        font-size: var(--font-size-shout);
+    }
+
+    /* Scribble */
+
+    .lead__scribble {
+        inset-block: 0;
+        inset-inline-start: 50%;
+        margin: auto;
+        inline-size: 1250px;
+        block-size: auto;
+    }
+
 }

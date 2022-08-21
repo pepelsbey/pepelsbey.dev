@@ -7,4 +7,25 @@
         --lead-inline-padding: 20px;
     }
 
+    /* Scribble */
+
+    .lead__scribble {
+        inset: 0;
+        margin: auto;
+        inline-size: calc(
+            100% - var(--lead-inline-padding) * 2
+        );
+        block-size: auto;
+    }
+
+}
+
+@media (width < 1760px) {
+
+    /* Title */
+
+    .lead__title {
+        font-size: var(--font-size-h1);
+    }
+
 }

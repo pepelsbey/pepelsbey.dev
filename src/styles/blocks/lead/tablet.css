@@ -3,8 +3,18 @@
     /* Lead */
 
     .lead {
-        --lead-block-padding: 80px;
+        --lead-block-padding: 48px;
         --lead-inline-padding: 42px;
+    }
+
+    /* Scribble */
+
+    .lead__scribble {
+        inset-block: 0;
+        inset-inline-end: 0;
+        margin: auto;
+        inline-size: 640px;
+        block-size: auto;
     }
 
 }
