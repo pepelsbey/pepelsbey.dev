@@ -1,53 +1,6 @@
 /* Lead */
 
-.lead {
-    --lead-block-padding: 40px;
-    --lead-inline-padding: 20px;
-
-    position: relative;
-    display: grid;
-    row-gap: 20px;
-    margin-block-start: calc(
-        -1 * var(--lead-block-padding)
-    );
-    margin-inline: calc(
-        -1 * var(--lead-inline-padding)
-    );
-    padding-block: var(--lead-block-padding);
-    padding-inline: var(--lead-inline-padding);
-    background-color: var(--lead-back);
-}
-
-/* Tags */
-
-.lead__tags {
-    order: -1;
-}
-
-/* Title */
-
-.lead__title {
-    margin: 0;
-    text-transform: uppercase;
-    line-height: 1.1;
-    font-weight: normal;
-    font-family: var(--font-family-heading);
-    font-size: var(--font-size-h1);
-}
-
-/* Scribble */
-
-.lead__scribble {
-    position: absolute;
-    transform: scaleX(-1);
-    inset: 0;
-    margin: auto;
-    inline-size: calc(
-        100% - var(--lead-inline-padding) * 2
-    );
-    block-size: calc(
-        100% - var(--lead-block-padding) * 2
-    );
-    color: var(--lead-scribble-fill);
-    pointer-events: none;
-}
+@import 'base.css';
+@import 'mobile.css';
+@import 'tablet.css';
+@import 'desktop.css';

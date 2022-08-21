@@ -1,0 +1,12 @@
+@media (width >= 1760px) {
+
+    /* Lead */
+
+    .lead {
+        --lead-block-padding: 80px;
+        --lead-inline-padding: 0;
+
+        margin-block-start: -80px;
+    }
+
+}

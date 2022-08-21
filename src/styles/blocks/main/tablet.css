@@ -3,8 +3,17 @@
     /* Main */
 
     .main {
-        padding-block: 48px 144px;
         padding-inline: 42px;
+    }
+
+}
+
+@media (width >= 1024px) {
+
+    /* Main */
+
+    .main {
+        padding-block: 80px 192px;
     }
 
 }

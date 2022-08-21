@@ -9,6 +9,7 @@
         align-items: center;
         padding-inline: 20px;
         padding-block: 16px;
+        box-shadow: 0 2px 0 var(--color-text-primary);
     }
 
 /* Button */
@@ -32,10 +33,4 @@
         display: none;
     }
 
-}
-
-@media (width < 1760px) {
-    .header {
-        box-shadow: 0 2px 0 var(--color-text-primary);
-    }
 }
