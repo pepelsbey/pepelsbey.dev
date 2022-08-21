@@ -4,6 +4,7 @@
 
     .project-feature {
         --project-feature-size: 364px;
+        --project-feature-radius: 40px;
         --project-feature-scribble-size: calc(
             var(--project-feature-size) -
             var(--project-feature-scribble-margin) * 2

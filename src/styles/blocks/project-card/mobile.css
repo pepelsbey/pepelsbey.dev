@@ -1,0 +1,9 @@
+@media (width < 1024px) {
+
+    /* Box */
+
+    .project-card__box {
+        padding-block: 20px;
+    }
+
+}

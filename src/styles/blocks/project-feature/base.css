@@ -13,7 +13,7 @@
     padding-inline: 20px;
     padding-block: 40px;
     min-height: var(--project-feature-size);
-    border-radius: var(--radius);
+    border-radius: var(--project-feature-radius);
     color: var(--project-feature-text-primary);
 }
 
@@ -57,7 +57,7 @@
     position: absolute;
     inset: 0;
     content: '';
-    border-radius: var(--radius);
+    border-radius: var(--project-feature-radius);
 }
 
 .project-feature__link:focus-visible::before {

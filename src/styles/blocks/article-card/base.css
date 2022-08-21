@@ -17,7 +17,7 @@
     row-gap: 20px;
     grid-template-columns: 1fr min-content;
     padding-inline: 20px;
-    border-radius: var(--radius);
+    border-radius: 20px;
     background-color: var(--article-card-box-back);
 }
 
@@ -92,7 +92,7 @@
     position: absolute;
     inset: 0;
     content: '';
-    border-radius: var(--radius);
+    border-radius: 20px;
 }
 
 .article-card__link:focus-visible::before {

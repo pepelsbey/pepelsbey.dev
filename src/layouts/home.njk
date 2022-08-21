@@ -77,7 +77,7 @@ layout: page.njk
             <div class="project-feature-list">
                 {% set scribbles = cycler(1, 2, 3) %}
                 {% for section in projects %}
-                    <article class="project-feature project-feature--{{ section.title | lower }} radius">
+                    <article class="project-feature project-feature--{{ section.title | lower }}">
                         <h3 class="project-feature__title">
                             <a class="project-feature__link" href="/projects/#{{ section.title | lower }}">
                                 <span class="sr-only">Projects:</span> {{ section.title }}

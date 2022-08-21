@@ -4,6 +4,7 @@
 
     .project-feature {
         --project-feature-size: 240px;
+        --project-feature-radius: 20px;
         --project-feature-scribble-size: 200px;
     }
 
