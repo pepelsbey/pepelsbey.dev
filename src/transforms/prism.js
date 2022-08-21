@@ -1,5 +1,5 @@
 module.exports = function (window, content) {
-    const articleContent = window.document.querySelector('.main__content');
+    const articleContent = window.document.getElementById('article-content');
 
     if (!articleContent) {
         return;
