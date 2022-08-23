@@ -14,29 +14,25 @@ function isMenuOpen() {
 function toggleMenu() {
     const isOpen = isMenuOpen();
 
-    page.classList.toggle('page--clip');
     headerButton.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
     headerLink.setAttribute('tabindex', isOpen ? '0' : '-1');
 
     if (isOpen) {
-        menu.classList.toggle('menu--open');
-    } else {
-        menu.classList.toggle('menu--closed');
-        setTimeout(() => menu.classList.toggle('menu--open'), 0);
-    }
-
-    if (isOpen) {
+        menu.classList.remove('menu--open');
+        menu.addEventListener('transitionend', () => {
+            menu.classList.add('menu--closed');
+        }, {
+            once: true
+        });
         focusTrap.deactivate();
     } else {
+        menu.classList.remove('menu--closed');
+        setTimeout(() => menu.classList.add('menu--open'), 20);
         focusTrap.activate();
     }
-}
 
-menu.addEventListener('transitionend', () => {
-    if (!isMenuOpen()) {
-        menu.classList.toggle('menu--closed');
-    }
-});
+    page.classList.toggle('page--clip');
+}
 
 headerButton.addEventListener('click', toggleMenu);
 
