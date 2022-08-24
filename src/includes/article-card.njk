@@ -14,11 +14,11 @@
 
     <article class="article-card">
         <div class="article-card__box">
-            <{{ heading }}} class="article-card__title">
+            <{{ heading }} class="article-card__title">
                 <a class="article-card__link" href="{{ articleUrl }}" {{ targetBlank }}>
                     {{- article.data.title | safe -}}
                 </a>
-            </{{ heading }}}>
+            </{{ heading }}>
 
             <p class="tags">
                 {% for tag in article.data.tags %}
