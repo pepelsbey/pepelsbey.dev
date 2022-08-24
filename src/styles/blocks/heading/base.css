@@ -2,16 +2,9 @@
 
 .heading {
     display: flex;
-    padding-block: 20px 60px;
-    background-image: linear-gradient(
-        to top,
-        var(--color-text-primary) 2px,
-        transparent 2px
-    );
-    background-position:
-        left 0
-        bottom 40px;
-    align-items: center;
+    padding-block-end: 20px;
+    align-items: baseline;
+    border-block-end: solid 2px var(--color-text-primary);
 }
 
 /* Title */
@@ -36,7 +29,6 @@
 /* Link */
 
 .heading__link {
-    margin-block-end: 8px;
     margin-inline-start: auto;
     color: var(--color-text-primary);
 }

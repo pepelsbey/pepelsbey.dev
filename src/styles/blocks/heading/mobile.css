@@ -1,5 +1,12 @@
 @media (width < 1024px) {
 
+    /* Heading */
+
+    .heading {
+        padding-block-start: 20px;
+        margin-block-end: 40px;
+    }
+
     /* Label */
 
     .heading__label {

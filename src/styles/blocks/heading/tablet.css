@@ -1,5 +1,18 @@
 @media (width >= 1024px) {
 
+    /* Heading */
+
+    .heading {
+        padding-block-start: 20px;
+        margin-block-end: 80px;
+    }
+
+    /* Title */
+
+    .heading__title--top {
+        font-size: var(--font-size-shout);
+    }
+
     /* Label */
 
     .heading__label {
