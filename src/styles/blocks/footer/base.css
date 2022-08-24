@@ -3,7 +3,7 @@
 .footer {
     display: grid;
     column-gap: 20px;
-    box-shadow: 0 -2px 0 var(--color-text-primary);
+    border-block-start: solid 2px var(--color-text-primary);
     color: var(--color-text-secondary);
 }
 
