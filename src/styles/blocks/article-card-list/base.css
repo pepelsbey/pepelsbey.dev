@@ -2,5 +2,9 @@
 
 .article-card-list {
     display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(404px, 1fr)
+    );
     column-gap: 20px;
 }
