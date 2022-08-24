@@ -1,0 +1,9 @@
+@media (width < 1024px) {
+
+    /* Label */
+
+    .heading__label {
+        display: none;
+    }
+
+}

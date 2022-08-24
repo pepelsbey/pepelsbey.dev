@@ -1,0 +1,42 @@
+/* Heading */
+
+.heading {
+    display: flex;
+    padding-block: 20px 60px;
+    background-image: linear-gradient(
+        to top,
+        var(--color-text-primary) 2px,
+        transparent 2px
+    );
+    background-position:
+        left 0
+        bottom 40px;
+    align-items: center;
+}
+
+/* Title */
+
+.heading__title {
+    margin: 0;
+    line-height: 1.1;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: var(--font-size-h1);
+    font-family: var(--font-family-heading);
+}
+
+/* Number */
+
+.heading__number {
+    align-self: start;
+    margin-inline-start: 4px;
+    line-height: 1.3;
+}
+
+/* Link */
+
+.heading__link {
+    margin-block-end: 8px;
+    margin-inline-start: auto;
+    color: var(--color-text-primary);
+}
