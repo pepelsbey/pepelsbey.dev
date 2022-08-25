@@ -9,7 +9,7 @@ intro:
   photo: /images/photo.png
   alt: Black and white portrait on a colored background.
   who: I’m Vadim Makeev, frontend developer based in Berlin
-  what: I started my career back in 2004 as a frontend developer, then switched to developer advocacy, public speaking, got involved in community, conferences, meetups, open-source, education, then learned how to do podcasts and video. But on every step of the way it has always been about the Web.
+  what: I started my career back in 2004 as a frontend developer, then switched to developer advocacy and public speaking, got involved in community, conferences, meetups, open-source, education, then learned how to make podcasts and video. But on every step of the way it has always been about the Web.
 
 # Skills
 
