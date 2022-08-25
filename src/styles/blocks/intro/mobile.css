@@ -9,7 +9,7 @@
     /* Name */
 
     .intro__name {
-        line-height: 1.25;
+        margin-block-start: -11px;
     }
 
     /* Photo */
