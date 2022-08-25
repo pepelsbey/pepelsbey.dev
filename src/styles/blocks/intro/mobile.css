@@ -25,4 +25,10 @@
         font-size: var(--font-size-h2);
     }
 
+    /* Scribble */
+
+    .intro__scribble {
+        display: none;
+    }
+
 }

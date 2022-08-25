@@ -53,6 +53,7 @@
     /* Intro */
 
     .intro {
+        position: relative;
         grid-template-columns: repeat(8, 1fr);
         column-gap: 20px;
         padding-block-start: 20px;
@@ -75,6 +76,20 @@
     .intro__who {
         align-self: center;
         line-height: 1.1;
+    }
+
+    /* Scribble */
+
+    .intro__scribble {
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-end: -320px;
+        z-index: -1;
+        block-size: 640px;
+        inline-size: 640px;
+        color: var(--intro-scribble-fill);
+        transform: scaleX(-1);
+        pointer-events: none;
     }
 
 }
