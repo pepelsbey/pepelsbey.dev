@@ -1,49 +1,27 @@
 @media (1024px <= width < 1760px) {
 
-    /* Intro */
-
-    .intro {
-        grid-template-areas:
-            'top'
-            'middle'
-            'bottom';
-    }
-
-    /* Hi */
-
-    .intro__hi {
-        grid-area: top;
-        grid-column: 2 / -1;
-    }
-
-    /* Name */
-
-    .intro__name {
-        grid-area: top;
-        grid-column: 1 / -1;
-        padding-block-end: 40px;
-    }
-
-    /* Photo */
-
-    .intro__photo {
-        grid-area: middle;
-        grid-column: 1 / span 5;
-    }
-
     /* Who */
 
     .intro__who {
-        grid-area: middle;
-        grid-column: 5 / -1;
         font-size: 4.5vw;
     }
 
     /* What */
 
     .intro__what {
-        grid-area: bottom;
-        grid-column: 6 / -1;
+        grid-column: 6 / span 3;
+    }
+
+    /* Path */
+
+    .intro__path {
+        grid-column: 6 / span 3;
+    }
+
+    /* Web */
+
+    .intro__web {
+        grid-column: 5 / span 3;
     }
 
 }
@@ -53,8 +31,12 @@
     /* Intro */
 
     .intro {
-        position: relative;
         grid-template-columns: repeat(8, 1fr);
+        grid-template-areas:
+            'first'
+            'second'
+            'third'
+            'fourth';
         column-gap: 20px;
         padding-block-start: 20px;
     }
@@ -62,34 +44,56 @@
     /* Hi */
 
     .intro__hi {
+        grid-area: first;
+        grid-column: 2 / -1;
         margin-block-start: -32px;
+    }
+
+    /* Name */
+
+    .intro__name {
+        grid-area: first;
+        grid-column: 1 / -1;
+        padding-block-end: 40px;
     }
 
     /* Photo */
 
     .intro__photo {
+        grid-area: second;
+        grid-column: 1 / span 5;
         border-radius: 40px;
     }
 
     /* Who */
 
     .intro__who {
-        align-self: center;
+        grid-area: second;
+        grid-column: 5 / span 4;
+        align-self: end;
+        padding-block-end: 12px;
         line-height: 1.1;
     }
 
-    /* Scribble */
+    /* What */
 
-    .intro__scribble {
-        position: absolute;
-        inset-block-start: 0;
-        inset-inline-end: -320px;
-        z-index: -1;
-        block-size: 640px;
-        inline-size: 640px;
-        color: var(--intro-scribble-fill);
-        transform: scaleX(-1);
-        pointer-events: none;
+    .intro__what {
+        padding-block-start: 18px;
+        grid-area: third;
+    }
+
+    /* Path */
+
+    .intro__path {
+        padding-block-start: 18px;
+        grid-area: third;
+    }
+
+    /* Web */
+
+    .intro__web {
+        padding-block-start: 30px;
+        grid-area: fourth;
     }
 
 }

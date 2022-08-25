@@ -1,39 +1,14 @@
 @media (width >= 1760px) {
 
-    /* Intro */
-
-    .intro {
-        grid-template-areas:
-            'top'
-            'bottom';
-    }
-
-    /* Hi */
-
-    .intro__hi {
-        grid-area: top;
-        grid-column: 2 / -1;
-    }
-
-    /* Name */
-
-    .intro__name {
-        grid-area: top;
-        grid-column: 1 / -1;
-        padding-block-end: 80px;
-    }
-
     /* Photo */
 
     .intro__photo {
-        grid-area: bottom;
         grid-column: 2 / span 3;
     }
 
     /* Who */
 
     .intro__who {
-        grid-area: bottom;
         grid-column: 4 / span 4;
         font-size: var(--font-size-h2);
     }
@@ -41,6 +16,18 @@
     /* What */
 
     .intro__what {
+        grid-column: 5 / span 2;
+    }
+
+    /* Path */
+
+    .intro__path {
+        grid-column: 6 / span 2;
+    }
+
+    /* Web */
+
+    .intro__web {
         grid-column: 5 / span 2;
     }
 

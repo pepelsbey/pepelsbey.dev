@@ -2,5 +2,4 @@
 
 .intro {
     --intro-photo-back: hsl(var(--color-lilac));
-    --intro-scribble-fill: hsl(var(--color-manatee) / 0.2);
 }

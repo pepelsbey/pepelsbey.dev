@@ -8,10 +8,10 @@ layout: page.njk
     <div class="main__wrapper main__gaps">
         <div class="intro">
             <p class="intro__hi">
-                {{ intro.hi }}
+                {{ intro.hi | safe }}
             </p>
             <h1 class="intro__name">
-                {{ intro.name }}
+                {{ intro.name | safe }}
             </h1>
             <img
                 class="intro__photo"
@@ -20,14 +20,11 @@ layout: page.njk
                 alt="{{ intro.alt }}"
             >
             <p class="intro__who">
-                {{ intro.who }}
+                {{ intro.who | safe }}
             </p>
             <p class="intro__what content content-inline">
                 {{ intro.what | markdownInline | safe }}
             </p>
-            <svg class="intro__scribble" width="200" height="200" aria-hidden="true">
-                <use href="/images/scribbles.svg#1"></use>
-            </svg>
         </div>
         <section>
             <header class="heading">

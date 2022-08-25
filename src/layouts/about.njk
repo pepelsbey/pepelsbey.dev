@@ -20,10 +20,13 @@ layout: page.njk
                     alt="{{ intro.alt }}"
                 >
                 <p class="intro__who">
-                    {{ intro.who }}
+                    {{ intro.who | safe }}
                 </p>
-                <p class="intro__what content content-inline">
-                    {{ intro.what | markdownInline | safe }}
+                <p class="intro__path content content-inline">
+                    {{ intro.path | markdownInline | safe }}
+                </p>
+                <p class="intro__web content content-inline">
+                    {{ intro.web | markdownInline | safe }}
                 </p>
             </section>
             <section class="about__item">

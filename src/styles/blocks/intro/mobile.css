@@ -6,12 +6,6 @@
         row-gap: 20px;
     }
 
-    /* Name */
-
-    .intro__name {
-        margin-block-start: -11px;
-    }
-
     /* Photo */
 
     .intro__photo {
@@ -23,12 +17,6 @@
     .intro__who {
         line-height: 1.25;
         font-size: var(--font-size-h2);
-    }
-
-    /* Scribble */
-
-    .intro__scribble {
-        display: none;
     }
 
 }
