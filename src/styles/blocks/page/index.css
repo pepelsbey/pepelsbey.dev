@@ -1,6 +1,7 @@
 /* Page */
 
 .page {
+    overflow-x: hidden;
     background-color: var(--color-back-primary);
     color: var(--color-text-primary);
 }
