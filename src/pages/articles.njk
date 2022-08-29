@@ -28,13 +28,18 @@ permalink: 'articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber 
                 </span>
             </a>
         </header>
+        <div class="columns">
+            <div class="columns__aside">
+            </div>
+            <div class="columns__cards">
+                {% from 'article-card-list.njk' import articleCardList with context %}
 
-        {% from 'article-card-list.njk' import articleCardList with context %}
-
-        {{ articleCardList(
-            collection=collections.articles,
-            limit=5
-        ) }}
+                {{ articleCardList(
+                    collection=collections.articles,
+                    limit=5
+                ) }}
+            </div>
+        </div>
     </div>
 </main>
 

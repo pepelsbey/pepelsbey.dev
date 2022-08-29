@@ -1,0 +1,9 @@
+@media (width >= 1760px) {
+
+    /* Content */
+
+    .columns__content {
+        grid-column-end: span 4;
+    }
+
+}

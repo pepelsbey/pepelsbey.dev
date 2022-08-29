@@ -1,0 +1,29 @@
+@media (width >= 1024px) {
+
+    /* Columns */
+
+    .columns {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        column-gap: 20px;
+    }
+
+    /* Aside */
+
+    .columns__aside {
+        grid-column-end: span 2;
+    }
+
+    /* Cards */
+
+    .columns__cards {
+        grid-column-end: span 6;
+    }
+
+    /* Content */
+
+    .columns__content {
+        grid-column-end: span 6;
+    }
+
+}
