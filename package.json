@@ -3,7 +3,8 @@
   "scripts": {
     "start": "eleventy --serve --quiet",
     "build": "rm -rf dist && eleventy",
-    "deploy": "cd dist && rsync --archive --compress --delete --exclude=.DS_Store . pepelsbey.dev:/var/www/pepelsbey.dev/html/"
+    "deploy": "cd dist && rsync --archive --compress --delete --exclude=.DS_Store . pepelsbey.dev:/var/www/pepelsbey.dev/html/",
+    "html": "node-w3c-validator --input ./dist/**/*.html --format lint --verbose --errors-only"
   },
   "engines": {
     "node": "16",
@@ -23,6 +24,7 @@
     "html-minifier": "^4.0.0",
     "js-yaml": "^4.1.0",
     "linkedom": "^0.14.12",
+    "node-w3c-validator": "^2.0.2",
     "postcss": "^8.4.13",
     "postcss-csso": "^6.0.0",
     "postcss-import": "^14.1.0",
