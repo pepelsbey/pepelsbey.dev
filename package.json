@@ -14,6 +14,11 @@
     "last 2 version",
     "not dead"
   ],
+  "nodeW3Cvalidator": {
+    "suppressErrors": [
+      "Attribute “media” not allowed on element “meta” at this point."
+    ]
+  },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0-canary.15",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
