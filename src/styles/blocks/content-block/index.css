@@ -80,8 +80,8 @@
 
 .content-block hr::before {
     line-height: 1;
-    font-family: var(--font-family-heading);
     font-size: var(--font-size-h3);
+    font-family: var(--font-family-heading);
     content: '*  *  *';
 }
 

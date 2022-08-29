@@ -1,9 +1,9 @@
 /* theme */
 
 .theme-switcher {
-    padding: 0.125rem;
     display: inline-grid;
     grid-template-columns: repeat(3, 1fr);
+    padding: 0.125rem;
     border: 2px solid var(--color-text-primary);
     border-radius: 5rem;
 }
@@ -36,7 +36,7 @@
 }
 
 .theme-switcher__button[aria-pressed='true'] {
+    outline-offset: 2px;
     background-color: var(--color-text-primary);
     color: var(--color-back-primary);
-    outline-offset: 2px;
 }

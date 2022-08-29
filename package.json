@@ -4,7 +4,8 @@
     "start": "eleventy --serve --quiet",
     "build": "rm -rf dist && eleventy",
     "deploy": "cd dist && rsync --archive --compress --delete --exclude=.DS_Store . pepelsbey.dev:/var/www/pepelsbey.dev/html/",
-    "html": "node-w3c-validator --input ./dist/**/*.html --format lint --verbose --errors-only"
+    "lint:html": "node-w3c-validator --input ./dist/**/*.html --format lint --verbose --errors-only",
+    "lint:css": "stylelint src/styles/**/*.css"
   },
   "engines": {
     "node": "16",
@@ -34,6 +35,8 @@
     "postcss-csso": "^6.0.0",
     "postcss-import": "^14.1.0",
     "postcss-media-minmax": "^5.0.0",
-    "pretty-data": "^0.40.0"
+    "pretty-data": "^0.40.0",
+    "stylelint": "^14.11.0",
+    "stylelint-order": "^5.0.0"
   }
 }

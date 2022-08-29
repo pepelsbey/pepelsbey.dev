@@ -14,8 +14,8 @@
 .article-card__box {
     position: relative;
     display: grid;
-    row-gap: 20px;
     grid-template-columns: 1fr min-content;
+    row-gap: 20px;
     padding-inline: 20px;
     border-radius: 20px;
     background-color: var(--article-card-box-back);
@@ -42,9 +42,9 @@
 /* Types */
 
 .article-card__types {
-    margin: 0;
     display: flex;
     column-gap: 8px;
+    margin: 0;
 }
 
 /* Type */
@@ -96,8 +96,8 @@
 }
 
 .article-card__link:focus-visible::before {
-    outline-offset: 2px;
     outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
 }
 
 /* Date */

@@ -11,13 +11,13 @@
     /* Section */
 
     .footer__section {
-        grid-column: span 2;
         grid-template-rows: 1fr min-content;
+        grid-column: span 2;
     }
 
     .footer__section:last-child {
         grid-column: span 4 / -1;
-        text-align: right;
+        text-align: end;
     }
 
 }

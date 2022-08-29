@@ -1,18 +1,18 @@
 /* Action */
 
 .action {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.4em;
     margin: 0;
     padding: 0;
-    display: inline-flex;
-    column-gap: 0.4em;
-    align-items: center;
     border: none;
     border-radius: 0.125rem;
     background-color: transparent;
     color: var(--color-text-primary);
     line-height: 1;
-    font-family: inherit;
     font-size: inherit;
+    font-family: inherit;
 }
 
 .action:focus-visible {

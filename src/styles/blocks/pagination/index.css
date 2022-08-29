@@ -22,8 +22,8 @@
 
 .pagination__link {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     width: 2em;
     height: 2em;
     border-radius: 0.125rem;

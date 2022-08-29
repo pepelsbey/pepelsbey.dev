@@ -27,9 +27,9 @@
 }
 
 .menu__link:focus-visible {
-    border-radius: 0.125em;
     outline: 2px solid var(--color-focus);
     outline-offset: 2px;
+    border-radius: 0.125em;
 }
 
 .menu__link[aria-current] {

@@ -61,8 +61,8 @@
 }
 
 .project-feature__link:focus-visible::before {
-    outline-offset: 2px;
     outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
 }
 
 /* Icon */
@@ -75,8 +75,8 @@
 
 .project-feature__scribble {
     position: absolute;
-    inset-inline-end: var(--project-feature-scribble-margin);
     inset-block-end: var(--project-feature-scribble-margin);
+    inset-inline-end: var(--project-feature-scribble-margin);
     inline-size: var(--project-feature-scribble-size);
     block-size: var(--project-feature-scribble-size);
     color: var(--project-feature-scribble-fill);

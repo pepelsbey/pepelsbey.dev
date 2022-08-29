@@ -14,15 +14,15 @@
 .skip__link {
     display: inline-block;
     margin-block: 8px;
-    color: var(--skip-text);
     outline: none;
+    color: var(--skip-text);
 }
 
 .skip__link:not(:active, :focus-visible) {
     position: absolute;
-    width: 1px;
-    height: 1px;
     padding: 0;
+    inline-size: 1px;
+    block-size: 1px;
     overflow: hidden;
     clip-path: inset(-50%);
     white-space: nowrap;

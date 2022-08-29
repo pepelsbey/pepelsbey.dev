@@ -12,8 +12,8 @@
     /* Section */
 
     .footer__section {
-        row-gap: 20px;
         align-content: start;
+        row-gap: 20px;
     }
 
     .footer__section:last-child {

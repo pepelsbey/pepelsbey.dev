@@ -19,8 +19,8 @@
     margin: 0;
     color: var(--color-text-primary);
     font-weight: normal;
-    font-family: var(--font-family-heading);
     font-size: var(--font-size-h3);
+    font-family: var(--font-family-heading);
 }
 
 /* List */
@@ -47,7 +47,7 @@
 }
 
 .footer__link:focus-visible {
-    border-radius: 0.125em;
     outline: 2px solid var(--color-focus);
     outline-offset: 2px;
+    border-radius: 0.125em;
 }

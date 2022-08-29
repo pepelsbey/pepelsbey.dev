@@ -2,8 +2,8 @@
 
 .heading {
     display: flex;
-    padding-block-end: 20px;
     align-items: baseline;
+    padding-block-end: 20px;
     border-block-end: solid 2px var(--color-text-primary);
 }
 

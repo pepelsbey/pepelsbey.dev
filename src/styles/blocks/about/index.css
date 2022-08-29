@@ -32,11 +32,11 @@
 /* Columns */
 
 .about__columns {
+    column-count: 2;
+    column-gap: 20px;
     margin: 0;
     padding: 0;
     list-style: none;
-    column-count: 2;
-    column-gap: 20px;
 }
 
 /* Links */
