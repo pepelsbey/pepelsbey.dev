@@ -5,6 +5,24 @@ date: 2022-07-04
 tags:
     - HTML
     - CSS
+toc:
+    - title: A challenge
+    - title: Setup and rules
+    - title: Reasonable six
+      items:
+        - Tables
+        - Floats
+        - Inline blocks
+        - Multi-columns
+        - Flexbox
+        - Grid Layout
+    - title: Weird five
+      items:
+        - Positioning
+        - Writing mode
+        - SVG
+        - Element
+        - Frames
 cover: true
 layout: article.njk
 ---

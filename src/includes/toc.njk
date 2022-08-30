@@ -1,0 +1,22 @@
+{% if toc %}
+    <ol>
+        {% for first in toc %}
+            <li>
+                <a href="#{{ first.title | slugify }}">
+                    {{ first.title | safe }}
+                </a>
+                {% if first.items %}
+                    <ol>
+                        {% for second in first.items %}
+                            <li>
+                                <a href="#{{ second | slugify }}">
+                                    {{ second }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ol>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ol>
+{% endif %}
