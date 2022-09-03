@@ -68,6 +68,7 @@ module.exports = (config) => {
     });
 
     const htmlTransforms = [
+        require('./src/transforms/anchors.js'),
         require('./src/transforms/demos.js'),
         require('./src/transforms/prism.js'),
     ];
@@ -83,7 +84,7 @@ module.exports = (config) => {
             return window.document.toString();
         }
 
-        return content
+        return content;
     })
 
     // CSS
