@@ -1,11 +1,9 @@
-module.exports = function (window, content) {
-    const articleContent = window.document.getElementById('article-content');
+module.exports = function(window) {
+    const content = window.document.getElementById('article-content');
 
-    if (!articleContent) {
-        return;
-    }
+    if (!content) return;
 
-    const pres = articleContent.querySelectorAll('pre');
+    const pres = content.querySelectorAll('pre');
 
     [...pres]
         .forEach((pre) => {
