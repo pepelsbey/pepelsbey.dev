@@ -1,15 +1,15 @@
 {% if toc %}
-    <ol>
+    <ol class="toc">
         {% for first in toc %}
             <li>
-                <a href="#{{ first.title | slugify }}">
+                <a class="toc__link" href="#{{ first.title | slugify }}">
                     {{ first.title | safe }}
                 </a>
                 {% if first.items %}
-                    <ol>
+                    <ol class="toc__list">
                         {% for second in first.items %}
                             <li>
-                                <a href="#{{ second | slugify }}">
+                                <a class="toc__link" href="#{{ second | slugify }}">
                                     {{ second }}
                                 </a>
                             </li>
