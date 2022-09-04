@@ -5,6 +5,12 @@
     color: var(--color-text-primary);
 }
 
+@media (prefers-reduced-motion: no-preference) {
+    .page {
+        scroll-behavior: smooth;
+    }
+}
+
 /* Clip */
 
 .page--clip {
