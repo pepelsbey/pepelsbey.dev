@@ -1,6 +1,5 @@
 /* Project Section List */
 
-.project-section-list {
-    display: grid;
-    row-gap: 60px;
-}
+@import 'base.css';
+@import 'tablet.css';
+@import 'desktop.css';

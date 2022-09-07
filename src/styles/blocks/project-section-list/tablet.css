@@ -1,0 +1,27 @@
+@media (1024px <= width < 1760px) {
+
+    /* Project Section List */
+
+    .project-section-list {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    /* Tools */
+
+    .project-section-list__tools {
+        grid-column: 1 / span 7;
+    }
+
+    /* Podcasts */
+
+    .project-section-list__podcasts {
+        grid-column: 2 / span 7;
+    }
+
+    /* Websites */
+
+    .project-section-list__websites {
+        grid-column: 1 / span 7;
+    }
+
+}

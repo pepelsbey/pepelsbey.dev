@@ -1,49 +1,6 @@
 /* Project Section */
 
-.project-section {
-    position: relative;
-    display: grid;
-    row-gap: 20px;
-    scroll-margin-block-start: 84px;
-}
-
-/* Title */
-
-.project-section__title {
-    margin: 0;
-    line-height: 1.1;
-    text-transform: uppercase;
-    font-weight: normal;
-    font-size: var(--font-size-h1);
-    font-family: var(--font-family-heading);
-}
-
-/* Desc */
-
-.project-section__desc {
-    margin: 0;
-    line-height: 1.33;
-    font-size: var(--font-size-h3);
-    font-family: var(--font-family-heading);
-}
-
-/* List */
-
-.project-section__list {
-    display: grid;
-    row-gap: 24px;
-    padding-block: 20px;
-}
-
-/* Scribble */
-
-.project-section__scribble {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    margin-inline: auto;
-    width: 100%;
-    height: auto;
-    color: var(--project-section-scribble-fill);
-    pointer-events: none;
-}
+@import 'base.css';
+@import 'mobile.css';
+@import 'tablet.css';
+@import 'desktop.css';

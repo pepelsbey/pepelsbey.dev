@@ -1,0 +1,11 @@
+@media (width >= 1760px) {
+
+    /* List */
+
+    .project-section__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 20px;
+    }
+
+}

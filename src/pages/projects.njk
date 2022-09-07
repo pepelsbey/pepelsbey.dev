@@ -32,7 +32,7 @@ permalink: projects/index.html
             {% for section in projects %}
                 {% set id = section.title | lower %}
 
-                <section class="project-section" id="{{ id }}">
+                <section class="project-section-list__{{ id }} project-section" id="{{ id }}">
                     <h2 class="project-section__title">
                         {{ section.title }}
                     </h2>

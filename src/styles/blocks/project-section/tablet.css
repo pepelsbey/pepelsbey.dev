@@ -1,0 +1,23 @@
+@media (1024px <= width < 1760px) {
+
+    /* List */
+
+    .project-section__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+    }
+
+    /* Scribble */
+
+    .project-section__scribble {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        width: auto;
+        height: 100%;
+        color: var(--project-section-scribble-fill);
+        pointer-events: none;
+    }
+
+}
