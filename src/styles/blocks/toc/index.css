@@ -1,28 +1,4 @@
 /* TOC */
 
-.toc {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    row-gap: 12px;
-    list-style: none;
-}
-
-/* List */
-
-.toc__list {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    row-gap: 8px;
-    padding-block-start: 4px;
-    padding-inline-start: 20px;
-    list-style: none;
-    font-size: var(--font-size-small);
-}
-
-/* Link */
-
-.toc__link {
-    color: var(--color-text-secondary);
-}
+@import 'base.css';
+@import 'mobile.css';

@@ -14,8 +14,11 @@
     font-family: var(--font-family-heading);
 }
 
-.content-block h2 {
+.content-block h2:not(:first-child) {
     margin-block-start: 40px;
+}
+
+.content-block h2 {
     line-height: 1.25;
     font-size: var(--font-size-h2);
 }

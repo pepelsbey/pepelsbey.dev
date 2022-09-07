@@ -8,9 +8,9 @@
         column-gap: 20px;
     }
 
-    /* Aside */
+    /* Filter */
 
-    .columns__aside {
+    .columns__filter {
         grid-column-end: span 2;
     }
 
@@ -20,10 +20,18 @@
         grid-column-end: span 6;
     }
 
-    /* Content */
+    /* TOC */
 
-    .columns__content {
+    .columns__toc {
+        grid-column-end: span 2;
+        padding-block-start: 48px;
+    }
+
+    /* Article */
+
+    .columns__article {
         grid-column-end: span 6;
+        padding-block-start: 48px;
     }
 
 }

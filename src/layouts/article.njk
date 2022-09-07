@@ -24,11 +24,11 @@ layout: page.njk
                 </svg>
             </header>
             <div class="main__wrapper columns">
-                <div class="columns__aside">
+                <div class="columns__toc">
                     {% include 'toc.njk' %}
                 </div>
-                <div class="columns__content">
-                    <div class="main__wrapper content content-block content-inline" id="article-content">
+                <div class="columns__article">
+                    <div class="content content-block content-inline" id="article-content">
                         {{ content | safe }}
                     </div>
                 </div>

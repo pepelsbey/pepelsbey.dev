@@ -1,0 +1,9 @@
+@media (width < 1024px) {
+
+    /* Article */
+
+    .columns__article {
+        padding-block-start: 40px;
+    }
+
+}

@@ -1,9 +1,16 @@
 @media (width >= 1760px) {
 
-    /* Content */
+    /* TOC */
 
-    .columns__content {
+    .columns__toc {
+        padding-block-start: 80px;
+    }
+
+    /* Acticle */
+
+    .columns__article {
         grid-column-end: span 4;
+        padding-block-start: 80px;
     }
 
 }
