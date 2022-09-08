@@ -25,7 +25,7 @@
 
     @media (prefers-reduced-motion: no-preference) {
         .menu {
-            transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+            transition: transform 0.4s var(--easing-function);
         }
     }
 

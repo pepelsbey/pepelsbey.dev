@@ -3,6 +3,10 @@
 @import 'global/fonts.css';
 @import 'global/box-model.css';
 
+/* Animation */
+
+@import 'animation/index.css';
+
 /* Colors */
 
 @import 'colors/index.css';

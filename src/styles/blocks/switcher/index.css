@@ -1,6 +1,8 @@
-/* theme */
+/* Theme */
 
 .theme-switcher {
+    position: relative;
+    z-index: 1;
     display: inline-grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 0.125rem;
@@ -21,10 +23,17 @@
     line-height: inherit;
     font-size: inherit;
     font-family: inherit;
+    transition: color 0.1s linear 0.1s;
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .theme-switcher__button:hover {
+    .theme-switcher__button[aria-pressed='false']:hover {
+        animation: menu-button 0.2s both;
+    }
+}
+
+@keyframes menu-button {
+    to {
         background-color: var(--color-current-back);
         color: var(--color-current-text);
     }
@@ -37,6 +46,28 @@
 
 .theme-switcher__button[aria-pressed='true'] {
     outline-offset: 2px;
-    background-color: var(--color-text-primary);
     color: var(--color-back-primary);
+}
+
+/* Status */
+
+.theme-switcher__status {
+    position: absolute;
+    inset: 0.125em;
+    z-index: -1;
+    margin-inline: auto;
+    width: calc(33% - 0.125em / 2);
+    border-radius: calc(5rem - 0.125em);
+    background-color: var(--color-text-primary);
+    pointer-events: none;
+    transform: translateX(0);
+    transition: transform 0.2s var(--easing-function);
+}
+
+.theme-switcher__button[aria-pressed='true'][value='light'] ~ .theme-switcher__status {
+    transform: translateX(-100%);
+}
+
+.theme-switcher__button[aria-pressed='true'][value='dark'] ~ .theme-switcher__status {
+    transform: translateX(100%);
 }
