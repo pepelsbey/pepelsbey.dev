@@ -6,21 +6,21 @@
         position: fixed;
         inset: 0;
         z-index: 1;
+        display: grid;
         grid-template-rows:
             min-content
             1fr
             min-content;
         padding: 20px;
-    }
-
-    .menu--open {
-        display: grid;
-        transform: translateX(0) scaleX(1);
+        transform: translateX(-100%) scaleX(0.3);
     }
 
     .menu--closed {
         display: none;
-        transform: translateX(-100%) scaleX(0.3);
+    }
+
+    .menu--open {
+        transform: translateX(0) scaleX(1);
     }
 
     @media (prefers-reduced-motion: no-preference) {
