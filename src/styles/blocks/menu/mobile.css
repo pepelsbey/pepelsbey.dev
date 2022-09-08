@@ -6,12 +6,20 @@
         position: fixed;
         inset: 0;
         z-index: 1;
-        display: grid;
         grid-template-rows:
             min-content
             1fr
             min-content;
         padding: 20px;
+    }
+
+    .menu--open {
+        display: grid;
+        transform: translateX(0) scaleX(1);
+    }
+
+    .menu--closed {
+        display: none;
         transform: translateX(-100%) scaleX(0.3);
     }
 
@@ -19,14 +27,6 @@
         .menu {
             transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
         }
-    }
-
-    .menu--closed {
-        display: none;
-    }
-
-    .menu--open {
-        transform: translateX(0) scaleX(1);
     }
 
     /* Feed */

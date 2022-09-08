@@ -5,6 +5,9 @@ const header = document.querySelector('.header');
 const headerButton = document.querySelector('.header__button');
 const headerLink = document.querySelector('.header__link');
 const menu = document.querySelector('.menu');
+const menuList = document.querySelector('.menu__list');
+const menuFeed = document.querySelector('.menu__feed');
+const mobileCheck = matchMedia('(max-width: 1023px)');
 const focusTrap = createFocusTrap(header);
 
 function isMenuOpen() {
@@ -41,3 +44,25 @@ document.addEventListener('keyup', (event) => {
         toggleMenu(false);
     }
 });
+
+function updateMenu(mobile) {
+    if (mobile) {
+        menuFeed.after(menuList);
+    } else {
+        menuFeed.before(menuList);
+        focusTrap.deactivate();
+        headerLink.setAttribute('tabindex', '0');
+    }
+}
+
+mobileCheck.addEventListener('change', (event) => {
+    if (event.matches) {
+        updateMenu(true);
+    } else {
+        updateMenu(false);
+    }
+});
+
+if (mobileCheck.matches) {
+    updateMenu(true);
+}
