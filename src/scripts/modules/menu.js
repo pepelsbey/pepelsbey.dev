@@ -14,55 +14,55 @@ function isMenuOpen() {
     return headerButton.getAttribute('aria-expanded') === 'true';
 }
 
-function toggleMenu() {
-    const isOpen = isMenuOpen();
+function openMenu() {
+    page.classList.add('page--clip');
 
-    headerButton.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
-    headerLink.setAttribute('tabindex', isOpen ? '0' : '-1');
+    headerButton.setAttribute('aria-expanded', 'true');
+    headerLink.setAttribute('tabindex', '-1');
 
-    if (isOpen) {
-        menu.classList.remove('menu--open');
-        menu.addEventListener('transitionend', () => {
-            menu.classList.add('menu--closed');
-        }, {
-            once: true
-        });
-        focusTrap.deactivate();
-    } else {
-        menu.classList.remove('menu--closed');
-        setTimeout(() => menu.classList.add('menu--open'), 20);
-        focusTrap.activate();
-    }
+    menu.classList.remove('menu--closed');
+    setTimeout(() => {
+        menu.classList.add('menu--open'), 20
+    });
 
-    page.classList.toggle('page--clip');
+    focusTrap.activate();
 }
 
-headerButton.addEventListener('click', toggleMenu);
+function closeMenu() {
+    page.classList.remove('page--clip');
+
+    headerButton.setAttribute('aria-expanded', 'false');
+    headerLink.removeAttribute('tabindex');
+
+    menu.classList.remove('menu--open');
+    menu.addEventListener('transitionend', () => {
+        menu.classList.add('menu--closed');
+    }, {
+        once: true
+    });
+
+    focusTrap.deactivate();
+}
+
+headerButton.addEventListener('click', () => {
+    isMenuOpen() ? closeMenu() : openMenu();
+});
 
 document.addEventListener('keyup', (event) => {
     if (event.key === 'Escape' && isMenuOpen()) {
-        toggleMenu(false);
+        closeMenu();
     }
 });
 
-function updateMenu(mobile) {
-    if (mobile) {
+mobileCheck.addEventListener('change', (event) => {
+    if (event.matches) {
         menuFeed.after(menuList);
     } else {
         menuFeed.before(menuList);
-        focusTrap.deactivate();
-        headerLink.setAttribute('tabindex', '0');
-    }
-}
-
-mobileCheck.addEventListener('change', (event) => {
-    if (event.matches) {
-        updateMenu(true);
-    } else {
-        updateMenu(false);
+        closeMenu();
     }
 });
 
 if (mobileCheck.matches) {
-    updateMenu(true);
+    menuFeed.after(menuList);
 }
