@@ -1,0 +1,9 @@
+@media (1024px <= width < 1760px) {
+
+    /* Column */
+
+    .column {
+        padding-inline: 42px;
+    }
+
+}

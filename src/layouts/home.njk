@@ -5,8 +5,8 @@ layout: page.njk
 {% include 'header.njk' %}
 
 <main class="main">
-    <div class="main__wrapper main__gaps">
-        <div class="intro">
+    <div class="main__gaps">
+        <div class="intro column">
             <p class="intro__hi">
                 {{ intro.hi | safe }}
             </p>
@@ -26,7 +26,7 @@ layout: page.njk
                 {{ intro.what | markdownInline | safe }}
             </p>
         </div>
-        <section>
+        <section class="column">
             <header class="heading">
                 <h2 class="heading__title">
                     Articles
@@ -51,7 +51,7 @@ layout: page.njk
                 limit=5
             ) }}
         </section>
-        <section>
+        <section class="column">
             {% set projectsList = [] %}
 
             {% for section in projects %}
