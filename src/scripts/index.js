@@ -1,2 +1,2 @@
 import './modules/menu.js';
-import './modules/switcher.js';
+import './modules/theme-switcher.js';
