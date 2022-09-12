@@ -1,10 +1,6 @@
 /* Article Card */
 
 .article-card {
-    --article-card-tools-back: hsl(var(--color-lilac));
-    --article-card-podcasts-back: hsl(var(--color-sulu));
-    --article-card-websites-back: hsl(var(--color-coral));
-    --article-card-project-text: hsl(var(--color-ebony));
     --article-card-type-text: hsl(var(--color-lilac));
     --article-card-type-video: hsl(var(--color-coral));
 }
@@ -19,24 +15,6 @@
     padding-inline: 20px;
     border-radius: 20px;
     background-color: var(--article-card-box-back);
-}
-
-/* Projects */
-
-.article-card__box--project {
-    color: var(--article-card-project-text);
-}
-
-.article-card__box--tools {
-    background-color: var(--article-card-tools-back);
-}
-
-.article-card__box--podcasts {
-    background-color: var(--article-card-podcasts-back);
-}
-
-.article-card__box--websites {
-    background-color: var(--article-card-websites-back);
 }
 
 /* Types */
