@@ -20,4 +20,4 @@ jobs:
           java-version: 11
       - run: npm ci
       - run: npm run build
-      - run: java -jar ./node_modules/vnu-jar/build/dist/vnu.jar ./dist
+      - run: java -jar ./node_modules/vnu-jar/build/dist/vnu.jar --skip-non-html ./dist
