@@ -1,0 +1,30 @@
+@media (width >= 1760px) {
+
+    /* About Section List */
+
+    .about-section-list {
+        padding-block-start: 80px;
+    }
+
+    /* Skills */
+
+    .about-section-list__skills {
+        grid-column: 2 / span 2;
+        grid-row-start: 1;
+    }
+
+    /* Work */
+
+    .about-section-list__work {
+        grid-column: 5 / span 3;
+        grid-row-start: 1;
+    }
+
+    /* Contacts */
+
+    .about-section-list__contacts {
+        grid-column: 3 / -3;
+        grid-row-start: 2;
+    }
+
+}

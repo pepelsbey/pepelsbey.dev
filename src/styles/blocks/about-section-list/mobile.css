@@ -1,0 +1,9 @@
+@media (width < 1024px) {
+
+    /* About Section List */
+
+    .about-section-list {
+        padding-block-start: 80px;
+    }
+
+}

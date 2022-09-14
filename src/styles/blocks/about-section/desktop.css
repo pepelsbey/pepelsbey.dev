@@ -1,0 +1,16 @@
+@media (width >= 1760px) {
+
+    /* Scribble */
+
+    .about-section__scribble--work {
+        display: none;
+    }
+
+    .about-section__scribble--contacts {
+        transform: translate(
+            calc(-100% - 20px),
+            -90px
+        );
+    }
+
+}

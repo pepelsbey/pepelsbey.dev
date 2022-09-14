@@ -1,8 +1,8 @@
 @media (width >= 1024px) {
 
-    /* Columns */
+    /* Two Columns */
 
-    .columns {
+    .two-columns {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         column-gap: 20px;
@@ -10,26 +10,26 @@
 
     /* Filter */
 
-    .columns__filter {
+    .two-columns__filter {
         grid-column-end: span 2;
     }
 
     /* Cards */
 
-    .columns__cards {
+    .two-columns__cards {
         grid-column-end: span 6;
     }
 
     /* TOC */
 
-    .columns__toc {
+    .two-columns__toc {
         grid-column-end: span 2;
         padding-block-start: 48px;
     }
 
     /* Article */
 
-    .columns__article {
+    .two-columns__article {
         grid-column-end: span 6;
         padding-block-start: 48px;
     }

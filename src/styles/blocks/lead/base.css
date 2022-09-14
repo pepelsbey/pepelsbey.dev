@@ -6,8 +6,6 @@
     row-gap: 20px;
     overflow: hidden;
     background-color: var(--lead-back);
-    padding-block: var(--lead-block-padding);
-    padding-inline: var(--lead-inline-padding);
 }
 
 /* Tags */

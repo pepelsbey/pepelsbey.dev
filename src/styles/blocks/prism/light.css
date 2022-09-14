@@ -2,7 +2,7 @@
 
 .prism {
     --prism-text: #24292f;
-    --prism-back: #f6f8fa;
+    --prism-back: hsl(var(--color-titan));
     --prism-gray: #6e7781;
     --prism-red: #cf222e;
     --prism-green: #116329;

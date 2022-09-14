@@ -1,0 +1,9 @@
+/* Focus */
+
+:focus-visible {
+    --focus-outline: hsl(var(--color-lilac));
+
+    outline: 2px solid var(--focus-outline);
+    outline-offset: 2px;
+    border-radius: 2px;
+}

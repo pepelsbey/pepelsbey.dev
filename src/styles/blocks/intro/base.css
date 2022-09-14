@@ -1,6 +1,7 @@
 /* Intro */
 
 .intro {
+    position: relative;
     display: grid;
 }
 
@@ -53,4 +54,17 @@
 
 .intro__web {
     margin: 0;
+}
+
+/* Scribble */
+
+.intro__scribble {
+    position: absolute;
+    inset-block-start: 0;
+    z-index: -1;
+    inline-size: 600px;
+    block-size: auto;
+    color: var(--intro-scribble-fill);
+    pointer-events: none;
+    transform: scaleX(-1);
 }

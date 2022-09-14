@@ -34,3 +34,13 @@
     row-gap: 24px;
     padding-block: 20px;
 }
+
+/* Scribble */
+
+.project-section__scribble {
+    position: absolute;
+    inset-block-start: 0;
+    z-index: -1;
+    color: var(--project-section-scribble-fill);
+    pointer-events: none;
+}

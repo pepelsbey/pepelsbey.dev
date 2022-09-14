@@ -1,0 +1,24 @@
+/* Skip Link */
+
+.skip-link {
+    --skip-link-back: hsl(var(--color-sulu));
+    --skip-link-text: hsl(var(--color-ebony));
+
+    margin: 0;
+    background-color: var(--skip-link-back);
+    text-align: center;
+}
+
+/* Link */
+
+.skip-link__action {
+    display: inline-block;
+    margin-block: 8px;
+    outline: none;
+    color: var(--skip-link-text);
+}
+
+.skip-link__action:not(:active, :focus-visible) {
+    position: absolute;
+    white-space: nowrap;
+}

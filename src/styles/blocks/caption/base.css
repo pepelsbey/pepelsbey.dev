@@ -1,6 +1,6 @@
-/* Heading */
+/* Caption */
 
-.heading {
+.caption {
     display: flex;
     align-items: baseline;
     padding-block-end: 20px;
@@ -9,7 +9,7 @@
 
 /* Title */
 
-.heading__title {
+.caption__title {
     margin: 0;
     line-height: 1.1;
     text-transform: uppercase;
@@ -20,7 +20,7 @@
 
 /* Number */
 
-.heading__number {
+.caption__number {
     align-self: start;
     margin-inline-start: 4px;
     line-height: 1.3;
@@ -28,7 +28,7 @@
 
 /* Link */
 
-.heading__link {
+.caption__link {
     margin-inline-start: auto;
     color: var(--color-text-primary);
 }

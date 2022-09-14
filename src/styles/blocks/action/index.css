@@ -1,13 +1,16 @@
 /* Action */
 
 .action {
+    --action-hover-back: hsl(var(--color-sulu));
+    --action-hover-text: hsl(var(--color-ebony));
+
     display: inline-flex;
     align-items: center;
     column-gap: 0.4em;
     margin: 0;
-    padding: 0;
+    padding: 0.15em;
     border: none;
-    border-radius: 0.125rem;
+    border-radius: 2px;
     background-color: transparent;
     color: var(--color-text-primary);
     line-height: 1;
@@ -15,17 +18,12 @@
     font-family: inherit;
 }
 
-.action:focus-visible {
-    outline: 2px solid var(--color-focus);
-    outline-offset: 2px;
-}
-
 /* Hover */
 
 @media (hover: hover) and (pointer: fine) {
     .action--hover:hover {
-        background-color: var(--color-current-back);
-        color: var(--color-current-text);
+        background-color: var(--action-hover-back);
+        color: var(--action-hover-text);
     }
 }
 

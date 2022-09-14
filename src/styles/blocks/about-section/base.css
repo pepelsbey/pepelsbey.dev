@@ -1,20 +1,15 @@
-/* About */
+/* About Section */
 
-.about {
-    display: grid;
-    row-gap: 80px;
-}
-
-/* Item */
-
-.about__item {
+.about-section {
+    position: relative;
     display: grid;
     row-gap: 20px;
+    align-content: start;
 }
 
 /* Title */
 
-.about__title {
+.about-section__title {
     margin: 0;
     font-weight: normal;
     font-size: var(--font-size-h2);
@@ -23,15 +18,15 @@
 
 /* Desc */
 
-.about__desc {
+.about-section__desc {
     margin: 0;
     padding-block-end: 20px;
     border-block-end: 2px solid var(--color-text-primary);
 }
 
-/* Columns */
+/* Skills */
 
-.about__columns {
+.about-section__skills {
     column-count: 2;
     column-gap: 20px;
     margin: 0;
@@ -39,12 +34,24 @@
     list-style: none;
 }
 
-/* Links */
+/* Contacts */
 
-.about__links {
+.about-section__contacts {
     display: grid;
     row-gap: 8px;
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+/* Scribble */
+
+.about-section__scribble {
+    position: absolute;
+    inset-block-start: 0;
+    z-index: -1;
+    inline-size: auto;
+    block-size: 600px;
+    color: var(--about-section-scribble-fill);
+    pointer-events: none;
 }

@@ -1,0 +1,5 @@
+/* About Section */
+
+.about-section {
+    --about-section-scribble-fill: hsl(var(--color-titan));
+}

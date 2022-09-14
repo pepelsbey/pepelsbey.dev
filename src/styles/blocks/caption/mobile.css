@@ -1,15 +1,15 @@
 @media (width < 1024px) {
 
-    /* Heading */
+    /* Caption */
 
-    .heading {
+    .caption {
         margin-block-end: 40px;
         padding-block-start: 20px;
     }
 
     /* Label */
 
-    .heading__label {
+    .caption__label {
         display: none;
     }
 

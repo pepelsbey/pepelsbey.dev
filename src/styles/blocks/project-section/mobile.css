@@ -3,14 +3,10 @@
     /* Scribble */
 
     .project-section__scribble {
-        position: absolute;
-        inset: 0;
-        z-index: -1;
         margin-inline: auto;
-        width: 100%;
-        height: auto;
-        color: var(--project-section-scribble-fill);
-        pointer-events: none;
+        inline-size: calc(100% - 24px * 2);
+        max-inline-size: 600px;
+        block-size: auto;
     }
 
 }

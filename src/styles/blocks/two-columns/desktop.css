@@ -2,13 +2,13 @@
 
     /* TOC */
 
-    .columns__toc {
+    .two-columns__toc {
         padding-block-start: 80px;
     }
 
     /* Acticle */
 
-    .columns__article {
+    .two-columns__article {
         grid-column-end: span 4;
         padding-block-start: 80px;
     }

@@ -16,8 +16,9 @@
 
 .tags__item {
     margin-block-end: var(--tags-gap);
-    padding-inline: 1rem;
+    padding-block: 2px;
+    padding-inline: 16px;
     border: 1.5px solid;
-    border-radius: 5em;
+    border-radius: 24px;
     font-size: var(--font-size-small);
 }

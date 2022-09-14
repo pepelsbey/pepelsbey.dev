@@ -1,6 +1,9 @@
 /* Menu */
 
 .menu {
+    --menu-current-back: hsl(var(--color-sulu));
+    --menu-current-text: hsl(var(--color-ebony));
+
     background-color: var(--color-back-primary);
 }
 
@@ -15,8 +18,8 @@
 /* Link */
 
 .menu__link {
-    padding: 0.1em;
-    border-radius: 0.125em;
+    padding: 0.15em;
+    border-radius: 2px;
     color: var(--color-text-secondary);
 }
 
@@ -26,13 +29,7 @@
     }
 }
 
-.menu__link:focus-visible {
-    outline: 2px solid var(--color-focus);
-    outline-offset: 2px;
-    border-radius: 0.125em;
-}
-
 .menu__link[aria-current] {
-    background-color: var(--color-current-back);
-    color: var(--color-current-text);
+    background-color: var(--menu-current-back);
+    color: var(--menu-current-text);
 }

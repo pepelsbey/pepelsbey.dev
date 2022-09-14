@@ -1,0 +1,9 @@
+@media (width < 1024px) {
+
+    /* Scribble */
+
+    .about-section__scribble {
+        display: none;
+    }
+
+}

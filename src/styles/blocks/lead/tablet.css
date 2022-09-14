@@ -3,8 +3,8 @@
     /* Lead */
 
     .lead {
-        --lead-block-padding: 48px;
-        --lead-inline-padding: 42px;
+        padding-block: 48px;
+        padding-inline: 42px;
     }
 
     /* Scribble */

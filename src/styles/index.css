@@ -2,10 +2,7 @@
 
 @import 'global/fonts.css';
 @import 'global/box-model.css';
-
-/* Animation */
-
-@import 'animation/index.css';
+@import 'global/focus.css';
 
 /* Colors */
 
@@ -19,21 +16,19 @@
 
 /* Blocks */
 
+@import 'blocks/about-section-list/index.css';
+@import 'blocks/about-section/index.css';
 @import 'blocks/about-work/index.css';
-@import 'blocks/about/index.css';
 @import 'blocks/action/index.css';
 @import 'blocks/article-card-list/index.css';
 @import 'blocks/article-card/index.css';
-@import 'blocks/aside/index.css';
+@import 'blocks/caption/index.css';
+@import 'blocks/column/index.css';
 @import 'blocks/content-block/index.css';
 @import 'blocks/content-inline/index.css';
-@import 'blocks/column/index.css';
-@import 'blocks/columns/index.css';
-@import 'blocks/figure/index.css';
 @import 'blocks/footer/index.css';
-@import 'blocks/header/index.css';
-@import 'blocks/heading/index.css';
 @import 'blocks/intro/index.css';
+@import 'blocks/header/index.css';
 @import 'blocks/lead/index.css';
 @import 'blocks/main/index.css';
 @import 'blocks/menu/index.css';
@@ -45,8 +40,9 @@
 @import 'blocks/project-feature/index.css';
 @import 'blocks/project-section-list/index.css';
 @import 'blocks/project-section/index.css';
-@import 'blocks/skip/index.css';
+@import 'blocks/skip-link/index.css';
 @import 'blocks/sr-only/index.css';
-@import 'blocks/switcher/index.css';
 @import 'blocks/tags/index.css';
 @import 'blocks/toc/index.css';
+@import 'blocks/theme-switcher/index.css';
+@import 'blocks/two-columns/index.css';

@@ -1,3 +1,65 @@
+@media (width >= 1024px) {
+
+    /* Intro */
+
+    .intro {
+        grid-template-columns: repeat(8, 1fr);
+        column-gap: 20px;
+        overflow-x: hidden;
+    }
+
+    @supports (overflow-x: clip) {
+        .intro {
+            overflow-x: clip;
+        }
+    }
+
+    /* Hi */
+
+    .intro__hi {
+        margin-block-start: -12px;
+    }
+
+    /* Name */
+
+    .intro__name {
+        padding-block-start: 20px;
+        padding-block-end: 40px;
+    }
+
+    /* Photo */
+
+    .intro__photo {
+        border-radius: 40px;
+    }
+
+    /* Who */
+
+    .intro__who {
+        padding-block-end: 12px;
+        line-height: 1.1;
+    }
+
+    /* What */
+
+    .intro__what {
+        padding-block-start: 18px;
+    }
+
+    /* Path */
+
+    .intro__path {
+        padding-block-start: 18px;
+    }
+
+    /* Web */
+
+    .intro__web {
+        padding-block-start: 30px;
+    }
+
+}
+
 @media (1024px <= width < 1760px) {
 
     /* Hi */
@@ -51,59 +113,12 @@
         grid-column: 5 / span 3;
     }
 
-}
+    /* Scribble */
 
-@media (width >= 1024px) {
-
-    /* Intro */
-
-    .intro {
-        grid-template-columns: repeat(8, 1fr);
-        column-gap: 20px;
-    }
-
-    /* Hi */
-
-    .intro__hi {
-        margin-block-start: -12px;
-    }
-
-    /* Name */
-
-    .intro__name {
-        padding-block-start: 20px;
-        padding-block-end: 40px;
-    }
-
-    /* Photo */
-
-    .intro__photo {
-        border-radius: 40px;
-    }
-
-    /* Who */
-
-    .intro__who {
-        padding-block-end: 12px;
-        line-height: 1.1;
-    }
-
-    /* What */
-
-    .intro__what {
-        padding-block-start: 18px;
-    }
-
-    /* Path */
-
-    .intro__path {
-        padding-block-start: 18px;
-    }
-
-    /* Web */
-
-    .intro__web {
-        padding-block-start: 30px;
+    .intro__scribble {
+        inset-inline-start: calc(
+            100% - 400px
+        );
     }
 
 }

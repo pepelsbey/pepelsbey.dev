@@ -1,13 +1,16 @@
 /* Theme */
 
 .theme-switcher {
+    --theme-switcher-hover-back: hsl(var(--color-sulu));
+    --theme-switcher-hover-text: hsl(var(--color-ebony));
+
     position: relative;
     z-index: 1;
     display: inline-grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 0.125rem;
-    border: 2px solid var(--color-text-primary);
-    border-radius: 5rem;
+    padding: 2px;
+    border: 2px solid var(--theme-switcher-back);
+    border-radius: 24px;
 }
 
 /* Button */
@@ -15,11 +18,11 @@
 .theme-switcher__button {
     margin: 0;
     padding: 0;
-    padding-inline: 0.8rem;
+    padding-inline: 16px;
     border: none;
-    border-radius: 5rem;
+    border-radius: 24px;
     background-color: transparent;
-    color: var(--color-text-primary);
+    color: var(--theme-switcher-back);
     line-height: inherit;
     font-size: inherit;
     font-family: inherit;
@@ -34,34 +37,33 @@
 
 @keyframes menu-button {
     to {
-        background-color: var(--color-current-back);
-        color: var(--color-current-text);
+        background-color: var(--theme-switcher-hover-back);
+        color: var(--theme-switcher-hover-text);
     }
 }
 
 .theme-switcher__button:focus-visible {
-    outline: 2px solid var(--color-focus);
     outline-offset: -2px;
 }
 
 .theme-switcher__button[aria-pressed='true'] {
     outline-offset: 2px;
-    color: var(--color-back-primary);
+    color: var(--theme-switcher-text);
 }
 
 /* Status */
 
 .theme-switcher__status {
     position: absolute;
-    inset: 0.125em;
+    inset: 2px;
     z-index: -1;
     margin-inline: auto;
-    width: calc(33% - 0.125em / 2);
-    border-radius: calc(5rem - 0.125em);
-    background-color: var(--color-text-primary);
+    width: calc(33% - 0.5px);
+    border-radius: 24px;
+    background-color: var(--theme-switcher-back);
     pointer-events: none;
     transform: translateX(0);
-    transition: transform 0.2s var(--easing-function);
+    transition: transform 0.2s;
 }
 
 .theme-switcher__button[aria-pressed='true'][value='light'] ~ .theme-switcher__status {

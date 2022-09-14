@@ -92,13 +92,30 @@
 /* Images */
 
 .content-block img {
+    display: block;
     width: 100%;
     height: auto;
+    border-radius: 20px;
 }
 
 /* Frames */
 
 .content-block iframe {
+    display: block;
     width: 100%;
     border: none;
+    border-radius: 20px;
+}
+
+/* Figure */
+
+.content-block figure {
+    display: grid;
+    row-gap: 20px;
+    padding-block: 20px;
+    margin: 0;
+}
+
+.content-block figcaption {
+    text-align: center;
 }
