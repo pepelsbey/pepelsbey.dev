@@ -3,6 +3,7 @@ const csso = require('postcss-csso');
 const dom = require('linkedom');
 const esbuild = require('esbuild');
 const fs = require('fs');
+const highlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const htmlmin = require('html-minifier');
 const markdown = require('markdown-it')({ html: true });
 const minmax = require('postcss-media-minmax');
@@ -10,7 +11,6 @@ const pimport = require('postcss-import');
 const postcss = require('postcss');
 const prettydata = require('pretty-data');
 const rss = require('@11ty/eleventy-plugin-rss');
-const highlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const yaml = require('js-yaml');
 
 const global = yaml.load(
@@ -29,14 +29,14 @@ module.exports = (config) => {
         return collectionApi.getFilteredByGlob(
             collections.articles
         );
-    })
+    });
 
     config.addCollection('sitemap', (collectionApi) => {
         return collectionApi.getFilteredByGlob([
             collections.articles,
             collections.pages,
         ]);
-    })
+    });
 
     // Markdown
 
@@ -85,7 +85,7 @@ module.exports = (config) => {
         }
 
         return content;
-    })
+    });
 
     // CSS
 
