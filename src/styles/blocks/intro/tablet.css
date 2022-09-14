@@ -5,13 +5,7 @@
     .intro {
         grid-template-columns: repeat(8, 1fr);
         column-gap: 20px;
-        overflow-x: hidden;
-    }
-
-    @supports (overflow-x: clip) {
-        .intro {
-            overflow-x: clip;
-        }
+        overflow: hidden;
     }
 
     /* Hi */
@@ -56,6 +50,19 @@
 
     .intro__web {
         padding-block-start: 30px;
+    }
+
+    /* Scribble */
+
+    .intro__scribble {
+        position: absolute;
+        inset-block-start: 0;
+        z-index: -1;
+        inline-size: 600px;
+        block-size: auto;
+        color: var(--intro-scribble-fill);
+        pointer-events: none;
+        transform: scaleX(-1);
     }
 
 }
