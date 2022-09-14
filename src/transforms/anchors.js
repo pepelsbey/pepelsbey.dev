@@ -1,10 +1,4 @@
-function slugify(input) {
-    return input
-        .trim()
-        .toLowerCase()
-        .replace(/\s+/g, '-')
-        .replace(/[^a-z0-9-]+/g, '');
-}
+const slugify = require('slugify');
 
 module.exports = function(window) {
     const content = window.document.getElementById('article-content');
