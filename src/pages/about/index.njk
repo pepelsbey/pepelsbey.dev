@@ -1,0 +1,174 @@
+---
+layout: page.njk
+permalink: about/index.html
+---
+
+<main class="main">
+    <div class="column">
+        <header class="caption">
+            <h1 class="caption__title caption__title--top">
+                {{ title }}
+            </h1>
+        </header>
+    </div>
+    <div class="intro column">
+        <img
+            class="intro__photo intro__photo--about"
+            src="{{ intro.photo }}"
+            width="308" height="205"
+            alt="{{ intro.alt }}"
+        >
+        <p class="intro__who">
+            {{ intro.who | safe }}
+        </p>
+        <p class="intro__path content content-inline">
+            {{ intro.path | markdownInline | safe }}
+        </p>
+        <p class="intro__web content content-inline">
+            {{ intro.web | markdownInline | safe }}
+        </p>
+        <svg class="intro__scribble" width="200" height="200" aria-hidden="true">
+            <use href="/images/scribbles.svg#1"></use>
+        </svg>
+    </div>
+    <div class="about-section-list column">
+        <section class="about-section about-section-list__skills">
+            <h2 class="about-section__title">
+                {{ skills.title }}
+            </h2>
+            <p class="about-section__desc">
+                {{ skills.desc }}
+            </p>
+            <ul class="about-section__skills">
+                {% for item in skills.list %}
+                    <li>
+                        {{ item }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+        <section class="about-section about-section-list__work">
+            <h2 class="about-section__title">
+                {{ work.title }}
+            </h2>
+            <p class="about-section__desc">
+                {{ work.desc }}
+            </p>
+            <ol class="about-section__work about-work" reversed>
+                {% for item in work.list %}
+                    <li class="about-work__item">
+                        <span class="about-work__period">
+                            {% set time = item.period.split('–') %}
+                            <time>{{ time[0] }}</time>–
+                            {%- if time[1] != '' -%}
+                                <time>{{ time[1] }}</time>
+                            {%- endif -%}
+                        </span>
+                        <span class="about-work__company">{{ item.company }}</span>
+                        <span class="about-work__title">{{ item.title }}</span>
+                    </li>
+                {% endfor %}
+            </ol>
+            <svg class="about-section__scribble about-section__scribble--work" width="200" height="200" aria-hidden="true">
+                <use href="/images/scribbles.svg#2"></use>
+            </svg>
+        </section>
+        <section class="about-section about-section-list__contacts">
+            <h2 class="about-section__title">
+                {{ contacts.title }}
+            </h2>
+            <p class="about-section__desc">
+                {{ contacts.desc }}
+            </p>
+            <ul class="about-section__contacts">
+                {% for item in contacts.list %}
+                    <li>
+                        <a class="action" href="{{ item.url }}">
+                            <svg class="action__icon" width="24" height="24" aria-hidden="true">
+                                <use href="/images/icons.svg#{{ item.icon }}"></use>
+                            </svg>
+                            {{- item.title -}}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <svg class="about-section__scribble about-section__scribble--contacts" width="200" height="200" aria-hidden="true">
+                <use href="/images/scribbles.svg#2"></use>
+            </svg>
+        </section>
+    </div>
+    {# <div class="about">
+        <section class="intro column">
+            <img
+                class="intro__photo intro__photo--about"
+                src="{{ intro.photo }}"
+                width="308" height="205"
+                alt="{{ intro.alt }}"
+            >
+            <p class="intro__who">
+                {{ intro.who | safe }}
+            </p>
+            <p class="intro__path content content-inline">
+                {{ intro.path | markdownInline | safe }}
+            </p>
+            <p class="intro__web content content-inline">
+                {{ intro.web | markdownInline | safe }}
+            </p>
+            <svg class="intro__scribble" width="200" height="200" aria-hidden="true">
+                <use href="/images/scribbles.svg#1"></use>
+            </svg>
+        </section>
+        <section class="about__item column">
+            <h2 class="about__title">
+                {{ skills.title }}
+            </h2>
+            <p class="about__desc">
+                {{ skills.desc }}
+            </p>
+            <ul class="about__columns">
+                {% for item in skills.list %}
+                    <li>
+                        {{ item }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+        <section class="about__item column">
+            <h2 class="about__title">
+                {{ work.title }}
+            </h2>
+            <p class="about__desc">
+                {{ work.desc }}
+            </p>
+            <ol class="about-work" reversed>
+                {% for item in work.list %}
+                    <li class="about-work__item">
+                        <time class="about-work__period">{{ item.period }}</time>
+                        <span class="about-work__company">{{ item.company }}</span>
+                        <span class="about-work__title">{{ item.title }}</span>
+                    </li>
+                {% endfor %}
+            </ol>
+        </section>
+        <section class="about__item column">
+            <h2 class="about__title">
+                {{ contacts.title }}
+            </h2>
+            <p class="about__desc">
+                {{ contacts.desc }}
+            </p>
+            <ul class="about__links">
+                {% for item in contacts.list %}
+                    <li class="about-links__item">
+                        <a class="about-links__link action" href="{{ item.url }}">
+                            <svg class="action__icon" width="24" height="24" aria-hidden="true">
+                                <use href="/images/icons.svg#{{ item.icon }}"></use>
+                            </svg>
+                            {{- item.title -}}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    </div> #}
+</main>

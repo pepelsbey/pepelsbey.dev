@@ -1,7 +1,4 @@
----
 title: About
-layout: about.njk
-permalink: about/index.html
 
 # Intro
 
@@ -76,4 +73,3 @@ contacts:
   - title: '@pepelsbey_dev'
     url: https://twitter.com/pepelsbey_dev
     icon: twitter
----

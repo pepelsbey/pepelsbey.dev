@@ -38,6 +38,10 @@
     <script async src="/scripts/index.js"></script>
 </head>
 <body class="page__body">
+    {% include 'header.njk' %}
+
     {{ content | safe }}
+
+    {% include 'footer.njk' %}
 </body>
 </html>

@@ -1,8 +1,7 @@
 ---
 layout: page.njk
+permalink: index.html
 ---
-
-{% include 'header.njk' %}
 
 <main class="main">
     <div class="main__gaps">
@@ -25,17 +24,20 @@ layout: page.njk
             <p class="intro__what content content-inline">
                 {{ intro.what | markdownInline | safe }}
             </p>
+            <svg class="intro__scribble" width="200" height="200" aria-hidden="true">
+                <use href="/images/scribbles.svg#1"></use>
+            </svg>
         </div>
         <section class="column">
-            <header class="heading">
-                <h2 class="heading__title">
+            <header class="caption">
+                <h2 class="caption__title">
                     Articles
                 </h2>
-                <span class="heading__number">
+                <span class="caption__number">
                     {{ collections.articles.length }}
                 </span>
-                <a class="heading__link action action--hover" href="/articles/" aria-label="View all articles">
-                    <span class="heading__label">
+                <a class="caption__link action action--hover" href="/articles/" aria-label="View all articles">
+                    <span class="caption__label">
                         View all
                     </span>
                     <svg class="action__icon" width="24" height="24" aria-hidden="true">
@@ -63,15 +65,15 @@ layout: page.njk
                 {% endfor %}
             {% endfor %}
 
-            <header class="heading">
-                <h2 class="heading__title">
+            <header class="caption">
+                <h2 class="caption__title">
                     Projects
                 </h2>
-                <span class="heading__number">
+                <span class="caption__number">
                     {{ projectsList.length }}
                 </span>
-                <a class="heading__link action action--hover" href="/projects/" aria-label="View all projects">
-                    <span class="heading__label">
+                <a class="caption__link action action--hover" href="/projects/" aria-label="View all projects">
+                    <span class="caption__label">
                         View all
                     </span>
                     <svg class="action__icon" width="24" height="24" aria-hidden="true">
@@ -101,5 +103,3 @@ layout: page.njk
         </section>
     </div>
 </main>
-
-{% include 'footer.njk' %}
