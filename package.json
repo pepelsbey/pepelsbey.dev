@@ -38,7 +38,6 @@
     "postcss-media-minmax": "^5.0.0",
     "pretty-data": "^0.40.0",
     "stylelint": "^14.11.0",
-    "stylelint-order": "^5.0.0",
-    "vnu-jar": "^21.10.12"
+    "stylelint-order": "^5.0.0"
   }
 }
