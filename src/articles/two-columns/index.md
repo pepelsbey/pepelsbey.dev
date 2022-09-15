@@ -63,7 +63,7 @@ To make it closer to reality, I decided to split the whole thing into two compon
 
 The idea is to have a columns component that could be filled with the real content, not just to draw two colored boxes next to each other.
 
-![](images/1-setup.png)
+![Green and peach news cards with a title and some text sitting in a row on a violet background with a gap between them.](images/setup.png)
 
 The news component will always stay the same, we’re going to play with the columns component only. The first news will have a `lightgreen` background, the second one — the famous `peachpuff`.
 
@@ -203,7 +203,7 @@ First of all, we need to make inline blocks out of our columns to make the whole
 }
 ```
 
-![](images/2-inline.png)
+![Green and peach news cards with tiny gap between them.](images/inline.png)
 
 Now our news blocks are in “columns”, but the gap between them doesn’t look right. It looks like a typical white space. Well, because it is! All the nesting in our HTML is routinely squashed by the browser into a single white space since it’s an inline context.
 
@@ -254,7 +254,7 @@ It’s time for the first layout technique that was designed for layouts. Well, 
 
 That’s it! I’m not a big fan of magic shorthand properties like `flex`, but I just couldn’t resist. Two columns and a 20px gap set in a single property! Isn’t it elegant? But there’s something wrong:
 
-![](images/3-multi.png)
+![Green and peach news cards in a row, but the second card’s heading starts in the first column and the rest goes to the second.](images/multi.png)
 
 Since content is flowing from one column to another, some block parts are flowing too. It looks like a broken portal or an old TV, but there’s an easy fix: a polite `avoid` value for the brutal `break-inside` property.
 
@@ -356,7 +356,7 @@ Since absolutely positioned elements are in their _parallel world,_ they tend to
 }
 ```
 
-![](images/4-position.png)
+![Green and peach news cards in a row, but on a tomato background this time.](images/position.png)
 
 Hmm, there’s something different with this demo! Unlike previous purple demos, this one has a page background filled with tomato color. That’s because it looks slightly more dangerous to highlight the nature of this group.
 
@@ -376,7 +376,7 @@ Knowing that let’s try a silly thing: change the parent’s block writing mode
 }
 ```
 
-![](images/5-writing.png)
+![Green and peach news cards in a row on a tomato background, but peach goes first, there’s no gap, and each cards is rotated by 90 degrees clockwise.](images/writing.png)
 
 See, this already looks like a layout! But some things need to be fixed to make it usable. Just like in `font-size: 0` case we need to restore the `writing-mode` for the columns to the previous state. And while we’re at it, let’s add width to our columns.
 
@@ -469,7 +469,7 @@ To make it work, let’s resize our columns to half of the parent width minus ha
 }
 ```
 
-![](images/6-element.png)
+![DevTool’s overlay box with the class name and dimensions over an invisible news card on a tomato background.](images/element.png)
 
 See, the columns are still there, but they’re invisible. Let’s put them back the way we need them! But the parent’s height is collapsed now without any content, let’s fix it with `height: 100%`. Relative positioning would keep those columns sizing and position relative to the parent block.
 
@@ -573,7 +573,7 @@ The same goes for the second news, the only difference is background color and c
 
 The only problem I couldn’t solve is the `<frameset>` background color in Safari: for some reason, it’s white, though it’s transparent in other browsers. This behavior is not mentioned anywhere, [even in HTML spec](https://html.spec.whatwg.org/multipage/rendering.html#frames-and-framesets) that describes `<frame>` and `<frameset>` behavior in detail for compatibility reasons.
 
-![](images/7-frames.png)
+![Green and peach news cards in a row on a tomato background, but the gap and the space below them are filled with white.](images/frames.png)
 
 That was the last weird two-column technique I came up with. Was it practical? Hell no! Did I have a lot of fun building it? Definitely.
 
