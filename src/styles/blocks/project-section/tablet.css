@@ -54,7 +54,7 @@
 
     /* Odd or Even */
 
-    .project-section:nth-child(odd) :is(
+    .project-section:nth-child(odd) :where(
         .project-section__title,
         .project-section__desc,
         .project-section__list
@@ -62,7 +62,7 @@
         grid-column-start: 1;
     }
 
-    .project-section:nth-child(even) :is(
+    .project-section:nth-child(even) :where(
         .project-section__title,
         .project-section__desc,
         .project-section__list
