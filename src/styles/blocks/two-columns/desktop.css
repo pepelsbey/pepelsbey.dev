@@ -9,7 +9,7 @@
     /* Acticle */
 
     .two-columns__article {
-        grid-column-end: span 4;
+        grid-column: 3 / span 4;
         padding-block-start: 80px;
     }
 

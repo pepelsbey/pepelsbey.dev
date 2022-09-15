@@ -1,7 +1,6 @@
 /* Article Card */
 
 .article-card {
-    --article-card-outline: hsl(var(--color-lilac));
     --article-card-type-text: hsl(var(--color-lilac));
     --article-card-type-video: hsl(var(--color-coral));
 }
@@ -75,7 +74,7 @@
 }
 
 .article-card__link:focus-visible::before {
-    outline: 2px solid var(--article-card-outline);
+    outline: 2px solid var(--color-focus-ring);
     outline-offset: 2px;
 }
 

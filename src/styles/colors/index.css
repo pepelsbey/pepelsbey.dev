@@ -11,4 +11,6 @@
     --color-lilac: 263 52% 64%;
     --color-sulu: 84 79% 71%;
     --color-coral: 16 100% 66%;
+
+    --color-focus-ring: hsl(var(--color-lilac));
 }

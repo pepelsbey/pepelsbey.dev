@@ -1,5 +1,5 @@
 /* Column */
 
 .column {
-    overflow-x: clip;
+    overflow: hidden;
 }

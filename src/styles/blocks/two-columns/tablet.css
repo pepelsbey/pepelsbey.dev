@@ -11,27 +11,33 @@
     /* Filter */
 
     .two-columns__filter {
-        grid-column-end: span 2;
+        grid-column: 1 / span 2;
     }
 
     /* Cards */
 
     .two-columns__cards {
-        grid-column-end: span 6;
+        grid-column: 3 / span 6;
     }
 
     /* TOC */
 
     .two-columns__toc {
-        grid-column-end: span 2;
+        grid-column: 1 / span 2;
         padding-block-start: 48px;
     }
 
     /* Article */
 
     .two-columns__article {
-        grid-column-end: span 6;
+        grid-column: 3 / span 6;
         padding-block-start: 48px;
+    }
+
+    /* Page */
+
+    .two-columns__page {
+        grid-column: 3 / span 4;
     }
 
 }

@@ -8,7 +8,7 @@ layout: page.njk
 permalink: 'articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html'
 ---
 
-<main class="main column">
+<main class="main column" id="main">
     <header class="caption">
         <h2 class="caption__title caption__title--top">
             {{ title }}
@@ -26,8 +26,6 @@ permalink: 'articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber 
         </a>
     </header>
     <div class="two-columns">
-        <div class="two-columns__filter">
-        </div>
         <div class="two-columns__cards">
             {% from 'article-card-list.njk' import articleCardList with context %}
 

@@ -14,18 +14,16 @@ permalink: projects/index.html
     {% endfor %}
 {% endfor %}
 
-<main class="main">
-    <div class="column">
-        <header class="caption">
-            <h1 class="caption__title caption__title--top">
-                {{ title }}
-            </h1>
-            <span class="caption__number">
-                {{ projectsList.length }}
-            </span>
-        </header>
-    </div>
-    <div class="project-section-list column">
+<main class="main column" id="main">
+    <header class="caption">
+        <h1 class="caption__title caption__title--top">
+            {{ title }}
+        </h1>
+        <span class="caption__number">
+            {{ projectsList.length }}
+        </span>
+    </header>
+    <div class="project-section-list">
         {% set scribbles = cycler(1, 2, 3) %}
         {% for section in projects %}
             {% set id = section.title | lower %}

@@ -1,7 +1,6 @@
 /* Project Card */
 
 .project-card {
-    --project-card-outline: hsl(var(--color-lilac));
     --project-card-tools-back: hsl(var(--color-lilac));
     --project-card-podcasts-back: hsl(var(--color-sulu));
     --project-card-websites-back: hsl(var(--color-coral));
@@ -64,7 +63,7 @@
 }
 
 .project-card__link:focus-visible::before {
-    outline: 2px solid var(--project-card-outline);
+    outline: 2px solid var(--color-focus-ring);
     outline-offset: 2px;
 }
 
