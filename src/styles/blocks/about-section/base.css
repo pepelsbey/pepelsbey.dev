@@ -43,15 +43,3 @@
     padding: 0;
     list-style: none;
 }
-
-/* Scribble */
-
-.about-section__scribble {
-    position: absolute;
-    inset-block-start: 0;
-    z-index: -1;
-    inline-size: auto;
-    block-size: 600px;
-    color: var(--about-section-scribble-fill);
-    pointer-events: none;
-}

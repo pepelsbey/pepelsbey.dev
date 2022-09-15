@@ -3,9 +3,9 @@ layout: page.njk
 permalink: index.html
 ---
 
-<main class="main">
+<main class="main column">
     <div class="main__gaps">
-        <div class="intro column">
+        <div class="intro ">
             <p class="intro__hi">
                 {{ intro.hi | safe }}
             </p>
@@ -28,7 +28,7 @@ permalink: index.html
                 <use href="/images/scribbles.svg#1"></use>
             </svg>
         </div>
-        <section class="column">
+        <section>
             <header class="caption">
                 <h2 class="caption__title">
                     Articles
@@ -53,7 +53,7 @@ permalink: index.html
                 limit=5
             ) }}
         </section>
-        <section class="column">
+        <section>
             {% set projectsList = [] %}
 
             {% for section in projects %}

@@ -59,12 +59,4 @@
         grid-column: 5 / span 2;
     }
 
-    /* Scribble */
-
-    .intro__scribble {
-        inset-inline-end: calc(
-            (100% - 1676px) / 2 - 42px - 200px
-        );
-    }
-
 }

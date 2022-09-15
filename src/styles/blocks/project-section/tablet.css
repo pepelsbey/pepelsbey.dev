@@ -15,6 +15,18 @@
         block-size: 600px;
     }
 
+    /* Odd or Even */
+
+    .project-section:nth-child(odd)
+    .project-section__scribble {
+        inset-inline-end: -200px;
+    }
+
+    .project-section:nth-child(even)
+    .project-section__scribble {
+        inset-inline-start: -200px;
+    }
+
 }
 
 @media (1024px <= width < 1760px) {
@@ -56,16 +68,6 @@
         .project-section__list
     ) {
         grid-column-start: 2;
-    }
-
-    .project-section:nth-child(odd)
-    .project-section__scribble {
-        inset-inline-end: -200px;
-    }
-
-    .project-section:nth-child(even)
-    .project-section__scribble {
-        inset-inline-start: -200px;
     }
 
 }

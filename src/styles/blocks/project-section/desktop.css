@@ -39,18 +39,4 @@
         grid-column-start: 3;
     }
 
-    .project-section:nth-child(odd)
-    .project-section__scribble {
-        inset-inline-end: calc(
-            (100% - 1676px) / 2 - 200px
-        );
-    }
-
-    .project-section:nth-child(even)
-    .project-section__scribble {
-        inset-inline-start: calc(
-            (100% - 1676px) / 2 - 200px
-        );
-    }
-
 }

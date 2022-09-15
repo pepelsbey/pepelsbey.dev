@@ -56,6 +56,7 @@
     .intro__scribble {
         position: absolute;
         inset-block-start: 0;
+        inset-inline-end: -200px;
         z-index: -1;
         inline-size: 600px;
         block-size: auto;
@@ -117,14 +118,6 @@
     .intro__web {
         grid-row: 4 / 5;
         grid-column: 5 / span 3;
-    }
-
-    /* Scribble */
-
-    .intro__scribble {
-        inset-inline-start: calc(
-            100% - 400px
-        );
     }
 
 }
