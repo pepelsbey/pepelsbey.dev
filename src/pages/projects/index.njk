@@ -25,12 +25,12 @@ permalink: projects/index.html
             </span>
         </header>
     </div>
-    <div class="project-section-list">
+    <div class="project-section-list column">
         {% set scribbles = cycler(1, 2, 3) %}
         {% for section in projects %}
             {% set id = section.title | lower %}
 
-            <section class="project-section column" id="{{ id }}">
+            <section class="project-section" id="{{ id }}">
                 <h2 class="project-section__title">
                     {{ section.title }}
                 </h2>

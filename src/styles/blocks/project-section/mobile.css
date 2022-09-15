@@ -3,6 +3,7 @@
     /* Scribble */
 
     .project-section__scribble {
+        inset-inline: 0;
         margin-inline: auto;
         inline-size: calc(100% - 24px * 2);
         max-inline-size: 600px;

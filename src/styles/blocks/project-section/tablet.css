@@ -6,13 +6,6 @@
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         column-gap: 20px;
-        overflow-x: hidden;
-    }
-
-    @supports (overflow-x: clip) {
-        .project-section {
-            overflow-x: clip;
-        }
     }
 
     /* Scribble */
@@ -20,7 +13,6 @@
     .project-section__scribble {
         inline-size: auto;
         block-size: 600px;
-        max-block-size: 100%;
     }
 
 }
@@ -68,12 +60,12 @@
 
     .project-section:nth-child(odd)
     .project-section__scribble {
-        inset-inline-end: -42px;
+        inset-inline-end: -200px;
     }
 
     .project-section:nth-child(even)
     .project-section__scribble {
-        inset-inline-start: -42px;
+        inset-inline-start: -200px;
     }
 
 }
