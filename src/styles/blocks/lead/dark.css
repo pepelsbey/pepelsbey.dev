@@ -2,5 +2,5 @@
 
 .lead {
     --lead-back: hsl(var(--color-steel));
-    --lead-scribble-fill: hsl(var(--color-manatee) / 0.05);
+    --lead-scribble-fill: hsl(var(--color-manatee) / 0.1);
 }

@@ -12,9 +12,8 @@
     .lead__scribble {
         inset: 0;
         margin: auto;
-        inline-size: calc(
-            100% - var(--lead-inline-padding) * 2
-        );
+        inline-size: calc(100% - 24px * 2);
+        max-inline-size: 600px;
         block-size: auto;
     }
 
