@@ -9,7 +9,7 @@
 
 .content-block :where(h2, h3) {
     margin: 0;
-    scroll-margin-block: 88px;
+    scroll-margin-block-start: 88px;
     font-weight: normal;
     font-family: var(--font-family-heading);
 }
