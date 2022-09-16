@@ -64,7 +64,7 @@ work:
 
 contacts:
   title: Contacts
-  desc: You can get in touch with me via email, Telegram or Twitter
+  desc: You can get in touch with me via email, Telegram or Twitter
   list:
   - title: hi@pepelsbey.dev
     url: mailto:hi@pepelsbey.dev
