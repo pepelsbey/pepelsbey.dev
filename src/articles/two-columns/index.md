@@ -1,7 +1,7 @@
 ---
 title: '6+5 ways to make a two-column layout: from pretty reasonable to com&shy;pletely wrong'
 desc: 'You probably won’t ever need eleven ways of making columns, but you might learn something new while figuring them out.'
-date: 2022-07-04
+date: 2022-09-26
 tags:
     - HTML
     - CSS
