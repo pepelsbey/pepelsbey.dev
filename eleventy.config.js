@@ -198,10 +198,18 @@ module.exports = (config) => {
     });
 
     config.addFilter('dateShort', (value) => {
-        return value.toLocaleString('en', {
-            month: 'long',
-            day: 'numeric',
-        });
+        const articleYear = value.getFullYear();
+        const currentYear = new Date().getFullYear();
+        const dateFormat = articleYear < currentYear
+            ? {
+                dateStyle: 'long',
+            }
+            : {
+                month: 'long',
+                day: 'numeric',
+            };
+
+        return value.toLocaleString('en', dateFormat);
     });
 
     config.addFilter('dateISO', (value) => {
