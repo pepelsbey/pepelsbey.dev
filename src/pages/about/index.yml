@@ -13,7 +13,7 @@ intro:
 
 skills:
   title: Skills
-  desc: Some of my favorite technologies, tools, or topics that I worked with
+  desc: Some of my favorite technologies, topics, or tools that I worked with
   list:
   - HTML
   - CSS
@@ -21,8 +21,10 @@ skills:
   - JavaScript
   - Accessibility
   - Typography
+  - Browsers
+  - Web Standards
   - Eleventy
-  - Figma
+  - UI/UX
 
 # Work
 
