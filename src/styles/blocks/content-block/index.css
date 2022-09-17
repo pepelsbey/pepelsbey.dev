@@ -54,7 +54,7 @@
 /* Ordered */
 
 .content-block ol {
-    counter-set: list;
+    counter-reset: list;
 }
 
 .content-block ol li::before {
