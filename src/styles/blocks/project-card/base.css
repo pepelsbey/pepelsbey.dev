@@ -44,6 +44,10 @@
     font-family: var(--font-family-heading);
 }
 
+.project-card__title * {
+    font-family: inherit;
+}
+
 /* Link */
 
 .project-card__link {

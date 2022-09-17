@@ -68,7 +68,7 @@
     tags:
     - JS
 
-  - title: <blink> is Back! But no one’s waiting
+  - title: '`<blink>` is back! But no one’s waiting'
     desc: In case you ever need to make your `<blink>` element work like it used to.
     url: https://blink-is-back.com/
     tags:
