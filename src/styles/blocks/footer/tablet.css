@@ -4,7 +4,6 @@
 
     .footer {
         grid-template-columns: repeat(8, 1fr);
-        padding-inline: 42px;
         padding-block: 80px;
     }
 

@@ -4,9 +4,6 @@
 
     .lead {
         padding-block: 80px;
-        padding-inline: calc(
-            (100% - 1676px) / 2
-        );
     }
 
     /* Title */
