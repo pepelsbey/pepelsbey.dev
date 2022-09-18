@@ -9,13 +9,10 @@ module.exports = function(window) {
         const source = iframe.getAttribute('src');
         const wrapper = window.document.createElement('figure');
 
-        wrapper.classList.add('figure');
-        iframe.classList.add('figure__content');
-
         wrapper.innerHTML = `
             ${iframe.outerHTML}
-            <figcaption class="figure__caption">
-                <a class="figure__link action" href="${source}" target="_blank" rel="nofollow noopener noreferrer">
+            <figcaption>
+                <a class="action" href="${source}" target="_blank">
                     Open in the new tab
                     <svg class="action__icon" width="24" height="24" aria-hidden="true">
                         <use href="/images/icons.svg#external">
