@@ -24,5 +24,6 @@
   items:
   - title: Handcrafted by me
   - title: Designed by Mark Shakhov
+    url: https://fb.com/mark.jpeg.71
   - title: Powered by Eleventy
     url: https://11ty.dev/
