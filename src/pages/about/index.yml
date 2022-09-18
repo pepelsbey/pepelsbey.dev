@@ -30,7 +30,7 @@ skills:
 
 work:
   title: Work
-  desc: Mostly frontend development and developer advocacy, but also project management and team leading
+  desc: Mostly frontend development and developer advocacy, but also occasional project management and team leading
   list:
   - company: Gorillas
     title: Frontend developer
@@ -47,18 +47,9 @@ work:
   - company: Yandex
     title: Frontend developer
     period: 2008–2009
-  - company: SUP Fabrique
-    title: Frontend team lead
-    period: 2007–2008
-  - company: Newmedia Stars
-    title: Frontend team lead
-    period: 2006–2007
-  - company: StarSoft
+  - company: Yearly years
     title: Frontend developer
-    period: 2005–2006
-  - company: Trinet
-    title: Frontend developer
-    period: 2004–2005
+    period: 2004–2008
 
 # Contacts
 
