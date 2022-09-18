@@ -1,20 +1,20 @@
 /* TOC */
 
 .toc {
-    margin: 0;
-    padding: 0;
     display: grid;
     row-gap: 12px;
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
 /* List */
 
 .toc__list {
-    margin: 0;
-    padding: 0;
     display: grid;
     row-gap: 8px;
+    margin: 0;
+    padding: 0;
     padding-block-start: 4px;
     padding-inline-start: 20px;
     list-style: none;

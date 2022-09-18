@@ -182,6 +182,10 @@ rules:
   # Text
     - direction
     - writing-mode
+    - list-style
+    - list-style-position
+    - list-style-type
+    - list-style-image
     - text-align
     - text-align-last
     - line-height
