@@ -3,6 +3,9 @@ layout: page.njk
 permalink: index.html
 ---
 
+{% from 'intro-picture.njk' import introPicture with context %}
+{% from 'article-card-list.njk' import articleCardList with context %}
+
 <main class="main column" id="main">
     <div class="main__gaps">
         <div class="intro ">
@@ -12,12 +15,9 @@ permalink: index.html
             <h1 class="intro__name">
                 {{ intro.name | safe }}
             </h1>
-            <img
-                class="intro__photo intro__photo--home"
-                src="{{ intro.photo }}"
-                width="308" height="205"
-                alt="{{ intro.alt }}"
-            >
+
+            {{ introPicture(context='home') }}
+
             <p class="intro__who">
                 {{ intro.who | safe }}
             </p>
@@ -45,8 +45,6 @@ permalink: index.html
                     </svg>
                 </a>
             </header>
-
-            {% from 'article-card-list.njk' import articleCardList with context %}
 
             {{ articleCardList(
                 collection=collections.articles,

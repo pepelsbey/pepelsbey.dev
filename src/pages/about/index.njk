@@ -3,6 +3,8 @@ layout: page.njk
 permalink: about/index.html
 ---
 
+{% from 'intro-picture.njk' import introPicture with context %}
+
 <main class="main column" id="main">
     <header class="caption">
         <h1 class="caption__title caption__title--top">
@@ -10,12 +12,8 @@ permalink: about/index.html
         </h1>
     </header>
     <div class="intro">
-        <img
-            class="intro__photo intro__photo--about"
-            src="{{ intro.photo }}"
-            width="308" height="205"
-            alt="{{ intro.alt }}"
-        >
+        {{ introPicture(context='about') }}
+
         <p class="intro__who">
             {{ intro.who | safe }}
         </p>

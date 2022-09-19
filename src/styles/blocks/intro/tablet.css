@@ -83,9 +83,9 @@
         grid-column: 1 / -1;
     }
 
-    /* Photo */
+    /* Picture */
 
-    .intro__photo {
+    .intro__picture {
         grid-row: 2 / 3;
         grid-column: 1 / span 5;
     }

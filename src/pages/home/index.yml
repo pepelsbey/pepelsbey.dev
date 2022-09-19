@@ -1,7 +1,6 @@
 intro:
   hi: Hi, my name is
   name: Vadim Makeev
-  photo: /images/photo.png
   alt: Black and white portrait on a colored background.
   who: I’m a frontend developer in love with the Web, browsers, bicycles, and podcasting
   what: Here you can find [my thoughts](/articles/) on web development, some of [my projects](/projects/), and information [about me](/about/)

@@ -1,0 +1,36 @@
+{% set formats = [
+    'avif',
+    'webp',
+    'png'
+] %}
+
+{% set widths = [
+    '2560',
+    '1920',
+    '1280',
+    '960',
+    '640'
+] %}
+
+{% macro introPicture(
+    context
+) %}
+    <picture class="intro__picture intro__picture--{{ context }}">
+        {% for format in formats %}
+            <source
+                srcset="
+                    {% for width in widths %}
+                        /images/photo/{{ width }}.{{ format }} {{ width }}w
+                        {{ ',' if not loop.last }}
+                    {% endfor %}
+                "
+                type="image/{{ format }}"
+            >
+        {% endfor %}
+        <img class="intro__photo"
+            src="/images/photo/1280.png"
+            width="640" height="426"
+            alt="{{ intro.alt }}"
+        >
+    </picture>
+{% endmacro %}
