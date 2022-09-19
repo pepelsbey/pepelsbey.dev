@@ -22,7 +22,7 @@ module.exports = (config) => {
 
     const collections = {
         'articles': 'src/articles/*/index.md',
-        'pages': 'src/pages/*.md',
+        'pages': 'src/pages/!(404)/index.njk',
     };
 
     config.addCollection('articles', (collectionApi) => {
