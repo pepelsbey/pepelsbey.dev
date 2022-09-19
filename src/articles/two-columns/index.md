@@ -63,7 +63,7 @@ To make it closer to reality, I decided to split the whole thing into two c
 
 The idea is to have a columns component that could be filled with the real content, not just to draw two colored boxes next to each other.
 
-![Green and peach news cards with a title and some text sitting in a row on a violet background with a gap between them.](images/setup.png)
+![Green and peach news cards with a title and some text sitting in a row on violet background with a gap between them.](images/setup.png)
 
 The news component will always stay the same, we’re going to play with the columns component only. The first news will have a `lightgreen` background, the second one — the famous `peachpuff`.
 
@@ -209,7 +209,7 @@ First of all, we need to make inline blocks out of our columns to make the 
 }
 ```
 
-![Green and peach news cards with tiny gap between them.](images/inline.png)
+![Green and peach news cards with a tiny gap between them.](images/inline.png)
 
 Now our news blocks are in “columns”, but the gap between them doesn’t look right. It looks like a typical white space. Well, because it is! All the nesting in our HTML is routinely squashed by the browser into a single white space since it’s an inline context.
 
@@ -392,7 +392,7 @@ Knowing that let’s try a silly thing: change the parent’s block writing mod
 }
 ```
 
-![Green and peach news cards in a row on a tomato background, but peach goes first, there’s no gap, and each cards is rotated by 90 degrees clockwise.](images/writing.png)
+![Green and peach news cards in a row on a tomato background, but peach goes first, there’s no gap, and each card is rotated 90 degrees clockwise.](images/writing.png)
 
 See, this already looks like a layout! But some things need to be fixed to make it usable. Just like in `font-size: 0` case we need to restore the `writing-mode` for the columns to the previous state. And while we’re at it, let’s add width to our columns.
 
