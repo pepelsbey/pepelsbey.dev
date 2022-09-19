@@ -3,7 +3,7 @@
 .prism {
     --prism-text: #24292f;
     --prism-back: hsl(var(--color-titan));
-    --prism-gray: #6e7781;
+    --prism-gray: #666e77;
     --prism-red: #cf222e;
     --prism-green: #116329;
     --prism-blue: #0550ae;
