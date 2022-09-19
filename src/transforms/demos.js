@@ -1,3 +1,5 @@
+const htmlmin = require('html-minifier');
+
 module.exports = function(window) {
     const content = window.document.getElementById('article-content');
 
@@ -9,7 +11,7 @@ module.exports = function(window) {
         const source = iframe.getAttribute('src');
         const wrapper = window.document.createElement('figure');
 
-        wrapper.innerHTML = `
+        const template = `
             ${iframe.outerHTML}
             <figcaption>
                 <a class="action" href="${source}" target="_blank">
@@ -20,6 +22,12 @@ module.exports = function(window) {
                 </a>
             </figcaption>
         `;
+
+        wrapper.innerHTML = htmlmin.minify(
+            template, {
+                collapseWhitespace: true
+            }
+        );
 
         iframe.replaceWith(wrapper);
     }
