@@ -1,5 +1,6 @@
 {% macro articleCardList(
     collection,
+    heading,
     limit
 ) %}
     <div class="article-card-list">
@@ -8,7 +9,7 @@
             {% if loop.index <= limit and article.url != page.url %}
                 {{ articleCard(
                     article=article,
-                    heading='h3'
+                    heading=heading
                 ) }}
             {% endif %}
         {% endfor %}

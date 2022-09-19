@@ -1,7 +1,9 @@
 <footer class="footer column">
     {% for section in footer %}
-        <section class="footer__section">
-            <h4 class="footer__title">{{ section.title }}</h4>
+        <div class="footer__section">
+            <strong class="footer__title">
+                {{ section.title }}
+            </strong>
             <ul class="footer__list">
                 {% for item in section.items %}
                     <li class="footer__item">
@@ -15,6 +17,6 @@
                     </li>
                 {% endfor %}
             </ul>
-        </section>
+        </div>
     {% endfor %}
 </footer>

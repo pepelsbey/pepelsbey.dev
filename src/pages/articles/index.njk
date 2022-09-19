@@ -10,9 +10,9 @@ permalink: 'articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber 
 
 <main class="main column" id="main">
     <header class="caption">
-        <h2 class="caption__title caption__title--top">
+        <h1 class="caption__title caption__title--top">
             {{ title }}
-        </h2>
+        </h1>
         <span class="caption__number">
             {{ collections.articles.length }}
         </span>
@@ -31,6 +31,7 @@ permalink: 'articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber 
 
             {{ articleCardList(
                 collection=collections.articles,
+                heading='h2',
                 limit=5
             ) }}
         </div>
