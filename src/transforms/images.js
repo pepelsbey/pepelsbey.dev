@@ -1,40 +1,130 @@
-const { Node } = require('linkedom');
+const fsp = require('fs/promises');
+const Image = require('@11ty/eleventy-img');
+const os = require('os');
+const path = require('path');
+const sharp = require('sharp');
 
-module.exports = function(window) {
-    const content = window.document.getElementById('article-content');
+Image.concurrency = os.cpus().length;
 
-    if (!content) return;
+const baseConfig = {
+    extBlackList: ['svg'],
+    widths: [640, 960, 1280, 1920, 2560],
+    sizes: [
+        '(min-width: 1760px) 828px',
+        '(min-width: 1024) calc(75vw - 20px - 2 * 42px)',
+        'calc(100vw - 2 * 20px)',
+    ].join(', '),
+    formats: [
+        'avif',
+        'webp',
+    ],
+    filenameFormat: (id, src, width, format) => {
+        const extension = path.extname(src);
+        const name = path.basename(src, extension);
+        return `${name}-${width}.${format}`;
+    },
+    sharpAvifOptions: {
+        lossless: true,
+    },
+    sharpWebpOptions: {
+        lossless: true,
+    },
+}
 
-    const images = content.querySelectorAll('p > img');
+const sharpAvifOptions = {
+    default: {
+        lossless: true,
+    },
+    get png() {
+        return this.default
+    },
+    jpg: {
+        quality: 50,
+    },
+    get jpeg() {
+        return this.jpg
+    },
+};
 
-    for (const image of images) {
-        const paragraph = image.parentNode;
-        const figure = window.document.createElement('figure');
-        let sibling = image.nextSibling;
+const sharpWebpOptions = {
+    default: {
+        lossless: true,
+    },
+    get png() {
+        return this.default
+    },
+    jpg: {
+        quality: 80,
+    },
+    get jpeg() {
+        return this.jpg
+    },
+};
 
-        image.setAttribute('loading', 'lazy');
-        figure.append(image);
+module.exports = function (window, content, outputPath) {
+    const articleContainer = window.document.getElementById('article-content');
 
-        if (sibling) {
-            const caption = window.document.createElement('figcaption');
-            const content = [];
+    if (!articleContainer) return;
 
-            while(sibling) {
-                content.push(sibling);
-                sibling = sibling.nextSibling;
-            }
+    const baseSourcePath = outputPath.replace('dist/', '').replace('/index.html', '');
+    const imagesSourcePath = path.join('src', baseSourcePath);
+    const imagesOutputPath = path.join('dist', baseSourcePath, 'images');
 
-            caption.innerHTML = content
-                .map((fragment) => (
-                    fragment.nodeType === Node.TEXT_NODE
-                        ? fragment.textContent
-                        : fragment.outerHTML
-                ))
-                .join('')
+    const images = Array.from(articleContainer.querySelectorAll('img'));
 
-            figure.appendChild(caption);
-        }
+    return Promise.all(
+        images.map((image) => buildImage(
+            image,
+            imagesSourcePath,
+            imagesOutputPath,
+            window,
+        ))
+    );
+}
 
-        paragraph.replaceWith(figure);
+async function buildImage(image, imagesSourcePath, imagesOutputPath, window) {
+    const originalLink = path.join(
+        imagesSourcePath,
+        image.src
+    );
+
+    try {
+        await fsp.stat(originalLink);
+    } catch (error) {
+        console.warn(`Image ${originalLink} does not exist`);
+        return;
     }
+
+    const ext = path.extname(originalLink).replace('.', '');
+
+    if (baseConfig.extBlackList.includes(ext)) {
+        return;
+    }
+
+    const { width: originalWidth } = await sharp(originalLink).metadata();
+
+    const options = {
+        urlPath: 'images/',
+        outputDir: imagesOutputPath,
+        widths: [...baseConfig.widths, originalWidth],
+        formats: [...baseConfig.formats, ext],
+        filenameFormat: baseConfig.filenameFormat,
+        sharpWebpOptions: sharpWebpOptions[ext] ? sharpWebpOptions[ext] : sharpWebpOptions.default,
+    };
+
+    const imageAttributes = Object.fromEntries(
+        [...image.attributes].map((attr) => [attr.name, attr.value])
+    );
+
+    imageAttributes.sizes = imageAttributes.sizes || baseConfig.sizes;
+
+    const metadata = Image.statsSync(originalLink, options);
+    const imageHTML = Image.generateHTML(metadata, imageAttributes);
+    const tempElement = window.document.createElement('div');
+
+    tempElement.innerHTML = imageHTML;
+
+    image.replaceWith(tempElement.firstElementChild);
+
+    Image(originalLink, options);
 }

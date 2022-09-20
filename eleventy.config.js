@@ -75,6 +75,7 @@ module.exports = (config) => {
     const htmlTransforms = [
         require('./src/transforms/anchors.js'),
         require('./src/transforms/demos.js'),
+        require('./src/transforms/figure.js'),
         require('./src/transforms/images.js'),
         require('./src/transforms/prism.js'),
     ];
