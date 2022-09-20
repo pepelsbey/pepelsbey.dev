@@ -374,7 +374,7 @@ Since absolutely positioned elements are in their _parallel world,_ they tend t
 ```
 
 ![Green and peach news cards in a row, but on a tomato background this time.](images/position.png)
-First dangerously red option
+The first dangerously red option
 
 Hmm, there’s something different with this demo! Unlike previous purple demos, this one has a page background filled with tomato color. That’s because it looks slightly more dangerous to highlight the nature of this group.
 
