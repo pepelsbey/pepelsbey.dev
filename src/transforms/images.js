@@ -1,3 +1,5 @@
+const { Node } = require('linkedom');
+
 module.exports = function(window) {
     const content = window.document.getElementById('article-content');
 
@@ -8,8 +10,31 @@ module.exports = function(window) {
     for (const image of images) {
         const paragraph = image.parentNode;
         const figure = window.document.createElement('figure');
+        let sibling = image.nextSibling;
 
+        image.setAttribute('loading', 'lazy');
         figure.append(image);
+
+        if (sibling) {
+            const caption = window.document.createElement('figcaption');
+            const content = [];
+
+            while(sibling) {
+                content.push(sibling);
+                sibling = sibling.nextSibling;
+            }
+
+            caption.innerHTML = content
+                .map((fragment) => (
+                    fragment.nodeType === Node.TEXT_NODE
+                        ? fragment.textContent
+                        : fragment.outerHTML
+                ))
+                .join('')
+
+            figure.appendChild(caption);
+        }
+
         paragraph.replaceWith(figure);
     }
 }
