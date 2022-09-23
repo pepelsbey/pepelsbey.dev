@@ -1,1 +1,8 @@
 title: Articles
+layout: page.njk
+eleventyComputed:
+    title: '{{ title }}{% if pagination.pageNumber > 0 %}, page {{ pagination.pageNumber + 1 }}{% endif %}'
+pagination:
+    data: collections.articles
+    size: 5
+permalink: 'articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html'

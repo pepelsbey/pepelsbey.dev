@@ -1,13 +1,3 @@
----
-eleventyComputed:
-    title: '{{ title }}{% if pagination.pageNumber > 0 %}, page {{ pagination.pageNumber + 1 }}{% endif %}'
-pagination:
-    data: collections.articles
-    size: 5
-layout: page.njk
-permalink: 'articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html'
----
-
 <main class="main column" id="main">
     <header class="caption">
         <h1 class="caption__title caption__title--top">

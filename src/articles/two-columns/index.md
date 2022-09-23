@@ -1,32 +1,3 @@
----
-title: '6+5 ways to make a two-column layout: from pretty reasonable to com&shy;pletely wrong'
-desc: 'You probably won’t ever need eleven ways of making columns, but you might learn something new while figuring them out.'
-date: 2022-09-26
-tags:
-    - HTML
-    - CSS
-toc:
-    - title: A challenge
-    - title: Setup and rules
-    - title: Reasonable six
-      items:
-        - Tables
-        - Floats
-        - Inline blocks
-        - Multi-columns
-        - Flexbox
-        - Grid Layout
-    - title: Weird five
-      items:
-        - Positioning
-        - Writing mode
-        - SVG
-        - Element
-        - Frames
-cover: true
-layout: article.njk
----
-
 ## A challenge
 
 Imagine you need to create a two-column layout. Yes, the simplest one: a column on the left, a column on the right, and some gap in-between. There’s an obvious modern solution for that:

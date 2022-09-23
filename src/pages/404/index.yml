@@ -1,4 +1,6 @@
 title: Not found
+layout: page.njk
+permalink: 404/index.html
 content: |
   I hate broken links as much as you do. Please consider [filing an issue](https://github.com/pepelsbey/pepelsbey.dev/issues) so this won’t happen to anybody ever again. Thanks!
 

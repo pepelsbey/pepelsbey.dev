@@ -1,3 +1,5 @@
+layout: page.njk
+permalink: index.html
 intro:
   hi: Hi, my name is
   name: Vadim Makeev

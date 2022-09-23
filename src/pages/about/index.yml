@@ -1,4 +1,6 @@
 title: About
+layout: page.njk
+permalink: about/index.html
 
 # Intro
 

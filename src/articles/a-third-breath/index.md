@@ -1,13 +1,3 @@
----
-title: 'A third breath'
-desc: 'On February 5th, 2008 I published a post called “Second breath” on my old blog. It lasted for a while until I stopped posting in 2014. Eight years later I’m taking a _third breath_ and starting another blog.'
-date: 2022-09-26
-tags:
-    - Meta
-cover: true
-layout: article.njk
----
-
 On February 5th, 2008 I published a post called “[A second breath](https://pepelsbey.net/2008/02/second-breath/)” on my old blog. Unfortunately, it’s in Russian, so you might not have a chance to enjoy it. This post’s first comment suggested using jQuery to make rounded corners. [And it wasn’t a joke](https://jquery.malsup.com/corner/) 😳
 
 Anyway, as you might’ve guessed by the title, it wasn’t my first attempt at blogging. It lasted for a while until I stopped posting in 2014. You know, too busy with social media, conferences, podcasting, and other stuff.
