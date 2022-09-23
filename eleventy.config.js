@@ -184,7 +184,7 @@ module.exports = (config) => {
     // Absolute links
 
     config.addFilter('absolute', (post) => {
-        const reg = /(src="[^(https:\/\/)])|(src="\/)|(href="[^(https:\/\/)])|(href="\/)/g;
+        const reg = /(src="[^(https://)])|(src="\/)|(href="[^(https://)])|(href="\/)/g;
         const prefix = global.domain + post.url;
         return post.templateContent.replace(reg, (match) => {
             if (match === 'src="/' || match === 'href="/') {
@@ -225,7 +225,7 @@ module.exports = (config) => {
 
     // Passthrough copy
 
-    copyPaths = [
+    [
         'src/robots.txt',
         'src/images',
         'src/fonts',

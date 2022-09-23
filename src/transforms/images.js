@@ -110,6 +110,7 @@ async function buildImage(image, imagesSourcePath, imagesOutputPath, window) {
         formats: [...baseConfig.formats, ext],
         filenameFormat: baseConfig.filenameFormat,
         sharpWebpOptions: sharpWebpOptions[ext] ? sharpWebpOptions[ext] : sharpWebpOptions.default,
+        sharpAvifOptions: sharpAvifOptions[ext] ? sharpAvifOptions[ext] : sharpAvifOptions.default,
     };
 
     const imageAttributes = Object.fromEntries(
