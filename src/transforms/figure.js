@@ -13,6 +13,7 @@ module.exports = function(window) {
         let sibling = image.nextSibling;
 
         image.setAttribute('loading', 'lazy');
+        image.setAttribute('decoding', 'async');
         figure.append(image);
 
         if (sibling) {
