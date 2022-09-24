@@ -1,11 +1,37 @@
 <footer class="footer column">
-    {% for section in footer %}
-        <div class="footer__section">
-            <strong class="footer__title">
-                {{ section.title }}
-            </strong>
+    <dl class="footer__section">
+        <dt class="footer__title">
+            {{ footer.social.title }}
+        </dt>
+        <dd class="footer__desc">
             <ul class="footer__list">
-                {% for item in section.items %}
+                {% for item in footer.social.list %}
+                    <li class="footer__item">
+                        <a class="footer__link" href="{{ item.url }}">
+                            {{- item.title | safe -}}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </dd>
+    </dl>
+    <dl class="footer__section">
+        <dt class="footer__title">
+            {{ footer.email.title }}
+        </dt>
+        <dd class="footer__desc">
+            <a class="footer__link" href="{{ footer.email.link }}">
+                {{- footer.email.text | safe -}}
+            </a>
+        </dd>
+    </dl>
+    <dl class="footer__section">
+        <dt class="footer__title">
+            {{ footer.credits.title }}
+        </dt>
+        <dd class="footer__desc">
+            <ul class="footer__list">
+                {% for item in footer.credits.list %}
                     <li class="footer__item">
                         {% if item.url %}
                             <a class="footer__link" href="{{ item.url }}">
@@ -17,6 +43,6 @@
                     </li>
                 {% endfor %}
             </ul>
-        </div>
-    {% endfor %}
+        </dd>
+    </dl>
 </footer>

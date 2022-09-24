@@ -1,7 +1,6 @@
-# Social
-
-- title: Links
-  items:
+social:
+  title: Links
+  list:
   - title: Twitter
     url: https://twitter.com/pepelsbey_dev
   - title: GitHub
@@ -11,17 +10,14 @@
   - title: Instagram
     url: https://instagram.com/pepelsbey
 
-# Email
+email:
+  title: Email
+  text: hi@<wbr>pepelsbey.dev
+  link: mailto:hi@pepelsbey.dev
 
-- title: Email
-  items:
-  - title: hi@<wbr>pepelsbey.dev
-    url: mailto:hi@pepelsbey.dev
-
-# Credits
-
-- title: Credits
-  items:
+credits:
+  title: Credits
+  list:
   - title: Handcrafted by me
   - title: Designed by Mark Shakhov
     url: https://fb.com/mark.jpeg.71
