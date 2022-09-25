@@ -4,7 +4,7 @@ Anyway, as you might’ve guessed by the title, it wasn’t my first attempt
 
 Eight years later I’m taking the third breath and starting another blog. Lucky for you, this time it’s in English. Lucky for me, I’m not promising to post daily as I did in 2008.
 
-I’m not starting with just a promise, you can already read a few articles: new “[6+5 ways to make a two-column layout](http://localhost:8080/articles/two-columns/)” and old “[When is a button not a button?](https://www.smashingmagazine.com/2019/02/buttons-interfaces/)” published in Smashing Magazine in 2019. But there’s more! I already have another article in the queue and a big list of ideas. [Subscribe to RSS](/feed/) so you won’t miss them!
+I’m not starting with just a promise, you can already read a few articles: new “[6+5 ways to make a two-column layout](/articles/two-columns/)” and old “[When is a button not a button?](https://www.smashingmagazine.com/2019/02/buttons-interfaces/)” published in Smashing Magazine in 2019. But there’s more! I already have another article in the queue and a big list of ideas. [Subscribe to RSS](/feed/) so you won’t miss them!
 
 It’s been busy eight years, so now I have [a few projects](/projects/) you might find interesting. And if you’re curious about who I am, you can find [some answers too](/about/).
 
