@@ -34,21 +34,21 @@
                         width="24" height="24"
                         role="img" aria-label="Video"
                     >
-                        <use href="/images/icons.svg#video">
+                        <use href="/images/icons.svg#video"/>
                     </svg>
                 {% endif %}
                 <svg class="article-card__type article-card__type--text"
                     width="24" height="24"
                     role="img" aria-label="Article"
                 >
-                    <use href="/images/icons.svg#text">
+                    <use href="/images/icons.svg#text"/>
                 </svg>
                 {% if external %}
                     <svg class="article-card__type article-card__type--external"
                         width="24" height="24"
                         role="img" aria-label="External"
                     >
-                        <use href="/images/icons.svg#external">
+                        <use href="/images/icons.svg#external"/>
                     </svg>
                 {% endif %}
             </p>
@@ -67,7 +67,7 @@
                 <a class="article-card__source action" href="{{ article.data.source.url }}" {{ targetBlank }}>
                     Read on {{ article.data.source.title }}
                     <svg class="action__icon" width="24" height="24" aria-hidden="true">
-                        <use href="/images/icons.svg#external">
+                        <use href="/images/icons.svg#external"/>
                     </svg>
                 </a>
             {% endif %}

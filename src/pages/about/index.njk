@@ -19,7 +19,7 @@
             {{ intro.web | markdownInline | safe }}
         </p>
         <svg class="intro__scribble" width="200" height="200" aria-hidden="true">
-            <use href="/images/scribbles.svg#1"></use>
+            <use href="/images/scribbles.svg#1"/>
         </svg>
     </div>
     <div class="about-section-list">
@@ -61,7 +61,7 @@
                 {% endfor %}
             </ol>
             <svg class="about-section__scribble about-section__scribble--work" width="200" height="200" aria-hidden="true">
-                <use href="/images/scribbles.svg#2"></use>
+                <use href="/images/scribbles.svg#2"/>
             </svg>
         </section>
         <section class="about-section about-section-list__contacts">
@@ -76,7 +76,7 @@
                     <li>
                         <a class="action" href="{{ item.url }}">
                             <svg class="action__icon" width="24" height="24" aria-hidden="true">
-                                <use href="/images/icons.svg#{{ item.icon }}"></use>
+                                <use href="/images/icons.svg#{{ item.icon }}"/>
                             </svg>
                             {{- item.title -}}
                         </a>
@@ -84,7 +84,7 @@
                 {% endfor %}
             </ul>
             <svg class="about-section__scribble about-section__scribble--contacts" width="200" height="200" aria-hidden="true">
-                <use href="/images/scribbles.svg#2"></use>
+                <use href="/images/scribbles.svg#2"/>
             </svg>
         </section>
     </div>
