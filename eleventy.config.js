@@ -61,8 +61,12 @@ module.exports = (config) => {
         if (path && path.endsWith('.html')) {
             const result = htmlmin.minify(
                 content, {
+                    collapseBooleanAttributes: true,
+                    collapseWhitespace: true,
+                    decodeEntities: true,
                     removeComments: true,
-                    collapseWhitespace: true
+                    sortAttributes: true,
+                    sortClassName: true,
                 }
             );
 
