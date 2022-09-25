@@ -8,22 +8,9 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="{{ global.subtitle }}">
-    <meta name="generator" content="{{ eleventy.generator }}">
-
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="hsl(84 79% 71%)">
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="hsl(263 52% 64%)">
-
-    {% include 'covers.njk' %}
-
     <link rel="stylesheet" href="/styles/index.css">
 
-    <style media="(prefers-color-scheme: light)">
-        {{ 'src/styles/light.css' | css }}
-    </style>
-    <style media="(prefers-color-scheme: dark)">
-        {{ 'src/styles/dark.css' | css }}
-    </style>
+    <link rel="preconnect" href="https://ohno.pepelsbey.dev">
 
     <link rel="preload" href="/fonts/inter-variable.woff2" crossorigin as="font" type="font/woff2">
     <link rel="preload" href="/fonts/neue-machina.woff2" crossorigin as="font" type="font/woff2">
@@ -33,6 +20,21 @@
     <link rel="icon" href="/images/logo/any.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/images/logo/180.png">
     <link rel="manifest" href="/manifest.json">
+
+    <meta name="description" content="{{ global.subtitle }}">
+    <meta name="generator" content="{{ eleventy.generator }}">
+
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="hsl(84 79% 71%)">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="hsl(263 52% 64%)">
+
+    {% include 'covers.njk' %}
+
+    <style media="(prefers-color-scheme: light)">
+        {{ 'src/styles/light.css' | css }}
+    </style>
+    <style media="(prefers-color-scheme: dark)">
+        {{ 'src/styles/dark.css' | css }}
+    </style>
 
     <script defer src="/scripts/index.js"></script>
     <script defer src="https://ohno.pepelsbey.dev/script.js" data-site="AQPFXSVA"></script>
