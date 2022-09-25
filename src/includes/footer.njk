@@ -33,13 +33,9 @@
             <ul class="footer__list">
                 {% for item in footer.credits.list %}
                     <li class="footer__item">
-                        {% if item.url %}
-                            <a class="footer__link" href="{{ item.url }}">
-                                {{- item.title | safe -}}
-                            </a>
-                        {% else %}
-                            {{ item.title | safe }}
-                        {% endif %}
+                        <a class="footer__link" href="{{ item.url }}">
+                            {{- item.title | safe -}}
+                        </a>
                     </li>
                 {% endfor %}
             </ul>
