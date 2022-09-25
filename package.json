@@ -34,7 +34,7 @@
         "esbuild": "^0.15.8",
         "eslint": "^8.23.1",
         "focus-trap": "^7.0.0",
-        "html-minifier": "^4.0.0",
+        "html-minifier-terser": "^7.0.0",
         "js-yaml": "^4.1.0",
         "linkedom": "^0.14.14",
         "node-w3c-validator": "^2.0.2",
