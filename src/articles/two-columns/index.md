@@ -34,7 +34,7 @@ To make it closer to reality, I decided to split the whole thing into two c
 
 The idea is to have a columns component that could be filled with the real content, not just to draw two colored boxes next to each other.
 
-![Green and peach news cards with a title and some text sitting in a row on violet background with a gap between them.](images/setup.png)
+![Green and peach news cards with a title and some text sitting in a row on a violet background with a gap between them.](images/setup.png)
 The look that we’re aiming for
 
 The news component will always stay the same, we’re going to play with the columns component only. The first news will have a `lightgreen` background, the second one — the famous `peachpuff`.
