@@ -3,7 +3,6 @@
     "scripts": {
         "start": "eleventy --serve --quiet",
         "build": "rm -rf dist && eleventy",
-        "deploy": "cd dist && rsync --archive --compress --delete --exclude=.DS_Store . pepelsbey.dev:/var/www/pepelsbey.dev/html/",
         "test": "npm run lint:editorconfig && npm run lint:css && npm run lint:javascript",
         "lint:editorconfig": "editorconfig-checker",
         "lint:html": "node-w3c-validator --input dist/**/*.html --format lint --verbose --errors-only",
