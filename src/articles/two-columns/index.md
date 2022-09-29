@@ -363,7 +363,7 @@ Knowing that let’s try a silly thing: change the parent’s block writing mod
 
 ```css
 .columns {
-    writing-mode: vertical-rl;
+    writing-mode: vertical-lr;
 }
 ```
 
@@ -383,13 +383,13 @@ Unfortunately, there’s no way for us to use the `gap` property outside of 
 
 ```css
 .columns__item + .columns__item {
-    margin-right: 20px;
+    margin-left: 20px;
 }
 ```
 
 I probably should’ve used `.columns__item—first` selector instead, but that would be way too easy. I’m trying to use as many tricks as possible here!
 
-Hopefully, you can smell the same weird thing in both `font-size: 0` and `writing-mode: vertical-rl` cases: they both fragile and misuse properties that weren’t meant for layout.
+Hopefully, you can smell the same weird thing in both `font-size: 0` and `writing-mode: vertical-lr` cases: they both fragile and misuse properties that weren’t meant for layout.
 
 Still, the second weird two-column layout. Ready for another one? Let’s go!
 
