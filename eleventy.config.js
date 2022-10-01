@@ -59,7 +59,7 @@ module.exports = (config) => {
 
     config.addTransform('html-minify', (content, path) => {
         if (path && path.endsWith('.html')) {
-            const result = htmlmin.minify(
+            return htmlmin.minify(
                 content, {
                     collapseBooleanAttributes: true,
                     collapseWhitespace: true,
@@ -70,8 +70,6 @@ module.exports = (config) => {
                     sortClassName: true,
                 }
             );
-
-            return result;
         }
 
         return content;
@@ -158,14 +156,12 @@ module.exports = (config) => {
             }
 
             return async () => {
-                let output = await esbuild.buildSync({
+                return esbuild.buildSync({
                     entryPoints: [path],
                     minify: true,
                     bundle: true,
                     write: false,
                 }).outputFiles[0].text;
-
-                return output;
             }
         }
     });
