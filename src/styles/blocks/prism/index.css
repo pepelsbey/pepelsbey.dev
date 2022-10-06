@@ -5,7 +5,7 @@
 
     margin: 0;
     padding: 20px;
-    overflow: scroll;
+    overflow: auto;
     border-radius: 20px;
     background-color: var(--prism-back);
 }
