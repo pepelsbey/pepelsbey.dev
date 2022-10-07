@@ -2,7 +2,7 @@ On February 5th, 2008 I published a post called “[A second breath](https:/
 
 Anyway, as you might’ve guessed by the title, it wasn’t my first attempt at blogging. It lasted for a while until I stopped posting in 2014. You know, too busy with social media, conferences, podcasting, and other stuff.
 
-Eight years later I’m taking the third breath and starting another blog. Lucky for you, this time it’s in English. Lucky for me, I’m not promising to post daily as I did in 2008.
+Eight years later I’m taking the third breath and starting another blog. Lucky for you, this time it’s in English. Lucky for me, I’m not promising to post daily as I did in 2008.
 
 I’m not starting with just a promise, you can already read a few articles: new “[6+5 ways to make a two-column layout](/articles/two-columns/)” and old “[When is a button not a button?](https://www.smashingmagazine.com/2019/02/buttons-interfaces/)” published in Smashing Magazine in 2019. But there’s more! I already have another article in the queue and a big list of ideas. [Subscribe to RSS](/feed/) so you won’t miss them!
 
