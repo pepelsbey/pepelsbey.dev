@@ -1,0 +1,27 @@
+title: 'SVG sprites: old-school, modern, unknown, and forgotten'
+desc: 'It’s time to revisit the old SVG sprites trick and dig out a few alternative methods from the SVG spec and Internet archives.'
+date: 2022-10-10
+tags:
+  - HTML
+  - SVG
+toc:
+  - title: Intro
+  - title: Why sprites
+  - title: Old-school sprites
+    items:
+      - Background images
+      - Content images too
+  - title: Modern symbols
+    items:
+      - Inline SVG
+      - External SVG
+  - title: Unknown fragments
+    items:
+      - Alt syntax
+      - A catch
+  - title: Forgotten stacks
+    items:
+      - Firefix
+  - title: One sprite to rule them all?
+cover: true
+layout: article.njk

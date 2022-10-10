@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Unknown: Fragments via ID</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            display: grid;
+            place-content: center;
+            background-color: #caee89;
+        }
+
+        a {
+            display: block;
+            width: 200px;
+            height: 200px;
+            background-image: url('icons/id.svg#link');
+        }
+
+        a:hover,
+        a:focus {
+            background-image: url('icons/id.svg#hover');
+        }
+    </style>
+</head>
+<body>
+    <a href aria-label="Settings"></a>
+</body>
+</html>

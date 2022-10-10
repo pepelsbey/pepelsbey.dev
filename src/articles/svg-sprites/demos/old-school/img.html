@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Old-school: Content image</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            display: grid;
+            place-content: center;
+            background-color: #caee89;
+        }
+
+        a img {
+            display: block;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            object-position: 0 0;
+        }
+
+        a:hover img,
+        a:focus img {
+            object-position: -200px 0;
+        }
+    </style>
+</head>
+<body>
+    <a href>
+        <img src="icons/sprite.svg" width="200" height="200" alt="Settings">
+    </a>
+</body>
+</html>
