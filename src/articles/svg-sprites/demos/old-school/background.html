@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Old-school: Background image</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            display: grid;
+            place-content: center;
+            background-color: #caee89;
+        }
+
+        a {
+            display: block;
+            width: 200px;
+            height: 200px;
+            background-image: url('icons/sprite.svg');
+            background-position: 0 0;
+            background-size: cover;
+        }
+
+        a:hover,
+        a:focus {
+            background-position: -200px 0;
+        }
+    </style>
+</head>
+<body>
+    <a href aria-label="Settings"></a>
+</body>
+</html>
