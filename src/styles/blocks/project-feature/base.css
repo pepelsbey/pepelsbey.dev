@@ -68,6 +68,7 @@
 /* Icon */
 
 .project-feature__icon {
+    pointer-events: none;
     z-index: 1;
 }
 
