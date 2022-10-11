@@ -292,7 +292,7 @@ It’s yet another feature from the [SVG specification](https://www.w3.org/TR/SV
 
 But there’s a catch 😅
 
-### A catchf
+### A catch
 
 For some reason, browsers treat URLs with fragment identifiers as different resources. Just like in the first naive demo: the first `sprite.svg#link` file will be loaded by default, and the second `sprite.svg#hover` will be loaded again on hover. As two different files! Even with the `svgView()` syntax. And it seems like it’s not just a request to the cache for the same file: if you throttle the network, you’ll see the delay. Only Safari takes the file from memory, but sometimes hover stucks.
 
