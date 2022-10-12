@@ -26,7 +26,8 @@
 /* Emphasis */
 
 .content-inline em {
-    font-style: oblique 10deg;
+    font-style: normal;
+    font-variation-settings: 'slnt' -10;
 }
 
 .content-inline strong {
