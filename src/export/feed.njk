@@ -4,7 +4,7 @@ permalink: /feed/index.xml
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ global.domain }}">
     <title>{{ global.title }}</title>
-    <subtitle>{{ global.subtitle }}</subtitle>
+    <subtitle>{{ global.description }}</subtitle>
     <link href="{{ global.domain }}"/>
     <link href="{{ global.domain + '/feed/' }}" rel="self"/>
     <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
