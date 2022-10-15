@@ -178,7 +178,7 @@ To make all the paths _external_ to the document, we can put them together in
 
 Though we have to keep the inline SVG placeholder in the document, it drastically improves the footprint and allows browsers to cache the file. By the way, it’s time to get rid of the prefixed `xlink:href`, simple `href` has been more than enough for a while.
 
-How does this _sprite.svg_ look like? It contains our SVG icons wrapped in `<symbol>` elements with a unique IDs, so we could request only the needed ones.
+How does this _sprite.svg_ look like? It contains our SVG icons wrapped in `<symbol>` elements with unique IDs, so we could request only the needed ones.
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">
@@ -328,7 +328,7 @@ Before diving into yet another SVG spriting method, let’s answer the most impo
 </a>
 ```
 
-Tell me if you’ve seen this one before: the inline SVG placeholder inherits the CSS styling and passes it into the sprite. But the real magic is happening behid the curtain and it’is called SVG stacks. One of the first mentions it got was Simurai’s “[SVG Stacks](https://simurai.com/blog/2012/04/02/svg-stacks)” blog post from 2012 where they together with Erik Dahlström figured out a way to use good old `:target` pseudo-class for that.
+Tell me if you’ve seen this one before: the inline SVG placeholder inherits the CSS styling and passes it into the sprite. But the real magic is happening behind the curtain and it is called SVG stacks. One of the first mentions it got was Simurai’s “[SVG Stacks](https://simurai.com/blog/2012/04/02/svg-stacks)” blog post from 2012 where they together with Erik Dahlström figured out a way to use good old `:target` pseudo-class for that.
 
 Let’s pull the curtain and see what our _sprite.svg_ is made of:
 
