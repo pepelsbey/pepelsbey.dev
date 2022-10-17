@@ -328,7 +328,7 @@ Before diving into yet another SVG spriting method, let’s answer the most impo
 </a>
 ```
 
-Tell me if you’ve seen this one before: the inline SVG placeholder inherits the CSS styling and passes it into the sprite. But the real magic is happening behind the curtain and it is called SVG stacks. One of the first mentions it got was Simurai’s “[SVG Stacks](https://simurai.com/blog/2012/04/02/svg-stacks)” blog post from 2012 where they together with Erik Dahlström figured out a way to use good old `:target` pseudo-class for that.
+Tell me if you’ve seen this one before: the inline SVG placeholder inherits the CSS styling and passes it into the sprite. But the real magic is happening behind the curtain and it’s called SVG stacks. One of the first mentions it got was Simurai’s “[SVG Stacks](https://simurai.com/blog/2012/04/02/svg-stacks)” blog post from 2012 where they together with Erik Dahlström figured out a way to use good old `:target` pseudo-class for that.
 
 Let’s pull the curtain and see what our _sprite.svg_ is made of:
 
