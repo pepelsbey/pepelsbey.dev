@@ -21,7 +21,7 @@ toc:
       - A catch
   - title: Forgotten stacks
     items:
-      - Firefix
+      - Firefox
   - title: One sprite to rule them all?
 cover: true
 layout: article.njk
