@@ -68,7 +68,7 @@ module.exports = function (window, content, outputPath) {
 
     const baseSourcePath = outputPath.replace('dist/', '').replace('/index.html', '');
     const imagesSourcePath = path.join('src', baseSourcePath);
-    const imagesOutputPath = path.join('dist', baseSourcePath, 'images');
+    const imagesOutputPrefix = path.join('dist', baseSourcePath);
 
     const images = Array.from(articleContainer.querySelectorAll('img'));
 
@@ -76,17 +76,27 @@ module.exports = function (window, content, outputPath) {
         images.map((image) => buildImage(
             image,
             imagesSourcePath,
-            imagesOutputPath,
+            imagesOutputPrefix,
             window,
         ))
     );
 }
 
-async function buildImage(image, imagesSourcePath, imagesOutputPath, window) {
+async function buildImage(image, imagesSourcePath, imagesOutputPrefix, window) {
     const originalLink = path.join(
         imagesSourcePath,
         image.src
     );
+
+    let imagePath = image.src.split('/');
+
+    imagePath.splice(-1);
+
+    const imagesSourcePrefix = imagePath.join('/');
+
+    imagePath.unshift(imagesOutputPrefix);
+
+    const imagesOutputPath = imagePath.join('/');
 
     try {
         await fsp.stat(originalLink);
@@ -104,7 +114,7 @@ async function buildImage(image, imagesSourcePath, imagesOutputPath, window) {
     const { width: originalWidth } = await sharp(originalLink).metadata();
 
     const options = {
-        urlPath: 'images/',
+        urlPath: imagesSourcePrefix,
         outputDir: imagesOutputPath,
         widths: [...baseConfig.widths, originalWidth],
         formats: [...baseConfig.formats, ext],
