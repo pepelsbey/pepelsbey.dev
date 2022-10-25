@@ -6,5 +6,16 @@ tags:
   - CSS
   - Performance
 toc:
+  - title: GOV.UK
+  - title: What if?
+  - title: Demo
+  - title: Priorities
+  - title: Rendering
+  - title: Preferences
+    items:
+      - Color scheme
+      - Pixel density
+      - Reduced motion
+  - title: A catch
 cover: true
 layout: article.njk
