@@ -230,6 +230,7 @@ module.exports = (config) => {
         'src/robots.txt',
         'src/images',
         'src/fonts',
+        'src/talks',
         'src/articles/**/*.!(md)',
     ].forEach(
         path => config.addPassthroughCopy(path)
