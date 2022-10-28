@@ -1,4 +1,4 @@
-const slugify = require('slugify');
+const slugify = require('@sindresorhus/slugify');
 
 module.exports = function(window) {
     const content = window.document.getElementById('article-content');
