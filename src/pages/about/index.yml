@@ -1,4 +1,5 @@
 title: About
+desc: Skills, work experience, and contact details
 layout: page.njk
 permalink: about/index.html
 

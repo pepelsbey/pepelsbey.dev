@@ -1,4 +1,5 @@
 title: Articles
+desc: HTML, CSS, SVG, performance, and accessibility
 layout: page.njk
 eleventyComputed:
     title: '{{ title }}{% if pagination.pageNumber > 0 %}, page {{ pagination.pageNumber + 1 }}{% endif %}'
