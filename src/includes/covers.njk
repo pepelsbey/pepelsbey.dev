@@ -7,9 +7,9 @@
 %}
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="{{ global.title }}">
-<meta property="og:description" content="{{ global.description }}">
-<meta property="og:url" content="{{ global.domain }}">
+<meta property="og:title" content="{{ title if title else global.title }}">
+<meta property="og:description" content="{{ desc if desc else global.description }}">
+<meta property="og:url" content="{{ (global.domain + page.url) }}">
 
 <meta property="og:image" content="{{ path }}">
 <meta property="og:image:width" content="1200">
