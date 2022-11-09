@@ -1,0 +1,16 @@
+title: 'CSS and JavaScript as first-class citizens in Eleventy'
+desc: 'When building websites on Eleventy, we often have to decide how to deal with the CSS and JavaScript post-processing. Recently I came up with a solution, finally making CSS and JS first-class citizens in Eleventy for me.'
+date: 2022-11-25
+tags:
+  - CSS
+  - JavaScript
+  - Eleventy
+toc:
+  - title: Vanilla all the way
+  - title: Second pass
+  - title: Custom Handlers
+    items:
+      - CSS
+      - JavaScript
+cover: true
+layout: article.njk
