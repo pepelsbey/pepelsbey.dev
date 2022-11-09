@@ -1,10 +1,18 @@
+{% set title = global.title if page.url == '/' else title + ' — ' + global.title %}
+
+{% set desc = desc if desc else global.description %}
+
+{% set cover =
+    global.domain + page.url + 'cover.png' if
+    cover else
+    global.domain + '/images/covers/' + ('index' if page.url == '/' else page.fileSlug) + '.png'
+%}
+
 <!DOCTYPE html>
 <html class="page" lang="en">
 <head>
     <meta charset="utf-8">
-    <title>
-        {{ global.title if page.url == '/' else title + ' — ' + global.title }}
-    </title>
+    <title>{{ title }}</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,13 +31,23 @@
 
     <link rel="canonical" href="{{ global.domain + page.url }}">
 
-    <meta name="description" content="{{ desc if desc else global.description }}">
+    <meta name="description" content="{{ desc }}">
     <meta name="generator" content="{{ eleventy.generator }}">
 
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="hsl(84 79% 71%)">
     <meta name="theme-color" media="(prefers-color-scheme: dark)" content="hsl(263 52% 64%)">
 
-    {% include 'covers.njk' %}
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ desc }}">
+    <meta property="og:url" content="{{ (global.domain + page.url) }}">
+
+    <meta property="og:image" content="{{ cover }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pepelsbey_dev">
 
     <style media="(prefers-color-scheme: light)">
         {{ 'src/styles/light.css' | css }}
