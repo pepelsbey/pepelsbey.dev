@@ -1,4 +1,5 @@
 title: Not found
+desc: A page that’s missing
 layout: page.njk
 permalink: 404/index.html
 content: |
