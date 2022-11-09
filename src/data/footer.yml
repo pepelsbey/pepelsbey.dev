@@ -3,12 +3,14 @@ social:
   list:
   - title: Twitter
     url: https://twitter.com/pepelsbey_dev
-  - title: GitHub
-    url: https://github.com/pepelsbey
+  - title: Mastodon
+    url: https://mastodon.social/@pepelsbey
+  - title: Telegram
+    url: https://t.me/pepelsbey_dev
+  - title: Instagram
+    url: https://www.instagram.com/pepelsbey/
   - title: LinkedIn
     url: https://www.linkedin.com/in/pepelsbey/
-  - title: Instagram
-    url: https://www.instagram.com/pepelsbey_dev/
 
 email:
   title: Email
