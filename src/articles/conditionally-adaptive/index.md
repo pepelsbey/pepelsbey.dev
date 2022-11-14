@@ -127,7 +127,7 @@ It took a surprisingly long time for this page to load, almost 12 seconds. I
 You might’ve guessed where these priorities come from. All CSS files linked to the page are evaluated during HTML parsing:
 
 - The ones with `media` attribute relevant to the current conditions (or without one, which makes it `media="all"`) get loaded with the **highest** priority.
-- The ones with `media` attribute irrelevant to the current conditions (like `media="print"` or `(width ≥ 1024px)` on mobile) are still loaded, but with the **lowest** priority.
+- The ones with `media` attribute irrelevant to the current conditions (like `media="print"` or `(width >= 1024px)` on mobile) are still loaded, but with the **lowest** priority.
 
 In the first case, I used desktop viewport width. What will happen if I load the same page in the mobile viewport? You’ll get the same files loaded but with different priorities: _base.css_ and _mobile.css_ are the highest priority.
 
