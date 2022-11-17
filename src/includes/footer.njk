@@ -7,7 +7,7 @@
             <ul class="footer__list">
                 {% for item in footer.social.list %}
                     <li class="footer__item">
-                        <a class="footer__link" href="{{ item.url }}">
+                        <a class="footer__link" href="{{ item.url }}" rel="me">
                             {{- item.title | safe -}}
                         </a>
                     </li>
