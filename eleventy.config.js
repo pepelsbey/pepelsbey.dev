@@ -1,14 +1,14 @@
-const autoprefixer = require('autoprefixer');
-const csso = require('postcss-csso');
 const dom = require('linkedom');
 const esbuild = require('esbuild');
 const fs = require('fs');
 const highlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const htmlmin = require('html-minifier-terser');
 const markdown = require('markdown-it')({ html: true });
-const minmax = require('postcss-media-minmax');
-const pimport = require('postcss-import');
 const postcss = require('postcss');
+const postcssImport = require('postcss-import');
+const postcssMediaMinmax = require('postcss-media-minmax');
+const autoprefixer = require('autoprefixer');
+const postcssCsso = require('postcss-csso');
 const prettydata = require('pretty-data');
 const rss = require('@11ty/eleventy-plugin-rss');
 const yaml = require('js-yaml');
@@ -114,10 +114,10 @@ module.exports = (config) => {
 
             return async () => {
                 let output = await postcss([
-                    pimport,
-                    minmax,
+                    postcssImport,
+                    postcssMediaMinmax,
                     autoprefixer,
-                    csso,
+                    postcssCsso,
                 ]).process(content, {
                     from: path,
                 });
@@ -130,10 +130,10 @@ module.exports = (config) => {
     config.addNunjucksAsyncFilter('css', (path, callback) => {
         fs.readFile(path, 'utf8', (error, content) => {
             postcss([
-                pimport,
-                minmax,
+                postcssImport,
+                postcssMediaMinmax,
                 autoprefixer,
-                csso,
+                postcssCsso,
             ]).process(content, {
                 from: path,
             }).then((output) => {
