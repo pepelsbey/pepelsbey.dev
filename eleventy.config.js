@@ -154,12 +154,15 @@ module.exports = (config) => {
             }
 
             return async () => {
-                return esbuild.buildSync({
+                let output = await esbuild.build({
+                    target: 'es2020',
                     entryPoints: [path],
                     minify: true,
                     bundle: true,
                     write: false,
-                }).outputFiles[0].text;
+                });
+
+                return output.outputFiles[0].text;
             }
         }
     });
