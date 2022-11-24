@@ -21,7 +21,7 @@
 
 /* Colors */
 
-.prism :where(
+.prism :is(
     .token.comment,
     .token.prolog,
     .token.cdata
@@ -29,7 +29,7 @@
     color: var(--prism-gray);
 }
 
-.prism :where(
+.prism :is(
     .token.doctype,
     .token.punctuation,
     .token.entity
@@ -37,7 +37,7 @@
     color: var(--prism-text);
 }
 
-.prism :where(
+.prism :is(
     .token.attr-name,
     .token.class-name,
     .token.boolean,
@@ -48,13 +48,13 @@
     color: var(--prism-blue);
 }
 
-.prism :where(
+.prism :is(
     .token.keyword
 ) {
     color: var(--prism-indigo);
 }
 
-.prism :where(
+.prism :is(
     .token.property,
     .token.tag,
     .token.symbol,
@@ -64,7 +64,7 @@
     color: var(--prism-green);
 }
 
-.prism :where(
+.prism :is(
     .token.selector,
     .token.string,
     .token.char,
@@ -77,7 +77,7 @@
     color: var(--prism-blue);
 }
 
-.prism :where(
+.prism :is(
     .token.variable,
     .token.operator,
     .token.function
@@ -85,7 +85,7 @@
     color: var(--prism-indigo);
 }
 
-.prism :where(
+.prism :is(
     .token.url
 ) {
     color: var(--prism-green);
@@ -93,7 +93,7 @@
 
 /* HTML overrides */
 
-.prism :where(
+.prism :is(
     .token.attr-value > .token.punctuation.attr-equals,
     .token.special-attr > .token.attr-value > .token.value.css
 ) {
@@ -102,19 +102,19 @@
 
 /* CSS overrides */
 
-.prism :where(
+.prism :is(
     .language-css .token.selector
 ) {
     color: var(--prism-green);
 }
 
-.prism :where(
+.prism :is(
     .language-css .token.property
 ) {
     color: var(--prism-blue);
 }
 
-.prism :where(
+.prism :is(
     .language-css .token.important,
     .language-css .token.atrule .token.rule
 ) {
@@ -123,14 +123,14 @@
 
 /* JS overrides */
 
-.prism :where(
+.prism :is(
     .language-js .token.keyword,
     .language-javascript .token.keyword
 ) {
     color: var(--prism-red);
 }
 
-.prism :where(
+.prism :is(
     .language-js .token.operator,
     .language-js .token.constant,
     .language-js .token.boolean,
@@ -145,14 +145,14 @@
     color: var(--prism-blue);
 }
 
-.prism :where(
+.prism :is(
     .language-js .token.function,
     .language-javascript .token.function
 ) {
     color: var(--prism-purple);
 }
 
-.prism :where(
+.prism :is(
     .language-js .token.attr-name,
     .language-js .token.class-name,
     .language-js .token.function-variable,
@@ -165,38 +165,38 @@
 
 /* JSX overrides */
 
-.prism :where(
+.prism :is(
     .language-jsx .token.keyword
 ) {
     color: var(--prism-red);
 }
 
-.prism :where(
+.prism :is(
     .language-jsx .token.function
 ) {
     color: var(--prism-purple);
 }
 
-.prism :where(
+.prism :is(
     .language-jsx .token.function-variable
 ) {
     color: var(--prism-brown);
 }
 
-.prism :where(
+.prism :is(
     .language-jsx .token.punctuation
 ) {
     color: var(--prism-blue);
 }
 
-.prism :where(
+.prism :is(
     .language-jsx .token.attr-name,
     .language-jsx .token.class-name
 ) {
     color: var(--prism-green);
 }
 
-.prism :where(
+.prism :is(
     .language-jsx .token.string
 ) {
     color: var(--prism-indigo);
@@ -204,13 +204,13 @@
 
 /* JSON overrides */
 
-.prism :where(
+.prism :is(
     .language-json .token.operator
 ) {
     color: var(--prism-text);
 }
 
-.prism :where(
+.prism :is(
     .language-json .token.null.keyword
 ) {
     color: var(--prism-blue);
@@ -218,7 +218,7 @@
 
 /* YAML overrides */
 
-.prism :where(
+.prism :is(
     .language-yml .token.atrule,
     .language-yaml .token.atrule
 ) {
@@ -227,26 +227,26 @@
 
 /* General */
 
-.prism :where(
+.prism :is(
     .token.bold
 ) {
     font-weight: bold;
 }
 
-.prism :where(
+.prism :is(
     .token.comment,
     .token.italic
 ) {
     font-style: italic;
 }
 
-.prism :where(
+.prism :is(
     .token.entity
 ) {
     cursor: help;
 }
 
-.prism :where(
+.prism :is(
     .token.namespace
 ) {
     opacity: 0.8;

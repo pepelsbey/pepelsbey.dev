@@ -7,7 +7,7 @@
 
 /* Headings */
 
-.content-block :where(h2, h3) {
+.content-block :is(h2, h3) {
     margin: 0;
     scroll-margin-block-start: 88px;
     font-weight: normal;
@@ -38,7 +38,7 @@
 
 /* Lists */
 
-.content-block :where(ol, ul) {
+.content-block :is(ol, ul) {
     display: grid;
     row-gap: 8px;
     margin: 0;
