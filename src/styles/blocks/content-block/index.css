@@ -125,5 +125,5 @@
 /* Details */
 
 .content-block details {
-    overflow-x: scroll;
+    overflow: auto;
 }
