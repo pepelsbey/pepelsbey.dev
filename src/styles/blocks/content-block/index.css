@@ -121,3 +121,9 @@
     text-align: center;
     font-size: var(--font-size-small);
 }
+
+/* Details */
+
+.content-block details {
+    overflow-x: scroll;
+}
