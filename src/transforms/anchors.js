@@ -9,7 +9,9 @@ module.exports = function(window) {
 
     for (const heading of headings) {
         const text = heading.textContent.trim()
-        const id = slugify(text).toLowerCase();
+        const id = slugify(text, {
+            decamelize: false
+        }).toLowerCase();
 
         heading.setAttribute('id', id);
     }
