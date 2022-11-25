@@ -1,4 +1,4 @@
-When I started to build my first website on Eleventy around 2019, I had to decide how to deal with the HTML, CSS, and JavaScript post-processing. By that time, I had gotten used to the convenience of the modular approach and automation. So it wasn’t an option to just copy files from _src_ to _dist_. I needed them stitched, modified, and minified.
+When I started to build my first website on [Eleventy](https://www.11ty.dev/) around 2019, I had to decide how to deal with the HTML, CSS, and JavaScript post-processing. By that time, I had gotten used to the convenience of the modular approach and automation. So it wasn’t an option to just copy files from _src_ to _dist_. I needed them stitched, modified, and minified.
 
 By then, I got over the preprocessors like Sass, so I needed some light post-processing for vanilla-flavored CSS and JS. I looked through the [Eleventy starter projects](https://www.11ty.dev/docs/starter/) but couldn’t find anything that would make sense. It was clear that early adopters of Eleventy were struggling with processing resources too.
 
