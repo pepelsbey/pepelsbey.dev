@@ -232,7 +232,7 @@ module.exports = (config) => {
         'src/images',
         'src/fonts',
         'src/talks',
-        'src/articles/**/*.!(md)',
+        'src/articles/**/*.!(md|yml)',
     ].forEach(
         path => config.addPassthroughCopy(path)
     );
