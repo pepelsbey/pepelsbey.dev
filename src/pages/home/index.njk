@@ -42,7 +42,7 @@
             </header>
 
             {{ articleCardList(
-                collection=collections.articles,
+                collection=collections.articles | reverse,
                 heading='h3',
                 limit=6
             ) }}

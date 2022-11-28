@@ -18,6 +18,7 @@
 
     .two-columns__cards {
         grid-column: 3 / span 6;
+        row-gap: 60px;
     }
 
     /* TOC */

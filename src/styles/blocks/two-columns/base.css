@@ -1,0 +1,5 @@
+/* Cards */
+
+.two-columns__cards {
+    display: grid;
+}

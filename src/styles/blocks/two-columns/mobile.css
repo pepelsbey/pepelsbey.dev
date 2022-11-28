@@ -1,5 +1,11 @@
 @media (width < 1024px) {
 
+    /* Cards */
+
+    .two-columns__cards {
+        row-gap: 40px;
+    }
+
     /* Article */
 
     .two-columns__article {

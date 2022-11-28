@@ -5,7 +5,7 @@
 ) %}
     <div class="article-card-list">
         {% from 'article-card.njk' import articleCard %}
-        {% for article in collection | reverse %}
+        {% for article in collection %}
             {% if loop.index <= limit and article.url != page.url %}
                 {{ articleCard(
                     article=article,

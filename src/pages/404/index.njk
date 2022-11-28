@@ -35,7 +35,7 @@
             {% from 'article-card-list.njk' import articleCardList with context %}
 
             {{ articleCardList(
-                collection=collections.articles,
+                collection=collections.articles | reverse,
                 heading='h3',
                 limit=4
             ) }}
