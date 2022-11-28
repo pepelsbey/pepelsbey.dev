@@ -6,6 +6,12 @@
         padding-block-start: 80px;
     }
 
+    /* Cards */
+
+    .two-columns__cards {
+        row-gap: 80px;
+    }
+
     /* Acticle */
 
     .two-columns__article {

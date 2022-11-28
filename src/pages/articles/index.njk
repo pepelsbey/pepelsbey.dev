@@ -20,10 +20,12 @@
             {% from 'article-card-list.njk' import articleCardList with context %}
 
             {{ articleCardList(
-                collection=collections.articles,
+                collection=pagination.items,
                 heading='h2',
-                limit=6
+                limit=pagination.size
             ) }}
+
+            {% include 'pagination.njk' %}
         </div>
     </div>
 </main>

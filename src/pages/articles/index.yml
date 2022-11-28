@@ -1,9 +1,8 @@
 title: Articles
 desc: HTML, CSS, SVG, performance, and accessibility
 layout: page.njk
-eleventyComputed:
-    title: '{{ title }}{% if pagination.pageNumber > 0 %}, page {{ pagination.pageNumber + 1 }}{% endif %}'
 pagination:
     data: collections.articles
     size: 6
+    reverse: true
 permalink: 'articles/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}index.html'

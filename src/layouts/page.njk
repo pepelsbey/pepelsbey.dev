@@ -1,11 +1,23 @@
-{% set title = global.title if page.url == '/' else title + ' — ' + global.title %}
+{% set title =
+    global.title if
+    page.url == '/' else
+    title + (', page ' + (pagination.pageNumber + 1) if
+    pagination.next or pagination.previous else
+    '') + ' — ' + global.title
+%}
 
-{% set desc = desc if desc else global.description %}
+{% set desc =
+    desc if
+    desc else
+    global.description
+%}
 
 {% set cover =
     global.domain + page.url + 'cover.png' if
     cover else
-    global.domain + '/images/covers/' + ('index' if page.url == '/' else page.fileSlug) + '.png'
+    global.domain + '/images/covers/' + ('index' if
+    page.url == '/' else
+    page.fileSlug) + '.png'
 %}
 
 <!DOCTYPE html>
