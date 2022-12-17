@@ -6,7 +6,7 @@
         "test": "npm run lint:editorconfig && npm run lint:css && npm run lint:javascript",
         "lint:editorconfig": "editorconfig-checker",
         "lint:html": "node-w3c-validator --input dist/**/*.html --format lint --verbose --errors-only",
-        "lint:css": "stylelint src/styles/**/*.css",
+        "lint:css": "stylelint \"src/styles/**/*.css\"",
         "lint:javascript": "eslint eleventy.config.js src/**/*.js"
     },
     "engines": {
