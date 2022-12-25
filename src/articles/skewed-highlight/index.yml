@@ -1,0 +1,15 @@
+title: 'A CSS challenge: skewed highlight'
+desc: 'Recently Sacha Greif challenged his Twitter followers to code a fancy highlighter effect using only CSS. Guess what? I took the bait and started coding!'
+date: 2022-12-26
+tags:
+  - HTML
+  - CSS
+toc:
+  - title: Grotesk font
+    items:
+      - Subsetting
+  - title: Remarkable mark
+  - title: Skewed background
+  - title: Decoration break
+cover: true
+layout: article.njk
