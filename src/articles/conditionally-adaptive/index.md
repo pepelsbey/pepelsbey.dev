@@ -112,7 +112,7 @@ I made both _tablet.css_ (83 KB) and _desktop.css_ (275 KB) even larger with 
 <iframe
     src="demo/index.html"
     height="280" loading="lazy"
-    title="TODO"
+    title="Demo with words “mobile” on the red, “tablet” on the green, or “desktop” on the violet backgrounds, depending on the viewport width."
 ></iframe>
 
 ## Priorities
