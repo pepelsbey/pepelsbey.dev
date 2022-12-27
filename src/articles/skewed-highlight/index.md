@@ -39,7 +39,7 @@ h1 {
 
 <iframe
     src="demos/type.html"
-    height="416" loading="lazy"
+    height="500" loading="lazy"
     title="The heading with the Hanken Grotesk font and text styles applied."
 ></iframe>
 
@@ -97,7 +97,7 @@ It looked pretty close already, but the whole point of this challenge was the 
 
 <iframe
     src="demos/mark.html"
-    height="416" loading="lazy"
+    height="500" loading="lazy"
     title="The heading with the multi-line styled mark tag highlighting the first part."
 ></iframe>
 
@@ -169,7 +169,7 @@ Once the background was done, I did a minor refactoring and used a few custom
 
 <iframe
     src="demos/almost.html"
-    height="416" loading="lazy"
+    height="500" loading="lazy"
     title="The heading with the side angles at the beginning and the end of the whole highlight."
 ></iframe>
 
@@ -236,7 +236,7 @@ I had to use the `-webkit-` prefix for it to work in Chrome and Safari, but
 
 <iframe
     src="demos/final.html"
-    height="416" loading="lazy"
+    height="500" loading="lazy"
     title="The heading with the side angles at the beginning and the end of every separate part of the highlight."
 ></iframe>
 
