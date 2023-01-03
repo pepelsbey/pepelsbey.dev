@@ -36,6 +36,14 @@
     hyphens: auto;
 }
 
+/* Quotes */
+
+.content-block blockquote {
+    margin: 0;
+    padding-inline-start: 24px;
+    font-variation-settings: 'slnt' -10;
+}
+
 /* Lists */
 
 .content-block :is(ol, ul) {
