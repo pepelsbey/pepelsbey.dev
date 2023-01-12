@@ -36,7 +36,9 @@ function closeMenu() {
 
     menu.classList.remove('menu--open');
     menu.addEventListener('transitionend', () => {
-        menu.classList.add('menu--closed');
+        if (!menu.classList.contains('menu--open')) {
+            menu.classList.add('menu--closed');
+        }
     }, {
         once: true
     });
