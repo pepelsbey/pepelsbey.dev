@@ -1,7 +1,7 @@
 {
     "private": true,
     "scripts": {
-        "start": "eleventy --serve --quiet --incremental",
+        "start": "eleventy --serve --quiet",
         "build": "rm -rf dist && eleventy",
         "test": "npm run lint:editorconfig && npm run lint:css && npm run lint:javascript",
         "lint:editorconfig": "editorconfig-checker",
