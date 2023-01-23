@@ -51,14 +51,14 @@ Tables were the first layout tool available in browsers. And I used them to c
 
 ```html
 <table class="columns">
-<tr>
-    <td class="columns__item columns__item--first">
-        <!-- Left -->
-    </td>
-    <td class="columns__item columns__item--second">
-        <!-- Right -->
-    </td>
-</tr>
+    <tr>
+        <td class="columns__item columns__item--first">
+            <!-- Left -->
+        </td>
+        <td class="columns__item columns__item--second">
+            <!-- Right -->
+        </td>
+    </tr>
 </table>
 ```
 
