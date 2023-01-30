@@ -7,5 +7,12 @@
 
 Special thanks to [@monochromer](https://github.com/monochromer) for Eleventy transforms.
 
+## Development
+
+- Install dependencies: `npm install`
+- Start local server: `npm start`
+- Build for production: `npm run build`
+- Lint code: `npm test`
+
 ---
 Licensed under [MIT](LICENSE.md)
