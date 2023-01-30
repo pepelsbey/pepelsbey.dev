@@ -26,7 +26,12 @@
     line-height: inherit;
     font-size: inherit;
     font-family: inherit;
-    transition: color 0.1s linear 0.1s;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .theme-switcher__button {
+        transition: color 0.1s linear 0.1s;
+    }
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -63,7 +68,12 @@
     background-color: var(--theme-switcher-back);
     pointer-events: none;
     transform: translateX(0);
-    transition: transform 0.2s;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .theme-switcher__status {
+        transition: transform 0.2s;
+    }
 }
 
 .theme-switcher__button[aria-pressed='true'][value='light'] ~ .theme-switcher__status {
