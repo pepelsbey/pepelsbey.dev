@@ -10,8 +10,9 @@ Special thanks to [@monochromer](https://github.com/monochromer) for Eleventy tr
 ## Development
 
 - Install dependencies: `npm install`
-- Start server for local development: `npm run start`
-- Run build for deployment: `npm run build`
+- Start local server: `npm start`
+- Build for production: `npm run build`
+- Lint code: `npm test`
 
 ---
 Licensed under [MIT](LICENSE.md)
