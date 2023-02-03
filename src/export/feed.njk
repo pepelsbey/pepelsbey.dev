@@ -22,8 +22,8 @@ permalink: /feed/index.xml
                 <p><a href="{{ url }}">Read on {{ title }}</a></p>
             {% endset %}
         {% else %}
-            {% set url = article.url | url | absoluteUrl(global.domain) %}
-            {% set content = article.templateContent | htmlToAbsoluteUrls(url) %}
+            {% set url = global.domain + article.url %}
+            {% set content = article.templateContent | absolute(article) %}
         {% endif %}
 
         <entry>

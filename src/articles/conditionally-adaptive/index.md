@@ -243,7 +243,7 @@ Interestingly, Safari sets the same priorities as Chrome, but it doesn’t cha
 
 ![Network panel in Safari with the list of CSS files: base.css, mobile.css with “highest” priority, then tablet.css, desktop.css with “lowest” priority.](images/safari/timelines.png)
 
-I filed [a bug report in WebKit](https://bugs.webkit.org/show_bug.cgi?id=243424) a few months ago, asking for a behavior change. Please have a look, and if you have some real-life use cases, don’t hesitate to share them in the comments. So far, I have gotten some attention from WebKit engineers, but no actions yet.
+I filed [a bug report in WebKit](https://bugs.webkit.org/show_bug.cgi?id=243424) a few months ago, asking for a behavior change. They closed it as a duplicate in favor [to this one](https://bugs.webkit.org/show_bug.cgi?id=39455). Please have a look, and if you have some real-life use cases, don’t hesitate to share them in the comments. So far, I have gotten some attention from WebKit engineers, but no actions yet.
 
 At this point, I’m very grateful to Firefox for supporting this behavior. Otherwise, it would be just a peculiar Chrome optimization that’s not worth relying on too much. Though it wasn’t easy to work with the Performance panel in Firefox, with the help of the Network panel’s throttling settings, I got a clear picture. In the mobile viewport, Firefox starts rendering before the _desktop.css_ is fully loaded.
 
