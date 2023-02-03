@@ -1,0 +1,10 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: #9073c9;
+    background-position: center;
+    background-size: 327px 280px;
+}

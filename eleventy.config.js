@@ -2,7 +2,7 @@ const dom = require('linkedom');
 const esbuild = require('esbuild');
 const fs = require('fs');
 const highlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const htmlmin = require('html-minifier-terser');
+const htmlmin = require('html-minifier');
 const markdown = require('markdown-it')({ html: true });
 const postcss = require('postcss');
 const postcssImport = require('postcss-import');
@@ -185,10 +185,10 @@ module.exports = (config) => {
 
     // Absolute links
 
-    config.addFilter('absolute', (post) => {
+    config.addFilter('absolute', (content, article) => {
         const reg = /(src="[^(https://)])|(src="\/)|(href="[^(https://)])|(href="\/)/g;
-        const prefix = global.domain + post.url;
-        return post.templateContent.replace(reg, (match) => {
+        const prefix = global.domain + article.url;
+        return content.replace(reg, (match) => {
             if (match === 'src="/' || match === 'href="/') {
                 match = match.slice(0, -1);
                 return match + prefix;

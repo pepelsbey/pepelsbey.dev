@@ -97,9 +97,9 @@
     content: '*  *  *';
 }
 
-/* Images */
+/* Images and Videos */
 
-.content-block img {
+.content-block :is(img, video) {
     display: block;
     width: 100%;
     height: auto;
