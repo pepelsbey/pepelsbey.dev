@@ -23,13 +23,13 @@
         ]
     },
     "devDependencies": {
-        "@11ty/eleventy": "^2.0.0-canary.30",
-        "@11ty/eleventy-img": "^2.0.1",
+        "@11ty/eleventy": "^2.0.0-beta.3",
+        "@11ty/eleventy-img": "^3.0.0",
         "@11ty/eleventy-plugin-rss": "^1.2.0",
         "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
         "@sindresorhus/slugify": "1.1.2",
         "autoprefixer": "^10.4.11",
-        "editorconfig-checker": "4.0.0",
+        "editorconfig-checker": "^5.0.1",
         "esbuild": "^0.17.0",
         "eslint": "^8.23.1",
         "focus-trap": "^7.0.0",
