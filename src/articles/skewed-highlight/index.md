@@ -106,7 +106,7 @@ It looked pretty close already, but the whole point of this challenge was the 
 
 Unfortunately, there’s no way to skew the background, so I had to construct it from multiple parts using gradients: left and right rectangles with a diagonal gradient and a part in between with just a fill.
 
-![](images/sliced.svg)
+![Yellow rectangle skewed to the right with contour overlay splitting it into three parts, from left to right. The first part is narrow and splits diagonally: the top left is transparent, and the bottom right is yellow. The second middle part is wide and entirely yellow. The third part is narrow and splits diagonally: the top left is yellow, and the bottom right is transparent.](images/sliced.svg)
 
 Since the gradient replaces the background color, I set it to transparent. Then I passed three linear gradients separated by commas to the `background-image` property.
 
