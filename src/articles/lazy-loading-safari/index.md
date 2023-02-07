@@ -91,3 +91,8 @@ It takes 23 seconds to show anything at all. And we get background color and
 There are two things. First, I’d suggest not relying on this lazy-loading technique anymore. Fortunately, it fails gracefully in Safari, but only if you use it for something non-critical. I’ve seen it used for lazy-loading base64-encoded fonts and images, which is a bad idea in general and does more harm than good.
 
 Second, please stop by [at the WebKit issue](https://bugs.webkit.org/show_bug.cgi?id=39455) I mentioned and share your use cases and concerns. It might help to draw attention and raise the priority. It’s not an imaginary use case or specific performance optimization for printing styles anymore. It seems like it’s breaking the Web.
+
+## Update
+
+- There’s a [similar issue](https://bugs.chromium.org/p/chromium/issues/detail?id=1001078) in Chrome implementation for `@import` media conditions. Apparently, it’s the case for the rest of the browsers, too.
+- The next day after I published this article, the [PR fixing this behavior in WebKit](https://github.com/WebKit/WebKit/pull/9746) was opened. We might see the updated behavior in Safari TP very soon!
