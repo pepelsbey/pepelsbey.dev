@@ -70,7 +70,7 @@ Like in the previous article, I used over-bloated base64-encoded PNG as a ba
 This is how it loads in Chrome:
 
 <figure>
-    <video controls muted playsinline width="2048" height="1152">
+    <video controls muted playsinline preload="none" poster="video/chrome.jpg" width="2048" height="1152">
         <source src="video/chrome.mp4" type="video/mp4">
     </video>
 </figure>
@@ -81,7 +81,7 @@ This is how it loads in Chrome:
 In Safari, we can finally see what the title of this article is all about:
 
 <figure>
-    <video controls muted playsinline width="2048" height="1152">
+    <video controls muted playsinline preload="none" poster="video/safari.jpg" width="2048" height="1152">
         <source src="video/safari.mp4" type="video/mp4">
     </video>
 </figure>
@@ -95,7 +95,7 @@ You don’t really expect browsers to load CSS differently depending on the le
 Yes, I manually entered 200 zeroes, and the demo still worked the same, but when I entered one more, it suddenly got fixed. It’s funny that spaces don’t count, only characters. I’m sorry, but I had to try this: it takes only 34 🤡 emojis to make it work. Some Unicode magic, I guess.
 
 <figure>
-    <video controls muted playsinline width="2048" height="1152">
+    <video controls muted playsinline preload="none" poster="video/funny.jpg" width="2048" height="1152">
         <source src="video/funny.mp4" type="video/mp4">
     </video>
 </figure>
