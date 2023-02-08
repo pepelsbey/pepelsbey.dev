@@ -108,9 +108,7 @@ I’d be careful with this lazy-loading technique. Fortunately, it works fine 
 
 ```html
 <body>
-    <script src="https://unpkg.com/react@18.0.0/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js" crossorigin></script>
-    <script src="app.js"></script>
+    <div id="root"></div>
 </body>
 ```
 
