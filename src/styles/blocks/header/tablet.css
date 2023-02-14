@@ -7,6 +7,7 @@
         grid-template-columns: min-content auto;
         column-gap: 40px;
         padding-block: 24px;
+        contain: layout;
     }
 
     /* Button */
