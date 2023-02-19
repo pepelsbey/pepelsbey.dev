@@ -2,7 +2,6 @@ const lightStyles = document.querySelectorAll('style[media*=prefers-color-scheme
 const darkStyles = document.querySelectorAll('style[media*=prefers-color-scheme][media*=dark]');
 const themeSwitcher = document.querySelector('.theme-switcher');
 const themeButtons = document.querySelectorAll('.theme-switcher__button');
-const darkSchemeMedia = matchMedia('(prefers-color-scheme: dark)');
 
 function setupSwitcher() {
     const savedScheme = getSavedScheme();
@@ -34,13 +33,10 @@ function pressButton(button, press) {
 
 function setupScheme() {
     const savedScheme = getSavedScheme();
-    const systemScheme = getSystemScheme();
 
     if (savedScheme === null) return;
 
-    if (savedScheme !== systemScheme) {
-        setScheme(savedScheme);
-    }
+    setScheme(savedScheme);
 }
 
 function setScheme(scheme) {
@@ -72,12 +68,6 @@ function switchMedia(scheme) {
     [...darkStyles].forEach((link) => {
         link.media = darkMedia;
     });
-}
-
-function getSystemScheme() {
-    const darkScheme = darkSchemeMedia.matches;
-
-    return darkScheme ? 'dark' : 'light';
 }
 
 function getSavedScheme() {
