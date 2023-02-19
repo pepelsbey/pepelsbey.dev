@@ -10,8 +10,7 @@
         "lint:javascript": "eslint eleventy.config.js src/**/*.js"
     },
     "engines": {
-        "node": "16",
-        "npm": "8"
+        "node": "16"
     },
     "browserslist": [
         "last 2 version",
@@ -42,7 +41,7 @@
         "postcss-import": "^15.0.0",
         "postcss-media-minmax": "^5.0.0",
         "pretty-data": "^0.40.0",
-        "stylelint": "^14.12.0",
-        "stylelint-order": "^6.0.1"
+        "stylelint": "^15.1.0",
+        "stylelint-order": "^6.0.2"
     }
 }
