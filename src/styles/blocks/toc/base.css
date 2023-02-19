@@ -1,6 +1,22 @@
 /* TOC */
 
-.toc {
+/* Title */
+
+.toc__title {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 8px;
+    list-style: none;
+    text-decoration: underline;
+}
+
+.toc__title::-webkit-details-marker {
+    display:none;
+}
+
+/* List */
+
+.toc__list {
     display: grid;
     row-gap: 12px;
     margin: 0;
@@ -8,9 +24,9 @@
     list-style: none;
 }
 
-/* List */
+/* Nested */
 
-.toc__list {
+.toc__nested {
     display: grid;
     row-gap: 8px;
     margin: 0;

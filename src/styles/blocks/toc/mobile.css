@@ -2,8 +2,14 @@
 
     /* TOC */
 
-    .toc {
+    .toc--tablet {
         display: none;
+    }
+
+    /* List */
+
+    .toc__list {
+        padding-block: 12px;
     }
 
 }

@@ -1,5 +1,11 @@
 @media (width < 1024px) {
 
+    /* TOC */
+
+    .two-columns__toc {
+        padding-block-start: 20px;
+    }
+
     /* Cards */
 
     .two-columns__cards {
@@ -10,6 +16,10 @@
 
     .two-columns__article {
         padding-block-start: 40px;
+    }
+
+    .two-columns__toc + .two-columns__article {
+        padding-block-start: 12px;
     }
 
 }
