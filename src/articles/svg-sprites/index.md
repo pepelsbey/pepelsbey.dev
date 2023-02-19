@@ -1,5 +1,3 @@
-## Intro
-
 SVG sprites have been around for a while and are usually considered a default option for icons and some other vector graphics. I mean the ones that require inline SVG placeholders and could be styled via CSS. And while they’re giving us some unique features, they also have some drawbacks and aren’t the only available option. Let’s try to remember why we needed SVG sprites in the first place, then see what other less-known options are available and how they might be useful.
 
 ## Why sprites

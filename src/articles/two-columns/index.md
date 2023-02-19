@@ -1,5 +1,3 @@
-## A challenge
-
 Imagine you need to create a two-column layout. Yes, the simplest one: a column on the left, a column on the right, and some gap in-between. There’s an obvious modern solution for that:
 
 ```css
