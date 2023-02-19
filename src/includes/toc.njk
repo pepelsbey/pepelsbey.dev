@@ -1,22 +1,36 @@
 {% if toc %}
-    <ol class="toc">
-        {% for first in toc %}
-            <li>
-                <a class="toc__link" href="#{{ first.title | slugify }}">
-                    {{ first.title | safe }}
-                </a>
-                {% if first.items %}
-                    <ol class="toc__list">
-                        {% for second in first.items %}
-                            <li>
-                                <a class="toc__link" href="#{{ second | slugify }}">
-                                    {{ second }}
-                                </a>
-                            </li>
-                        {% endfor %}
-                    </ol>
-                {% endif %}
-            </li>
-        {% endfor %}
-    </ol>
+    {% set list %}
+        <ol class="toc__list">
+            {% for first in toc %}
+                <li>
+                    <a class="toc__link" href="#{{ first.title | slugify }}">
+                        {{ first.title | safe }}
+                    </a>
+                    {% if first.items %}
+                        <ol class="toc__nested">
+                            {% for second in first.items %}
+                                <li>
+                                    <a class="toc__link" href="#{{ second | slugify }}">
+                                        {{ second }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ol>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ol>
+    {% endset %}
+    <details class="toc toc--mobile">
+        <summary class="toc__title">
+            <svg class="toc__icon" width="24" height="24" aria-hidden="true">
+                <use href="/images/icons.svg#index"/>
+            </svg>
+            Contents
+        </summary>
+        {{ list | safe }}
+    </details>
+    <div class="toc toc--tablet">
+        {{ list | safe }}
+    </div>
 {% endif %}

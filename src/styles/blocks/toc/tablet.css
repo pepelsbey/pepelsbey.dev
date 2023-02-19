@@ -1,0 +1,9 @@
+@media (width >= 1024px) {
+
+    /* TOC */
+
+    .toc--mobile {
+        display: none;
+    }
+
+}

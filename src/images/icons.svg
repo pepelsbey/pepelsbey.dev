@@ -38,6 +38,9 @@
     <svg id="menu" stroke="currentcolor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24">
         <path d="M3 6h18M3 12h12M3 18h18"/>
     </svg>
+    <svg id="index" stroke="currentcolor" stroke-width="2" stroke-linecap="round" viewBox="0 0 24 24">
+        <path d="M21 12H9m12-6H9m12 12H9m-4-6a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm0-6a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm0 12a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/>
+    </svg>
     <!-- <svg id="play" fill="none" stroke="currentcolor" stroke-width="2" viewBox="0 0 24 24">
         <path d="M5 4.99c0-.97 0-1.46.2-1.72a1 1 0 0 1 .74-.4c.34-.02.74.25 1.55.79l10.51 7c.67.45 1 .68 1.12.96a1 1 0 0 1 0 .76c-.12.28-.45.5-1.12.95L7.5 20.34c-.81.54-1.21.81-1.55.79a1 1 0 0 1-.74-.4c-.2-.26-.2-.75-.2-1.72V4.99Z"/>
     </svg> -->
