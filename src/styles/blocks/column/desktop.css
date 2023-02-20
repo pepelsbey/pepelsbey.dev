@@ -1,11 +1,11 @@
 @media (width >= 1760px) {
 
-    /* Column */
+	/* Column */
 
-    .column {
-        padding-inline: calc(
-            (100% - 1676px) / 2
-        );
-    }
+	.column {
+		padding-inline: calc(
+			(100% - 1676px) / 2
+		);
+	}
 
 }

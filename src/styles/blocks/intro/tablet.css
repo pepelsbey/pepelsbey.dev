@@ -1,123 +1,123 @@
 @media (width >= 1024px) {
 
-    /* Intro */
+	/* Intro */
 
-    .intro {
-        grid-template-columns: repeat(8, 1fr);
-        column-gap: 20px;
-    }
+	.intro {
+		grid-template-columns: repeat(8, 1fr);
+		column-gap: 20px;
+	}
 
-    /* Hi */
+	/* Hi */
 
-    .intro__hi {
-        margin-block-start: -12px;
-    }
+	.intro__hi {
+		margin-block-start: -12px;
+	}
 
-    /* Name */
+	/* Name */
 
-    .intro__name {
-        padding-block-start: 20px;
-        padding-block-end: 40px;
-    }
+	.intro__name {
+		padding-block-start: 20px;
+		padding-block-end: 40px;
+	}
 
-    /* Photo */
+	/* Photo */
 
-    .intro__photo {
-        border-radius: 40px;
-    }
+	.intro__photo {
+		border-radius: 40px;
+	}
 
-    /* Who */
+	/* Who */
 
-    .intro__who {
-        padding-block-end: 12px;
-        line-height: 1.1;
-    }
+	.intro__who {
+		padding-block-end: 12px;
+		line-height: 1.1;
+	}
 
-    /* What */
+	/* What */
 
-    .intro__what {
-        padding-block-start: 18px;
-    }
+	.intro__what {
+		padding-block-start: 18px;
+	}
 
-    /* Path */
+	/* Path */
 
-    .intro__path {
-        padding-block-start: 18px;
-    }
+	.intro__path {
+		padding-block-start: 18px;
+	}
 
-    /* Web */
+	/* Web */
 
-    .intro__web {
-        padding-block-start: 30px;
-    }
+	.intro__web {
+		padding-block-start: 30px;
+	}
 
-    /* Scribble */
+	/* Scribble */
 
-    .intro__scribble {
-        position: absolute;
-        inset-block-start: 0;
-        inset-inline-end: -200px;
-        z-index: -1;
-        inline-size: 600px;
-        block-size: auto;
-        color: var(--intro-scribble-fill);
-        pointer-events: none;
-        transform: scaleX(-1);
-    }
+	.intro__scribble {
+		position: absolute;
+		inset-block-start: 0;
+		inset-inline-end: -200px;
+		z-index: -1;
+		inline-size: 600px;
+		block-size: auto;
+		color: var(--intro-scribble-fill);
+		pointer-events: none;
+		transform: scaleX(-1);
+	}
 
 }
 
 @media (1024px <= width < 1760px) {
 
-    /* Hi */
+	/* Hi */
 
-    .intro__hi {
-        grid-row: 1 / 2;
-        grid-column: 2 / span 3;
-    }
+	.intro__hi {
+		grid-row: 1 / 2;
+		grid-column: 2 / span 3;
+	}
 
-    /* Name */
+	/* Name */
 
-    .intro__name {
-        grid-row: 1 / 2;
-        grid-column: 1 / -1;
-    }
+	.intro__name {
+		grid-row: 1 / 2;
+		grid-column: 1 / -1;
+	}
 
-    /* Picture */
+	/* Picture */
 
-    .intro__picture {
-        grid-row: 2 / 3;
-        grid-column: 1 / span 5;
-    }
+	.intro__picture {
+		grid-row: 2 / 3;
+		grid-column: 1 / span 5;
+	}
 
-    /* Who */
+	/* Who */
 
-    .intro__who {
-        grid-row: 2 / 3;
-        grid-column: 5 / -1;
-        align-self: end;
-        font-size: 4.5vw;
-    }
+	.intro__who {
+		grid-row: 2 / 3;
+		grid-column: 5 / -1;
+		align-self: end;
+		font-size: 4.5vw;
+	}
 
-    /* What */
+	/* What */
 
-    .intro__what {
-        grid-row: 3 / 4;
-        grid-column: 6 / span 3;
-    }
+	.intro__what {
+		grid-row: 3 / 4;
+		grid-column: 6 / span 3;
+	}
 
-    /* Path */
+	/* Path */
 
-    .intro__path {
-        grid-row: 3 / 4;
-        grid-column: 6 / span 3;
-    }
+	.intro__path {
+		grid-row: 3 / 4;
+		grid-column: 6 / span 3;
+	}
 
-    /* Web */
+	/* Web */
 
-    .intro__web {
-        grid-row: 4 / 5;
-        grid-column: 5 / span 3;
-    }
+	.intro__web {
+		grid-row: 4 / 5;
+		grid-column: 5 / span 3;
+	}
 
 }

@@ -1,5 +1,5 @@
 /* Content */
 
 .content {
-    --content-image-outline: hsl(var(--color-manatee) / 0.2);
+	--content-image-outline: hsl(var(--color-manatee) / 0.2);
 }

@@ -1,35 +1,35 @@
 @media (width >= 1024px) {
 
-    /* About Section List */
+	/* About Section List */
 
-    .about-section-list {
-        grid-template-columns: repeat(8, 1fr);
-        column-gap: 20px;
-    }
+	.about-section-list {
+		grid-template-columns: repeat(8, 1fr);
+		column-gap: 20px;
+	}
 
 }
 
 @media (1024px <= width < 1760px) {
 
-    /* Skills */
+	/* Skills */
 
-    .about-section-list__skills {
-        grid-row-start: 1;
-        grid-column: 1 / span 4;
-    }
+	.about-section-list__skills {
+		grid-row-start: 1;
+		grid-column: 1 / span 4;
+	}
 
-    /* Work */
+	/* Work */
 
-    .about-section-list__work {
-        grid-row-start: 2;
-        grid-column: 5 / span 4;
-    }
+	.about-section-list__work {
+		grid-row-start: 2;
+		grid-column: 5 / span 4;
+	}
 
-    /* Contacts */
+	/* Contacts */
 
-    .about-section-list__contacts {
-        grid-row-start: 3;
-        grid-column: 2 / -2;
-    }
+	.about-section-list__contacts {
+		grid-row-start: 3;
+		grid-column: 2 / -2;
+	}
 
 }

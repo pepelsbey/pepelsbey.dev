@@ -1,28 +1,28 @@
 @media (width < 1024px) {
 
-    /* Intro */
+	/* Intro */
 
-    .intro {
-        row-gap: 20px;
-    }
+	.intro {
+		row-gap: 20px;
+	}
 
-    /* Photo */
+	/* Photo */
 
-    .intro__photo {
-        border-radius: 20px;
-    }
+	.intro__photo {
+		border-radius: 20px;
+	}
 
-    /* Who */
+	/* Who */
 
-    .intro__who {
-        line-height: 1.25;
-        font-size: var(--font-size-h2);
-    }
+	.intro__who {
+		line-height: 1.25;
+		font-size: var(--font-size-h2);
+	}
 
-    /* Scribble */
+	/* Scribble */
 
-    .intro__scribble {
-        display: none;
-    }
+	.intro__scribble {
+		display: none;
+	}
 
 }

@@ -1,17 +1,17 @@
 @media (width < 1024px) {
 
-    /* Project Feature */
+	/* Project Feature */
 
-    .project-feature {
-        --project-feature-size: 240px;
-        --project-feature-radius: 20px;
-        --project-feature-scribble-size: 200px;
-    }
+	.project-feature {
+		--project-feature-size: 240px;
+		--project-feature-radius: 20px;
+		--project-feature-scribble-size: 200px;
+	}
 
-    /* Icon */
+	/* Icon */
 
-    .project-feature__icon {
-        width: 36px;
-        height: 36px;
-    }
+	.project-feature__icon {
+		width: 36px;
+		height: 36px;
+	}
 }

@@ -3,37 +3,37 @@ permalink: /feed/index.xml
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ global.domain }}">
-    <title>{{ global.title }}</title>
-    <subtitle>{{ global.description }}</subtitle>
-    <link href="{{ global.domain }}"/>
-    <link href="{{ global.domain + '/feed/' }}" rel="self"/>
-    <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-    <id>{{ global.domain }}/</id>
-    <author>
-        <name>{{ global.author }}</name>
-        <email>{{ global.email }}</email>
-    </author>
-    {%- for article in collections.articles | reverse %}
-        {% if article.data.source %}
-            {% set url = article.data.source.url %}
-            {% set title = article.data.source.title %}
-            {% set content %}
-                <p>{{ article.data.desc | markdownInline | safe }}</p>
-                <p><a href="{{ url }}">Read on {{ title }}</a></p>
-            {% endset %}
-        {% else %}
-            {% set url = global.domain + article.url %}
-            {% set content = article.templateContent | absolute(article) %}
-        {% endif %}
+	<title>{{ global.title }}</title>
+	<subtitle>{{ global.description }}</subtitle>
+	<link href="{{ global.domain }}"/>
+	<link href="{{ global.domain + '/feed/' }}" rel="self"/>
+	<updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+	<id>{{ global.domain }}/</id>
+	<author>
+		<name>{{ global.author }}</name>
+		<email>{{ global.email }}</email>
+	</author>
+	{%- for article in collections.articles | reverse %}
+		{% if article.data.source %}
+			{% set url = article.data.source.url %}
+			{% set title = article.data.source.title %}
+			{% set content %}
+				<p>{{ article.data.desc | markdownInline | safe }}</p>
+				<p><a href="{{ url }}">Read on {{ title }}</a></p>
+			{% endset %}
+		{% else %}
+			{% set url = global.domain + article.url %}
+			{% set content = article.templateContent | absolute(article) %}
+		{% endif %}
 
-        <entry>
-            <title>{{ article.data.title | trim }}</title>
-            <link href="{{ url }}"/>
-            <updated>{{ article.date | dateToRfc3339 }}</updated>
-                <id>{{ url }}</id>
-            <content type="html" xml:lang="{{ global.language }}">
-                {{- content | trim -}}
-            </content>
-        </entry>
-    {%- endfor %}
+		<entry>
+			<title>{{ article.data.title | trim }}</title>
+			<link href="{{ url }}"/>
+			<updated>{{ article.date | dateToRfc3339 }}</updated>
+				<id>{{ url }}</id>
+			<content type="html" xml:lang="{{ global.language }}">
+				{{- content | trim -}}
+			</content>
+		</entry>
+	{%- endfor %}
 </feed>

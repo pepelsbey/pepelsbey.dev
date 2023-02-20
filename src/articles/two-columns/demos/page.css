@@ -1,25 +1,25 @@
 /* Page */
 
 *, ::before, ::after {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .page,
 .page__body {
-    height: 100%;
+	height: 100%;
 }
 
 .page__body {
-    margin: auto;
-    padding-block-start: 30px;
-    width: 800px;
-    font-family: sans-serif;
+	margin: auto;
+	padding-block-start: 30px;
+	width: 800px;
+	font-family: sans-serif;
 }
 
 .page__body--reasonable {
-    background-color: mediumpurple;
+	background-color: mediumpurple;
 }
 
 .page__body--wrong {
-    background-color: tomato;
+	background-color: tomato;
 }

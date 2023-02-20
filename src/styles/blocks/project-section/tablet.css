@@ -1,73 +1,73 @@
 @media (width >= 1024px) {
 
-    /* Project Section */
+	/* Project Section */
 
-    .project-section {
-        display: grid;
-        grid-template-columns: repeat(8, 1fr);
-        column-gap: 20px;
-    }
+	.project-section {
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		column-gap: 20px;
+	}
 
-    /* Scribble */
+	/* Scribble */
 
-    .project-section__scribble {
-        inline-size: auto;
-        block-size: 600px;
-    }
+	.project-section__scribble {
+		inline-size: auto;
+		block-size: 600px;
+	}
 
-    /* Odd or Even */
+	/* Odd or Even */
 
-    .project-section:nth-child(odd)
-    .project-section__scribble {
-        inset-inline-end: -200px;
-    }
+	.project-section:nth-child(odd)
+	.project-section__scribble {
+		inset-inline-end: -200px;
+	}
 
-    .project-section:nth-child(even)
-    .project-section__scribble {
-        inset-inline-start: -200px;
-    }
+	.project-section:nth-child(even)
+	.project-section__scribble {
+		inset-inline-start: -200px;
+	}
 
 }
 
 @media (1024px <= width < 1760px) {
 
-    /* Title */
+	/* Title */
 
-    .project-section__title {
-        grid-column-end: span 7;
-    }
+	.project-section__title {
+		grid-column-end: span 7;
+	}
 
-    /* Desc */
+	/* Desc */
 
-    .project-section__desc {
-        grid-column-end: span 7;
-    }
+	.project-section__desc {
+		grid-column-end: span 7;
+	}
 
-    /* List */
+	/* List */
 
-    .project-section__list {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-end: span 6;
-        column-gap: 20px;
-    }
+	.project-section__list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-column-end: span 6;
+		column-gap: 20px;
+	}
 
-    /* Odd or Even */
+	/* Odd or Even */
 
-    .project-section:nth-child(odd) :is(
-        .project-section__title,
-        .project-section__desc,
-        .project-section__list
-    ) {
-        grid-column-start: 1;
-    }
+	.project-section:nth-child(odd) :is(
+		.project-section__title,
+		.project-section__desc,
+		.project-section__list
+	) {
+		grid-column-start: 1;
+	}
 
-    .project-section:nth-child(even) :is(
-        .project-section__title,
-        .project-section__desc,
-        .project-section__list
-    ) {
-        grid-column-start: 2;
-    }
+	.project-section:nth-child(even) :is(
+		.project-section__title,
+		.project-section__desc,
+		.project-section__list
+	) {
+		grid-column-start: 2;
+	}
 
 }

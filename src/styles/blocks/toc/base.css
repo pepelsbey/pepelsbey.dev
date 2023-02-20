@@ -3,41 +3,41 @@
 /* Title */
 
 .toc__title {
-    display: inline-flex;
-    align-items: center;
-    column-gap: 8px;
-    list-style: none;
+	display: inline-flex;
+	align-items: center;
+	column-gap: 8px;
+	list-style: none;
 }
 
 .toc__title::-webkit-details-marker {
-    display:none;
+	display:none;
 }
 
 /* List */
 
 .toc__list {
-    display: grid;
-    row-gap: 12px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+	display: grid;
+	row-gap: 12px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 /* Nested */
 
 .toc__nested {
-    display: grid;
-    row-gap: 8px;
-    margin: 0;
-    padding: 0;
-    padding-block-start: 4px;
-    padding-inline-start: 20px;
-    list-style: none;
-    font-size: var(--font-size-small);
+	display: grid;
+	row-gap: 8px;
+	margin: 0;
+	padding: 0;
+	padding-block-start: 4px;
+	padding-inline-start: 20px;
+	list-style: none;
+	font-size: var(--font-size-small);
 }
 
 /* Link */
 
 .toc__link {
-    color: var(--color-text-secondary);
+	color: var(--color-text-secondary);
 }

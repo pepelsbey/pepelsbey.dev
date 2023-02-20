@@ -22,31 +22,31 @@ I picked the colors from the picture, played with the line height, and got a g
 
 ```css
 body {
-    margin: 0;
-    display: grid;
-    place-items: center;
-    background-color: #f6f6ec;
-    font-family: 'Hanken Grotesk', sans-serif;
+	margin: 0;
+	display: grid;
+	place-items: center;
+	background-color: #f6f6ec;
+	font-family: 'Hanken Grotesk', sans-serif;
 }
 
 h1 {
-    max-width: 18ch;
-    color: #142847;
-    line-height: 1.1;
-    font-size: 7.5vw;
+	max-width: 18ch;
+	color: #142847;
+	line-height: 1.1;
+	font-size: 7.5vw;
 }
 ```
 
 <iframe
-    src="demos/type.html"
-    height="500" loading="lazy"
-    title="The heading with the Hanken Grotesk font and text styles applied."
+	src="demos/type.html"
+	height="500" loading="lazy"
+	title="The heading with the Hanken Grotesk font and text styles applied."
 ></iframe>
 
 ```html
 <h1>
-    The European Accessibility Act—<br>
-    A milestone for digital accessibility
+	The European Accessibility Act—<br>
+	A milestone for digital accessibility
 </h1>
 ```
 
@@ -58,17 +58,17 @@ To use Hanken Grotesk font in the demo, I took the usual HTML snippet from Go
 
 ```html
 <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
+	rel="preconnect"
+	href="https://fonts.googleapis.com"
 >
 <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
+	rel="preconnect"
+	href="https://fonts.gstatic.com"
+	crossorigin
 >
 <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?…"
+	rel="stylesheet"
+	href="https://fonts.googleapis.com/css2?…"
 >
 ```
 
@@ -88,17 +88,17 @@ Alright, enough with the text. Let’s see how I highlighted it.
 
 ```css
 mark {
-    background-color: #f8db75;
-    color: inherit;
+	background-color: #f8db75;
+	color: inherit;
 }
 ```
 
 It looked pretty close already, but the whole point of this challenge was the side angles.
 
 <iframe
-    src="demos/mark.html"
-    height="500" loading="lazy"
-    title="The heading with the multi-line styled mark tag highlighting the first part."
+	src="demos/mark.html"
+	height="500" loading="lazy"
+	title="The heading with the multi-line styled mark tag highlighting the first part."
 ></iframe>
 
 
@@ -112,24 +112,24 @@ Since the gradient replaces the background color, I set it to transparent. Th
 
 ```css
 mark {
-    background-color: transparent;
-    background-image:
-        linear-gradient(
-            to bottom right,
-            transparent 50%,
-            #f8db75 50% 100%
-        ),
-        linear-gradient(
-            to right,
-            #f8db75,
-            #f8db75
-        ),
-        linear-gradient(
-            to top left,
-            transparent 50%,
-            #f8db75 50%
-        )
-    ;
+	background-color: transparent;
+	background-image:
+		linear-gradient(
+			to bottom right,
+			transparent 50%,
+			#f8db75 50% 100%
+		),
+		linear-gradient(
+			to right,
+			#f8db75,
+			#f8db75
+		),
+		linear-gradient(
+			to top left,
+			transparent 50%,
+			#f8db75 50%
+		)
+	;
 }
 ```
 
@@ -143,17 +143,17 @@ It was just a first step: by default, gradients overlap each other and repeat
 
 ```css
 mark {
-    background-size:
-        0.25em 1em,
-        calc(100% - 0.25em * 2 + 1px) 1em,
-        0.25em 1em
-    ;
-    background-position:
-        left center,
-        center,
-        right center
-    ;
-    background-repeat: no-repeat;
+	background-size:
+		0.25em 1em,
+		calc(100% - 0.25em * 2 + 1px) 1em,
+		0.25em 1em
+	;
+	background-position:
+		left center,
+		center,
+		right center
+	;
+	background-repeat: no-repeat;
 }
 ```
 
@@ -168,50 +168,50 @@ Positioning background was fairly simple:
 Once the background was done, I did a minor refactoring and used a few custom properties to make the highlight easily adjustable. But first, let’s look at the result!
 
 <iframe
-    src="demos/almost.html"
-    height="500" loading="lazy"
-    title="The heading with the side angles at the beginning and the end of the whole highlight."
+	src="demos/almost.html"
+	height="500" loading="lazy"
+	title="The heading with the side angles at the beginning and the end of the whole highlight."
 ></iframe>
 
 ```css
 mark {
-    --mark-color: #f8db75;
-    --mark-skew: 0.25em;
-    --mark-height: 1em;
-    --mark-overlap: 0.3em;
+	--mark-color: #f8db75;
+	--mark-skew: 0.25em;
+	--mark-height: 1em;
+	--mark-overlap: 0.3em;
 
-    margin-inline: calc(var(--mark-overlap) * -1);
-    padding-inline: var(--mark-overlap);
+	margin-inline: calc(var(--mark-overlap) * -1);
+	padding-inline: var(--mark-overlap);
 
-    background-color: transparent;
-    background-image:
-        linear-gradient(
-            to bottom right,
-            transparent 50%,
-            var(--mark-color) 50%
-        ),
-        linear-gradient(
-            var(--mark-color),
-            var(--mark-color)
-        ),
-        linear-gradient(
-            to top left,
-            transparent 50%,
-            var(--mark-color) 50%
-        )
-    ;
-    background-size:
-        var(--mark-skew) var(--mark-height),
-        calc(100% - var(--mark-skew) * 2 + 1px) var(--mark-height),
-        var(--mark-skew) var(--mark-height)
-    ;
-    background-position:
-        left center,
-        center,
-        right center
-    ;
-    background-repeat: no-repeat;
-    color: inherit;
+	background-color: transparent;
+	background-image:
+		linear-gradient(
+			to bottom right,
+			transparent 50%,
+			var(--mark-color) 50%
+		),
+		linear-gradient(
+			var(--mark-color),
+			var(--mark-color)
+		),
+		linear-gradient(
+			to top left,
+			transparent 50%,
+			var(--mark-color) 50%
+		)
+	;
+	background-size:
+		var(--mark-skew) var(--mark-height),
+		calc(100% - var(--mark-skew) * 2 + 1px) var(--mark-height),
+		var(--mark-skew) var(--mark-height)
+	;
+	background-position:
+		left center,
+		center,
+		right center
+	;
+	background-repeat: no-repeat;
+	color: inherit;
 }
 ```
 
@@ -227,17 +227,17 @@ There’s a way to control how the box breaks into multiple lines or, to be 
 
 ```css
 mark {
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
 }
 ```
 
 I had to use the `-webkit-` prefix for it to work in Chrome and Safari, but the result was just stunning: every line of the `<mark>` element was decorated like its own element.
 
 <iframe
-    src="demos/final.html"
-    height="500" loading="lazy"
-    title="The heading with the side angles at the beginning and the end of every separate part of the highlight."
+	src="demos/final.html"
+	height="500" loading="lazy"
+	title="The heading with the side angles at the beginning and the end of every separate part of the highlight."
 ></iframe>
 
 * * *

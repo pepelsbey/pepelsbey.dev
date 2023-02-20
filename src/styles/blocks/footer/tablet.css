@@ -1,22 +1,22 @@
 @media (width >= 1024px) {
 
-    /* Footer */
+	/* Footer */
 
-    .footer {
-        grid-template-columns: repeat(8, 1fr);
-        padding-block: 80px;
-    }
+	.footer {
+		grid-template-columns: repeat(8, 1fr);
+		padding-block: 80px;
+	}
 
-    /* Section */
+	/* Section */
 
-    .footer__section {
-        grid-template-rows: 1fr min-content;
-        grid-column: span 2;
-    }
+	.footer__section {
+		grid-template-rows: 1fr min-content;
+		grid-column: span 2;
+	}
 
-    .footer__section:last-child {
-        grid-column: span 4 / -1;
-        text-align: end;
-    }
+	.footer__section:last-child {
+		grid-column: span 4 / -1;
+		text-align: end;
+	}
 
 }

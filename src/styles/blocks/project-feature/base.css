@@ -1,85 +1,85 @@
 /* Project Feature */
 
 .project-feature {
-    --project-feature-back-tools: hsl(var(--color-lilac));
-    --project-feature-back-podcasts: hsl(var(--color-sulu));
-    --project-feature-back-websites: hsl(var(--color-coral));
-    --project-feature-text-primary: hsl(var(--color-ebony));
-    --project-feature-scribble-margin: 8px;
+	--project-feature-back-tools: hsl(var(--color-lilac));
+	--project-feature-back-podcasts: hsl(var(--color-sulu));
+	--project-feature-back-websites: hsl(var(--color-coral));
+	--project-feature-text-primary: hsl(var(--color-ebony));
+	--project-feature-scribble-margin: 8px;
 
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr min-content;
-    padding-inline: 20px;
-    padding-block: 40px;
-    min-height: var(--project-feature-size);
-    border-radius: var(--project-feature-radius);
-    color: var(--project-feature-text-primary);
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr min-content;
+	padding-inline: 20px;
+	padding-block: 40px;
+	min-height: var(--project-feature-size);
+	border-radius: var(--project-feature-radius);
+	color: var(--project-feature-text-primary);
 }
 
 /* Types */
 
 .project-feature--tools {
-    background-color: var(--project-feature-back-tools);
+	background-color: var(--project-feature-back-tools);
 }
 
 .project-feature--podcasts {
-    background-color: var(--project-feature-back-podcasts);
+	background-color: var(--project-feature-back-podcasts);
 }
 
 .project-feature--websites {
-    background-color: var(--project-feature-back-websites);
+	background-color: var(--project-feature-back-websites);
 }
 
 /* Title */
 
 .project-feature__title {
-    z-index: 1;
-    margin: 0;
-    line-height: 1.25;
-    font-weight: normal;
-    font-size: var(--font-size-h2);
-    font-family: var(--font-family-heading);
+	z-index: 1;
+	margin: 0;
+	line-height: 1.25;
+	font-weight: normal;
+	font-size: var(--font-size-h2);
+	font-family: var(--font-family-heading);
 }
 
 /* Link */
 
 .project-feature__link {
-    color: inherit;
-    text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 .project-feature__link:focus-visible {
-    outline: none;
+	outline: none;
 }
 
 .project-feature__link::before {
-    position: absolute;
-    inset: 0;
-    content: '';
-    border-radius: var(--project-feature-radius);
+	position: absolute;
+	inset: 0;
+	content: '';
+	border-radius: var(--project-feature-radius);
 }
 
 .project-feature__link:focus-visible::before {
-    outline: 2px solid var(--color-focus-ring);
-    outline-offset: 2px;
+	outline: 2px solid var(--color-focus-ring);
+	outline-offset: 2px;
 }
 
 /* Icon */
 
 .project-feature__icon {
-    pointer-events: none;
-    z-index: 1;
+	pointer-events: none;
+	z-index: 1;
 }
 
 /* Scribble */
 
 .project-feature__scribble {
-    position: absolute;
-    inset-block-end: var(--project-feature-scribble-margin);
-    inset-inline-end: var(--project-feature-scribble-margin);
-    inline-size: var(--project-feature-scribble-size);
-    block-size: var(--project-feature-scribble-size);
-    color: var(--project-feature-scribble-fill);
-    pointer-events: none;
+	position: absolute;
+	inset-block-end: var(--project-feature-scribble-margin);
+	inset-inline-end: var(--project-feature-scribble-margin);
+	inline-size: var(--project-feature-scribble-size);
+	block-size: var(--project-feature-scribble-size);
+	color: var(--project-feature-scribble-fill);
+	pointer-events: none;
 }

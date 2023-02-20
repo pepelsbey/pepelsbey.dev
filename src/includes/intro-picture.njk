@@ -1,48 +1,48 @@
 {% set formats = [
-    'avif',
-    'webp'
+	'avif',
+	'webp'
 ] %}
 
 {% set widths = [
-    '2560',
-    '1920',
-    '1280',
-    '960',
-    '640'
+	'2560',
+	'1920',
+	'1280',
+	'960',
+	'640'
 ] %}
 
 {% set sizes = [
-    '(min-width: 1760px) 616px',
-    '(min-width: 1024) calc(75vw - 20px - 2 * 42px)',
-    'calc(100vw - 2 * 20px)'
+	'(min-width: 1760px) 616px',
+	'(min-width: 1024) calc(75vw - 20px - 2 * 42px)',
+	'calc(100vw - 2 * 20px)'
 ] %}
 
 {% macro introPicture(
-    context
+	context
 ) %}
-    <picture class="intro__picture intro__picture--{{ context }}">
-        {% for format in formats %}
-            <source
-                srcset="
-                    {%- for width in widths -%}
-                        /images/photo/{{ width }}.{{ format }} {{ width }}w
-                        {{- ',' if not loop.last -}}
-                    {%- endfor -%}
-                "
-                sizes="
-                    {%- for size in sizes -%}
-                        {{- size -}}
-                        {{- ',' if not loop.last -}}
-                    {%- endfor -%}
-                "
-                type="image/{{ format }}"
-            >
-        {% endfor %}
-        <img class="intro__photo"
-            src="/images/photo/index.jpg"
-            width="640" height="426"
-            fetchpriority="high"
-            alt="{{ intro.alt }}"
-        >
-    </picture>
+	<picture class="intro__picture intro__picture--{{ context }}">
+		{% for format in formats %}
+			<source
+				srcset="
+					{%- for width in widths -%}
+						/images/photo/{{ width }}.{{ format }} {{ width }}w
+						{{- ',' if not loop.last -}}
+					{%- endfor -%}
+				"
+				sizes="
+					{%- for size in sizes -%}
+						{{- size -}}
+						{{- ',' if not loop.last -}}
+					{%- endfor -%}
+				"
+				type="image/{{ format }}"
+			>
+		{% endfor %}
+		<img class="intro__photo"
+			src="/images/photo/index.jpg"
+			width="640" height="426"
+			fetchpriority="high"
+			alt="{{ intro.alt }}"
+		>
+	</picture>
 {% endmacro %}

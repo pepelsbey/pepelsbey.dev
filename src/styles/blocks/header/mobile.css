@@ -1,35 +1,35 @@
 @media (width < 1024px) {
 
-    /* Header */
+	/* Header */
 
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-content: center;
-        align-items: center;
-        padding-block: 16px;
-        box-shadow: 0 2px 0 var(--color-text-primary);
-    }
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		align-items: center;
+		padding-block: 16px;
+		box-shadow: 0 2px 0 var(--color-text-primary);
+	}
 
-    /* Button */
+	/* Button */
 
-    .header__button {
-        position: relative;
-        z-index: 2;
-    }
+	.header__button {
+		position: relative;
+		z-index: 2;
+	}
 
-    .header__button[aria-expanded='false'] :is(
-        .header__icon-close,
-        .header__text-close
-    ) {
-        display: none;
-    }
+	.header__button[aria-expanded='false'] :is(
+		.header__icon-close,
+		.header__text-close
+	) {
+		display: none;
+	}
 
-    .header__button[aria-expanded='true'] :is(
-        .header__icon-menu,
-        .header__text-menu
-    ) {
-        display: none;
-    }
+	.header__button[aria-expanded='true'] :is(
+		.header__icon-menu,
+		.header__text-menu
+	) {
+		display: none;
+	}
 
 }

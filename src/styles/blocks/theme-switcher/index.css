@@ -1,75 +1,75 @@
 /* Theme */
 
 .theme-switcher {
-    --theme-switcher-hover-back: hsl(var(--color-sulu));
-    --theme-switcher-hover-text: hsl(var(--color-ebony));
+	--theme-switcher-hover-back: hsl(var(--color-sulu));
+	--theme-switcher-hover-text: hsl(var(--color-ebony));
 
-    position: relative;
-    z-index: 1;
-    display: inline-grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 2px;
-    border: 2px solid var(--theme-switcher-back);
-    border-radius: 24px;
+	position: relative;
+	z-index: 1;
+	display: inline-grid;
+	grid-template-columns: repeat(3, 1fr);
+	padding: 2px;
+	border: 2px solid var(--theme-switcher-back);
+	border-radius: 24px;
 }
 
 /* Button */
 
 .theme-switcher__button {
-    margin: 0;
-    padding: 0;
-    padding-inline: 16px;
-    border: none;
-    border-radius: 24px;
-    background-color: transparent;
-    color: var(--theme-switcher-back);
-    line-height: inherit;
-    font-size: inherit;
-    font-family: inherit;
-    transition: color 0.1s linear 0.1s;
+	margin: 0;
+	padding: 0;
+	padding-inline: 16px;
+	border: none;
+	border-radius: 24px;
+	background-color: transparent;
+	color: var(--theme-switcher-back);
+	line-height: inherit;
+	font-size: inherit;
+	font-family: inherit;
+	transition: color 0.1s linear 0.1s;
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .theme-switcher__button[aria-pressed='false']:hover {
-        animation: menu-button 0.2s both;
-    }
+	.theme-switcher__button[aria-pressed='false']:hover {
+		animation: menu-button 0.2s both;
+	}
 }
 
 @keyframes menu-button {
-    to {
-        background-color: var(--theme-switcher-hover-back);
-        color: var(--theme-switcher-hover-text);
-    }
+	to {
+		background-color: var(--theme-switcher-hover-back);
+		color: var(--theme-switcher-hover-text);
+	}
 }
 
 .theme-switcher__button:focus-visible {
-    outline-offset: -2px;
+	outline-offset: -2px;
 }
 
 .theme-switcher__button[aria-pressed='true'] {
-    outline-offset: 2px;
-    color: var(--theme-switcher-text);
+	outline-offset: 2px;
+	color: var(--theme-switcher-text);
 }
 
 /* Status */
 
 .theme-switcher__status {
-    position: absolute;
-    inset: 2px;
-    z-index: -1;
-    margin-inline: auto;
-    width: calc(33% - 0.5px);
-    border-radius: 24px;
-    background-color: var(--theme-switcher-back);
-    pointer-events: none;
-    transform: translateX(0);
-    transition: transform 0.2s;
+	position: absolute;
+	inset: 2px;
+	z-index: -1;
+	margin-inline: auto;
+	width: calc(33% - 0.5px);
+	border-radius: 24px;
+	background-color: var(--theme-switcher-back);
+	pointer-events: none;
+	transform: translateX(0);
+	transition: transform 0.2s;
 }
 
 .theme-switcher__button[aria-pressed='true'][value='light'] ~ .theme-switcher__status {
-    transform: translateX(-100%);
+	transform: translateX(-100%);
 }
 
 .theme-switcher__button[aria-pressed='true'][value='dark'] ~ .theme-switcher__status {
-    transform: translateX(100%);
+	transform: translateX(100%);
 }

@@ -1,23 +1,23 @@
 /* Header */
 
 .header {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    background-color: var(--color-back-primary);
-    view-transition-name: header;
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	background-color: var(--color-back-primary);
+	view-transition-name: header;
 }
 
 /* Link */
 
 .header__link {
-    display: block;
-    border-radius: 50%;
-    color: var(--color-text-primary);
+	display: block;
+	border-radius: 50%;
+	color: var(--color-text-primary);
 }
 
 /* Logo */
 
 .header__logo {
-    display: block;
+	display: block;
 }

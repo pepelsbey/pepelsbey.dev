@@ -1,24 +1,24 @@
 /* Tags */
 
 .tags {
-    --tags-gap: 8px;
+	--tags-gap: 8px;
 
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: var(--tags-gap);
-    margin: 0;
-    margin-block-end: calc(
-        -1 * var(--tags-gap)
-    );
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: var(--tags-gap);
+	margin: 0;
+	margin-block-end: calc(
+		-1 * var(--tags-gap)
+	);
 }
 
 /* Item */
 
 .tags__item {
-    margin-block-end: var(--tags-gap);
-    padding-block: 2px;
-    padding-inline: 16px;
-    border: 1.5px solid;
-    border-radius: 24px;
-    font-size: var(--font-size-small);
+	margin-block-end: var(--tags-gap);
+	padding-block: 2px;
+	padding-inline: 16px;
+	border: 1.5px solid;
+	border-radius: 24px;
+	font-size: var(--font-size-small);
 }

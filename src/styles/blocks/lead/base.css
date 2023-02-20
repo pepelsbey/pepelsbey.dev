@@ -1,34 +1,34 @@
 /* Lead */
 
 .lead {
-    position: relative;
-    display: grid;
-    row-gap: 20px;
-    overflow: hidden;
-    background-color: var(--lead-back);
+	position: relative;
+	display: grid;
+	row-gap: 20px;
+	overflow: hidden;
+	background-color: var(--lead-back);
 }
 
 /* Tags */
 
 .lead__tags {
-    order: -1;
+	order: -1;
 }
 
 /* Title */
 
 .lead__title {
-    margin: 0;
-    line-height: 1.1;
-    text-transform: uppercase;
-    font-weight: normal;
-    font-family: var(--font-family-heading);
+	margin: 0;
+	line-height: 1.1;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-family: var(--font-family-heading);
 }
 
 /* Scribble */
 
 .lead__scribble {
-    position: absolute;
-    transform: scaleX(-1);
-    color: var(--lead-scribble-fill);
-    pointer-events: none;
+	position: absolute;
+	transform: scaleX(-1);
+	color: var(--lead-scribble-fill);
+	pointer-events: none;
 }

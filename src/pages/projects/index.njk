@@ -1,67 +1,67 @@
 {% set projectsList = [] %}
 
 {% for section in projects %}
-    {% for project in section.projects %}
-        {% set projectsList = (
-            projectsList.push(project),
-            projectsList
-        ) %}
-    {% endfor %}
+	{% for project in section.projects %}
+		{% set projectsList = (
+			projectsList.push(project),
+			projectsList
+		) %}
+	{% endfor %}
 {% endfor %}
 
 <main class="main column" id="main">
-    <header class="caption">
-        <h1 class="caption__title caption__title--top">
-            {{ title }}
-        </h1>
-        <span class="caption__number" aria-label="{{ projectsList.length }} in total">
-            {{ projectsList.length }}
-        </span>
-    </header>
-    <div class="project-section-list">
-        {% set scribbles = cycler(1, 2, 3) %}
-        {% for section in projects %}
-            {% set id = section.title | lower %}
+	<header class="caption">
+		<h1 class="caption__title caption__title--top">
+			{{ title }}
+		</h1>
+		<span class="caption__number" aria-label="{{ projectsList.length }} in total">
+			{{ projectsList.length }}
+		</span>
+	</header>
+	<div class="project-section-list">
+		{% set scribbles = cycler(1, 2, 3) %}
+		{% for section in projects %}
+			{% set id = section.title | lower %}
 
-            <section class="project-section" id="{{ id }}">
-                <h2 class="project-section__title">
-                    {{ section.title }}
-                </h2>
-                <p class="project-section__desc">
-                    {{ section.desc | markdownInline | safe }}
-                </p>
+			<section class="project-section" id="{{ id }}">
+				<h2 class="project-section__title">
+					{{ section.title }}
+				</h2>
+				<p class="project-section__desc">
+					{{ section.desc | markdownInline | safe }}
+				</p>
 
-                <div class="project-section__list">
-                    {% for project in section.projects %}
-                        <article class="project-card">
-                            <div class="project-card__box project-card__box--{{ id }}">
-                                <h3 class="project-card__title">
-                                    <a class="project-card__link" href="{{ project.url }}" target="_blank">
-                                        {{- project.title | markdownInline | safe -}}
-                                    </a>
-                                </h3>
-                                <p class="tags">
-                                    {% for tag in project.tags %}
-                                        <span class="tags__item">
-                                            {{ tag }}
-                                        </span>
-                                    {% endfor %}
-                                </p>
-                                <svg width="24" height="24" aria-hidden="true">
-                                    <use href="/images/icons.svg#external"/>
-                                </svg>
-                            </div>
-                            <p class="project-card__desc content content-inline">
-                                {{ project.desc | markdownInline | safe }}
-                            </p>
-                        </article>
-                    {% endfor %}
-                </div>
+				<div class="project-section__list">
+					{% for project in section.projects %}
+						<article class="project-card">
+							<div class="project-card__box project-card__box--{{ id }}">
+								<h3 class="project-card__title">
+									<a class="project-card__link" href="{{ project.url }}" target="_blank">
+										{{- project.title | markdownInline | safe -}}
+									</a>
+								</h3>
+								<p class="tags">
+									{% for tag in project.tags %}
+										<span class="tags__item">
+											{{ tag }}
+										</span>
+									{% endfor %}
+								</p>
+								<svg width="24" height="24" aria-hidden="true">
+									<use href="/images/icons.svg#external"/>
+								</svg>
+							</div>
+							<p class="project-card__desc content content-inline">
+								{{ project.desc | markdownInline | safe }}
+							</p>
+						</article>
+					{% endfor %}
+				</div>
 
-                <svg class="project-section__scribble" width="200" height="200" aria-hidden="true">
-                    <use href="/images/scribbles.svg#{{ scribbles.next() }}"/>
-                </svg>
-            </section>
-        {% endfor %}
-    </div>
+				<svg class="project-section__scribble" width="200" height="200" aria-hidden="true">
+					<use href="/images/scribbles.svg#{{ scribbles.next() }}"/>
+				</svg>
+			</section>
+		{% endfor %}
+	</div>
 </main>

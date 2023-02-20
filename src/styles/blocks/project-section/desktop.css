@@ -1,42 +1,42 @@
 @media (width >= 1760px) {
 
-    /* Title */
+	/* Title */
 
-    .project-section__title {
-        grid-column-end: span 4;
-    }
+	.project-section__title {
+		grid-column-end: span 4;
+	}
 
-    /* Desc */
+	/* Desc */
 
-    .project-section__desc {
-        grid-column-end: span 4;
-    }
+	.project-section__desc {
+		grid-column-end: span 4;
+	}
 
-    /* List */
+	/* List */
 
-    .project-section__list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-column-end: span 6;
-        column-gap: 20px;
-    }
+	.project-section__list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-column-end: span 6;
+		column-gap: 20px;
+	}
 
-    /* Odd or Even */
+	/* Odd or Even */
 
-    .project-section:nth-child(odd) :is(
-        .project-section__title,
-        .project-section__desc,
-        .project-section__list
-    ) {
-        grid-column-start: 1;
-    }
+	.project-section:nth-child(odd) :is(
+		.project-section__title,
+		.project-section__desc,
+		.project-section__list
+	) {
+		grid-column-start: 1;
+	}
 
-    .project-section:nth-child(even) :is(
-        .project-section__title,
-        .project-section__desc,
-        .project-section__list
-    ) {
-        grid-column-start: 3;
-    }
+	.project-section:nth-child(even) :is(
+		.project-section__title,
+		.project-section__desc,
+		.project-section__list
+	) {
+		grid-column-start: 3;
+	}
 
 }

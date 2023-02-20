@@ -1,6 +1,6 @@
 /* Theme Switcher */
 
 .theme-switcher {
-    --theme-switcher-back: hsl(var(--color-white));
-    --theme-switcher-text: hsl(var(--color-ebony));
+	--theme-switcher-back: hsl(var(--color-white));
+	--theme-switcher-text: hsl(var(--color-ebony));
 }

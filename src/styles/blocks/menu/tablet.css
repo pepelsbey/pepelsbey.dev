@@ -1,22 +1,22 @@
 @media (width >= 1024px) {
 
-    /* Menu */
+	/* Menu */
 
-    .menu {
-        display: grid;
-        grid-template-columns:
-            1fr
-            max-content
-            max-content;
-        align-items: center;
-        column-gap: 40px;
-    }
+	.menu {
+		display: grid;
+		grid-template-columns:
+			1fr
+			max-content
+			max-content;
+		align-items: center;
+		column-gap: 40px;
+	}
 
-    /* List */
+	/* List */
 
-    .menu__list {
-        display: flex;
-        column-gap: 40px;
-    }
+	.menu__list {
+		display: flex;
+		column-gap: 40px;
+	}
 
 }

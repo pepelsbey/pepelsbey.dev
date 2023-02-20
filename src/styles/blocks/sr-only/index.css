@@ -1,16 +1,16 @@
 /* SR Only */
 
 .sr-only {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: -1px;
-    padding: 0;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: none;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    white-space: nowrap;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: -1px;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	border: none;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	white-space: nowrap;
 }

@@ -7,19 +7,19 @@ First of all, let’s all agree that sprites are a trick. You might call it a
 In the early Web days, sprites were used similarly, but to optimize network performance (limit the number of requests) and also work around the way browsers load resources. Consider this example: one background image should be replaced with another once the user hovers/focuses the link.
 
 <iframe
-    src="demos/old-school/naive.html"
-    height="360" loading="lazy"
-    title="Black contour cogwheel icon on a green background, on hover it becomes purple."
+	src="demos/old-school/naive.html"
+	height="360" loading="lazy"
+	title="Black contour cogwheel icon on a green background, on hover it becomes purple."
 ></iframe>
 
 ```css
 a {
-    background-image: url('link.svg');
+	background-image: url('link.svg');
 }
 
 a:hover,
 a:focus {
-    background-image: url('hover.svg');
+	background-image: url('hover.svg');
 }
 ```
 
@@ -39,8 +39,8 @@ In the previous case, both icons were separate files, containing nothing but th
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 24">
-    <path fill="#0c0b1d" d="M19.43…"/>
-    <path fill="#9874d3" d="M43.43…"/>
+	<path fill="#0c0b1d" d="M19.43…"/>
+	<path fill="#9874d3" d="M43.43…"/>
 </svg>
 ```
 
@@ -51,21 +51,21 @@ Look at the `d` attributes of every `<path>` element, specifically on how the
 The easiest way to put a decorative image on a page is to use the `background-image` property. Seriously, you don’t always need to do complex things with your graphics, it’s usually more performant too. Let’s put our sprite in the background image and move its position to a certain coordinate to show the needed icon. There’s no need to set `background-position` to `0 0`, but I like to keep defaults visible when they’re about to change.
 
 <iframe
-    src="demos/old-school/background.html"
-    height="360" loading="lazy"
-    title="Black contour cogwheel icon on a green background, on hover it becomes purple."
+	src="demos/old-school/background.html"
+	height="360" loading="lazy"
+	title="Black contour cogwheel icon on a green background, on hover it becomes purple."
 ></iframe>
 
 ```css
 a {
-    background-image: url('sprite.svg');
-    background-position: 0 0;
-    background-size: cover;
+	background-image: url('sprite.svg');
+	background-position: 0 0;
+	background-size: cover;
 }
 
 a:hover,
 a:focus {
-    background-position: -200px 0;
+	background-position: -200px 0;
 }
 ```
 
@@ -79,31 +79,31 @@ Interestingly enough, you can use old-school sprites not only for background ima
 
 ```html
 <a href>
-    <img
-        src="sprite.svg"
-        width="200" height="200"
-        alt="Settings"
-    >
+	<img
+		src="sprite.svg"
+		width="200" height="200"
+		alt="Settings"
+	>
 </a>
 ```
 
 Styling in this case looks quite similar to the previous example, but with `object-fit` and `object-position` properties instead. Unlike `background-position`, the default position here would be `50% 50%`, so we’ll have to set it to `0 0` to make it work the same way.
 
 <iframe
-    src="demos/old-school/img.html"
-    height="360" loading="lazy"
-    title="Black contour cogwheel icon on a green background, on hover it becomes purple."
+	src="demos/old-school/img.html"
+	height="360" loading="lazy"
+	title="Black contour cogwheel icon on a green background, on hover it becomes purple."
 ></iframe>
 
 ```css
 a img {
-    object-fit: cover;
-    object-position: 0 0;
+	object-fit: cover;
+	object-position: 0 0;
 }
 
 a:hover img,
 a:focus img {
-    object-position: -200px 0;
+	object-position: -200px 0;
 }
 ```
 
@@ -121,32 +121,32 @@ If you just need to change your SVG icon’s color fill via CSS, you can put i
 
 ```html
 <a href aria-label="Settings">
-    <svg
-        viewBox="0 0 24 24"
-        width="200" height="200"
-        aria-hidden="true"
-    >
-        <path fill="currentcolor" d="M19.43…"/>
-    </svg>
+	<svg
+		viewBox="0 0 24 24"
+		width="200" height="200"
+		aria-hidden="true"
+	>
+		<path fill="currentcolor" d="M19.43…"/>
+	</svg>
 </a>
 ```
 
 <iframe
-    src="demos/symbols/inline.html"
-    height="360" loading="lazy"
-    title="Black contour cogwheel icon on a green background, on hover it becomes purple."
+	src="demos/symbols/inline.html"
+	height="360" loading="lazy"
+	title="Black contour cogwheel icon on a green background, on hover it becomes purple."
 ></iframe>
 
 Such an icon would inherit the parent element’s text color because its `<path>`’s fill is set to `currentcolor`, some kind of a variable that carries, you guessed it, the current color. In this case, you don’t even have to style the actual SVG element.
 
 ```css
 a {
-    color: #0c0b1d;
+	color: #0c0b1d;
 }
 
 a:hover,
 a:focus {
-    color: #9874d3;
+	color: #9874d3;
 }
 ```
 
@@ -157,20 +157,20 @@ But inline icons are not ideal. You can often rely on the browser cache when it
 To make all the paths _external_ to the document, we can put them together in a file organized in a special way. Let’s call it _sprite.svg_ and throw in another icon just to make it look like a library. Instead of the `<path>` itself, we now have `<use>` element that gets the symbol from the library by ID.
 
 <iframe
-    src="demos/symbols/external.html"
-    height="360" loading="lazy"
-    title="Black contour cogwheel icon on a green background, on hover it becomes purple."
+	src="demos/symbols/external.html"
+	height="360" loading="lazy"
+	title="Black contour cogwheel icon on a green background, on hover it becomes purple."
 ></iframe>
 
 ```html
 <a href aria-label="Settings">
-    <svg
-        viewBox="0 0 24 24"
-        width="200" height="200"
-        aria-hidden="true"
-    >
-        <use href="sprite.svg#favorite"/>
-    </svg>
+	<svg
+		viewBox="0 0 24 24"
+		width="200" height="200"
+		aria-hidden="true"
+	>
+		<use href="sprite.svg#favorite"/>
+	</svg>
 </a>
 ```
 
@@ -180,12 +180,12 @@ How does this _sprite.svg_ look like? It contains our SVG icons wrapped in `<s
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">
-    <symbol id="settings" viewBox="0 0 24 24">
-        <path fill="currentcolor" d="M19.43…"/>
-    </symbol>
-    <symbol id="favorite" viewBox="0 0 24 24">
-        <path fill="currentcolor" d="M16.5…"/>
-    </symbol>
+	<symbol id="settings" viewBox="0 0 24 24">
+		<path fill="currentcolor" d="M19.43…"/>
+	</symbol>
+	<symbol id="favorite" viewBox="0 0 24 24">
+		<path fill="currentcolor" d="M16.5…"/>
+	</symbol>
 </svg>
 ```
 
@@ -202,19 +202,19 @@ This method is a built-in SVG feature useful for organizing complex vector doc
 Let’s try one more time to use a “true” SVG sprite as a background image, with an anchor pointing to a specific icon in that sprite. Yes, the same thing that didn’t work previously. Wouldn’t it be nice to make it work? 🤔
 
 <iframe
-    src="demos/fragments/id.html"
-    height="360" loading="lazy"
-    title="Black contour cogwheel icon on a green background, on hover it becomes purple."
+	src="demos/fragments/id.html"
+	height="360" loading="lazy"
+	title="Black contour cogwheel icon on a green background, on hover it becomes purple."
 ></iframe>
 
 ```css
 a {
-    background-image: url('sprite.svg#link');
+	background-image: url('sprite.svg#link');
 }
 
 a:hover,
 a:focus {
-    background-image: url('sprite.svg#hover');
+	background-image: url('sprite.svg#hover');
 }
 ```
 
@@ -222,18 +222,18 @@ You know what? It works! Not only for background images but for content images�
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">
-    <view id="link" viewBox="0 0 24 24"/>
-    <path
-        transform="translate(0, 0)"
-        fill="#0c0b1d"
-        d="M19.43…"
-    />
-    <view id="hover" viewBox="24 0 24 24"/>
-    <path
-        transform="translate(24, 0)"
-        fill="#9874d3"
-        d="M19.43…"
-    />
+	<view id="link" viewBox="0 0 24 24"/>
+	<path
+		transform="translate(0, 0)"
+		fill="#0c0b1d"
+		d="M19.43…"
+	/>
+	<view id="hover" viewBox="24 0 24 24"/>
+	<path
+		transform="translate(24, 0)"
+		fill="#9874d3"
+		d="M19.43…"
+	/>
 </svg>
 
 ```
@@ -251,21 +251,21 @@ Unfortunately, this solution is limited to background images and content image
 While we’re at it, there’s another syntax that might be convenient in some cases. Previously, to make this “true sprite” work we had to mark it with `<view>` elements and unique IDs. But we can also tell what fragment of the sprite we need right in the URL, using `svgView` and `viewBox` parameters.
 
 <iframe
-    src="demos/fragments/view.html"
-    height="360" loading="lazy"
-    title="Black contour cogwheel icon on a green background, on hover it becomes purple."
+	src="demos/fragments/view.html"
+	height="360" loading="lazy"
+	title="Black contour cogwheel icon on a green background, on hover it becomes purple."
 ></iframe>
 
 ```css
 a {
-    background-image:
-        url('sprite.svg#svgView(viewBox(0, 0, 24, 24))');
+	background-image:
+		url('sprite.svg#svgView(viewBox(0, 0, 24, 24))');
 }
 
 a:hover,
 a:focus {
-    background-image:
-        url('sprite.svg#svgView(viewBox(24, 0, 24, 24))');
+	background-image:
+		url('sprite.svg#svgView(viewBox(24, 0, 24, 24))');
 }
 ```
 
@@ -273,16 +273,16 @@ This one will show the second icon on hover because of the 24 pixels shift. I�
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">
-    <path
-        transform="translate(0, 0)"
-        fill="#0c0b1d"
-        d="M19.43…"
-    />
-    <path
-        transform="translate(24, 0)"
-        fill="#9874d3"
-        d="M19.43…"
-    />
+	<path
+		transform="translate(0, 0)"
+		fill="#0c0b1d"
+		d="M19.43…"
+	/>
+	<path
+		transform="translate(24, 0)"
+		fill="#9874d3"
+		d="M19.43…"
+	/>
 </svg>
 ```
 
@@ -313,16 +313,16 @@ You know, the way I said “if only” and the next chapter that’s coming up
 Before diving into yet another SVG spriting method, let’s answer the most important question: does CSS styling work? Yes, it does. That’s what we’re going to try first.
 
 <iframe
-    src="demos/stacks/inline.html"
-    height="360" loading="lazy"
-    title="Black contour cogwheel icon on a green background, on hover it becomes purple."
+	src="demos/stacks/inline.html"
+	height="360" loading="lazy"
+	title="Black contour cogwheel icon on a green background, on hover it becomes purple."
 ></iframe>
 
 ```html
 <a href aria-label="Settings">
-    <svg aria-hidden="true" width="200" height="200">
-        <use href="sprite.svg#settings"/>
-    </svg>
+	<svg aria-hidden="true" width="200" height="200">
+		<use href="sprite.svg#settings"/>
+	</svg>
 </a>
 ```
 
@@ -332,19 +332,19 @@ Let’s pull the curtain and see what our _sprite.svg_ is made of:
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">
-    <defs>
-        <style>
-            :root svg:not(:target) {
-                display: none;
-            }
-        </style>
-    </defs>
-    <svg id="settings" viewBox="0 0 24 24">
-        <path fill="currentcolor" d="M19.43…"/>
-    </svg>
-    <svg id="favorite" viewBox="0 0 24 24">
-        <path fill="currentcolor" d="M16.5…"/>
-    </svg>
+	<defs>
+		<style>
+			:root svg:not(:target) {
+				display: none;
+			}
+		</style>
+	</defs>
+	<svg id="settings" viewBox="0 0 24 24">
+		<path fill="currentcolor" d="M19.43…"/>
+	</svg>
+	<svg id="favorite" viewBox="0 0 24 24">
+		<path fill="currentcolor" d="M16.5…"/>
+	</svg>
 </svg>
 ```
 
@@ -355,14 +355,14 @@ As for the `<svg>` wrappers for each icon, they serve an important role in ma
 But the most exciting part is that it also works for [background images](demos/stacks/background.html) and [content images](demos/stacks/img.html).
 
 <iframe
-    src="demos/stacks/background.html"
-    height="360" loading="lazy"
-    title="Black contour cogwheel icon on a green background, it does not become purple on hover."
+	src="demos/stacks/background.html"
+	height="360" loading="lazy"
+	title="Black contour cogwheel icon on a green background, it does not become purple on hover."
 ></iframe>
 
 ```css
 a {
-    background-image: url('sprite.svg#settings');
+	background-image: url('sprite.svg#settings');
 }
 ```
 
@@ -372,20 +372,20 @@ But if you really want this kind of sprite to work, it’s possible to creat
 
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg">
-    <defs>
-        <style>
-            :root svg:not(:target) {
-                display: none;
-            }
-        </style>
-        <path id="settings" d="M19.43…"/>
-    </defs>
-    <svg id="settings-black" viewBox="0 0 24 24">
-        <use fill="black" href="#settings"/>
-    </svg>
-    <svg id="settings-white" viewBox="0 0 24 24">
-        <use fill="white" href="#settings"/>
-    </svg>
+	<defs>
+		<style>
+			:root svg:not(:target) {
+				display: none;
+			}
+		</style>
+		<path id="settings" d="M19.43…"/>
+	</defs>
+	<svg id="settings-black" viewBox="0 0 24 24">
+		<use fill="black" href="#settings"/>
+	</svg>
+	<svg id="settings-white" viewBox="0 0 24 24">
+		<use fill="white" href="#settings"/>
+	</svg>
 </svg>
 ```
 
@@ -401,8 +401,8 @@ We need to put some opaque rectangles in each icon to give it a desirable 
 
 ```svg
 <svg id="settings" viewBox="0 0 24 24">
-    <rect width="24" height="24" fill-opacity="0"/>
-    <path fill="currentcolor" d="M19.43…"/>
+	<rect width="24" height="24" fill-opacity="0"/>
+	<path fill="currentcolor" d="M19.43…"/>
 </svg>
 ```
 

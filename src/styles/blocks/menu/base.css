@@ -1,35 +1,35 @@
 /* Menu */
 
 .menu {
-    --menu-current-back: hsl(var(--color-sulu));
-    --menu-current-text: hsl(var(--color-ebony));
+	--menu-current-back: hsl(var(--color-sulu));
+	--menu-current-text: hsl(var(--color-ebony));
 
-    background-color: var(--color-back-primary);
+	background-color: var(--color-back-primary);
 }
 
 /* List */
 
 .menu__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 /* Link */
 
 .menu__link {
-    padding: 0.15em;
-    border-radius: 2px;
-    color: var(--color-text-secondary);
+	padding: 0.15em;
+	border-radius: 2px;
+	color: var(--color-text-secondary);
 }
 
 @media (hover: hover) and (pointer: fine) {
-    .menu__link:hover {
-        color: var(--color-text-primary);
-    }
+	.menu__link:hover {
+		color: var(--color-text-primary);
+	}
 }
 
 .menu__link[aria-current] {
-    background-color: var(--menu-current-back);
-    color: var(--menu-current-text);
+	background-color: var(--menu-current-back);
+	color: var(--menu-current-text);
 }

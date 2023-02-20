@@ -1,26 +1,26 @@
 @media (width >= 1024px) {
 
-    /* Header */
+	/* Header */
 
-    .header {
-        display: grid;
-        grid-template-columns: min-content auto;
-        column-gap: 40px;
-        padding-block: 24px;
-        contain: layout;
-    }
+	.header {
+		display: grid;
+		grid-template-columns: min-content auto;
+		column-gap: 40px;
+		padding-block: 24px;
+		contain: layout;
+	}
 
-    /* Button */
+	/* Button */
 
-    .header__button {
-        display: none;
-    }
+	.header__button {
+		display: none;
+	}
 
-    /* Logo */
+	/* Logo */
 
-    .header__logo {
-        inline-size: 40px;
-        block-size: 40px;
-    }
+	.header__logo {
+		inline-size: 40px;
+		block-size: 40px;
+	}
 
 }

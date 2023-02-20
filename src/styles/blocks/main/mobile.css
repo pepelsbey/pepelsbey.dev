@@ -1,21 +1,21 @@
 @media (width < 1024px) {
 
-    /* Main */
+	/* Main */
 
-    .main {
-        padding-block: 40px 100px;
-    }
+	.main {
+		padding-block: 40px 100px;
+	}
 
-    /* Lead */
+	/* Lead */
 
-    .main__lead {
-        margin-block-start: -40px;
-    }
+	.main__lead {
+		margin-block-start: -40px;
+	}
 
-    /* Gaps */
+	/* Gaps */
 
-    .main__gaps {
-        row-gap: 80px;
-    }
+	.main__gaps {
+		row-gap: 80px;
+	}
 
 }
