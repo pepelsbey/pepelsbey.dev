@@ -3,9 +3,6 @@
 /* Title */
 
 .toc__title {
-	display: inline-flex;
-	align-items: center;
-	column-gap: 8px;
 	list-style: none;
 }
 
