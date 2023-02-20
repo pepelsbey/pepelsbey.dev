@@ -7,7 +7,6 @@
     align-items: center;
     column-gap: 8px;
     list-style: none;
-    text-decoration: underline;
 }
 
 .toc__title::-webkit-details-marker {
