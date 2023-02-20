@@ -1,5 +1,5 @@
 /* Project Feature */
 
 .project-feature {
-    --project-feature-scribble-fill: hsl(var(--color-white) / 1);
+	--project-feature-scribble-fill: hsl(var(--color-white) / 1);
 }

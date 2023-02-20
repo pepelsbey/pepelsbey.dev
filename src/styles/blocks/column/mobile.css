@@ -1,9 +1,9 @@
 @media (width < 1024px) {
 
-    /* Column */
+	/* Column */
 
-    .column {
-        padding-inline: 20px;
-    }
+	.column {
+		padding-inline: 20px;
+	}
 
 }

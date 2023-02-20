@@ -1,22 +1,22 @@
 @media (width >= 1024px) {
 
-    /* Caption */
+	/* Caption */
 
-    .caption {
-        margin-block-end: 80px;
-        padding-block-start: 20px;
-    }
+	.caption {
+		margin-block-end: 80px;
+		padding-block-start: 20px;
+	}
 
-    /* Title */
+	/* Title */
 
-    .caption__title--top {
-        font-size: var(--font-size-shout);
-    }
+	.caption__title--top {
+		font-size: var(--font-size-shout);
+	}
 
-    /* Label */
+	/* Label */
 
-    .caption__label {
-        display: inline;
-    }
+	.caption__label {
+		display: inline;
+	}
 
 }

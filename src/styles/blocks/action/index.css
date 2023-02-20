@@ -1,36 +1,36 @@
 /* Action */
 
 .action {
-    --action-hover-back: hsl(var(--color-sulu));
-    --action-hover-text: hsl(var(--color-ebony));
+	--action-hover-back: hsl(var(--color-sulu));
+	--action-hover-text: hsl(var(--color-ebony));
 
-    display: inline-flex;
-    align-items: center;
-    column-gap: 0.4em;
-    margin: 0;
-    padding: 0.15em;
-    border: none;
-    border-radius: 2px;
-    background-color: transparent;
-    color: var(--color-text-primary);
-    line-height: 1;
-    font-size: inherit;
-    font-family: inherit;
-    cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	column-gap: 0.4em;
+	margin: 0;
+	padding: 0.15em;
+	border: none;
+	border-radius: 2px;
+	background-color: transparent;
+	color: var(--color-text-primary);
+	line-height: 1;
+	font-size: inherit;
+	font-family: inherit;
+	cursor: pointer;
 }
 
 /* Hover */
 
 @media (hover: hover) and (pointer: fine) {
-    .action--hover:hover {
-        background-color: var(--action-hover-back);
-        color: var(--action-hover-text);
-    }
+	.action--hover:hover {
+		background-color: var(--action-hover-back);
+		color: var(--action-hover-text);
+	}
 }
 
 /* Icon */
 
 .action__icon {
-    width: 24px;
-    height: 24px;
+	width: 24px;
+	height: 24px;
 }

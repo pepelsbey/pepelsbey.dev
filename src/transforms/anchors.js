@@ -1,18 +1,18 @@
 const slugify = require('@sindresorhus/slugify');
 
 module.exports = function(window) {
-    const content = window.document.getElementById('article-content');
+	const content = window.document.getElementById('article-content');
 
-    if (!content) return;
+	if (!content) return;
 
-    const headings = content.querySelectorAll('h2, h3, h4, h5, h6');
+	const headings = content.querySelectorAll('h2, h3, h4, h5, h6');
 
-    for (const heading of headings) {
-        const text = heading.textContent.trim()
-        const id = slugify(text, {
-            decamelize: false
-        }).toLowerCase();
+	for (const heading of headings) {
+		const text = heading.textContent.trim()
+		const id = slugify(text, {
+			decamelize: false
+		}).toLowerCase();
 
-        heading.setAttribute('id', id);
-    }
+		heading.setAttribute('id', id);
+	}
 }

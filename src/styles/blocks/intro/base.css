@@ -1,57 +1,57 @@
 /* Intro */
 
 .intro {
-    position: relative;
-    display: grid;
+	position: relative;
+	display: grid;
 }
 
 /* Hi */
 
 .intro__hi {
-    margin: 0;
+	margin: 0;
 }
 
 /* Name */
 
 .intro__name {
-    margin: 0;
-    line-height: 1.1;
-    text-transform: uppercase;
-    font-weight: normal;
-    font-size: var(--font-size-shout);
-    font-family: var(--font-family-heading);
+	margin: 0;
+	line-height: 1.1;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: var(--font-size-shout);
+	font-family: var(--font-family-heading);
 }
 
 /* Photo */
 
 .intro__photo {
-    display: block;
-    width: 100%;
-    height: auto;
-    background-color: var(--intro-photo-back);
+	display: block;
+	width: 100%;
+	height: auto;
+	background-color: var(--intro-photo-back);
 }
 
 /* Who */
 
 .intro__who {
-    margin: 0;
-    font-family: var(--font-family-heading);
+	margin: 0;
+	font-family: var(--font-family-heading);
 }
 
 /* What */
 
 .intro__what {
-    margin: 0;
+	margin: 0;
 }
 
 /* Path */
 
 .intro__path {
-    margin: 0;
+	margin: 0;
 }
 
 /* Web */
 
 .intro__web {
-    margin: 0;
+	margin: 0;
 }

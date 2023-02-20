@@ -1,44 +1,44 @@
 {% if pagination.hrefs.length > 1 %}
-    <nav class="pagination" aria-label="Articles">
-        {% if pagination.href.previous %}
-            <a
-                class="pagination__link"
-                href="{{ pagination.href.previous }}"
-                aria-label="Previous page"
-                rel="prev"
-            >
-                <svg width="24" height="24" aria-hidden="true">
-                    <use href="/images/icons.svg#left"/>
-                </svg>
-            </a>
-        {% endif %}
-        <ul class="pagination__list">
-            {% for pageEntry in pagination.pages %}
-                {% set href = pagination.hrefs[loop.index0] %}
-                {% set current = 'aria-current="page"' if page.url == href else '' %}
-                <li class="pagination__number">
-                    <a
-                        class="pagination__link"
-                        href="{{ href }}"
-                        aria-label="Page {{ loop.index }}"
-                        {{ current | safe }}
-                    >
-                        {{ loop.index }}
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-        {% if pagination.href.next %}
-            <a
-                class="pagination__link"
-                href="{{ pagination.href.next }}"
-                aria-label="Next page"
-                rel="next"
-            >
-                <svg width="24" height="24" aria-hidden="true">
-                    <use href="/images/icons.svg#right"/>
-                </svg>
-            </a>
-        {% endif %}
-    </ul>
+	<nav class="pagination" aria-label="Articles">
+		{% if pagination.href.previous %}
+			<a
+				class="pagination__link"
+				href="{{ pagination.href.previous }}"
+				aria-label="Previous page"
+				rel="prev"
+			>
+				<svg width="24" height="24" aria-hidden="true">
+					<use href="/images/icons.svg#left"/>
+				</svg>
+			</a>
+		{% endif %}
+		<ul class="pagination__list">
+			{% for pageEntry in pagination.pages %}
+				{% set href = pagination.hrefs[loop.index0] %}
+				{% set current = 'aria-current="page"' if page.url == href else '' %}
+				<li class="pagination__number">
+					<a
+						class="pagination__link"
+						href="{{ href }}"
+						aria-label="Page {{ loop.index }}"
+						{{ current | safe }}
+					>
+						{{ loop.index }}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+		{% if pagination.href.next %}
+			<a
+				class="pagination__link"
+				href="{{ pagination.href.next }}"
+				aria-label="Next page"
+				rel="next"
+			>
+				<svg width="24" height="24" aria-hidden="true">
+					<use href="/images/icons.svg#right"/>
+				</svg>
+			</a>
+		{% endif %}
+	</ul>
 {% endif %}

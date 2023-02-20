@@ -1,12 +1,12 @@
 module.exports = function(window) {
-    const content = window.document.getElementById('article-content');
+	const content = window.document.getElementById('article-content');
 
-    if (!content) return;
+	if (!content) return;
 
-    const pres = content.querySelectorAll('pre');
+	const pres = content.querySelectorAll('pre');
 
-    [...pres]
-        .forEach((pre) => {
-            pre.classList.add('prism');
-        });
+	[...pres]
+		.forEach((pre) => {
+			pre.classList.add('prism');
+		});
 }

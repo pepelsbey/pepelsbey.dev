@@ -1,6 +1,6 @@
 /* Project Section List */
 
 .project-section-list {
-    display: grid;
-    row-gap: 60px;
+	display: grid;
+	row-gap: 60px;
 }

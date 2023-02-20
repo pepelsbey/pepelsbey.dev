@@ -56,19 +56,19 @@ Let’s say our tablet breakpoint starts at 768 px and ends at 1023 px. Ever
 
 ```html
 <link
-    rel="stylesheet" href="base.css"
+	rel="stylesheet" href="base.css"
 >
 <link
-    rel="stylesheet" href="mobile.css"
-    media="(max-width: 767px)"
+	rel="stylesheet" href="mobile.css"
+	media="(max-width: 767px)"
 >
 <link
-    rel="stylesheet" href="tablet.css"
-    media="(min-width: 768px) and (max-width: 1023px)"
+	rel="stylesheet" href="tablet.css"
+	media="(min-width: 768px) and (max-width: 1023px)"
 >
 <link
-    rel="stylesheet" href="desktop.css"
-    media="(min-width: 1024px)"
+	rel="stylesheet" href="desktop.css"
+	media="(min-width: 1024px)"
 >
 ```
 
@@ -88,12 +88,12 @@ The first _base.css_ is quite small, only 91 bytes:
 
 ```css
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
 body {
-    margin: 0;
-    background-position: center;
+	margin: 0;
+	background-position: center;
 }
 ```
 
@@ -101,18 +101,18 @@ Then goes _mobile.css_, slightly bigger (16 KB), but only because I artificial
 
 ```css
 body {
-    background-color: #ef875d;
-    background-image: url('data:image/png;base64,…');
-    background-size: 511px 280px;
+	background-color: #ef875d;
+	background-image: url('data:image/png;base64,…');
+	background-size: 511px 280px;
 }
 ```
 
 I made both _tablet.css_ (83 KB) and _desktop.css_ (275 KB) even larger with bigger images inlined. You can play with the demo by resizing the window to get the idea. It’s going to help us understand how browsers prioritize CSS loading.
 
 <iframe
-    src="demo/index.html"
-    height="280" loading="lazy"
-    title="Demo with words “mobile” on the red, “tablet” on the green, or “desktop” on the violet backgrounds, depending on the viewport width."
+	src="demo/index.html"
+	height="280" loading="lazy"
+	title="Demo with words “mobile” on the red, “tablet” on the green, or “desktop” on the violet backgrounds, depending on the viewport width."
 ></iframe>
 
 ## Priorities
@@ -178,12 +178,12 @@ One of the most popular media features these days is `prefers-color-scheme`, w
 
 ```html
 <link
-    rel="stylesheet" href="light.css"
-    media="(prefers-color-scheme: light)"
+	rel="stylesheet" href="light.css"
+	media="(prefers-color-scheme: light)"
 >
 <link
-    rel="stylesheet" href="dark.css"
-    media="(prefers-color-scheme: dark)"
+	rel="stylesheet" href="dark.css"
+	media="(prefers-color-scheme: dark)"
 >
 ```
 
@@ -195,17 +195,17 @@ Sometimes we have to deal not with [beautiful vector graphics](/articles/svg-s
 
 ```css
 a {
-    display: block;
-    width: 24px;
-    height: 24px;
-    background-image: url('icon.png');
+	display: block;
+	width: 24px;
+	height: 24px;
+	background-image: url('icon.png');
 }
 
 @media (min-resolution: 2dppx) {
-    a {
-        background-image: url('icon@2x.png');
-        background-size: 24px 24px;
-    }
+	a {
+		background-image: url('icon@2x.png');
+		background-size: 24px 24px;
+	}
 }
 ```
 
@@ -213,8 +213,8 @@ These six lines of CSS specifically targeting high-density screens are usually 
 
 ```html
 <link
-    rel="stylesheet" href="retina.css"
-    media="(min-resolution: 2dppx)"
+	rel="stylesheet" href="retina.css"
+	media="(min-resolution: 2dppx)"
 >
 ```
 
@@ -226,8 +226,8 @@ Animations and smooth transitions could improve user experience, but for some pe
 
 ```html
 <link
-    rel="stylesheet" href="animation.css"
-    media="(prefers-reduced-motion: no-preference)"
+	rel="stylesheet" href="animation.css"
+	media="(prefers-reduced-motion: no-preference)"
 >
 ```
 

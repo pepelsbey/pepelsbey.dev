@@ -11,60 +11,60 @@ const mobileCheck = matchMedia('(max-width: 1023px)');
 const focusTrap = createFocusTrap(header);
 
 function isMenuOpen() {
-    return headerButton.getAttribute('aria-expanded') === 'true';
+	return headerButton.getAttribute('aria-expanded') === 'true';
 }
 
 function openMenu() {
-    page.classList.add('page--clip');
+	page.classList.add('page--clip');
 
-    headerButton.setAttribute('aria-expanded', 'true');
-    headerLink.setAttribute('tabindex', '-1');
+	headerButton.setAttribute('aria-expanded', 'true');
+	headerLink.setAttribute('tabindex', '-1');
 
-    menu.classList.remove('menu--closed');
-    setTimeout(() => {
-        menu.classList.add('menu--open'), 20
-    });
+	menu.classList.remove('menu--closed');
+	setTimeout(() => {
+		menu.classList.add('menu--open'), 20
+	});
 
-    focusTrap.activate();
+	focusTrap.activate();
 }
 
 function closeMenu() {
-    page.classList.remove('page--clip');
+	page.classList.remove('page--clip');
 
-    headerButton.setAttribute('aria-expanded', 'false');
-    headerLink.removeAttribute('tabindex');
+	headerButton.setAttribute('aria-expanded', 'false');
+	headerLink.removeAttribute('tabindex');
 
-    menu.classList.remove('menu--open');
-    menu.addEventListener('transitionend', () => {
-        if (!menu.classList.contains('menu--open')) {
-            menu.classList.add('menu--closed');
-        }
-    }, {
-        once: true
-    });
+	menu.classList.remove('menu--open');
+	menu.addEventListener('transitionend', () => {
+		if (!menu.classList.contains('menu--open')) {
+			menu.classList.add('menu--closed');
+		}
+	}, {
+		once: true
+	});
 
-    focusTrap.deactivate();
+	focusTrap.deactivate();
 }
 
 headerButton.addEventListener('click', () => {
-    isMenuOpen() ? closeMenu() : openMenu();
+	isMenuOpen() ? closeMenu() : openMenu();
 });
 
 document.addEventListener('keyup', (event) => {
-    if (event.key === 'Escape' && isMenuOpen()) {
-        closeMenu();
-    }
+	if (event.key === 'Escape' && isMenuOpen()) {
+		closeMenu();
+	}
 });
 
 mobileCheck.addEventListener('change', (event) => {
-    if (event.matches) {
-        menuFeed.after(menuList);
-    } else {
-        menuFeed.before(menuList);
-        closeMenu();
-    }
+	if (event.matches) {
+		menuFeed.after(menuList);
+	} else {
+		menuFeed.before(menuList);
+		closeMenu();
+	}
 });
 
 if (mobileCheck.matches) {
-    menuFeed.after(menuList);
+	menuFeed.after(menuList);
 }

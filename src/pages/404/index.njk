@@ -1,44 +1,44 @@
 <div class="main column">
-    <div class="main__gaps">
-        <main id="main">
-            <header class="caption">
-                <h1 class="caption__title caption__title--top">
-                    {{ title }}
-                </h1>
-            </header>
-            <div class="two-columns">
-                <div class="two-columns__page">
-                    <div class="content content-block content-inline">
-                        {{ content | markdown | safe }}
-                    </div>
-                </div>
-            </div>
-        </main>
-        <aside>
-            <header class="caption">
-                <h2 class="caption__title">
-                    Articles
-                </h2>
-                <span class="caption__number" aria-label="{{ collections.articles.length }} in total">
-                    {{ collections.articles.length }}
-                </span>
-                <a class="caption__link action action--hover" href="/articles/" aria-label="View all articles">
-                    <span class="caption__label">
-                        View all
-                    </span>
-                    <svg class="action__icon" width="24" height="24" aria-hidden="true">
-                        <use href="/images/icons.svg#right"/>
-                    </svg>
-                </a>
-            </header>
+	<div class="main__gaps">
+		<main id="main">
+			<header class="caption">
+				<h1 class="caption__title caption__title--top">
+					{{ title }}
+				</h1>
+			</header>
+			<div class="two-columns">
+				<div class="two-columns__page">
+					<div class="content content-block content-inline">
+						{{ content | markdown | safe }}
+					</div>
+				</div>
+			</div>
+		</main>
+		<aside>
+			<header class="caption">
+				<h2 class="caption__title">
+					Articles
+				</h2>
+				<span class="caption__number" aria-label="{{ collections.articles.length }} in total">
+					{{ collections.articles.length }}
+				</span>
+				<a class="caption__link action action--hover" href="/articles/" aria-label="View all articles">
+					<span class="caption__label">
+						View all
+					</span>
+					<svg class="action__icon" width="24" height="24" aria-hidden="true">
+						<use href="/images/icons.svg#right"/>
+					</svg>
+				</a>
+			</header>
 
-            {% from 'article-card-list.njk' import articleCardList with context %}
+			{% from 'article-card-list.njk' import articleCardList with context %}
 
-            {{ articleCardList(
-                collection=collections.articles | reverse,
-                heading='h3',
-                limit=4
-            ) }}
-        </aside>
-    </div>
+			{{ articleCardList(
+				collection=collections.articles | reverse,
+				heading='h3',
+				limit=4
+			) }}
+		</aside>
+	</div>
 </div>

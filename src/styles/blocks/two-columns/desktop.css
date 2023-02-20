@@ -1,22 +1,22 @@
 @media (width >= 1760px) {
 
-    /* TOC */
+	/* TOC */
 
-    .two-columns__toc {
-        padding-block-start: 80px;
-    }
+	.two-columns__toc {
+		padding-block-start: 80px;
+	}
 
-    /* Cards */
+	/* Cards */
 
-    .two-columns__cards {
-        row-gap: 80px;
-    }
+	.two-columns__cards {
+		row-gap: 80px;
+	}
 
-    /* Acticle */
+	/* Acticle */
 
-    .two-columns__article {
-        grid-column: 3 / span 4;
-        padding-block-start: 80px;
-    }
+	.two-columns__article {
+		grid-column: 3 / span 4;
+		padding-block-start: 80px;
+	}
 
 }

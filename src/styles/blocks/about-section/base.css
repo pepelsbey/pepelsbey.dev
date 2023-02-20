@@ -1,45 +1,45 @@
 /* About Section */
 
 .about-section {
-    position: relative;
-    display: grid;
-    align-content: start;
-    row-gap: 20px;
+	position: relative;
+	display: grid;
+	align-content: start;
+	row-gap: 20px;
 }
 
 /* Title */
 
 .about-section__title {
-    margin: 0;
-    font-weight: normal;
-    font-size: var(--font-size-h2);
-    font-family: var(--font-family-heading);
+	margin: 0;
+	font-weight: normal;
+	font-size: var(--font-size-h2);
+	font-family: var(--font-family-heading);
 }
 
 /* Desc */
 
 .about-section__desc {
-    margin: 0;
-    padding-block-end: 20px;
-    border-block-end: 2px solid var(--color-text-primary);
+	margin: 0;
+	padding-block-end: 20px;
+	border-block-end: 2px solid var(--color-text-primary);
 }
 
 /* Skills */
 
 .about-section__skills {
-    column-count: 2;
-    column-gap: 20px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+	column-count: 2;
+	column-gap: 20px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 /* Contacts */
 
 .about-section__contacts {
-    display: grid;
-    row-gap: 8px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+	display: grid;
+	row-gap: 8px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }

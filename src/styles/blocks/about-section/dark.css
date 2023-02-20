@@ -1,5 +1,5 @@
 /* About Section */
 
 .about-section {
-    --about-section-scribble-fill: hsl(var(--color-manatee) / 0.2);
+	--about-section-scribble-fill: hsl(var(--color-manatee) / 0.2);
 }

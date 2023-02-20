@@ -1,15 +1,15 @@
 @media (width < 1024px) {
 
-    /* TOC */
+	/* TOC */
 
-    .toc--tablet {
-        display: none;
-    }
+	.toc--tablet {
+		display: none;
+	}
 
-    /* List */
+	/* List */
 
-    .toc__list {
-        padding-block: 12px;
-    }
+	.toc__list {
+		padding-block: 12px;
+	}
 
 }

@@ -1,29 +1,29 @@
 @media (width >= 1024px) {
 
-    /* Scribble */
+	/* Scribble */
 
-    .about-section__scribble {
-        position: absolute;
-        inset-block-start: 0;
-        z-index: -1;
-        inline-size: auto;
-        block-size: 600px;
-        color: var(--about-section-scribble-fill);
-        pointer-events: none;
-    }
+	.about-section__scribble {
+		position: absolute;
+		inset-block-start: 0;
+		z-index: -1;
+		inline-size: auto;
+		block-size: 600px;
+		color: var(--about-section-scribble-fill);
+		pointer-events: none;
+	}
 
 }
 
 @media (1024px <= width < 1760px) {
 
-    /* Scribble */
+	/* Scribble */
 
-    .about-section__scribble--work {
-        inset-inline-start: -620px;
-    }
+	.about-section__scribble--work {
+		inset-inline-start: -620px;
+	}
 
-    .about-section__scribble--contacts {
-        display: none;
-    }
+	.about-section__scribble--contacts {
+		display: none;
+	}
 
 }

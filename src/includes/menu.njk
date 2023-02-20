@@ -1,25 +1,25 @@
 <nav class="menu menu--closed" id="menu" aria-label="Primary">
-    <ul class="menu__list">
-        {% for item in menu %}
-            {% if item.link == page.url %}
-                {% set current = 'aria-current="page"' %}
-            {% else %}
-                {% set current = '' %}
-            {% endif %}
-            <li class="menu__item">
-                <a class="menu__link" href="{{ item.link }}" {{ current | safe }}>
-                    {{- item.title -}}
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
+	<ul class="menu__list">
+		{% for item in menu %}
+			{% if item.link == page.url %}
+				{% set current = 'aria-current="page"' %}
+			{% else %}
+				{% set current = '' %}
+			{% endif %}
+			<li class="menu__item">
+				<a class="menu__link" href="{{ item.link }}" {{ current | safe }}>
+					{{- item.title -}}
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
 
-    <a class="menu__feed action action--hover" href="/feed/">
-        <svg class="action__icon" width="24" height="24" aria-hidden="true">
-            <use href="/images/icons.svg#rss"/>
-        </svg>
-        RSS
-    </a>
+	<a class="menu__feed action action--hover" href="/feed/">
+		<svg class="action__icon" width="24" height="24" aria-hidden="true">
+			<use href="/images/icons.svg#rss"/>
+		</svg>
+		RSS
+	</a>
 
-    {% include 'theme-switcher.njk' %}
+	{% include 'theme-switcher.njk' %}
 </nav>

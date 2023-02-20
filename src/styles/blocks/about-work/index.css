@@ -1,29 +1,29 @@
 /* About Work */
 
 .about-work {
-    display: grid;
-    row-gap: 24px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+	display: grid;
+	row-gap: 24px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 /* Item */
 
 .about-work__item {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 20px;
 }
 
 /* Period */
 
 .about-work__period {
-    grid-row: span 2;
+	grid-row: span 2;
 }
 
 /* Title */
 
 .about-work__title {
-    color: var(--color-text-secondary);
+	color: var(--color-text-secondary);
 }

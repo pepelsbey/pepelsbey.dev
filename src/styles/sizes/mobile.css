@@ -1,10 +1,10 @@
 @media (width < 1024px) {
-    :root {
-        --font-size-small: 1rem;
-        --font-size-normal: 1rem;
-        --font-size-h3: 1.5rem;
-        --font-size-h2: 2rem;
-        --font-size-h1: 2.5rem;
-        --font-size-shout: 4rem;
-    }
+	:root {
+		--font-size-small: 1rem;
+		--font-size-normal: 1rem;
+		--font-size-h3: 1.5rem;
+		--font-size-h2: 2rem;
+		--font-size-h1: 2.5rem;
+		--font-size-shout: 4rem;
+	}
 }

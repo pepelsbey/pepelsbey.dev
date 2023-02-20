@@ -1,6 +1,6 @@
 /* Intro */
 
 .intro {
-    --intro-photo-back: hsl(var(--color-sulu));
-    --intro-scribble-fill: hsl(var(--color-titan));
+	--intro-photo-back: hsl(var(--color-sulu));
+	--intro-scribble-fill: hsl(var(--color-titan));
 }

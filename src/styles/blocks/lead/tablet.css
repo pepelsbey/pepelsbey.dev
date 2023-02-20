@@ -1,19 +1,19 @@
 @media (1024px <= width < 1760px) {
 
-    /* Lead */
+	/* Lead */
 
-    .lead {
-        padding-block: 48px;
-    }
+	.lead {
+		padding-block: 48px;
+	}
 
-    /* Scribble */
+	/* Scribble */
 
-    .lead__scribble {
-        inset-block: 0;
-        inset-inline-end: 0;
-        margin: auto;
-        inline-size: 640px;
-        block-size: auto;
-    }
+	.lead__scribble {
+		inset-block: 0;
+		inset-inline-end: 0;
+		margin: auto;
+		inline-size: 640px;
+		block-size: auto;
+	}
 
 }

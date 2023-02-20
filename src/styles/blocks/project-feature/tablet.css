@@ -1,20 +1,20 @@
 @media (width >= 1024px) {
 
-    /* Project Feature */
+	/* Project Feature */
 
-    .project-feature {
-        --project-feature-size: 364px;
-        --project-feature-radius: 40px;
-        --project-feature-scribble-size: calc(
-            var(--project-feature-size) -
-            var(--project-feature-scribble-margin) * 2
-        );
-    }
+	.project-feature {
+		--project-feature-size: 364px;
+		--project-feature-radius: 40px;
+		--project-feature-scribble-size: calc(
+			var(--project-feature-size) -
+			var(--project-feature-scribble-margin) * 2
+		);
+	}
 
-    /* Icon */
+	/* Icon */
 
-    .project-feature__icon {
-        width: 64px;
-        height: 64px;
-    }
+	.project-feature__icon {
+		width: 64px;
+		height: 64px;
+	}
 }

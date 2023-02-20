@@ -1,27 +1,27 @@
 /* Page */
 
 .page {
-    background-color: var(--color-back-primary);
-    color: var(--color-text-primary);
+	background-color: var(--color-back-primary);
+	color: var(--color-text-primary);
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .page {
-        scroll-behavior: smooth;
-    }
+	.page {
+		scroll-behavior: smooth;
+	}
 }
 
 /* Clip */
 
 .page--clip {
-    overflow: hidden;
+	overflow: hidden;
 }
 
 /* Body */
 
 .page__body {
-    margin: 0;
-    line-height: 1.5;
-    font-size: var(--font-size-normal);
-    font-family: var(--font-family-text);
+	margin: 0;
+	line-height: 1.5;
+	font-size: var(--font-size-normal);
+	font-family: var(--font-family-text);
 }

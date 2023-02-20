@@ -1,76 +1,76 @@
 {% macro articleCard(
-    article,
-    heading
+	article,
+	heading
 ) %}
-    {% set video = article.data.video %}
-    {% set external = article.data.source %}
+	{% set video = article.data.video %}
+	{% set external = article.data.source %}
 
-    {% if external %}
-        {% set articleUrl = article.data.source.url %}
-        {% set targetBlank = 'target="_blank"' %}
-    {% else %}
-        {% set articleUrl = article.url %}
-    {% endif %}
+	{% if external %}
+		{% set articleUrl = article.data.source.url %}
+		{% set targetBlank = 'target="_blank"' %}
+	{% else %}
+		{% set articleUrl = article.url %}
+	{% endif %}
 
-    <article class="article-card">
-        <div class="article-card__box">
-            <{{ heading }} class="article-card__title">
-                <a class="article-card__link" href="{{ articleUrl }}" {{ targetBlank }}>
-                    {{- article.data.title | safe -}}
-                </a>
-            </{{ heading }}>
+	<article class="article-card">
+		<div class="article-card__box">
+			<{{ heading }} class="article-card__title">
+				<a class="article-card__link" href="{{ articleUrl }}" {{ targetBlank }}>
+					{{- article.data.title | safe -}}
+				</a>
+			</{{ heading }}>
 
-            <p class="tags">
-                {% for tag in article.data.tags %}
-                    <span class="tags__item">
-                        {{ tag }}
-                    </span>
-                {% endfor %}
-            </p>
+			<p class="tags">
+				{% for tag in article.data.tags %}
+					<span class="tags__item">
+						{{ tag }}
+					</span>
+				{% endfor %}
+			</p>
 
-            <p class="article-card__types">
-                {% if video %}
-                    <svg class="article-card__type article-card__type--video"
-                        width="24" height="24"
-                        role="img" aria-label="Video"
-                    >
-                        <use href="/images/icons.svg#video"/>
-                    </svg>
-                {% endif %}
-                <svg class="article-card__type article-card__type--text"
-                    width="24" height="24"
-                    role="img" aria-label="Article"
-                >
-                    <use href="/images/icons.svg#text"/>
-                </svg>
-                {% if external %}
-                    <svg class="article-card__type article-card__type--external"
-                        width="24" height="24"
-                        role="img" aria-label="External"
-                    >
-                        <use href="/images/icons.svg#external"/>
-                    </svg>
-                {% endif %}
-            </p>
+			<p class="article-card__types">
+				{% if video %}
+					<svg class="article-card__type article-card__type--video"
+						width="24" height="24"
+						role="img" aria-label="Video"
+					>
+						<use href="/images/icons.svg#video"/>
+					</svg>
+				{% endif %}
+				<svg class="article-card__type article-card__type--text"
+					width="24" height="24"
+					role="img" aria-label="Article"
+				>
+					<use href="/images/icons.svg#text"/>
+				</svg>
+				{% if external %}
+					<svg class="article-card__type article-card__type--external"
+						width="24" height="24"
+						role="img" aria-label="External"
+					>
+						<use href="/images/icons.svg#external"/>
+					</svg>
+				{% endif %}
+			</p>
 
-            <time class="article-card__date" datetime="{{ article.date | dateISO }}">
-                {{ article.date | dateShort }}
-            </time>
-        </div>
+			<time class="article-card__date" datetime="{{ article.date | dateISO }}">
+				{{ article.date | dateShort }}
+			</time>
+		</div>
 
-        <div class="article-card__desc">
-            <p class="article-card__text content content-inline">
-                {{ article.data.desc | markdownInline | safe }}
-            </p>
+		<div class="article-card__desc">
+			<p class="article-card__text content content-inline">
+				{{ article.data.desc | markdownInline | safe }}
+			</p>
 
-            {% if external %}
-                <a class="article-card__source action" href="{{ article.data.source.url }}" {{ targetBlank }}>
-                    Read on {{ article.data.source.title }}
-                    <svg class="action__icon" width="24" height="24" aria-hidden="true">
-                        <use href="/images/icons.svg#external"/>
-                    </svg>
-                </a>
-            {% endif %}
-        </div>
-    </article>
+			{% if external %}
+				<a class="article-card__source action" href="{{ article.data.source.url }}" {{ targetBlank }}>
+					Read on {{ article.data.source.title }}
+					<svg class="action__icon" width="24" height="24" aria-hidden="true">
+						<use href="/images/icons.svg#external"/>
+					</svg>
+				</a>
+			{% endif %}
+		</div>
+	</article>
 {% endmacro %}

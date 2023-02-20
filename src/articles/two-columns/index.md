@@ -2,9 +2,9 @@ Imagine you need to create a two-column layout. Yes, the simplest one: a colu
 
 ```css
 .columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
 }
 ```
 
@@ -50,12 +50,12 @@ Tables were the first layout tool available in browsers. And I used them to c
 ```html
 <table class="columns">
 <tr>
-    <td class="columns__item columns__item--first">
-        <!-- Left -->
-    </td>
-    <td class="columns__item columns__item--second">
-        <!-- Right -->
-    </td>
+	<td class="columns__item columns__item--first">
+		<!-- Left -->
+	</td>
+	<td class="columns__item columns__item--second">
+		<!-- Right -->
+	</td>
 </tr>
 </table>
 ```
@@ -68,13 +68,13 @@ To make tables disappear and behave like a neutral column component we need t
 
 ```css
 .columns {
-    border-collapse: collapse;
+	border-collapse: collapse;
 }
 
 .columns__item {
-    padding: 0;
-    width: 50%;
-    vertical-align: top;
+	padding: 0;
+	width: 50%;
+	vertical-align: top;
 }
 ```
 
@@ -82,11 +82,11 @@ To make a gap in 2002 I’d use another empty cell in the middle with some e
 
 ```css
 .columns__item--first {
-    padding-right: 10px;
+	padding-right: 10px;
 }
 
 .columns__item--second {
-    padding-left: 10px;
+	padding-left: 10px;
 }
 ```
 
@@ -96,8 +96,8 @@ And here comes the news:
 
 ```html
 <article class="news">
-    <h2 class="news__title">Title</h2>
-    <p class="news__lead">Content</p>
+	<h2 class="news__title">Title</h2>
+	<p class="news__lead">Content</p>
 </article>
 ```
 
@@ -115,12 +115,12 @@ In this case, we won’t need any special HTML elements to make it work, so�
 
 ```html
 <div class="columns">
-    <div class="columns__item columns__item--first">
-        <!-- Left -->
-    </div>
-    <div class="columns__item columns__item--second">
-        <!-- Right -->
-    </div>
+	<div class="columns__item columns__item--first">
+		<!-- Left -->
+	</div>
+	<div class="columns__item columns__item--second">
+		<!-- Right -->
+	</div>
 </div>
 ```
 
@@ -135,7 +135,7 @@ Let’s go with the first option. Back in float layouts days, we’d use `over
 
 ```css
 .columns {
-    display: flow-root;
+	display: flow-root;
 }
 ```
 
@@ -145,7 +145,7 @@ Now we need to set up columns’ width and since they’re not glued together
 
 ```css
 .columns__item {
-    width: calc(50% - 10px);
+	width: calc(50% - 10px);
 }
 ```
 
@@ -153,11 +153,11 @@ Let’s finally float them to different sides of the parent:
 
 ```css
 .columns__item--first {
-    float: left;
+	float: left;
 }
 
 .columns__item--second {
-    float: right;
+	float: right;
 }
 ```
 
@@ -173,9 +173,9 @@ First of all, we need to make inline blocks out of our columns to make the 
 
 ```css
 .columns__item {
-    display: inline-block;
-    width: calc(50% - 10px);
-    vertical-align: top;
+	display: inline-block;
+	width: calc(50% - 10px);
+	vertical-align: top;
 }
 ```
 
@@ -193,11 +193,11 @@ The second way is rather fragile, so let’s go with the first one. And since
 
 ```css
 .columns {
-    font-size: 0;
+	font-size: 0;
 }
 
 .columns__item {
-    font-size: 16px;
+	font-size: 16px;
 }
 ```
 
@@ -205,13 +205,13 @@ Once we have both our columns sitting right next to each other, we can make t
 
 ```css
 .columns {
-    word-spacing: 20px;
-    font-size: 0;
+	word-spacing: 20px;
+	font-size: 0;
 }
 
 .columns__item {
-    word-spacing: normal;
-    font-size: 16px;
+	word-spacing: normal;
+	font-size: 16px;
 }
 ```
 
@@ -227,7 +227,7 @@ It’s time for the first layout technique that was designed for layouts. Well, 
 
 ```css
 .columns {
-    columns: 2 20px;
+	columns: 2 20px;
 }
 ```
 
@@ -240,7 +240,7 @@ Since content is flowing from one column to another, some block parts are flow
 
 ```css
 .columns__item {
-    break-inside: avoid;
+	break-inside: avoid;
 }
 ```
 
@@ -256,12 +256,12 @@ Now it’s as easy as:
 
 ```css
 .columns {
-    display: flex;
-    gap: 20px;
+	display: flex;
+	gap: 20px;
 }
 
 .columns__item {
-    width: 50%;
+	width: 50%;
 }
 ```
 
@@ -269,12 +269,12 @@ But if you don’t have the luxury of supporting only recent browser versions,
 
 ```css
 .columns {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .columns__item {
-    width: calc(50% - 10px);
+	width: calc(50% - 10px);
 }
 ```
 
@@ -288,9 +288,9 @@ Seriously, Grid Layout makes so much sense in almost every layout situation, e
 
 ```css
 .columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
 }
 ```
 
@@ -320,13 +320,13 @@ Let’s keep the parent component in the flow with `position: relative`. In th
 
 ```css
 .columns {
-    position: relative;
+	position: relative;
 }
 
 .columns__item {
-    position: absolute;
-    top: 0;
-    width: calc(50% - 10px);
+	position: absolute;
+	top: 0;
+	width: calc(50% - 10px);
 }
 ```
 
@@ -334,11 +334,11 @@ Since absolutely positioned elements are in their _parallel world,_ they tend t
 
 ```css
 .columns__item--first {
-    left: 0;
+	left: 0;
 }
 
 .columns__item--second {
-    right: 0;
+	right: 0;
 }
 ```
 
@@ -361,7 +361,7 @@ Knowing that let’s try a silly thing: change the parent’s block writing mod
 
 ```css
 .columns {
-    writing-mode: vertical-lr;
+	writing-mode: vertical-lr;
 }
 ```
 
@@ -372,8 +372,8 @@ See, this already looks like a layout! But some things need to be fixed to m
 
 ```css
 .columns__item {
-    width: 390px;
-    writing-mode: horizontal-tb;
+	width: 390px;
+	writing-mode: horizontal-tb;
 }
 ```
 
@@ -381,7 +381,7 @@ Unfortunately, there’s no way for us to use the `gap` property outside of 
 
 ```css
 .columns__item + .columns__item {
-    margin-left: 20px;
+	margin-left: 20px;
 }
 ```
 
@@ -401,9 +401,9 @@ Let’s start from CSS… and finish right away. This is the only styling we’
 
 ```css
 .columns {
-    display: block;
-    width: 100%;
-    height: 100%;
+	display: block;
+	width: 100%;
+	height: 100%;
 }
 ```
 
@@ -411,18 +411,18 @@ You can already see that this method is as friendly to content flow as absol
 
 ```html
 <svg class="columns">
-    <foreignObject>
-        <article class="news news--first">
-            <h2 class="news__title">Title</h2>
-            <p class="news__lead">Content</p>
-        </article>
-    </foreignObject>
-    <foreignObject>
-        <article class="news news--second">
-            <h2 class="news__title">Title</h2>
-            <p class="news__lead">Content</p>
-        </article>
-    </foreignObject>
+	<foreignObject>
+		<article class="news news--first">
+			<h2 class="news__title">Title</h2>
+			<p class="news__lead">Content</p>
+		</article>
+	</foreignObject>
+	<foreignObject>
+		<article class="news news--second">
+			<h2 class="news__title">Title</h2>
+			<p class="news__lead">Content</p>
+		</article>
+	</foreignObject>
 </svg>
 ```
 
@@ -436,10 +436,10 @@ To make it work, we need to position these foreign agents… sorry, I mean 
 
 ```html
 <foreignObject x="0" y="0" width="390" height="100%">
-    <!-- Left -->
+	<!-- Left -->
 </foreignObject>
 <foreignObject x="410" y="0" width="390" height="100%">
-    <!-- Right -->
+	<!-- Right -->
 </foreignObject>
 ```
 
@@ -457,9 +457,9 @@ To make it work, let’s resize our columns to half of the parent width minu
 
 ```css
 .columns__item {
-    position: absolute;
-    clip-path: inset(50%);
-    width: calc(50% - 10px);
+	position: absolute;
+	clip-path: inset(50%);
+	width: calc(50% - 10px);
 }
 ```
 
@@ -470,8 +470,8 @@ See, the columns are still there, but they’re invisible. Let’s put them back
 
 ```css
 .columns {
-    position: relative;
-    height: 100%;
+	position: relative;
+	height: 100%;
 }
 ```
 
@@ -479,13 +479,13 @@ Now it’s time for some magic. Only for this demo we have IDs for each news in
 
 ```css
 .columns {
-    background-image:
-        -moz-element(#news-first),
-        -moz-element(#news-second);
-    background-position:
-        left top,
-        right top;
-    background-repeat: no-repeat;
+	background-image:
+		-moz-element(#news-first),
+		-moz-element(#news-second);
+	background-position:
+		left top,
+		right top;
+	background-repeat: no-repeat;
 }
 ```
 
@@ -505,9 +505,9 @@ To make the layout that we’re aiming for, we’ll need three frames in a se
 
 ```html
 <frameset cols="50%, 20, 50%" border="0">
-    <frame frameborder="0" src="">
-    <frame frameborder="0" src="">
-    <frame frameborder="0" src="">
+	<frame frameborder="0" src="">
+	<frame frameborder="0" src="">
+	<frame frameborder="0" src="">
 <frameset>
 ```
 
@@ -521,10 +521,10 @@ Let’s start with CSS for the `<iframe>`, nothing too fancy:
 
 ```css
 .columns {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: none;
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: none;
 }
 ```
 
@@ -532,13 +532,13 @@ And here comes the markup, the most exciting part. Instead of the URL of the f
 
 ```html
 <iframe class="columns" src="data:text/html,
-    <!DOCTYPE html>
-    <meta charset='utf-8'>
-    <frameset cols='50%,20,50%' border='0'>
-        <frame frameborder='0' src='data:text/html,'>
-        <frame frameborder='0' src='data:text/html,'>
-        <frame frameborder='0' src='data:text/html,'>
-    </frameset>
+	<!DOCTYPE html>
+	<meta charset='utf-8'>
+	<frameset cols='50%,20,50%' border='0'>
+		<frame frameborder='0' src='data:text/html,'>
+		<frame frameborder='0' src='data:text/html,'>
+		<frame frameborder='0' src='data:text/html,'>
+	</frameset>
 "></iframe>
 ```
 
@@ -548,21 +548,21 @@ So let’s get the actual content the same way we did with the `<frameset>`: b
 
 ```html
 <iframe class="columns" src="data:text/html,
-    <!DOCTYPE html>
-    <meta charset='utf-8'>
-    <frameset cols='50%, 20, 50%' border='0'>
-        <frame frameborder='0' src='data:text/html,
-            <!DOCTYPE html>
-            <meta charset=utf-8>
-            <style>
-                /* News styles */
-            </style>
-            <article class=news>
-                <h2 class=news__title>Title</h2>
-                <p class=news__lead>Content</p>
-            </article>
-        '>
-    </frameset>
+	<!DOCTYPE html>
+	<meta charset='utf-8'>
+	<frameset cols='50%, 20, 50%' border='0'>
+		<frame frameborder='0' src='data:text/html,
+			<!DOCTYPE html>
+			<meta charset=utf-8>
+			<style>
+				/* News styles */
+			</style>
+			<article class=news>
+				<h2 class=news__title>Title</h2>
+				<p class=news__lead>Content</p>
+			</article>
+		'>
+	</frameset>
 "></iframe>
 ```
 

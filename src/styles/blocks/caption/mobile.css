@@ -1,16 +1,16 @@
 @media (width < 1024px) {
 
-    /* Caption */
+	/* Caption */
 
-    .caption {
-        margin-block-end: 40px;
-        padding-block-start: 20px;
-    }
+	.caption {
+		margin-block-end: 40px;
+		padding-block-start: 20px;
+	}
 
-    /* Label */
+	/* Label */
 
-    .caption__label {
-        display: none;
-    }
+	.caption__label {
+		display: none;
+	}
 
 }

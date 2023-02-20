@@ -1,25 +1,25 @@
 @media (width < 1024px) {
 
-    /* TOC */
+	/* TOC */
 
-    .two-columns__toc {
-        padding-block-start: 20px;
-    }
+	.two-columns__toc {
+		padding-block-start: 20px;
+	}
 
-    /* Cards */
+	/* Cards */
 
-    .two-columns__cards {
-        row-gap: 40px;
-    }
+	.two-columns__cards {
+		row-gap: 40px;
+	}
 
-    /* Article */
+	/* Article */
 
-    .two-columns__article {
-        padding-block-start: 40px;
-    }
+	.two-columns__article {
+		padding-block-start: 40px;
+	}
 
-    .two-columns__toc + .two-columns__article {
-        padding-block-start: 12px;
-    }
+	.two-columns__toc + .two-columns__article {
+		padding-block-start: 12px;
+	}
 
 }

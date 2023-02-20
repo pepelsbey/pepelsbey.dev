@@ -1,22 +1,22 @@
 @media (width < 1024px) {
 
-    /* Footer */
+	/* Footer */
 
-    .footer {
-        grid-template-columns: 1fr 1fr;
-        row-gap: 40px;
-        padding-block: 40px;
-    }
+	.footer {
+		grid-template-columns: 1fr 1fr;
+		row-gap: 40px;
+		padding-block: 40px;
+	}
 
-    /* Section */
+	/* Section */
 
-    .footer__section {
-        align-content: start;
-        row-gap: 20px;
-    }
+	.footer__section {
+		align-content: start;
+		row-gap: 20px;
+	}
 
-    .footer__section:last-child {
-        grid-column: 1 / -1;
-    }
+	.footer__section:last-child {
+		grid-column: 1 / -1;
+	}
 
 }

@@ -1,34 +1,34 @@
 /* Caption */
 
 .caption {
-    display: flex;
-    align-items: baseline;
-    padding-block-end: 20px;
-    border-block-end: solid 2px var(--color-text-primary);
+	display: flex;
+	align-items: baseline;
+	padding-block-end: 20px;
+	border-block-end: solid 2px var(--color-text-primary);
 }
 
 /* Title */
 
 .caption__title {
-    margin: 0;
-    line-height: 1.1;
-    text-transform: uppercase;
-    font-weight: normal;
-    font-size: var(--font-size-h1);
-    font-family: var(--font-family-heading);
+	margin: 0;
+	line-height: 1.1;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: var(--font-size-h1);
+	font-family: var(--font-family-heading);
 }
 
 /* Number */
 
 .caption__number {
-    align-self: start;
-    margin-inline-start: 4px;
-    line-height: 1.3;
+	align-self: start;
+	margin-inline-start: 4px;
+	line-height: 1.3;
 }
 
 /* Link */
 
 .caption__link {
-    margin-inline-start: auto;
-    color: var(--color-text-primary);
+	margin-inline-start: auto;
+	color: var(--color-text-primary);
 }

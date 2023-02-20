@@ -1,13 +1,13 @@
 /* Prism */
 
 .prism {
-    --prism-text: #c9d1d9;
-    --prism-back: hsl(var(--color-steel));
-    --prism-gray: #8b949e;
-    --prism-red: #ff7b72;
-    --prism-green: #7ee787;
-    --prism-blue: #79c0ff;
-    --prism-indigo: #a5d6ff;
-    --prism-purple: #d2a8ff;
-    --prism-brown: #ffa657;
+	--prism-text: #c9d1d9;
+	--prism-back: hsl(var(--color-steel));
+	--prism-gray: #8b949e;
+	--prism-red: #ff7b72;
+	--prism-green: #7ee787;
+	--prism-blue: #79c0ff;
+	--prism-indigo: #a5d6ff;
+	--prism-purple: #d2a8ff;
+	--prism-brown: #ffa657;
 }

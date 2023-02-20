@@ -2,20 +2,20 @@ I know, it’s a strong statement. You might even call it clickbait. But hear
 
 ```html
 <link
-    rel="stylesheet"
-    href="critical.css"
+	rel="stylesheet"
+	href="critical.css"
 >
 <link
-    rel="stylesheet"
-    href="deferred.css"
-    media="print"
-    onload="this.media='all'"
+	rel="stylesheet"
+	href="deferred.css"
+	media="print"
+	onload="this.media='all'"
 >
 <noscript>
-    <link
-        rel="stylesheet"
-        href="deferred.css"
-    >
+	<link
+		rel="stylesheet"
+		href="deferred.css"
+	>
 </noscript>
 ```
 
@@ -34,17 +34,17 @@ Turns out, it’s a bit more complicated. Let’s take a look at the demo.
 Here’s the slightly modified demo from the previous article I used for testing:
 
 <iframe
-    src="demo/index.html"
-    height="280" loading="lazy"
-    title="Demo with the word “lazy” repeated on the violet background."
+	src="demo/index.html"
+	height="280" loading="lazy"
+	title="Demo with the word “lazy” repeated on the violet background."
 ></iframe>
 
 ```html
 <link
-    rel="stylesheet"
-    href="deferred.css"
-    media="not all"
-    onload="this.media='all'"
+	rel="stylesheet"
+	href="deferred.css"
+	media="not all"
+	onload="this.media='all'"
 >
 ```
 
@@ -52,8 +52,8 @@ The markup is almost the same, but I replaced `print` value with `not all`, wh
 
 ```css
 body {
-    background-color: #9073c9;
-    background-size: 327px 280px;
+	background-color: #9073c9;
+	background-size: 327px 280px;
 }
 ```
 
@@ -61,7 +61,7 @@ And here comes the image, in the _deferred.css:_
 
 ```css
 body {
-    background-image: url('data:image/png;base64,…');
+	background-image: url('data:image/png;base64,…');
 }
 ```
 
@@ -70,9 +70,9 @@ Like in the previous article, I used over-bloated base64-encoded PNG as a ba
 This is how it loads in Chrome:
 
 <figure>
-    <video controls muted playsinline preload="none" poster="video/chrome.jpg" width="2048" height="1152">
-        <source src="video/chrome.mp4" type="video/mp4">
-    </video>
+	<video controls muted playsinline preload="none" poster="video/chrome.jpg" width="2048" height="1152">
+		<source src="video/chrome.mp4" type="video/mp4">
+	</video>
 </figure>
 
 1. The critical CSS is loaded instantly, and we see the background color.
@@ -81,9 +81,9 @@ This is how it loads in Chrome:
 In Safari, we can finally see what the title of this article is all about:
 
 <figure>
-    <video controls muted playsinline preload="none" poster="video/safari.jpg" width="2048" height="1152">
-        <source src="video/safari.mp4" type="video/mp4">
-    </video>
+	<video controls muted playsinline preload="none" poster="video/safari.jpg" width="2048" height="1152">
+		<source src="video/safari.mp4" type="video/mp4">
+	</video>
 </figure>
 
 It takes 23 seconds to show anything at all. And we get background color and image at the same time, which makes lazy loading useless. Definitely broken, if you ask me. So, this is it, right? Well, it was until I got feedback from WebKit engineers: apparently, this behavior depends on the length of the content 🤔
@@ -95,9 +95,9 @@ You don’t really expect browsers to load CSS differently depending on the le
 Yes, I manually entered 200 zeroes, and the demo still worked the same, but when I entered one more, it suddenly got fixed. It’s funny that spaces don’t count, only characters. I’m sorry, but I had to try this: it takes only 34 🤡 emojis to make it work. Some Unicode magic, I guess.
 
 <figure>
-    <video controls muted playsinline preload="none" poster="video/funny.jpg" width="2048" height="1152">
-        <source src="video/funny.mp4" type="video/mp4">
-    </video>
+	<video controls muted playsinline preload="none" poster="video/funny.jpg" width="2048" height="1152">
+		<source src="video/funny.mp4" type="video/mp4">
+	</video>
 </figure>
 
 The good news is that this behavior just got fixed [in the PR to the WebKit engine](https://github.com/WebKit/WebKit/pull/9746) the next day I published the first version of this article. We might see the updated behavior in [Safari TP](https://developer.apple.com/safari/technology-preview/) very soon! But the question remains…
@@ -108,7 +108,7 @@ I’d be careful with this lazy-loading technique. Fortunately, it works fine 
 
 ```html
 <body>
-    <div id="root"></div>
+	<div id="root"></div>
 </body>
 ```
 
@@ -118,13 +118,13 @@ But `<link>` is not the only way to load CSS with media conditions. There’s 
 
 ```html
 <link
-    rel="stylesheet"
-    href="dark.css"
-    media="(prefers-color-scheme: dark)"
+	rel="stylesheet"
+	href="dark.css"
+	media="(prefers-color-scheme: dark)"
 >
 
 <style>
-    @import url('dark.css') (prefers-color-scheme: dark);
+	@import url('dark.css') (prefers-color-scheme: dark);
 </style>
 ```
 

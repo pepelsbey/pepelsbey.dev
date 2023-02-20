@@ -1,7 +1,7 @@
 /* Focus */
 
 :focus-visible {
-    outline: 2px solid var(--color-focus-ring);
-    outline-offset: 2px;
-    border-radius: 2px;
+	outline: 2px solid var(--color-focus-ring);
+	outline-offset: 2px;
+	border-radius: 2px;
 }
