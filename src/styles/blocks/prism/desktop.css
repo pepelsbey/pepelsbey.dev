@@ -1,0 +1,9 @@
+@media (width >= 1760px) {
+
+	/* Prism */
+
+	.prism {
+		tab-size: 4;
+	}
+
+}
