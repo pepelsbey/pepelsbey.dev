@@ -59,18 +59,22 @@
 	.token.property,
 	.token.tag,
 	.token.symbol,
-	.token.deleted,
-	.token.important
+	.token.important,
+	.token.inserted
 ) {
 	color: var(--prism-green);
 }
 
 .prism :is(
+	.token.deleted
+) {
+	color: var(--prism-red);
+}
+.prism :is(
 	.token.selector,
 	.token.string,
 	.token.char,
 	.token.builtin,
-	.token.inserted,
 	.token.regex,
 	.token.attr-value,
 	.token.attr-value > .token.punctuation
