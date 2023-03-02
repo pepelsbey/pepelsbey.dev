@@ -10,6 +10,7 @@ const postcssMediaMinmax = require('postcss-media-minmax');
 const autoprefixer = require('autoprefixer');
 const postcssCsso = require('postcss-csso');
 const prettydata = require('pretty-data');
+const removeMarkdown = require('remove-markdown');
 const rss = require('@11ty/eleventy-plugin-rss');
 const yaml = require('js-yaml');
 
@@ -51,6 +52,10 @@ module.exports = (config) => {
 
 	config.addFilter('markdownInline', (value) => {
 		return markdown.renderInline(value);
+	});
+
+	config.addFilter('markdownRemove', (value) => {
+		return removeMarkdown(value);
 	});
 
 	config.setLibrary('md', markdown);
