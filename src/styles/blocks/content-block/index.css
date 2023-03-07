@@ -55,6 +55,10 @@
 	list-style: none;
 }
 
+.content-block :is(ol, ul) :is(ol, ul) {
+	margin-block: 8px 4px;
+}
+
 .content-block li {
 	line-height: 1.4;
 }
