@@ -3,11 +3,11 @@
 	"scripts": {
 		"start": "eleventy --serve --quiet",
 		"build": "rm -rf dist && eleventy",
-		"test": "npm run lint:editorconfig && npm run lint:css && npm run lint:javascript",
-		"lint:editorconfig": "editorconfig-checker",
-		"lint:html": "node-w3c-validator --input dist/**/*.html --format lint --verbose --errors-only",
-		"lint:css": "stylelint \"src/styles/**/*.css\"",
-		"lint:javascript": "eslint eleventy.config.js src/**/*.js"
+		"test": "npm run editorconfig && npm run css && npm run javascript",
+		"editorconfig": "editorconfig-checker",
+		"html": "java -jar node_modules/vnu-jar/build/dist/vnu.jar --filterfile .vnurc dist/**/*.html",
+		"css": "stylelint \"src/styles/**/*.css\"",
+		"javascript": "eslint eleventy.config.js src/**/*.js"
 	},
 	"engines": {
 		"node": "16"
@@ -16,11 +16,6 @@
 		"last 2 version",
 		"not dead"
 	],
-	"nodeW3Cvalidator": {
-		"suppressErrors": [
-			"Attribute “media” not allowed on element “meta” at this point."
-		]
-	},
 	"devDependencies": {
 		"@11ty/eleventy": "^2.0.0",
 		"@11ty/eleventy-img": "^3.0.0",
@@ -35,7 +30,6 @@
 		"html-minifier": "^4.0.0",
 		"js-yaml": "^4.1.0",
 		"linkedom": "^0.14.14",
-		"node-w3c-validator": "^2.0.2",
 		"postcss": "^8.4.16",
 		"postcss-csso": "^6.0.1",
 		"postcss-import": "^15.0.0",
@@ -43,6 +37,7 @@
 		"pretty-data": "^0.40.0",
 		"remove-markdown": "^0.5.0",
 		"stylelint": "^15.1.0",
-		"stylelint-order": "^6.0.2"
+		"stylelint-order": "^6.0.2",
+		"vnu-jar": "^22.9.29"
 	}
 }
