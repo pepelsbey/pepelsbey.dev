@@ -391,7 +391,7 @@ But if you really want this kind of sprite to work, it’s possible to creat
 
 You might call this method a hack and this is probably fair. But it’s so basic that full browser compatibility for it goes back to 2015 or even earlier. Though I noticed behavior in Firefox that might require some fixing, but only for inline SVG placeholders.
 
-### Firefix
+### Firefox
 
 You see, in HTML and CSS everything is a rectangular block unless you specifically try to round it or clip it some other clever way. But in SVG everything gets a unique shape and hover behavior based exactly on its shape. For some reason, inline SVG placeholders with SVG symbol libraries keep the hover area rectangular too.
 
