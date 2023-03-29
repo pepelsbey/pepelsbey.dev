@@ -214,9 +214,9 @@ Here we’re asking the browser to make sense of this string and build a DOM 
 But if we specifically ask the browser to create elements, combine them in a certain way, and then append them to the `<body>`:
 
 ```js
-const div = document.createElement('div');
+const ul = document.createElement('ul');
 const p = document.createElement('p');
-p.appendChild(div);
+p.appendChild(ul);
 document.body.appendChild(p);
 ```
 
