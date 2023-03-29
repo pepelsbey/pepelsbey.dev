@@ -32,6 +32,12 @@
   desc: Shows that I co-host, produce, record, and edit, mostly Russian-speaking so far.
   projects:
 
+  - title: The F-Word, occasional interviews
+    desc: Interesting people and controversial topics, co-hosted with [Bruce Lawson](https://twitter.com/brucel).
+    url: https://f-word.dev/
+    tags:
+    - En
+
   - title: Web Standards, weekly news
     desc: Weekly frontend news for the Russian-speaking community, on-air since 2016.
     url: https://web-standards.ru/podcast/
@@ -39,16 +45,10 @@
     - Ru
 
   - title: LP, favorite music
-    desc: Three friends discussing favorite music albums and telling cool stories.
+    desc: Friends discussing favorite music albums and telling cool stories.
     url: https://3lp.me/
     tags:
     - Ru
-
-  - title: The F-Word, occasional news
-    desc: Occasional frontend news, co-hosted with [Bruce Lawson](https://twitter.com/brucel).
-    url: https://f-word.dev/
-    tags:
-    - En
 
 # Websites
 
