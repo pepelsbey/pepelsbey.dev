@@ -74,6 +74,7 @@ The `<ul>`’s content model allows zero or more `<li>` elements and nothing el
 Let’s turn the whole thing upside down and put the `<ul>` inside the `<p>`:
 
 ```html
+<!-- Source -->
 <p>
 	<ul></ul>
 </p>
@@ -82,6 +83,7 @@ Let’s turn the whole thing upside down and put the `<ul>` inside the `<p>`:
 The `<p>`’s content model allows only phrasing content, and `<ul>` is flow content. But who cares? Browsers are still going to render a list inside a para… What the hell? 😬
 
 ```html
+<!-- DOM -->
 <p></p>
 <ul></ul>
 <p></p>
@@ -203,6 +205,7 @@ document.body.innerHTML = `
 Here we’re asking the browser to make sense of this string and build a DOM tree based on that. You might even call it declarative. In this case, we’ll get the same result as with the plain markup before: the `<p>` is torn apart again 🫠
 
 ```html
+<!-- DOM -->
 <p></p>
 <ul></ul>
 <p></p>
@@ -220,6 +223,7 @@ document.body.appendChild(p);
 Then we’ll get exactly what we’ve asked for:
 
 ```html
+<!-- DOM -->
 <p>
 	<ul></ul>
 </p>
@@ -238,6 +242,7 @@ As I mentioned initially, we often use abstraction layers to generate markup
 I tested the `p > ul` example in a few major frameworks: React, Angular, Svelte, Vue, Preact, and Lit. It should give us a good idea of how things work across the board.
 
 ```html
+<!-- Source -->
 <p>
 	<ul></ul>
 </p>
