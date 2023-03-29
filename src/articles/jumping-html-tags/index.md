@@ -276,6 +276,8 @@ Svelte doesn’t help much either, but at least it sounds a bit more confiden
 
 > &lt;/p&gt; attempted to close &lt;p&gt; that was already automatically closed by &lt;ul&gt;
 
+There’s a special case here: Vue, when paired with some SSR engine like [Nuxt](https://nuxtjs.org/), might also report “[hydration mismatch](https://vuejs.org/guide/scaling-up/ssr.html#hydration-mismatch)” errors. Not the best error name, but at least it tries to warn you. But that’s not the case with the plain Vue.
+
 ### Do what you tell them
 
 <p class="frameworks">
