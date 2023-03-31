@@ -1,0 +1,11 @@
+title: 'Uppercase copy and paste. The problem and a questionable trick'
+desc: 'If you copy one of my article titles, you’ll probably get “ARTICLE TITLE” in uppercase. Why would I name my article like that? It’s not me, it’s browsers and specs again.'
+date: 2023-04-03
+tags:
+  - CSS
+  - JavaScript
+toc:
+  - title: The problem
+  - title: A questionable trick
+cover: true
+layout: article.njk
