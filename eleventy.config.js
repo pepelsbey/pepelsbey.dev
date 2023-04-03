@@ -2,14 +2,14 @@ const dom = require('linkedom');
 const esbuild = require('esbuild');
 const fs = require('fs');
 const highlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const htmlmin = require('html-minifier');
+const htmlMin = require('html-minifier');
 const markdown = require('markdown-it')({ html: true });
 const postcss = require('postcss');
 const postcssImport = require('postcss-import');
 const postcssMediaMinmax = require('postcss-media-minmax');
 const autoprefixer = require('autoprefixer');
 const postcssCsso = require('postcss-csso');
-const prettydata = require('pretty-data');
+const prettyData = require('pretty-data');
 const removeMarkdown = require('remove-markdown');
 const rss = require('@11ty/eleventy-plugin-rss');
 const yaml = require('js-yaml');
@@ -64,7 +64,7 @@ module.exports = (config) => {
 
 	config.addTransform('html-minify', (content, path) => {
 		if (path && path.endsWith('.html')) {
-			return htmlmin.minify(
+			return htmlMin.minify(
 				content, {
 					collapseBooleanAttributes: true,
 					collapseWhitespace: true,
@@ -174,9 +174,9 @@ module.exports = (config) => {
 
 	// XML minification
 
-	config.addTransform('xmlmin', (content, path) => {
+	config.addTransform('xmlMin', (content, path) => {
 		if (path && path.endsWith('.xml')) {
-			return prettydata.pd.xmlmin(content);
+			return prettyData.pd.xmlmin(content);
 		}
 
 		return content;
