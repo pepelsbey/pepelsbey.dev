@@ -29,8 +29,6 @@ module.exports = (config) => {
 	config.addCollection('articles', (collectionApi) => {
 		return collectionApi.getFilteredByGlob(
 			collections.articles
-		).filter(
-			article => article.data.draft !== true
 		);
 	});
 
@@ -38,9 +36,7 @@ module.exports = (config) => {
 		return collectionApi.getFilteredByGlob([
 			collections.articles,
 			collections.pages,
-		]).filter(
-			article => article.data.draft !== true
-		);
+		]);
 
 	});
 
