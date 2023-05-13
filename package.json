@@ -5,7 +5,7 @@
 		"build": "rm -rf dist && eleventy",
 		"test": "npm run editorconfig && npm run css && npm run javascript",
 		"editorconfig": "editorconfig-checker",
-		"html": "java -jar node_modules/vnu-jar/build/dist/vnu.jar --filterfile .vnurc dist/**/*.html",
+		"html": "java -jar node_modules/vnu-jar/build/dist/vnu.jar --filterfile .vnurc --skip-non-html dist",
 		"css": "stylelint \"src/styles/**/*.css\"",
 		"javascript": "eslint eleventy.config.js src/**/*.js"
 	},
