@@ -14,12 +14,9 @@
 /* Name */
 
 .intro__name {
-	margin: 0;
 	line-height: 1.1;
 	text-transform: uppercase;
-	font-weight: normal;
 	font-size: var(--font-size-shout);
-	font-family: var(--font-family-heading);
 }
 
 /* Photo */
@@ -29,13 +26,6 @@
 	width: 100%;
 	height: auto;
 	background-color: var(--intro-photo-back);
-}
-
-/* Who */
-
-.intro__who {
-	margin: 0;
-	font-family: var(--font-family-heading);
 }
 
 /* What */

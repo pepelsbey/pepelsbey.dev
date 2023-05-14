@@ -35,11 +35,8 @@
 
 .project-feature__title {
 	z-index: 1;
-	margin: 0;
 	line-height: 1.25;
-	font-weight: normal;
 	font-size: var(--font-size-h2);
-	font-family: var(--font-family-heading);
 }
 
 /* Link */

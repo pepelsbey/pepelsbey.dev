@@ -2,14 +2,14 @@
 
 <main class="main column" id="main">
 	<header class="caption">
-		<h1 class="caption__title caption__title--top">
+		<h1 class="caption__title caption__title--top title">
 			{{ title }}
 		</h1>
 	</header>
 	<div class="intro">
 		{{ introPicture(context='about') }}
 
-		<p class="intro__who">
+		<p class="intro__who title">
 			{{ intro.who | safe }}
 		</p>
 		<p class="intro__path content content-inline">
@@ -24,7 +24,7 @@
 	</div>
 	<div class="about-section-list">
 		<section class="about-section about-section-list__skills">
-			<h2 class="about-section__title">
+			<h2 class="about-section__title title">
 				{{ skills.title }}
 			</h2>
 			<p class="about-section__desc">
@@ -39,7 +39,7 @@
 			</ul>
 		</section>
 		<section class="about-section about-section-list__work">
-			<h2 class="about-section__title">
+			<h2 class="about-section__title title">
 				{{ work.title }}
 			</h2>
 			<p class="about-section__desc">
@@ -65,7 +65,7 @@
 			</svg>
 		</section>
 		<section class="about-section about-section-list__contacts">
-			<h2 class="about-section__title">
+			<h2 class="about-section__title title">
 				{{ contacts.title }}
 			</h2>
 			<p class="about-section__desc">

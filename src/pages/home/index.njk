@@ -7,13 +7,13 @@
 			<p class="intro__hi">
 				{{ intro.hi | safe }}
 			</p>
-			<h1 class="intro__name">
+			<h1 class="intro__name title">
 				{{ intro.name | safe }}
 			</h1>
 
 			{{ introPicture(context='home') }}
 
-			<p class="intro__who">
+			<p class="intro__who title">
 				{{ intro.who | safe }}
 			</p>
 			<p class="intro__what content content-inline">
@@ -25,7 +25,7 @@
 		</div>
 		<section>
 			<header class="caption">
-				<h2 class="caption__title">
+				<h2 class="caption__title title">
 					Articles
 				</h2>
 				<span class="caption__number" aria-label="{{ collections.articles.length }} in total">
@@ -60,7 +60,7 @@
 			{% endfor %}
 
 			<header class="caption">
-				<h2 class="caption__title">
+				<h2 class="caption__title title">
 					Projects
 				</h2>
 				<span class="caption__number" aria-label="{{ projectsList.length }} in total">
@@ -80,7 +80,7 @@
 				{% set scribbles = cycler(1, 2, 3) %}
 				{% for section in projects %}
 					<article class="project-feature project-feature--{{ section.title | lower }}">
-						<h3 class="project-feature__title">
+						<h3 class="project-feature__title title">
 							<a class="project-feature__link" href="/projects/#{{ section.title | lower }}">
 								{{ section.title }}
 							</a>

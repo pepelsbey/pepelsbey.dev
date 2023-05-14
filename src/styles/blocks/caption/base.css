@@ -10,12 +10,9 @@
 /* Title */
 
 .caption__title {
-	margin: 0;
 	line-height: 1.1;
 	text-transform: uppercase;
-	font-weight: normal;
 	font-size: var(--font-size-h1);
-	font-family: var(--font-family-heading);
 }
 
 /* Number */

@@ -37,12 +37,9 @@
 .project-card__title {
 	grid-row: 2 / auto;
 	grid-column: 1 / -1;
-	margin: 0;
 	text-wrap: balance;
 	line-height: 1.25;
-	font-weight: normal;
 	font-size: var(--font-size-h3);
-	font-family: var(--font-family-heading);
 }
 
 .project-card__title * {

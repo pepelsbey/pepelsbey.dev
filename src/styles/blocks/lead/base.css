@@ -17,12 +17,9 @@
 /* Title */
 
 .lead__title {
-	margin: 0;
 	line-height: 1.1;
 	text-wrap: balance;
 	text-transform: uppercase;
-	font-weight: normal;
-	font-family: var(--font-family-heading);
 }
 
 /* Scribble */

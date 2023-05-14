@@ -11,7 +11,7 @@
 
 <main class="main column" id="main">
 	<header class="caption">
-		<h1 class="caption__title caption__title--top">
+		<h1 class="caption__title caption__title--top title">
 			{{ title }}
 		</h1>
 		<span class="caption__number" aria-label="{{ projectsList.length }} in total">
@@ -24,7 +24,7 @@
 			{% set id = section.title | lower %}
 
 			<section class="project-section" id="{{ id }}">
-				<h2 class="project-section__title">
+				<h2 class="project-section__title title">
 					{{ section.title }}
 				</h2>
 				<p class="project-section__desc">
@@ -35,7 +35,7 @@
 					{% for project in section.projects %}
 						<article class="project-card">
 							<div class="project-card__box project-card__box--{{ id }}">
-								<h3 class="project-card__title">
+								<h3 class="project-card__title title">
 									<a class="project-card__link" href="{{ project.url }}" target="_blank">
 										{{- project.title | markdownInline | safe -}}
 									</a>
