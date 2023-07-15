@@ -24,7 +24,7 @@
 		"@sindresorhus/slugify": "1.1.2",
 		"autoprefixer": "^10.4.11",
 		"editorconfig-checker": "^5.0.1",
-		"esbuild": "^0.17.0",
+		"esbuild": "^0.18.13",
 		"eslint": "^8.23.1",
 		"focus-trap": "^7.0.0",
 		"html-minifier": "^4.0.0",
