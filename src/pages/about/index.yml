@@ -35,6 +35,9 @@ work:
   title: Work
   desc: Mostly frontend development and developer advocacy, but also occasional project management and team leading
   list:
+  - company: Virtual Identity
+    title: Frontend developer
+    period: 2023–
   - company: Gorillas
     title: Frontend developer
     period: 2022–2023
