@@ -1,31 +1,3 @@
-# Tools
-
-- title: Tools
-  desc: Handy little tools that I created for myself, but you might also find useful.
-  projects:
-
-  - title: Shower, presentation engine
-    desc: Presentation engine for people who enjoy writing HTML and CSS.
-    url: https://shwr.me/
-    tags:
-    - HTML
-    - CSS
-    - JS
-
-  - title: Prompter, script scroller
-    desc: A thing that scrolls your text on a mirror so you can look right into the camera.
-    url: https://github.com/pepelsbey/prompter
-    tags:
-    - CSS
-    - JS
-
-  - title: ContentEditable, browser extension
-    desc: Browser extension that makes any page editable by adding an attribute to the `<body>`.
-    url: https://github.com/pepelsbey/contenteditable
-    tags:
-    - Extension
-    - JS
-
 # Podcasts
 
 - title: Podcasts
@@ -73,3 +45,24 @@
     url: https://blink-is-back.com/
     tags:
     - HTML
+
+# Tools
+
+- title: Tools
+  desc: Handy little tools that I created for myself, but you might also find useful.
+  projects:
+
+  - title: Shower, presentation engine
+    desc: Presentation engine for people who enjoy writing HTML and CSS.
+    url: https://shwr.me/
+    tags:
+    - HTML
+    - CSS
+    - JS
+
+  - title: Prompter, script scroller
+    desc: A thing that scrolls your text on a mirror so you can look right into the camera.
+    url: https://github.com/pepelsbey/prompter
+    tags:
+    - CSS
+    - JS
