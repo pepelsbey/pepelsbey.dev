@@ -352,7 +352,7 @@ So I used this one instead, and it worked. Note the `.*` at the end:
 
 > Element “style” not allowed as child of element.*
 
-As for the GitHub Actions workflow that runs this script, there’s nothing special in there. But if you’re interested, you can [check it out](https://github.com/pepelsbey/pepelsbey.dev/blob/main/.github/workflows/html.yml). I’d also recommend checking out the [Bootstrap’s script](https://github.com/twbs/bootstrap/blob/main/build/vnu-jar.js) that runs the validation. It’s a bit more sophisticated and doesn’t break the tests if Java is missing.
+As for the GitHub Actions workflow that runs this script, there’s nothing special in there. But if you’re interested, you can [check it out](https://github.com/pepelsbey/pepelsbey.dev/blob/main/.github/workflows/html.yml). I’d also recommend checking out the [Bootstrap’s script](https://github.com/twbs/bootstrap/blob/main/build/vnu-jar.mjs) that runs the validation. It’s a bit more sophisticated and doesn’t break the tests if Java is missing.
 
 ### HTML-validate
 
