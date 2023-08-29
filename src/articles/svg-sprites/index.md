@@ -78,7 +78,7 @@ But in the case of a same-sized icon sprite positioned in a single row, usi
 Interestingly enough, you can use old-school sprites not only for background images but also for content images. I wouldn’t recommend using decorative images for icons because browsers might prioritize them too much during loading and your users will get “Save Image As…” and other irrelevant context menu items and behavior for your link. But for the sake of it, let’s try it 🤓
 
 ```html
-<a href>
+<a href="">
 	<img
 		src="sprite.svg"
 		width="200" height="200"
@@ -120,7 +120,7 @@ SVG became much more popular once developers realized that it’s not just anoth
 If you just need to change your SVG icon’s color fill via CSS, you can put it in your markup and call it a day. Feel free to get rid of the `xmlns` attribute when your SVG is inlined, by the way. But don’t forget to add `width` and `height` attributes (otherwise your icon might take the whole page if your CSS will fail to load) and `aria-hidden="true"` to keep icons under the screen reader’s radar.
 
 ```html
-<a href aria-label="Settings">
+<a href="" aria-label="Settings">
 	<svg
 		viewBox="0 0 24 24"
 		width="200" height="200"
@@ -163,7 +163,7 @@ To make all the paths _external_ to the document, we can put them together in
 ></iframe>
 
 ```html
-<a href aria-label="Settings">
+<a href="" aria-label="Settings">
 	<svg
 		viewBox="0 0 24 24"
 		width="200" height="200"
@@ -319,7 +319,7 @@ Before diving into yet another SVG spriting method, let’s answer the most impo
 ></iframe>
 
 ```html
-<a href aria-label="Settings">
+<a href="" aria-label="Settings">
 	<svg aria-hidden="true" width="200" height="200">
 		<use href="sprite.svg#settings"/>
 	</svg>

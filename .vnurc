@@ -1,6 +1,4 @@
-Attribute “media” not allowed on element “meta” at this point.
-Attribute “fetchpriority” not allowed on element “img” at this point.
-Possible misuse of “aria-label”.*
-Element “style” not allowed as child of element “div”.*
-Bad value for attribute “src” on element “iframe”.*
-Attribute “href” without an explicit value seen.*
+; Attribute “media” not allowed on element “meta” at this point.
+; Attribute “fetchpriority” not allowed on element “img” at this point.
+; Possible misuse of “aria-label”.*
+; Element “style” not allowed as child of element “div”.*
