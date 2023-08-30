@@ -39,10 +39,11 @@ layout: page.njk
 					<span class="caption__label">
 						Articles
 					</span>
+					<span class="caption__number">
+						{{ collections.articles.length - 1 }}
+						<span class="caption__total">in total</span>
+					</span>
 				</h2>
-				<span class="caption__number" aria-label="{{ collections.articles.length - 1 }} in total">
-					{{ collections.articles.length - 1 }}
-				</span>
 				<a class="caption__link action action--hover" href="/articles/" aria-label="View all articles">
 					<span class="caption__label">
 						View all

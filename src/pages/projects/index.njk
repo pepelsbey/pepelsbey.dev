@@ -13,10 +13,11 @@
 	<header class="caption">
 		<h1 class="caption__title caption__title--top">
 			{{ title }}
+			<span class="caption__number">
+				{{ projectsList.length }}
+				<span class="caption__total">in total</span>
+			</span>
 		</h1>
-		<span class="caption__number" aria-label="{{ projectsList.length }} in total">
-			{{ projectsList.length }}
-		</span>
 	</header>
 	<div class="project-section-list">
 		{% set scribbles = cycler(1, 2, 3) %}

@@ -27,10 +27,11 @@
 			<header class="caption">
 				<h2 class="caption__title">
 					Articles
+					<span class="caption__number">
+						{{ collections.articles.length }}
+						<span class="caption__total">in total</span>
+					</span>
 				</h2>
-				<span class="caption__number" aria-label="{{ collections.articles.length }} in total">
-					{{ collections.articles.length }}
-				</span>
 				<a class="caption__link action action--hover" href="/articles/" aria-label="View all articles">
 					<span class="caption__label">
 						View all
@@ -62,10 +63,11 @@
 			<header class="caption">
 				<h2 class="caption__title">
 					Projects
+					<span class="caption__number">
+						{{ projectsList.length }}
+						<span class="caption__total">in total</span>
+					</span>
 				</h2>
-				<span class="caption__number" aria-label="{{ projectsList.length }} in total">
-					{{ projectsList.length }}
-				</span>
 				<a class="caption__link action action--hover" href="/projects/" aria-label="View all projects">
 					<span class="caption__label">
 						View all

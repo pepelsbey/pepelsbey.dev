@@ -2,10 +2,11 @@
 	<header class="caption">
 		<h1 class="caption__title caption__title--top">
 			{{ title }}
+			<span class="caption__number">
+				{{ collections.articles.length }}
+				<span class="caption__total">in total</span>
+			</span>
 		</h1>
-		<span class="caption__number" aria-label="{{ collections.articles.length }} in total">
-			{{ collections.articles.length }}
-		</span>
 		<a class="caption__link action action--hover" href="/feed/">
 			<svg class="action__icon" width="24" height="24" aria-hidden="true">
 				<use href="/images/icons.svg#rss"/>

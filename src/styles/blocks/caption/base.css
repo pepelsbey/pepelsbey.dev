@@ -10,6 +10,7 @@
 /* Title */
 
 .caption__title {
+	display: flex;
 	margin: 0;
 	line-height: 1.1;
 	text-transform: uppercase;
@@ -21,9 +22,20 @@
 /* Number */
 
 .caption__number {
-	align-self: start;
 	margin-inline-start: 4px;
 	line-height: 1.3;
+	font-size: var(--font-size-normal);
+	font-family: var(--font-family-text);
+}
+
+/* Total */
+
+.caption__total {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	opacity: 0;
 }
 
 /* Link */
