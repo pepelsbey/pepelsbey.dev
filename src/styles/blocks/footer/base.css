@@ -24,12 +24,6 @@
 	font-family: var(--font-family-heading);
 }
 
-/* Desc */
-
-.footer__desc {
-	margin: 0;
-}
-
 /* List */
 
 .footer__list {
