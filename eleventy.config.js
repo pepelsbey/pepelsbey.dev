@@ -102,9 +102,9 @@ module.exports = (config) => {
 			targets: lightningcss.browserslistToTargets(
 				packageJson.browserslist,
 			),
-			drafts: {
-				nesting: true,
-			},
+			include:
+				lightningcss.Features.MediaQueries |
+				lightningcss.Features.Nesting,
 		});
 	};
 
