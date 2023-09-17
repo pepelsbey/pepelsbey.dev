@@ -10,7 +10,7 @@
 		"javascript": "eslint eleventy.config.js src/**/*.js"
 	},
 	"engines": {
-		"node": "16"
+		"node": "18"
 	},
 	"browserslist": [
 		"last 2 version",
