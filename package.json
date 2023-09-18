@@ -3,9 +3,9 @@
 	"scripts": {
 		"start": "eleventy --serve --quiet",
 		"build": "rm -rf dist && eleventy",
-		"test": "npm run editorconfig && npm run css && npm run javascript",
+		"test": "npm run editorconfig && npm run html && npm run css && npm run javascript",
 		"editorconfig": "editorconfig-checker",
-		"html": "java -jar node_modules/vnu-jar/build/dist/vnu.jar --filterfile .vnurc --skip-non-html dist",
+		"html": "w3c-html-validator dist '--ignore=/^Element “style” not allowed as child of element “div” in this context|^Bad value  for attribute “src” on element “iframe”/'",
 		"css": "stylelint \"src/styles/**/*.css\"",
 		"javascript": "eslint eleventy.config.js src/**/*.js"
 	},
@@ -34,6 +34,6 @@
 		"remove-markdown": "^0.5.0",
 		"stylelint": "^15.1.0",
 		"stylelint-order": "^6.0.2",
-		"vnu-jar": "^23.4.11"
+		"w3c-html-validator": "^1.4.0"
 	}
 }
