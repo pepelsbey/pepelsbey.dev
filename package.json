@@ -5,7 +5,7 @@
 		"build": "rm -rf dist && eleventy",
 		"test": "npm run editorconfig && npm run html && npm run css && npm run javascript",
 		"editorconfig": "editorconfig-checker",
-		"html": "w3c-html-validator dist '--ignore=/^Element “style” not allowed as child of element “div” in this context|^Bad value  for attribute “src” on element “iframe”/'",
+		"html": "w3c-html-validator dist --ignore-config=.validator",
 		"css": "stylelint \"src/styles/**/*.css\"",
 		"javascript": "eslint eleventy.config.js src/**/*.js"
 	},
@@ -34,6 +34,6 @@
 		"remove-markdown": "^0.5.0",
 		"stylelint": "^15.1.0",
 		"stylelint-order": "^6.0.2",
-		"w3c-html-validator": "^1.4.0"
+		"w3c-html-validator": "^1.5.0"
 	}
 }
