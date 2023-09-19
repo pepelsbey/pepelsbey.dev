@@ -2,7 +2,7 @@ const dom = require('linkedom');
 const esbuild = require('esbuild');
 const fs = require('fs');
 const highlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const htmlMin = require('html-minifier');
+const htmlMin = require('html-minifier-terser');
 const markdown = require('markdown-it')({ html: true });
 const lightningcss = require('lightningcss');
 const prettyData = require('pretty-data');
@@ -50,9 +50,9 @@ module.exports = (config) => {
 
 	// HTML
 
-	config.addTransform('html-minify', (content, path) => {
+	config.addTransform('html-minify', async (content, path) => {
 		if (path && path.endsWith('.html')) {
-			return htmlMin.minify(content, {
+			return await htmlMin.minify(content, {
 				collapseBooleanAttributes: true,
 				collapseWhitespace: true,
 				decodeEntities: true,
