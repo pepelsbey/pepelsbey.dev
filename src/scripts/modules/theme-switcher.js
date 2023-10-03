@@ -1,5 +1,7 @@
-const lightStyles = document.querySelectorAll('style[media*=prefers-color-scheme][media*=light]');
-const darkStyles = document.querySelectorAll('style[media*=prefers-color-scheme][media*=dark]');
+const lightStyle = document.querySelector('style[media*=prefers-color-scheme][media*=light]');
+const darkStyle = document.querySelector('style[media*=prefers-color-scheme][media*=dark]');
+const lightTheme = document.querySelector('meta[name=theme-color][media*=prefers-color-scheme][media*=light]');
+const darkTheme = document.querySelector('meta[name=theme-color][media*=prefers-color-scheme][media*=dark]');
 const themeSwitcher = document.querySelector('.theme-switcher');
 const themeButtons = document.querySelectorAll('.theme-switcher__button');
 
@@ -61,13 +63,11 @@ function switchMedia(scheme) {
 		darkMedia = (scheme === 'dark') ? 'all' : 'not all';
 	}
 
-	[...lightStyles].forEach((link) => {
-		link.media = lightMedia;
-	});
+	lightStyle.media = lightMedia;
+	darkStyle.media = darkMedia;
 
-	[...darkStyles].forEach((link) => {
-		link.media = darkMedia;
-	});
+	lightTheme.media = lightMedia;
+	darkTheme.media = darkMedia;
 }
 
 function getSavedScheme() {
