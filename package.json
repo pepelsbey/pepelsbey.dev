@@ -22,7 +22,7 @@
 		"@11ty/eleventy-plugin-rss": "^1.2.0",
 		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
 		"@sindresorhus/slugify": "1.1.2",
-		"editorconfig-checker": "^5.0.1",
+		"editorconfig-checker": "^5.1.1",
 		"esbuild": "^0.19.2",
 		"eslint": "^8.23.1",
 		"focus-trap": "^7.0.0",
