@@ -37,6 +37,7 @@
 /* Link */
 
 .footer__link {
+	justify-self: start;
 	color: var(--color-text-secondary);
 	box-decoration-break: clone;
 }
