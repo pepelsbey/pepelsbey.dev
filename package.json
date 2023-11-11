@@ -18,22 +18,22 @@
 	],
 	"devDependencies": {
 		"@11ty/eleventy": "^2.0.1",
-		"@11ty/eleventy-img": "^3.0.0",
+		"@11ty/eleventy-img": "^3.1.8",
 		"@11ty/eleventy-plugin-rss": "^1.2.0",
 		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
 		"@sindresorhus/slugify": "1.1.2",
 		"editorconfig-checker": "^5.1.1",
-		"esbuild": "^0.19.2",
-		"eslint": "^8.23.1",
-		"focus-trap": "^7.0.0",
+		"esbuild": "^0.19.5",
+		"eslint": "^8.53.0",
+		"focus-trap": "^7.5.4",
 		"html-minifier-terser": "^7.2.0",
 		"js-yaml": "^4.1.0",
-		"lightningcss": "^1.21.7",
-		"linkedom": "^0.15.2",
+		"lightningcss": "^1.22.1",
+		"linkedom": "^0.16.1",
 		"pretty-data": "^0.40.0",
 		"remove-markdown": "^0.5.0",
-		"stylelint": "^15.1.0",
-		"stylelint-order": "^6.0.2",
-		"w3c-html-validator": "^1.5.0"
+		"stylelint": "^15.11.0",
+		"stylelint-order": "^6.0.3",
+		"w3c-html-validator": "^1.6.1"
 	}
 }
