@@ -16,9 +16,9 @@
 	margin-block: 8px;
 	outline: none;
 	color: var(--skip-link-text);
-}
 
-.skip-link__action:not(:active, :focus-visible) {
-	position: absolute;
-	white-space: nowrap;
+	&:not(:active, :focus-visible) {
+		position: absolute;
+		white-space: nowrap;
+	}
 }

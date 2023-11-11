@@ -40,10 +40,10 @@
 	justify-self: start;
 	color: var(--color-text-secondary);
 	box-decoration-break: clone;
-}
 
-@media (hover: hover) and (pointer: fine) {
-	.footer__link:hover {
-		color: var(--color-text-primary);
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			color: var(--color-text-primary);
+		}
 	}
 }

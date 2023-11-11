@@ -27,11 +27,20 @@
 	font-size: inherit;
 	font-family: inherit;
 	transition: color 0.1s linear 0.1s;
-}
 
-@media (hover: hover) and (pointer: fine) {
-	.theme-switcher__button[aria-pressed='false']:hover {
-		animation: menu-button 0.2s both;
+	&[aria-pressed='true'] {
+		outline-offset: 2px;
+		color: var(--theme-switcher-text);
+	}
+
+	@media (hover: hover) and (pointer: fine) {
+		&[aria-pressed='false']:hover {
+			animation: menu-button 0.2s both;
+		}
+	}
+
+	&:focus-visible {
+		outline-offset: -2px;
 	}
 }
 
@@ -40,15 +49,6 @@
 		background-color: var(--theme-switcher-hover-back);
 		color: var(--theme-switcher-hover-text);
 	}
-}
-
-.theme-switcher__button:focus-visible {
-	outline-offset: -2px;
-}
-
-.theme-switcher__button[aria-pressed='true'] {
-	outline-offset: 2px;
-	color: var(--theme-switcher-text);
 }
 
 /* Status */
@@ -64,12 +64,12 @@
 	pointer-events: none;
 	transform: translateX(0);
 	transition: transform 0.2s;
-}
 
-.theme-switcher__button[aria-pressed='true'][value='light'] ~ .theme-switcher__status {
-	transform: translateX(-100%);
-}
+	.theme-switcher__button[aria-pressed='true'][value='light'] ~ & {
+		transform: translateX(-100%);
+	}
 
-.theme-switcher__button[aria-pressed='true'][value='dark'] ~ .theme-switcher__status {
-	transform: translateX(100%);
+	.theme-switcher__button[aria-pressed='true'][value='dark'] ~ & {
+		transform: translateX(100%);
+	}
 }

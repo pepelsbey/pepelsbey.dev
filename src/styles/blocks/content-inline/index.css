@@ -2,34 +2,40 @@
 
 /* Links */
 
-.content-inline a {
-	color: var(--color-text-primary);
-}
+.content-inline {
+	a {
+		color: var(--color-text-primary);
 
-.content-inline a:focus-visible {
-	outline: 2px solid var(--color-focus-ring);
-	outline-offset: 2px;
-	border-radius: 2px;
+		&:focus-visible {
+			outline: 2px solid var(--color-focus-ring);
+			outline-offset: 2px;
+			border-radius: 2px;
+		}
+	}
 }
 
 /* Code */
 
-.content-inline code {
-	padding: 0.1em 0.2em;
-	border-radius: 0.1em;
-	box-decoration-break: clone;
-	background-color: var(--content-code-back);
-	hyphens: none;
-	font-family: var(--font-family-code);
+.content-inline {
+	code {
+		padding: 0.1em 0.2em;
+		border-radius: 0.1em;
+		box-decoration-break: clone;
+		background-color: var(--content-code-back);
+		hyphens: none;
+		font-family: var(--font-family-code);
+	}
 }
 
 /* Emphasis */
 
-.content-inline em {
-	font-style: normal;
-	font-variation-settings: 'slnt' -10;
-}
+.content-inline {
+	em {
+		font-style: normal;
+		font-variation-settings: 'slnt' -10;
+	}
 
-.content-inline strong {
-	font-weight: 600;
+	strong {
+		font-weight: 600;
+	}
 }

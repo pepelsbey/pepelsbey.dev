@@ -3,10 +3,8 @@
 .page {
 	background-color: var(--color-back-primary);
 	color: var(--color-text-primary);
-}
 
-@media (prefers-reduced-motion: no-preference) {
-	.page {
+	@media (prefers-reduced-motion: no-preference) {
 		scroll-behavior: smooth;
 	}
 }

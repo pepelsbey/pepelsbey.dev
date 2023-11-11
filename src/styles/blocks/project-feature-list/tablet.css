@@ -4,10 +4,10 @@
 
 	.project-feature-list {
 		grid-template-columns: 1fr 1fr;
-	}
 
-	.project-feature-list > :nth-child(3n) {
-		grid-column: span 2;
+		> :nth-child(3n) {
+			grid-column: span 2;
+		}
 	}
 
 }

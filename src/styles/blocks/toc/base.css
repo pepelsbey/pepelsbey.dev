@@ -4,10 +4,10 @@
 
 .toc__title {
 	list-style: none;
-}
 
-.toc__title::-webkit-details-marker {
-	display:none;
+	&::-webkit-details-marker {
+		display:none;
+	}
 }
 
 /* List */

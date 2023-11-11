@@ -12,11 +12,11 @@
 	.footer__section {
 		grid-template-rows: 1fr min-content;
 		grid-column: span 2;
-	}
 
-	.footer__section:last-child {
-		grid-column: span 4 / -1;
-		text-align: end;
+		&:last-child {
+			grid-column: span 4 / -1;
+			text-align: end;
+		}
 	}
 
 }

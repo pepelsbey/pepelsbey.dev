@@ -61,22 +61,22 @@
 .article-card__link {
 	color: inherit;
 	text-decoration: none;
-}
 
-.article-card__link:focus-visible {
-	outline: none;
-}
+	&::before {
+		position: absolute;
+		inset: 0;
+		content: '';
+		border-radius: 20px;
+	}
 
-.article-card__link::before {
-	position: absolute;
-	inset: 0;
-	content: '';
-	border-radius: 20px;
-}
+	&:focus-visible {
+		outline: none;
+	}
 
-.article-card__link:focus-visible::before {
-	outline: 2px solid var(--color-focus-ring);
-	outline-offset: 2px;
+	&:focus-visible::before {
+		outline: 2px solid var(--color-focus-ring);
+		outline-offset: 2px;
+	}
 }
 
 /* Date */

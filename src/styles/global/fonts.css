@@ -70,10 +70,8 @@
 	--font-family-text: 'Inter', sans-serif;
 	--font-family-heading: 'Neue Machina', sans-serif;
 	--font-family-code: 'JetBrains Mono', monospace;
-}
 
-@supports (font-variation-settings: normal) {
-	:root {
+	@supports (font-variation-settings: normal) {
 		--font-family-text: 'Inter Variable', sans-serif;
 	}
 }

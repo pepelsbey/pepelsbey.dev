@@ -47,22 +47,22 @@
 .project-feature__link {
 	color: inherit;
 	text-decoration: none;
-}
 
-.project-feature__link:focus-visible {
-	outline: none;
-}
+	&:focus-visible {
+		outline: none;
+	}
 
-.project-feature__link::before {
-	position: absolute;
-	inset: 0;
-	content: '';
-	border-radius: var(--project-feature-radius);
-}
+	&::before {
+		position: absolute;
+		inset: 0;
+		content: '';
+		border-radius: var(--project-feature-radius);
+	}
 
-.project-feature__link:focus-visible::before {
-	outline: 2px solid var(--color-focus-ring);
-	outline-offset: 2px;
+	&:focus-visible::before {
+		outline: 2px solid var(--color-focus-ring);
+		outline-offset: 2px;
+	}
 }
 
 /* Icon */

@@ -30,14 +30,14 @@
 	color: var(--color-text-primary);
 	text-align: center;
 	line-height: 1;
-}
 
-.pagination__link[aria-current] {
-	background-color: var(--pagination-current-back);
-	color: var(--pagination-current-text);
-}
+	&:focus-visible {
+		outline: 2px solid var(--color-focus-ring);
+		outline-offset: 2px;
+	}
 
-.pagination__link:focus-visible {
-	outline: 2px solid var(--color-focus-ring);
-	outline-offset: 2px;
+	&[aria-current] {
+		background-color: var(--pagination-current-back);
+		color: var(--pagination-current-text);
+	}
 }
