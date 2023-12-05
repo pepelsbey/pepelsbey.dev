@@ -1,4 +1,5 @@
-const htmlmin = require('html-minifier-terser');
+const htmlmin = require("html-minifier-terser");
+
 
 module.exports = function(window) {
 	const content = window.document.getElementById('article-content');
@@ -23,8 +24,8 @@ module.exports = function(window) {
 			</figcaption>
 		`;
 
-		wrapper.innerHTML = async () => {
-			await htmlmin.minify(
+		(async () => {
+			wrapper.innerHTML = await htmlmin.minify(
 				template, {
 					collapseBooleanAttributes: true,
 					collapseWhitespace: true,
@@ -33,7 +34,7 @@ module.exports = function(window) {
 					removeComments: true,
 				}
 			);
-		};
+		})()
 
 		iframe.replaceWith(wrapper);
 	}
