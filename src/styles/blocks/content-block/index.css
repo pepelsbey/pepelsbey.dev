@@ -138,8 +138,8 @@
 	figure {
 		display: grid;
 		row-gap: 20px;
-		padding-block: 20px;
 		margin: 0;
+		padding-block: 20px;
 	}
 
 	figcaption {

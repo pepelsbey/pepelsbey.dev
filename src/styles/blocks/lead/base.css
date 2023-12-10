@@ -29,7 +29,7 @@
 
 .lead__scribble {
 	position: absolute;
-	transform: scaleX(-1);
 	color: var(--lead-scribble-fill);
+	transform: scaleX(-1);
 	pointer-events: none;
 }

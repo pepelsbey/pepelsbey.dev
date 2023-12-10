@@ -10,8 +10,8 @@
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr min-content;
-	padding-inline: 20px;
 	padding-block: 40px;
+	padding-inline: 20px;
 	min-height: var(--project-feature-size);
 	border-radius: var(--project-feature-radius);
 	color: var(--project-feature-text-primary);

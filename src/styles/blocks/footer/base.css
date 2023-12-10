@@ -38,8 +38,8 @@
 
 .footer__link {
 	justify-self: start;
-	color: var(--color-text-secondary);
 	box-decoration-break: clone;
+	color: var(--color-text-secondary);
 
 	@media (hover: hover) and (pointer: fine) {
 		&:hover {

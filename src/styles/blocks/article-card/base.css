@@ -90,8 +90,8 @@
 .article-card__desc {
 	display: grid;
 	row-gap: 16px;
-	padding-inline: 20px;
 	padding-block-start: 16px;
+	padding-inline: 20px;
 }
 
 /* Text */

@@ -9,8 +9,8 @@
 	width: 1px;
 	height: 1px;
 	overflow: hidden;
-	border: none;
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
+	border: none;
 	white-space: nowrap;
 }
