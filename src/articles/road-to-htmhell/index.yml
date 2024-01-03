@@ -1,0 +1,15 @@
+title: 'The road to HTMHell is paved with semantics'
+desc: 'HTML semantics is a nice idea, but does it really make a difference? There’s a huge gap between HTML spec’s good intentions and what browsers and screen readers are willing to implement.'
+date: 2024-01-08
+tags:
+  - HTML
+  - A11y
+toc:
+  - title: Simple days
+  - title: Semantics
+  - title: A new hope
+  - title: Drunk on semantics
+  - title: Good intentions
+  - title: Training wheels
+cover: true
+layout: article.njk
