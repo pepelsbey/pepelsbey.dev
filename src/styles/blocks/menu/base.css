@@ -3,8 +3,6 @@
 .menu {
 	--menu-current-back: hsl(var(--color-sulu));
 	--menu-current-text: hsl(var(--color-ebony));
-
-	background-color: var(--color-back-primary);
 }
 
 /* List */

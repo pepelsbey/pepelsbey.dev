@@ -12,6 +12,7 @@
 			1fr
 			min-content;
 		padding: 20px;
+		background-color: var(--color-back-primary);
 		transform: translateX(-100%) scaleX(0.3);
 		view-transition-name: menu;
 		contain: layout;
