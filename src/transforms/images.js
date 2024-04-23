@@ -101,7 +101,7 @@ async function buildImage(image, imagesSourcePath, imagesOutputPrefix, window) {
 	try {
 		await fsp.stat(originalLink);
 	} catch (error) {
-		console.warn(`Image ${originalLink} does not exist`);
+		console.warn(`Image ${originalLink} does not exist. ${error}`);
 		return;
 	}
 
