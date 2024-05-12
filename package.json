@@ -17,13 +17,13 @@
 		"not dead"
 	],
 	"devDependencies": {
-		"@11ty/eleventy": "^2.0.1",
+		"@11ty/eleventy": "^3.0.0-alpha.10",
 		"@11ty/eleventy-img": "^4.0.2",
 		"@11ty/eleventy-plugin-rss": "^1.2.0",
 		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
 		"@sindresorhus/slugify": "1.1.2",
 		"editorconfig-checker": "^5.1.5",
-		"esbuild": "^0.20.2",
+		"esbuild": "^0.21.1",
 		"eslint": "^9.1.0",
 		"focus-trap": "^7.5.4",
 		"globals": "^15.0.0",
