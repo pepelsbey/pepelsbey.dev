@@ -16,6 +16,9 @@
 		"last 2 version",
 		"not dead"
 	],
+	"dependencies": {
+		"focus-trap": "^7.5.4"
+	},
 	"devDependencies": {
 		"@11ty/eleventy": "^3.0.0-alpha.10",
 		"@11ty/eleventy-img": "^4.0.2",
@@ -25,7 +28,6 @@
 		"editorconfig-checker": "^5.1.5",
 		"esbuild": "^0.21.1",
 		"eslint": "^9.1.0",
-		"focus-trap": "^7.5.4",
 		"globals": "^15.0.0",
 		"html-minifier-terser": "^7.2.0",
 		"js-yaml": "^4.1.0",
