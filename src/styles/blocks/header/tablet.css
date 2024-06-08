@@ -1,5 +1,11 @@
 @media (width >= 1024px) {
 
+	@keyframes --header-shadow {
+		to {
+			box-shadow: 0 2px 0 var(--color-text-primary);
+		}
+	}
+
 	/* Header */
 
 	.header {
@@ -8,6 +14,15 @@
 		column-gap: 40px;
 		padding-block: 24px;
 		contain: layout;
+
+		@supports (animation-timeline: auto) {
+			box-shadow: 0 2px 0 transparent;
+			animation-fill-mode: both;
+			animation-name: --header-shadow;
+			animation-range: 0 100px;
+			animation-timeline: scroll();
+			animation-timing-function: linear;
+		}
 	}
 
 	/* Button */
