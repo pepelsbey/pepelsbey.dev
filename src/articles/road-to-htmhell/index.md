@@ -4,9 +4,7 @@ HTML semantics is a nice idea, but does it really make a difference? There�
 
 Like most people involved in front-end, I started my journey into Web development with HTML. It was simple enough, close to a natural language, and easy to use: you type some tags, save a text file, and reload the browser to see the result. And it would almost never fail if I made a mistake!
 
-Back then, I considered HTML a simple set of visual building blocks. It was too late for purely visual `<font>` elements (the CSS has replaced them), but the general idea stayed pretty much the same: if you wrap your text into `<h1>`, it becomes big and bold, if you have two `<td>` cells in a row, that’s your two-column layout. Easy! I learned tags to be able to achieve certain styles and behaviors. Remember `<marquee>`?
-
-<marquee id="marquee" behavior="alternate" scrollamount="7">
+Back then, I considered HTML a simple set of visual building blocks. It was too late for purely visual `<font>` elements (the CSS has replaced them), but the general idea stayed pretty much the same: if you wrap your text into `<h1>`, it becomes big and bold, if you have two `<td>` cells in a row, that’s your two-column layout. Easy! I learned tags to be able to achieve certain styles and behaviors. Remember [`<marquee>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/marquee)?
 
 ```html
 <marquee
@@ -14,22 +12,6 @@ Back then, I considered HTML a simple set of visual building blocks. It was 
 	scrollamount="7"
 ></marquee>
 ```
-</marquee>
-
-<p style="text-align: center">
-	<button type="button" onclick="document.getElementById('marquee').stop()">
-		Stop Marquee
-	</button>
-	<button type="button" onclick="document.getElementById('marquee').start()">
-		Start Marquee
-	</button>
-</p>
-
-<script>
-	if (matchMedia('(prefers-reduced-motion)').matches) {
-		document.getElementById('marquee').stop();
-	}
-</script>
 
 That was just the beginning: soon, I needed calendars, popups, icons, etc. It turned out I had to code them myself! And so I did, mainly using divs, spans, and some CSS. Back in the mid-2000s, there weren’t any particular “logical” tags or functional widgets, only the ones you’d find on a typical text editor panel.
 
