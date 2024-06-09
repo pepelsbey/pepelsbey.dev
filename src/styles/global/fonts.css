@@ -1,23 +1,11 @@
-/* Inter Variable */
-
-@font-face {
-	font-weight: 100 900;
-	font-family: 'Inter Variable';
-	font-style: oblique 0deg 10deg;
-	font-display: swap;
-	src: url('/fonts/inter-variable.woff2') format('woff2');
-}
-
-/* Inter Static */
+/* Inter */
 
 @font-face {
 	font-weight: 400;
 	font-family: 'Inter';
 	font-style: normal;
 	font-display: swap;
-	src:
-		url('/fonts/inter-regular.woff2') format('woff2'),
-		url('/fonts/inter-regular.woff') format('woff');
+	src: url('/fonts/inter-regular.woff2') format('woff2');
 }
 
 @font-face {
@@ -25,9 +13,7 @@
 	font-family: 'Inter';
 	font-style: italic;
 	font-display: swap;
-	src:
-		url('/fonts/inter-italic.woff2') format('woff2'),
-		url('/fonts/inter-italic.woff') format('woff');
+	src: url('/fonts/inter-italic.woff2') format('woff2');
 }
 
 @font-face {
@@ -35,9 +21,25 @@
 	font-family: 'Inter';
 	font-style: normal;
 	font-display: swap;
-	src:
-		url('/fonts/inter-bold.woff2') format('woff2'),
-		url('/fonts/inter-bold.woff') format('woff');
+	src: url('/fonts/inter-bold.woff2') format('woff2');
+}
+
+/* Inter Variable */
+
+@font-face {
+	font-weight: 100 900;
+	font-family: 'Inter Variable';
+	font-style: normal;
+	font-display: swap;
+	src: url('/fonts/inter-variable.woff2') format('woff2');
+}
+
+@font-face {
+	font-weight: 400;
+	font-family: 'Inter Variable';
+	font-style: italic;
+	font-display: swap;
+	src: url('/fonts/inter-italic.woff2') format('woff2');
 }
 
 /* Neue Machina */
@@ -47,9 +49,7 @@
 	font-family: 'Neue Machina';
 	font-style: normal;
 	font-display: swap;
-	src:
-		url('/fonts/neue-machina.woff2') format('woff2'),
-		url('/fonts/neue-machina.woff') format('woff');
+	src: url('/fonts/neue-machina.woff2') format('woff2');
 }
 
 /* JetBrains Mono */
@@ -59,9 +59,7 @@
 	font-family: 'JetBrains Mono';
 	font-style: normal;
 	font-display: swap;
-	src:
-		url('/fonts/jetbrains-mono.woff2') format('woff2'),
-		url('/fonts/jetbrains-mono.woff') format('woff');
+	src: url('/fonts/jetbrains-mono.woff2') format('woff2');
 }
 
 /* Variables */
