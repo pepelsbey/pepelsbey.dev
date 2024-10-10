@@ -1,0 +1,5 @@
+/* Update */
+
+.update {
+	--update-back: hsl(var(--color-sulu) / 40%);
+}
