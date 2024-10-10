@@ -1,10 +1,14 @@
 social:
   title: Links
   list:
-  - title: Twitter
-    url: https://twitter.com/pepelsbey_dev
   - title: Mastodon
     url: https://mastodon.social/@pepelsbey
+  - title: Bluesky
+    url: https://bsky.app/profile/pepelsbey.dev
+  - title: Threads
+    url: https://www.threads.net/@pepelsbey
+  - title: Twitter
+    url: https://twitter.com/pepelsbey_dev
   - title: Telegram
     url: https://t.me/pepelsbey_dev
   - title: LinkedIn
