@@ -23,6 +23,12 @@ At first, it didn’t make any sense: I often copy titles of my newly publi
 
 Then I did the same in Chrome and Safari and got the uppercase. There we go again 🙄
 
+<div class="update">
+
+**Update:** Chrome changed the behavior to match Firefox’s in version 127, released on July 23rd, 2024, although it wasn’t mentioned in the [release notes](https://developer.chrome.com/release-notes/127). But enough spoilers, keep reading.
+
+</div>
+
 ## The problem
 
 As I mentioned in the article that caused it, Web standards are the main thing that holds the whole Web platform together. In our case, it’s the [CSS Text Module](https://www.w3.org/TR/css-text-3/#propdef-text-transform) spec, which says, plain and simple, about the `text-transform` property:
