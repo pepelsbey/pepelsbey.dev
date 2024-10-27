@@ -1,5 +1,5 @@
-const lightStyle = document.querySelector('style[media*=prefers-color-scheme][media*=light]');
-const darkStyle = document.querySelector('style[media*=prefers-color-scheme][media*=dark]');
+const lightStyle = document.querySelector('link[rel=stylesheet][media*=prefers-color-scheme][media*=light]');
+const darkStyle = document.querySelector('link[rel=stylesheet][media*=prefers-color-scheme][media*=dark]');
 const lightTheme = document.querySelector('meta[name=theme-color][media*=prefers-color-scheme][media*=light]');
 const darkTheme = document.querySelector('meta[name=theme-color][media*=prefers-color-scheme][media*=dark]');
 const themeSwitcher = document.querySelector('.theme-switcher');

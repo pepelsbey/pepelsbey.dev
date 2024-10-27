@@ -29,6 +29,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="/styles/index.css">
+	<link rel="stylesheet" href="/styles/light.css" media="(prefers-color-scheme: light)">
+	<link rel="stylesheet" href="/styles/dark.css" media="(prefers-color-scheme: dark)">
 
 	<link rel="preload" href="/fonts/inter-variable.woff2" crossorigin as="font" type="font/woff2">
 	<link rel="preload" href="/fonts/neue-machina.woff2" crossorigin as="font" type="font/woff2">
@@ -60,13 +62,6 @@
 
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@pepelsbey_dev">
-
-	<style media="(prefers-color-scheme: light)">
-		{{ 'src/styles/light.css' | css }}
-	</style>
-	<style media="(prefers-color-scheme: dark)">
-		{{ 'src/styles/dark.css' | css }}
-	</style>
 
 	<link rel="alternate" type="application/rss+xml" href="{{ global.domain }}/feed/" title="{{ global.title }}">
 
