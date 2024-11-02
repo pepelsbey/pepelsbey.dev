@@ -23,26 +23,26 @@
 		"not dead"
 	],
 	"dependencies": {
-		"focus-trap": "^7.5.4"
+		"focus-trap": "^7.6.0"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^3.0.0",
 		"@11ty/eleventy-img": "^5.0.0",
-		"@11ty/eleventy-plugin-rss": "^2.0.1",
+		"@11ty/eleventy-plugin-rss": "^2.0.2",
 		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-		"@sindresorhus/slugify": "1.1.2",
+		"@sindresorhus/slugify": "^2.2.1",
 		"editorconfig-checker": "^6.0.0",
 		"esbuild": "^0.24.0",
-		"eslint": "^9.1.0",
-		"globals": "^15.0.0",
+		"eslint": "^9.14.0",
+		"globals": "^15.11.0",
 		"html-minifier-terser": "^7.2.0",
 		"js-yaml": "^4.1.0",
-		"lightningcss": "^1.25.1",
-		"linkedom": "^0.18.3",
+		"lightningcss": "^1.27.0",
+		"linkedom": "^0.18.5",
 		"pretty-data": "^0.40.0",
-		"remove-markdown": "^0.5.0",
-		"stylelint": "^16.3.1",
+		"remove-markdown": "^0.5.5",
+		"stylelint": "^16.10.0",
 		"stylelint-order": "^6.0.4",
-		"w3c-html-validator": "^1.7.0"
+		"w3c-html-validator": "^1.8.2"
 	}
 }
