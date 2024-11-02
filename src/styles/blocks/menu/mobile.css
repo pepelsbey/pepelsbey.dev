@@ -11,7 +11,9 @@
 			min-content
 			1fr
 			min-content;
+		row-gap: 40px;
 		padding: 20px;
+		overflow: auto;
 		background-color: var(--color-back-primary);
 		transform: translateX(-100%) scaleX(0.3);
 		view-transition-name: menu;
