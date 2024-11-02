@@ -30,7 +30,7 @@
 		"@11ty/eleventy-img": "^5.0.0",
 		"@11ty/eleventy-plugin-rss": "^2.0.2",
 		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
-		"@sindresorhus/slugify": "^2.2.1",
+		"@sindresorhus/slugify": "^1.1.2",
 		"editorconfig-checker": "^6.0.0",
 		"esbuild": "^0.24.0",
 		"eslint": "^9.14.0",
