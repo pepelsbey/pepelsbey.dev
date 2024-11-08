@@ -7,10 +7,10 @@
 @import 'blocks/about-section/light.css';
 @import 'blocks/article-card/light.css';
 @import 'blocks/content/light.css';
-@import 'blocks/update/light.css';
 @import 'blocks/intro/light.css';
 @import 'blocks/lead/light.css';
-@import 'blocks/prism/light.css';
 @import 'blocks/project-feature/light.css';
 @import 'blocks/project-section/light.css';
+@import 'blocks/shiki/light.css';
 @import 'blocks/theme-switcher/light.css';
+@import 'blocks/update/light.css';

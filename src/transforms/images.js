@@ -1,8 +1,8 @@
-const fsp = require('fs/promises');
-const Image = require('@11ty/eleventy-img');
-const os = require('os');
-const path = require('path');
-const sharp = require('sharp');
+import { promises as fsp } from 'fs';
+import Image from '@11ty/eleventy-img';
+import os from 'os';
+import path from 'path';
+import sharp from 'sharp';
 
 Image.concurrency = os.cpus().length;
 
@@ -61,7 +61,7 @@ const sharpWebpOptions = {
 	},
 };
 
-module.exports = function (window, content, outputPath) {
+export default function (window, content, outputPath) {
 	const articleContainer = window.document.getElementById('article-content');
 
 	if (!articleContainer) return;

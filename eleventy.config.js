@@ -1,19 +1,34 @@
-const dom = require('linkedom');
-const esbuild = require('esbuild');
-const fs = require('fs');
-const highlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const htmlMin = require('html-minifier-terser');
-const markdown = require('markdown-it')({ html: true });
-const lightningcss = require('lightningcss');
-const prettyData = require('pretty-data');
-const removeMarkdown = require('remove-markdown');
-const rss = require('@11ty/eleventy-plugin-rss');
-const yaml = require('js-yaml');
-const packageJson = require('./package.json');
+import { parseHTML } from 'linkedom';
+import * as esbuild from 'esbuild';
+import { readFileSync } from 'node:fs';
+import { minify as htmlMinify } from 'html-minifier-terser';
+import markdownIt from 'markdown-it';
+import { bundle as lightningcssBundle, browserslistToTargets, Features } from 'lightningcss';
+import { pd as prettyData } from 'pretty-data';
+import removeMarkdown from 'remove-markdown';
+import rss from '@11ty/eleventy-plugin-rss';
+import { load as yamlLoad } from 'js-yaml';
+import shikiHighlight from '@shikijs/markdown-it'
 
-const global = yaml.load(fs.readFileSync('src/data/global.yml', 'utf8'));
+import anchors from './src/transforms/anchors.js';
+import demos from './src/transforms/demos.js';
+import figure from './src/transforms/figure.js';
+import images from './src/transforms/images.js';
 
-module.exports = (config) => {
+const globalData = yamlLoad(readFileSync('src/data/global.yml', 'utf8'));
+const packageJson = JSON.parse(readFileSync('package.json', 'utf8'));
+
+const markdown = new markdownIt({ html: true }).use(
+	await shikiHighlight({
+		defaultColor: false,
+		themes: {
+			dark: `github-dark`,
+			light: `github-light`,
+		},
+	}),
+);
+
+export default (config) => {
 	// Collections
 
 	const collections = {
@@ -52,7 +67,7 @@ module.exports = (config) => {
 
 	config.addTransform('html-minify', async (content, path) => {
 		if (path && path.endsWith('.html')) {
-			return await htmlMin.minify(content, {
+			return await htmlMinify(content, {
 				collapseBooleanAttributes: true,
 				collapseWhitespace: true,
 				decodeEntities: true,
@@ -65,16 +80,15 @@ module.exports = (config) => {
 	});
 
 	const htmlTransforms = [
-		require('./src/transforms/anchors.js'),
-		require('./src/transforms/demos.js'),
-		require('./src/transforms/figure.js'),
-		require('./src/transforms/images.js'),
-		require('./src/transforms/prism.js'),
+		anchors,
+		demos,
+		figure,
+		images,
 	];
 
 	config.addTransform('html-transform', async (content, path) => {
 		if (path && path.endsWith('.html')) {
-			const window = dom.parseHTML(content);
+			const window = parseHTML(content);
 
 			for (const transform of htmlTransforms) {
 				await transform(window, content, path);
@@ -95,16 +109,12 @@ module.exports = (config) => {
 	];
 
 	const processStyles = async (path) => {
-		return await lightningcss.bundle({
+		return await lightningcssBundle({
 			filename: path,
 			minify: true,
 			sourceMap: false,
-			targets: lightningcss.browserslistToTargets(
-				packageJson.browserslist,
-			),
-			include:
-				lightningcss.Features.MediaQueries |
-				lightningcss.Features.Nesting,
+			targets: browserslistToTargets(packageJson.browserslist),
+			include: Features.MediaQueries | Features.Nesting,
 		});
 	};
 
@@ -160,7 +170,7 @@ module.exports = (config) => {
 
 	config.addTransform('xmlMin', (content, path) => {
 		if (path && path.endsWith('.xml')) {
-			return prettyData.pd.xmlmin(content);
+			return prettyData.xmlmin(content);
 		}
 
 		return content;
@@ -169,14 +179,14 @@ module.exports = (config) => {
 	// YAML
 
 	config.addDataExtension('yml', (contents) => {
-		return yaml.load(contents);
+		return yamlLoad(contents);
 	});
 
 	// Absolute links
 
 	config.addFilter('absolute', (content, article) => {
 		const reg = /(src="[^(https://)])|(src="\/)|(href="[^(https://)])|(href="\/)/g;
-		const prefix = global.domain + article.url;
+		const prefix = globalData.domain + article.url;
 		return content.replace(reg, (match) => {
 			if (match === 'src="/' || match === 'href="/') {
 				match = match.slice(0, -1);
@@ -227,7 +237,6 @@ module.exports = (config) => {
 	// Plugins
 
 	config.addPlugin(rss);
-	config.addPlugin(highlight);
 
 	// Config
 

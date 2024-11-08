@@ -37,7 +37,7 @@ In the previous case, both icons were separate files, containing nothing but th
 
 ![Two contour icons in a row: cogwheel in black, cogwheel in purple.](images/sprite.png)
 
-```svg
+```xml
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 24">
 	<path fill="#0c0b1d" d="M19.43…"/>
 	<path fill="#9874d3" d="M43.43…"/>
@@ -178,7 +178,7 @@ Though we have to keep the inline SVG placeholder in the document, it drasti
 
 How does this _sprite.svg_ look like? It contains our SVG icons wrapped in `<symbol>` elements with unique IDs, so we could request only the needed ones.
 
-```svg
+```xml
 <svg xmlns="http://www.w3.org/2000/svg">
 	<symbol id="settings" viewBox="0 0 24 24">
 		<path fill="currentcolor" d="M19.43…"/>
@@ -220,7 +220,7 @@ a:focus {
 
 You know what? It works! Not only for background images but for content images too. Though the SVG sprite needs to be organized differently. Let’s have a look and then unpack it.
 
-```svg
+```xml
 <svg xmlns="http://www.w3.org/2000/svg">
 	<view id="link" viewBox="0 0 24 24"/>
 	<path
@@ -271,7 +271,7 @@ a:focus {
 
 This one will show the second icon on hover because of the 24 pixels shift. I know, it looks a bit ugly, but it’s going to work with any “true sprite”, even the old-school ones. And there’s no need for IDs or some extra markup, just make sure that all icons will have their place (naturally or via transform) and start moving your viewport!
 
-```svg
+```xml
 <svg xmlns="http://www.w3.org/2000/svg">
 	<path
 		transform="translate(0, 0)"
@@ -330,7 +330,7 @@ Tell me if you’ve seen this one before: the inline SVG placeholder inherits 
 
 Let’s pull the curtain and see what our _sprite.svg_ is made of:
 
-```svg
+```xml
 <svg xmlns="http://www.w3.org/2000/svg">
 	<defs>
 		<style>
@@ -370,7 +370,7 @@ I’m sorry for your frustration if you’ve just tried to hover it. Unfortun
 
 But if you really want this kind of sprite to work, it’s possible to create multiple instances of the same icon with different colors and IDs via `<use>` and change ID in CSS on hover. But this is a story for another article 😉
 
-```svg
+```xml
 <svg xmlns="http://www.w3.org/2000/svg">
 	<defs>
 		<style>
@@ -399,7 +399,7 @@ But only in the case of SVG stack and only in Firefox the icon’s hover area
 
 We need to put some opaque rectangles in each icon to give it a desirable hover area. They could be circles too, but rectangles would be more universal. That would be pretty easy to automate based on the icon’s `viewBox` attribute, in case you’d like to build such a sprite based on a folder of icons.
 
-```svg
+```xml
 <svg id="settings" viewBox="0 0 24 24">
 	<rect width="24" height="24" fill-opacity="0"/>
 	<path fill="currentcolor" d="M19.43…"/>

@@ -1,6 +1,6 @@
-const htmlmin = require('html-minifier-terser');
+import { minify as htmlmin } from 'html-minifier-terser';
 
-module.exports = async function(window) {
+export default async function(window) {
 	const content = window.document.getElementById('article-content');
 
 	if (!content) return;
@@ -23,7 +23,7 @@ module.exports = async function(window) {
 			</figcaption>
 		`;
 
-		wrapper.innerHTML = await htmlmin.minify(
+		wrapper.innerHTML = await htmlmin(
 			template, {
 				collapseBooleanAttributes: true,
 				collapseWhitespace: true,

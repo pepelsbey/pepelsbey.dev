@@ -1,6 +1,6 @@
-const slugify = require('@sindresorhus/slugify');
+import slugify from '@sindresorhus/slugify';
 
-module.exports = function(window) {
+export default function(window) {
 	const content = window.document.getElementById('article-content');
 
 	if (!content) return;

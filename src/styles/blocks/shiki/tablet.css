@@ -1,8 +1,8 @@
 @media (1024px <= width < 1760px) {
 
-	/* Prism */
+	/* Shiki */
 
-	.prism {
+	.shiki {
 		tab-size: 3;
 	}
 
