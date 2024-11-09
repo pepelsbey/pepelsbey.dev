@@ -1,8 +1,6 @@
 /* Shiki */
 
 .shiki {
-	--shiki-back: hsl(var(--color-titan));
-
 	&, span {
 		color: var(--shiki-light);
 	}

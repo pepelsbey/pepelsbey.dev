@@ -1,17 +1,10 @@
 /* Shiki */
 
 .shiki {
-	--shiki-focus: hsl(var(--color-lilac));
-
 	margin-block: 20px;
 	margin-inline: 0;
 	padding: 20px;
 	overflow: auto;
 	border-radius: 20px;
-	background-color: var(--shiki-back);
-
-	&:focus-visible {
-		outline: 2px solid var(--shiki-focus);
-		outline-offset: 2px;
-	}
+	background-color: var(--content-code-back);
 }
