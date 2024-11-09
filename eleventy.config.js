@@ -22,9 +22,16 @@ const markdown = new markdownIt({ html: true }).use(
 	await shikiHighlight({
 		defaultColor: false,
 		themes: {
-			dark: `github-dark`,
-			light: `github-light`,
+			dark: 'github-dark',
+			light: 'github-light',
 		},
+		transformers: [
+			{
+				pre(node) {
+					delete node.properties.tabindex;
+				},
+			},
+		],
 	}),
 );
 
