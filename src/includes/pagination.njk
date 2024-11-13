@@ -12,7 +12,7 @@
 				</svg>
 			</a>
 		{% endif %}
-		<ul class="pagination__list">
+		<ol class="pagination__list">
 			{% for pageEntry in pagination.pages %}
 				{% set href = pagination.hrefs[loop.index0] %}
 				{% set current = 'aria-current="page"' if page.url == href else '' %}
@@ -27,7 +27,7 @@
 					</a>
 				</li>
 			{% endfor %}
-		</ul>
+		</ol>
 		{% if pagination.href.next %}
 			<a
 				class="pagination__link"
