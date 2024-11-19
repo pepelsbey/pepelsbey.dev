@@ -15,7 +15,8 @@
     Content-Security-Policy = """
       default-src 'self';
       frame-ancestors 'self';
-      style-src 'self' 'unsafe-inline';
+      style-src 'self' 'unsafe-inline' fonts.googleapis.com;
+      font-src 'self' fonts.gstatic.com;
       """
     Cross-Origin-Resource-Policy = "same-origin"
     Referrer-Policy = "strict-origin-when-cross-origin"
