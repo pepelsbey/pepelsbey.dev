@@ -8,7 +8,7 @@
 		"editorconfig": "editorconfig-checker",
 		"html": "w3c-html-validator dist --ignore-config=.validator",
 		"css": "stylelint \"src/styles/**/*.css\"",
-		"javascript": "eslint eleventy.config.js src/**/*.js"
+		"javascript": "eslint"
 	},
 	"engines": {
 		"node": "20"
