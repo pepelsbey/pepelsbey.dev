@@ -109,26 +109,18 @@
 	}
 }
 
-/* Images and Videos */
+/* Images, Videos, Frames */
 
 .content-block {
-	img, video {
+	img, video, iframe {
 		display: block;
 		width: 100%;
-		height: auto;
 		border: 2px solid var(--content-image-outline);
 		border-radius: 20px;
 	}
-}
 
-/* Frames */
-
-.content-block {
-	iframe {
-		display: block;
-		width: 100%;
-		border: none;
-		border-radius: 20px;
+	img, video {
+		height: auto;
 	}
 }
 
