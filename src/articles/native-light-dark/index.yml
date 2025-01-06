@@ -1,0 +1,15 @@
+title: 'Native HTML light and dark color scheme switching'
+desc: 'While there’s no truly native way to build a light/dark color scheme switcher yet, we all try our best to build something that comes close. Some native HTML options are often overlooked in favor of hacky solutions. Let’s make them well-known and widely used while we wait for the proper built-in one.'
+date: 2025-01-06
+tags:
+  - HTML
+  - CSS
+toc:
+  - title: Setting color-scheme
+  - title: Switching color-scheme
+  - title: Linking a CSS scheme
+  - title: Switching CSS schemes
+  - title: One more thing
+  - title: Homework
+cover: true
+layout: article.njk
