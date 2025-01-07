@@ -234,10 +234,11 @@ export default (config) => {
 	// Passthrough copy
 
 	[
-		'src/robots.txt',
-		'src/images',
+		'src/apple-touch-icon.png',
+		'src/favicon.ico',
 		'src/fonts',
-		'src/talks',
+		'src/images',
+		'src/robots.txt',
 		'src/articles/**/*.!(md|yml)',
 	].forEach((path) => config.addPassthroughCopy(path));
 
