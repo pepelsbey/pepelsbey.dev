@@ -138,7 +138,7 @@ To make it work properly, you’ll need to decide where to store your global `co
 ```
 
 <iframe
-	src="demos/color-scheme"
+	src="demo/color-scheme/index.html"
 	height="256" loading="lazy"
 	title="Three-button switcher group: light, auto, dark. The auto button is selected."
 ></iframe>
@@ -228,7 +228,7 @@ function switchScheme(scheme) {
 In short, if we force the dark scheme, the `dark.css` gets `media="all"` instead of the `prefers-color-scheme` and the `light.css` one gets `‌media="not all"`, and the other way around for the light scheme. Once the user chooses the “auto” option, we stop forcing and restoring all previous `prefers-color-scheme` media values.
 
 <iframe
-	src="demos/link-media"
+	src="demo/link-media/index.html"
 	height="256" loading="lazy"
 	title="Three-button switcher group: light, auto, dark. The auto button is selected."
 ></iframe>

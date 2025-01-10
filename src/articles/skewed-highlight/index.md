@@ -38,7 +38,7 @@ h1 {
 ```
 
 <iframe
-	src="demos/type.html"
+	src="demo/type.html"
 	height="500" loading="lazy"
 	title="The heading with the Hanken Grotesk font and text styles applied."
 ></iframe>
@@ -96,7 +96,7 @@ mark {
 It looked pretty close already, but the whole point of this challenge was the side angles.
 
 <iframe
-	src="demos/mark.html"
+	src="demo/mark.html"
 	height="500" loading="lazy"
 	title="The heading with the multi-line styled mark tag highlighting the first part."
 ></iframe>
@@ -168,7 +168,7 @@ Positioning background was fairly simple:
 Once the background was done, I did a minor refactoring and used a few custom properties to make the highlight easily adjustable. But first, let’s look at the result!
 
 <iframe
-	src="demos/almost.html"
+	src="demo/almost.html"
 	height="500" loading="lazy"
 	title="The heading with the side angles at the beginning and the end of the whole highlight."
 ></iframe>
@@ -235,7 +235,7 @@ mark {
 I had to use the `-webkit-` prefix for it to work in Chrome and Safari, but the result was just stunning: every line of the `<mark>` element was decorated like its own element.
 
 <iframe
-	src="demos/final.html"
+	src="demo/final.html"
 	height="500" loading="lazy"
 	title="The heading with the side angles at the beginning and the end of every separate part of the highlight."
 ></iframe>

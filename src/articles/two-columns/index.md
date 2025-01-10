@@ -43,7 +43,7 @@ How would you sort the list of reasonable options? Well, probably not alphabeti
 
 ### Tables
 
-⚙️ [Demo: two columns and a gap with tables](demos/table.html)
+⚙️ [Demo: two columns and a gap with tables](demo/table.html)
 
 Tables were the first layout tool available in browsers. And I used them to create my first webpage back in 2002. To make a table layout you need a parent wrapper `<table>`, some `<tr>` rows, and `<td>` cells for columns.
 
@@ -105,7 +105,7 @@ Once we have both news in each table cell, the first “reasonable” layout i
 
 ### Floats
 
-⚙️ [Demo: two columns and a gap with floats](demos/float.html)
+⚙️ [Demo: two columns and a gap with floats](demo/float.html)
 
 The next layout technique I learned were floats. They were invented for a newspaper or magazine-like content layouts where text would “float” around pictures, quotes, or similar elements. I tried this first in Adobe PageMaker when laying out an actual newspaper and it was very nice to have floats available on the Web too.
 
@@ -165,7 +165,7 @@ And there you have it! The second slightly more “reasonable” two-column opt
 
 ### Inline blocks
 
-⚙️ [Demo: two columns and a gap with inline blocks](demos/inline-block.html)
+⚙️ [Demo: two columns and a gap with inline blocks](demo/inline-block.html)
 
 Layouts based on inline blocks were popular around the same time as floats. But they were a little bit more finicky to deal with. We’ll use the same markup as with floats, but we won’t need any first/second modifiers.
 
@@ -221,7 +221,7 @@ That was the third way, the next three will finally start making sense, I promi
 
 ### Multi-columns
 
-⚙️ [Demo: two columns and a gap with multi-columns](demos/multi-column.html)
+⚙️ [Demo: two columns and a gap with multi-columns](demo/multi-column.html)
 
 It’s time for the first layout technique that was designed for layouts. Well, almost. Multi-columns can take any content and make it flow through the columns with some native gaps in-between. As seen in newspapers!
 
@@ -248,7 +248,7 @@ That was quick! The fourth two-column layout. Let’s see if there’s anything
 
 ### Flexbox
 
-⚙️ [Demo: two columns and a gap with Flexbox](demos/flexbox.html)
+⚙️ [Demo: two columns and a gap with Flexbox](demo/flexbox.html)
 
 Here comes the most popular layout technique these days. It’s been around for a while, but back in the old days there used to be differences in browser implementations and just [obvious bugs](https://github.com/philipwalton/flexbugs) that made Flexbox tricky to use. But not anymore!
 
@@ -282,7 +282,7 @@ Finally, something modern and usable, the fifth already! Flexbox is relevant to
 
 ### Grid Layout
 
-⚙️ [Demo: two columns and a gap with Grid Layout](demos/table.html)
+⚙️ [Demo: two columns and a gap with Grid Layout](demo/table.html)
 
 Seriously, Grid Layout makes so much sense in almost every layout situation, even for micro-layouts like putting an icon next to a word. Remember? This is what we’ve started from:
 
@@ -312,7 +312,7 @@ Other methods are making things too complicated with extra markup, misusing some
 
 ### Positioning
 
-⚙️ [Demo: two columns and a gap with positioning](demos/position.html)
+⚙️ [Demo: two columns and a gap with positioning](demo/position.html)
 
 Positioning is not the best layout technique because it breaks the content flow, one of the main principles of the Web. But it’s still a useful tool in some cases. Unlike shapes in SVG, we don’t have to position elements from the top left corner of the document every time: fortunately, there’s a way to nest positioning.
 
@@ -351,7 +351,7 @@ So there you have it: the first weird way. Nothing too scary, right? Of cours
 
 ### Writing mode
 
-⚙️ [Demo: two columns and a gap with writing mode](demos/writing-mode.html)
+⚙️ [Demo: two columns and a gap with writing mode](demo/writing-mode.html)
 
 To understand how the next method works, let’s think about this very text: not the meaning of it, but the shape. I’m writing it in horizontal lines that go one after another from top to bottom. This behavior is common for many languages and controlled with the `writing-mode` property. In this case, its value is `horizontal-tb`, meaning “horizontal, top to bottom”.
 
@@ -393,7 +393,7 @@ Still, the second weird two-column layout. Ready for another one? Let’s go!
 
 ### SVG
 
-⚙️ [Demo: two columns and a gap with SVG](demos/svg.html)
+⚙️ [Demo: two columns and a gap with SVG](demo/svg.html)
 
 I already mentioned SVG as merely a graphics format that could be hand-coded, but doesn’t fit our layout needs. Sorry, but I lied to you. You weren’t ready for the truth at the beginning. But now you’ve been through a lot of weird stuff and are ready for anything.
 
@@ -449,7 +449,7 @@ That’s the third weird two-column layout. Let’s explore a slightly more rea
 
 ### Element
 
-⚙️ [Demo: two columns and a gap with element](demos/element.html)
+⚙️ [Demo: two columns and a gap with element](demo/element.html)
 
 When setting up the rules, I mentioned that we’re trying to make something practical here, not just draw two boxes next to each other. But there is a way to take some real content and draw it as a background image. It’s not Canvas, it only works in Firefox, and you should never use it. Sounds exciting!
 
@@ -497,7 +497,7 @@ The fourth weird layout method wasn’t that bad compared to what’s coming ne
 
 ### Frames
 
-⚙️ [Demo: two columns and a gap with frames](demos/frame.html)
+⚙️ [Demo: two columns and a gap with frames](demo/frame.html)
 
 You might know what `<iframe>` is, but you probably haven’t used the `<frame>` element much. It serves a similar purpose by giving you a “window” to another document. The main difference between them is that `<iframe>` is a standalone element, but `<frame>` elements come in sets called `<frameset>`. And those framesets have some layout capabilities!
 

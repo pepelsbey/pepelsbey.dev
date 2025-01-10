@@ -7,7 +7,7 @@ First of all, let’s all agree that sprites are a trick. You might call it a
 In the early Web days, sprites were used similarly, but to optimize network performance (limit the number of requests) and also work around the way browsers load resources. Consider this example: one background image should be replaced with another once the user hovers/focuses the link.
 
 <iframe
-	src="demos/old-school/naive.html"
+	src="demo/old-school/naive.html"
 	height="360" loading="lazy"
 	title="Black contour cogwheel icon on a green background, on hover it becomes purple."
 ></iframe>
@@ -51,7 +51,7 @@ Look at the `d` attributes of every `<path>` element, specifically on how the
 The easiest way to put a decorative image on a page is to use the `background-image` property. Seriously, you don’t always need to do complex things with your graphics, it’s usually more performant too. Let’s put our sprite in the background image and move its position to a certain coordinate to show the needed icon. There’s no need to set `background-position` to `0 0`, but I like to keep defaults visible when they’re about to change.
 
 <iframe
-	src="demos/old-school/background.html"
+	src="demo/old-school/background.html"
 	height="360" loading="lazy"
 	title="Black contour cogwheel icon on a green background, on hover it becomes purple."
 ></iframe>
@@ -90,7 +90,7 @@ Interestingly enough, you can use old-school sprites not only for background ima
 Styling in this case looks quite similar to the previous example, but with `object-fit` and `object-position` properties instead. Unlike `background-position`, the default position here would be `50% 50%`, so we’ll have to set it to `0 0` to make it work the same way.
 
 <iframe
-	src="demos/old-school/img.html"
+	src="demo/old-school/img.html"
 	height="360" loading="lazy"
 	title="Black contour cogwheel icon on a green background, on hover it becomes purple."
 ></iframe>
@@ -132,7 +132,7 @@ If you just need to change your SVG icon’s color fill via CSS, you can put i
 ```
 
 <iframe
-	src="demos/symbols/inline.html"
+	src="demo/symbols/inline.html"
 	height="360" loading="lazy"
 	title="Black contour cogwheel icon on a green background, on hover it becomes purple."
 ></iframe>
@@ -157,7 +157,7 @@ But inline icons are not ideal. You can often rely on the browser cache when it
 To make all the paths _external_ to the document, we can put them together in a file organized in a special way. Let’s call it _sprite.svg_ and throw in another icon just to make it look like a library. Instead of the `<path>` itself, we now have `<use>` element that gets the symbol from the library by ID.
 
 <iframe
-	src="demos/symbols/external.html"
+	src="demo/symbols/external.html"
 	height="360" loading="lazy"
 	title="Black contour cogwheel icon on a green background, on hover it becomes purple."
 ></iframe>
@@ -202,7 +202,7 @@ This method is a built-in SVG feature useful for organizing complex vector doc
 Let’s try one more time to use a “true” SVG sprite as a background image, with an anchor pointing to a specific icon in that sprite. Yes, the same thing that didn’t work previously. Wouldn’t it be nice to make it work? 🤔
 
 <iframe
-	src="demos/fragments/id.html"
+	src="demo/fragments/id.html"
 	height="360" loading="lazy"
 	title="Black contour cogwheel icon on a green background, on hover it becomes purple."
 ></iframe>
@@ -251,7 +251,7 @@ Unfortunately, this solution is limited to background images and content image
 While we’re at it, there’s another syntax that might be convenient in some cases. Previously, to make this “true sprite” work we had to mark it with `<view>` elements and unique IDs. But we can also tell what fragment of the sprite we need right in the URL, using `svgView` and `viewBox` parameters.
 
 <iframe
-	src="demos/fragments/view.html"
+	src="demo/fragments/view.html"
 	height="360" loading="lazy"
 	title="Black contour cogwheel icon on a green background, on hover it becomes purple."
 ></iframe>
@@ -313,7 +313,7 @@ You know, the way I said “if only” and the next chapter that’s coming up
 Before diving into yet another SVG spriting method, let’s answer the most important question: does CSS styling work? Yes, it does. That’s what we’re going to try first.
 
 <iframe
-	src="demos/stacks/inline.html"
+	src="demo/stacks/inline.html"
 	height="360" loading="lazy"
 	title="Black contour cogwheel icon on a green background, on hover it becomes purple."
 ></iframe>
@@ -352,10 +352,10 @@ Just like `<symbol>`, our icons don’t get their place since they’re stacked 
 
 As for the `<svg>` wrappers for each icon, they serve an important role in making all that beautiful auto-scaling thanks to the `viewBox` attribute. That’s also why there’s a complicated `:root svg` selector: it says “affect only nested `<svg>` elements”, which makes sense since there’s a parent one too.
 
-But the most exciting part is that it also works for [background images](demos/stacks/background.html) and [content images](demos/stacks/img.html).
+But the most exciting part is that it also works for [background images](demo/stacks/background.html) and [content images](demo/stacks/img.html).
 
 <iframe
-	src="demos/stacks/background.html"
+	src="demo/stacks/background.html"
 	height="360" loading="lazy"
 	title="Black contour cogwheel icon on a green background, it does not become purple on hover."
 ></iframe>
