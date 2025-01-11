@@ -24,21 +24,21 @@
 		"not dead"
 	],
 	"dependencies": {
-		"focus-trap": "^7.6.2"
+		"focus-trap": "^7.6.4"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^3.0.0",
-		"@11ty/eleventy-img": "^5.0.0",
+		"@11ty/eleventy-img": "^6.0.0",
 		"@11ty/eleventy-plugin-rss": "^2.0.2",
-		"@shikijs/markdown-it": "^1.25.1",
+		"@shikijs/markdown-it": "^1.26.1",
 		"@sindresorhus/slugify": "^2.2.1",
-		"editorconfig-checker": "^6.0.0",
+		"editorconfig-checker": "^6.0.1",
 		"esbuild": "^0.24.2",
-		"eslint": "^9.17.0",
+		"eslint": "^9.18.0",
 		"globals": "^15.14.0",
 		"html-minifier-terser": "^7.2.0",
 		"js-yaml": "^4.1.0",
-		"lightningcss": "^1.28.2",
+		"lightningcss": "^1.29.1",
 		"linkedom": "^0.18.6",
 		"pretty-data": "^0.40.0",
 		"remove-markdown": "^0.6.0",
