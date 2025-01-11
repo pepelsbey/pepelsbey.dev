@@ -15,8 +15,9 @@ import demos from './src/transforms/demos.js';
 import figure from './src/transforms/figure.js';
 import images from './src/transforms/images.js';
 
+import packageJson from './package.json' with { type: 'json' };
+
 const globalData = yamlLoad(readFileSync('src/data/global.yml', 'utf8'));
-const packageJson = JSON.parse(readFileSync('package.json', 'utf8'));
 
 const markdown = new markdownIt({ html: true }).use(
 	await shikiHighlight({

@@ -11,7 +11,7 @@
 		"javascript": "eslint"
 	},
 	"engines": {
-		"node": "20"
+		"node": "22"
 	},
 	"browserslist": [
 		"Chrome > 0 and last 2.5 years",
