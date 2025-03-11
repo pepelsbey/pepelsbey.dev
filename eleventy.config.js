@@ -1,6 +1,5 @@
 import { parseHTML } from 'linkedom';
 import * as esbuild from 'esbuild';
-import { readFileSync } from 'node:fs';
 import { minify as htmlMinify } from 'html-minifier-terser';
 import markdownIt from 'markdown-it';
 import { bundle as lightningcssBundle, browserslistToTargets, Features } from 'lightningcss';
@@ -16,8 +15,6 @@ import figure from './src/transforms/figure.js';
 import images from './src/transforms/images.js';
 
 import packageJson from './package.json' with { type: 'json' };
-
-const globalData = yamlLoad(readFileSync('src/data/global.yml', 'utf8'));
 
 const markdown = new markdownIt({ html: true }).use(
 	await shikiHighlight({
@@ -188,21 +185,6 @@ export default (config) => {
 
 	config.addDataExtension('yml', (contents) => {
 		return yamlLoad(contents);
-	});
-
-	// Absolute links
-
-	config.addFilter('absolute', (content, article) => {
-		const reg = /(src="[^(https://)])|(src="\/)|(href="[^(https://)])|(href="\/)/g;
-		const prefix = globalData.domain + article.url;
-		return content.replace(reg, (match) => {
-			if (match === 'src="/' || match === 'href="/') {
-				match = match.slice(0, -1);
-				return match + prefix;
-			} else {
-				return match.slice(0, -1) + prefix + match.slice(-1);
-			}
-		});
 	});
 
 	// Dates

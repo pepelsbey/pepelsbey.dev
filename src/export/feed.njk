@@ -23,7 +23,7 @@ permalink: /feed/index.xml
 			{% endset %}
 		{% else %}
 			{% set url = global.domain + article.url %}
-			{% set content = article.templateContent | absolute(article) %}
+			{% set content = article.templateContent %}
 		{% endif %}
 
 		<entry>
