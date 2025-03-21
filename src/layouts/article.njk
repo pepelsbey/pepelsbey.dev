@@ -28,6 +28,14 @@ layout: page.njk
 				<div class="two-columns__article">
 					<div class="content content-block content-inline" id="article-content">
 						{{ content | safe }}
+						<p class="content__last-updated">
+							<small>
+								Last updated on
+								<time datetime="{{ page.inputPath | lastModified | dateISO }}">
+									{{ page.inputPath | lastModified | dateLong }}
+								</time>
+							</small>
+						</p>
 					</div>
 				</div>
 			</div>
