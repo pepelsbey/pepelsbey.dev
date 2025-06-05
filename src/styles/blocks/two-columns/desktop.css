@@ -12,7 +12,7 @@
 		row-gap: 80px;
 	}
 
-	/* Acticle */
+	/* Article */
 
 	.two-columns__article {
 		grid-column: 3 / span 4;

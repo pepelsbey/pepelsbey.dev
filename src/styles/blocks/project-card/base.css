@@ -16,7 +16,6 @@
 	row-gap: 20px;
 	padding-inline: 20px;
 	border-radius: 20px;
-	background-color: var(--project-card-box-back);
 	color: var(--project-card-project-text);
 }
 
