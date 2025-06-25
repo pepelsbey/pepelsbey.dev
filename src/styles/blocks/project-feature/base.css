@@ -55,8 +55,8 @@
 	&::before {
 		position: absolute;
 		inset: 0;
-		content: '';
 		border-radius: var(--project-feature-radius);
+		content: '';
 	}
 
 	&:focus-visible::before {
@@ -68,8 +68,8 @@
 /* Icon */
 
 .project-feature__icon {
-	pointer-events: none;
 	z-index: 1;
+	pointer-events: none;
 }
 
 /* Scribble */

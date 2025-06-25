@@ -15,8 +15,8 @@
 
 .intro__name {
 	margin: 0;
-	line-height: 1.1;
 	text-transform: uppercase;
+	line-height: 1.1;
 	font-weight: normal;
 	font-size: var(--font-size-shout);
 	font-family: var(--font-family-heading);

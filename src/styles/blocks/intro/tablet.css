@@ -61,8 +61,8 @@
 		inline-size: 600px;
 		block-size: auto;
 		color: var(--intro-scribble-fill);
-		pointer-events: none;
 		transform: scaleX(-1);
+		pointer-events: none;
 	}
 
 }

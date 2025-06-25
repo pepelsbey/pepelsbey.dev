@@ -1,9 +1,9 @@
 :root {
-	color-scheme: light;
-
 	--color-back-primary: hsl(var(--color-white));
 	--color-back-secondary: hsl(var(--color-titan));
 
 	--color-text-primary: hsl(var(--color-ebony));
 	--color-text-secondary: hsl(var(--color-grey));
+
+	color-scheme: light;
 }

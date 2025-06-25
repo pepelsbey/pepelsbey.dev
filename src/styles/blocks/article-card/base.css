@@ -65,8 +65,8 @@
 	&::before {
 		position: absolute;
 		inset: 0;
-		content: '';
 		border-radius: 20px;
+		content: '';
 	}
 
 	&:focus-visible {

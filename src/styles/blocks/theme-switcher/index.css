@@ -61,9 +61,9 @@
 	width: calc(33% - 0.5px);
 	border-radius: 24px;
 	background-color: var(--theme-switcher-back);
-	pointer-events: none;
 	transform: translateX(0);
 	transition: transform 0.2s;
+	pointer-events: none;
 
 	.theme-switcher__button[aria-pressed='true'][value='light'] ~ & {
 		transform: translateX(-100%);

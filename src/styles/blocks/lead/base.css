@@ -18,9 +18,9 @@
 
 .lead__title {
 	margin: 0;
-	line-height: 1.1;
-	text-wrap: balance;
 	text-transform: uppercase;
+	text-wrap: balance;
+	line-height: 1.1;
 	font-weight: normal;
 	font-family: var(--font-family-heading);
 }
