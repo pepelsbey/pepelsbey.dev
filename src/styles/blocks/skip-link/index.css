@@ -19,6 +19,7 @@
 
 	&:not(:active, :focus-visible) {
 		position: absolute;
+		clip-path: inset(50%);
 		white-space: nowrap;
 	}
 }
