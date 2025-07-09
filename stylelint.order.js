@@ -1,7 +1,6 @@
 export const propertiesOrder = [
-	// Positioning
-
 	'all',
+
 	'position',
 	'position-anchor',
 	'position-area',
@@ -9,28 +8,28 @@ export const propertiesOrder = [
 	'position-try-order',
 	'position-try',
 	'position-visibility',
+
 	'top',
 	'right',
 	'bottom',
 	'left',
+
 	'inset',
 	'inset-area',
-	'inset-block',
-	'inset-block-start',
-	'inset-block-end',
 	'inset-inline',
 	'inset-inline-start',
 	'inset-inline-end',
+	'inset-block',
+	'inset-block-start',
+	'inset-block-end',
+
 	'anchor-default',
 	'anchor-name',
 	'anchor-scroll',
+
 	'z-index',
 
-	// Block
-
 	'display',
-
-	// Grid
 
 	'grid-template',
 	'grid-template-rows',
@@ -51,8 +50,6 @@ export const propertiesOrder = [
 	'grid-row-gap',
 	'grid-column-gap',
 
-	// Flexbox
-
 	'flex',
 	'flex-grow',
 	'flex-shrink',
@@ -61,22 +58,23 @@ export const propertiesOrder = [
 	'flex-direction',
 	'flex-wrap',
 
-	// Box Alignment
+	'order',
 
 	'place-content',
 	'align-content',
 	'justify-content',
+
 	'place-items',
 	'align-items',
 	'justify-items',
+
 	'place-self',
 	'align-self',
 	'justify-self',
+
 	'gap',
 	'row-gap',
 	'column-gap',
-
-	// Columns
 
 	'columns',
 	'column-count',
@@ -89,61 +87,65 @@ export const propertiesOrder = [
 	'column-span',
 	'column-width',
 
-	'order',
 	'table-layout',
 	'caption-side',
 	'empty-cells',
+
 	'float',
 	'float-defer',
 	'float-offset',
 	'float-reference',
 	'clear',
+
 	'object-fit',
 	'object-position',
-
-	// Margin
 
 	'margin',
 	'margin-top',
 	'margin-right',
 	'margin-bottom',
 	'margin-left',
-	'margin-block',
-	'margin-block-start',
-	'margin-block-end',
+
 	'margin-inline',
 	'margin-inline-start',
 	'margin-inline-end',
+
+	'margin-block',
+	'margin-block-start',
+	'margin-block-end',
+
 	'margin-break',
 	'margin-trim',
-
-	// Padding
 
 	'padding',
 	'padding-top',
 	'padding-right',
 	'padding-bottom',
 	'padding-left',
-	'padding-block',
-	'padding-block-start',
-	'padding-block-end',
+
 	'padding-inline',
 	'padding-inline-start',
 	'padding-inline-end',
 
-	// Sizing
+	'padding-block',
+	'padding-block-start',
+	'padding-block-end',
 
 	'box-sizing',
 	'aspect-ratio',
+
 	'width',
 	'min-width',
 	'max-width',
+
 	'inline-size',
 	'min-inline-size',
 	'max-inline-size',
+
 	'height',
 	'min-height',
 	'max-height',
+
 	'block-size',
 	'min-block-size',
 	'max-block-size',
@@ -173,128 +175,155 @@ export const propertiesOrder = [
 	'clip-path',
 	'clip-rule',
 
-	// Scrolling
-
 	'scroll-behavior',
-	'scroll-margin-block-end',
-	'scroll-margin-block-start',
-	'scroll-margin-block',
-	'scroll-margin-bottom',
-	'scroll-margin-inline-end',
-	'scroll-margin-inline-start',
-	'scroll-margin-inline',
-	'scroll-margin-left',
-	'scroll-margin-right',
-	'scroll-margin-top',
+
 	'scroll-margin',
+	'scroll-margin-top',
+	'scroll-margin-right',
+	'scroll-margin-bottom',
+	'scroll-margin-left',
+
+	'scroll-margin-inline',
+	'scroll-margin-inline-start',
+	'scroll-margin-inline-end',
+	'scroll-margin-block',
+	'scroll-margin-block-start',
+	'scroll-margin-block-end',
+
 	'scroll-marker-group',
-	'scroll-padding-block-end',
-	'scroll-padding-block-start',
-	'scroll-padding-block',
-	'scroll-padding-bottom',
-	'scroll-padding-inline-end',
-	'scroll-padding-inline-start',
-	'scroll-padding-inline',
-	'scroll-padding-left',
-	'scroll-padding-right',
-	'scroll-padding-top',
+
 	'scroll-padding',
+	'scroll-padding-top',
+	'scroll-padding-right',
+	'scroll-padding-bottom',
+	'scroll-padding-left',
+
+	'scroll-padding-inline',
+	'scroll-padding-inline-start',
+	'scroll-padding-inline-end',
+	'scroll-padding-block',
+	'scroll-padding-block-start',
+	'scroll-padding-block-end',
+
+	'scroll-snap-type',
 	'scroll-snap-align',
 	'scroll-snap-stop',
-	'scroll-snap-type',
-	'scroll-timeline-axis',
-	'scroll-timeline-name',
+
 	'scroll-timeline',
-	'scrollbar-color',
-	'scrollbar-gutter',
+	'scroll-timeline-name',
+	'scroll-timeline-axis',
+
 	'scrollbar-width',
+	'scrollbar-gutter',
+	'scrollbar-color',
+
 	'overscroll-behavior',
 	'overscroll-behavior-x',
 	'overscroll-behavior-y',
 	'overscroll-behavior-inline',
 	'overscroll-behavior-block',
 
-	// Decoration
-
 	'appearance',
 	'box-shadow',
+
 	'outline',
 	'outline-width',
 	'outline-style',
 	'outline-color',
 	'outline-offset',
+
 	'border',
 	'border-width',
 	'border-style',
 	'border-color',
+
 	'border-top',
 	'border-top-width',
 	'border-top-style',
 	'border-top-color',
+
+	'border-right',
+	'border-right-width',
+	'border-right-style',
+	'border-right-color',
+
+	'border-bottom',
+	'border-bottom-width',
+	'border-bottom-style',
+	'border-bottom-color',
+
+	'border-left',
+	'border-left-width',
+	'border-left-style',
+	'border-left-color',
+
+	'border-inline',
+	'border-inline-width',
+	'border-inline-style',
+	'border-inline-color',
+
+	'border-inline-start',
+	'border-inline-start-width',
+	'border-inline-start-style',
+	'border-inline-start-color',
+
+	'border-inline-end',
+	'border-inline-end-width',
+	'border-inline-end-style',
+	'border-inline-end-color',
+
 	'border-block',
 	'border-block-width',
 	'border-block-style',
 	'border-block-color',
 	'border-block-start',
+
 	'border-block-start-width',
 	'border-block-start-style',
 	'border-block-start-color',
-	'border-bottom',
-	'border-bottom-width',
-	'border-bottom-style',
-	'border-bottom-color',
+
 	'border-block-end',
 	'border-block-end-width',
 	'border-block-end-style',
 	'border-block-end-color',
-	'border-left',
-	'border-left-width',
-	'border-left-style',
-	'border-left-color',
-	'border-inline',
-	'border-inline-width',
-	'border-inline-style',
-	'border-inline-color',
-	'border-inline-start',
-	'border-inline-start-width',
-	'border-inline-start-style',
-	'border-inline-start-color',
-	'border-right',
-	'border-right-width',
-	'border-right-style',
-	'border-right-color',
-	'border-inline-end',
-	'border-inline-end-width',
-	'border-inline-end-style',
-	'border-inline-end-color',
+
 	'border-radius',
+
 	'border-top-left-radius',
 	'border-top-right-radius',
 	'border-bottom-right-radius',
 	'border-bottom-left-radius',
+
 	'border-start-start-radius',
 	'border-start-end-radius',
 	'border-end-end-radius',
 	'border-end-start-radius',
+
 	'border-image',
 	'border-image-source',
 	'border-image-slice',
 	'border-image-width',
 	'border-image-outset',
 	'border-image-repeat',
+
 	'border-top-image',
 	'border-right-image',
 	'border-bottom-image',
 	'border-left-image',
-	'border-corner-image',
+
 	'border-top-left-image',
 	'border-top-right-image',
 	'border-bottom-right-image',
 	'border-bottom-left-image',
+
+	'border-corner-image',
+
 	'border-boundary',
 	'border-collapse',
 	'border-spacing',
+
 	'box-decoration-break',
+
 	'stroke',
 	'stroke-dasharray',
 	'stroke-dashoffset',
@@ -303,6 +332,7 @@ export const propertiesOrder = [
 	'stroke-miterlimit',
 	'stroke-opacity',
 	'stroke-width',
+
 	'background',
 	'background-color',
 	'background-image',
@@ -315,24 +345,20 @@ export const propertiesOrder = [
 	'background-attachment',
 	'background-repeat',
 	'background-blend-mode',
+
 	'backface-visibility',
+
 	'fill',
 	'fill-opacity',
 	'fill-rule',
+
 	'accent-color',
 	'caret-color',
+
 	'color',
 
-	// Masking
-
 	'mask',
-	'mask-border-mode',
-	'mask-border-outset',
-	'mask-border-repeat',
-	'mask-border-slice',
-	'mask-border-source',
-	'mask-border-width',
-	'mask-border',
+
 	'mask-clip',
 	'mask-composite',
 	'mask-image',
@@ -343,7 +369,13 @@ export const propertiesOrder = [
 	'mask-size',
 	'mask-type',
 
-	// Text
+	'mask-border',
+	'mask-border-mode',
+	'mask-border-outset',
+	'mask-border-repeat',
+	'mask-border-slice',
+	'mask-border-source',
+	'mask-border-width',
 
 	'direction',
 	'writing-mode',
@@ -434,7 +466,6 @@ export const propertiesOrder = [
 	'font-size-adjust',
 	'font-family',
 	'font-style',
-	'font-display',
 	'font-effect',
 	'font-synthesis',
 	'font-synthesis-position',
@@ -456,25 +487,23 @@ export const propertiesOrder = [
 	'font-palette',
 	'font-kerning',
 	'font-smooth',
-	'src',
+
 	'quotes',
+
 	'counter-set',
 	'counter-increment',
 	'counter-reset',
-
-	// Transform
 
 	'transform',
 	'transform-box',
 	'transform-origin',
 	'transform-style',
+
 	'translate',
 	'rotate',
 	'scale',
 	'perspective',
 	'perspective-origin',
-
-	// Transition
 
 	'transition',
 	'transition-behavior',
@@ -482,8 +511,6 @@ export const propertiesOrder = [
 	'transition-duration',
 	'transition-property',
 	'transition-timing-function',
-
-	// Animation
 
 	'animation',
 	'animation-composition',
@@ -507,8 +534,6 @@ export const propertiesOrder = [
 	'offset-position',
 	'offset-rotate',
 
-	// View Transition
-
 	'view-timeline-axis',
 	'view-timeline-inset',
 	'view-timeline-name',
@@ -517,8 +542,6 @@ export const propertiesOrder = [
 	'view-transition-name',
 
 	'timeline-scope',
-
-	// SVG
 
 	'x',
 	'y',
@@ -529,13 +552,9 @@ export const propertiesOrder = [
 	'ry',
 	'd',
 
-	// Math
-
 	'math-depth',
 	'math-shift',
 	'math-style',
-
-	// Other
 
 	'color-scheme',
 	'content',

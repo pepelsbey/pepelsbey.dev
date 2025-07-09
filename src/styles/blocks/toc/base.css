@@ -27,8 +27,8 @@
 	row-gap: 8px;
 	margin: 0;
 	padding: 0;
-	padding-block-start: 4px;
 	padding-inline-start: 20px;
+	padding-block-start: 4px;
 	list-style: none;
 	font-size: var(--font-size-small);
 }

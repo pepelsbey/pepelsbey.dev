@@ -10,8 +10,8 @@
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr min-content;
-	padding-block: 40px;
 	padding-inline: 20px;
+	padding-block: 40px;
 	min-height: var(--project-feature-size);
 	border-radius: var(--project-feature-radius);
 	color: var(--project-feature-text-primary);
@@ -76,8 +76,8 @@
 
 .project-feature__scribble {
 	position: absolute;
-	inset-block-end: var(--project-feature-scribble-margin);
 	inset-inline-end: var(--project-feature-scribble-margin);
+	inset-block-end: var(--project-feature-scribble-margin);
 	inline-size: var(--project-feature-scribble-size);
 	block-size: var(--project-feature-scribble-size);
 	color: var(--project-feature-scribble-fill);

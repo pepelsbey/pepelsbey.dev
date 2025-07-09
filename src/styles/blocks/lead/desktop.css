@@ -16,8 +16,8 @@
 	/* Scribble */
 
 	.lead__scribble {
-		inset-block: 0;
 		inset-inline-start: 50%;
+		inset-block: 0;
 		margin: auto;
 		inline-size: 1250px;
 		block-size: auto;

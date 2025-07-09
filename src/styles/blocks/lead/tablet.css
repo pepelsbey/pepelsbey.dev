@@ -9,8 +9,8 @@
 	/* Scribble */
 
 	.lead__scribble {
-		inset-block: 0;
 		inset-inline-end: 0;
+		inset-block: 0;
 		margin: auto;
 		inline-size: 640px;
 		block-size: auto;

@@ -55,8 +55,8 @@
 
 	.intro__scribble {
 		position: absolute;
-		inset-block-start: 0;
 		inset-inline-end: -200px;
+		inset-block-start: 0;
 		z-index: -1;
 		inline-size: 600px;
 		block-size: auto;
