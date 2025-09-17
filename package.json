@@ -17,8 +17,7 @@
 		"baseline widely available"
 	],
 	"dependencies": {
-		"focus-trap": "^7.6.5",
-		"plausible-tracker": "^0.3.9"
+		"focus-trap": "^7.6.5"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^3.1.2",

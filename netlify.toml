@@ -17,8 +17,6 @@
       frame-ancestors 'self';
       style-src 'self' 'unsafe-inline' fonts.googleapis.com;
       font-src 'self' fonts.gstatic.com;
-      script-src 'self' plausible.io;
-      connect-src 'self' plausible.io;
       """
     Cross-Origin-Resource-Policy = "same-origin"
     Referrer-Policy = "strict-origin-when-cross-origin"
