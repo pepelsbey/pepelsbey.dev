@@ -1,4 +1,4 @@
-name: CSS
+name: ESLint
 
 on:
   pull_request:
@@ -15,4 +15,4 @@ jobs:
         with:
           node-version-file: package.json
       - run: npm ci
-      - run: npm run css
+      - run: npm run eslint

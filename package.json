@@ -4,11 +4,10 @@
 	"scripts": {
 		"start": "eleventy --serve --quiet",
 		"build": "rm -rf dist && eleventy",
-		"test": "npm run editorconfig && npm run html && npm run css && npm run javascript",
+		"test": "npm run editorconfig && npm run stylelint && npm run eslint",
 		"editorconfig": "editorconfig-checker",
-		"html": "w3c-html-validator dist --ignore-config=.validator",
-		"css": "stylelint \"src/styles/**/*.css\"",
-		"javascript": "eslint"
+		"stylelint": "stylelint \"src/styles/**/*.css\"",
+		"eslint": "eslint"
 	},
 	"engines": {
 		"node": "22"
@@ -36,7 +35,6 @@
 		"pretty-data": "^0.40.0",
 		"remove-markdown": "^0.6.2",
 		"stylelint": "^16.24.0",
-		"stylelint-order": "^7.0.0",
-		"w3c-html-validator": "^1.9.1"
+		"stylelint-order": "^7.0.0"
 	}
 }

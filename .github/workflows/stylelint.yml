@@ -1,4 +1,4 @@
-name: JavaScript
+name: Stylelint
 
 on:
   pull_request:
@@ -15,4 +15,4 @@ jobs:
         with:
           node-version-file: package.json
       - run: npm ci
-      - run: npm run javascript
+      - run: npm run stylelint

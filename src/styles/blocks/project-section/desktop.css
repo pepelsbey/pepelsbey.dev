@@ -1,5 +1,4 @@
 @media (width >= 1760px) {
-
 	.project-section {
 		&:nth-child(odd) {
 			.project-section__title,
