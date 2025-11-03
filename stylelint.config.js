@@ -20,5 +20,18 @@ export default {
 				severity: 'warning',
 			},
 		],
+		'rule-empty-line-before': [
+			'always-multi-line',
+			{
+				except: ['first-nested'],
+			},
+		],
+		'at-rule-empty-line-before': [
+			'always',
+			{
+				except: ['first-nested'],
+				ignoreAtRules: ['import'],
+			},
+		],
 	},
 };
