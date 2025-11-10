@@ -5,45 +5,58 @@
   projects:
 
   - title: The F-Word, occasional interviews
-    desc: Interesting people and controversial topics, co-hosted with [Bruce Lawson](https://twitter.com/brucel).
+    desc: Interesting people and controversial topics, co-hosted with [Bruce Lawson](https://social.vivaldi.net/@brucelawson). Archived.
     url: https://f-word.dev/
     tags:
     - En
+    - Talk
 
   - title: Web Standards, weekly news
     desc: Weekly frontend news for the Russian-speaking community, on-air since 2016.
     url: https://web-standards.ru/podcast/
     tags:
     - Ru
+    - News
 
   - title: LP, favorite records
     desc: Friends discussing favorite music albums and telling cool stories.
     url: https://3lp.me/
     tags:
     - Ru
+    - Music
 
 # Websites
 
 - title: Websites
-  desc: Mostly useless, but funny or nostalgic enough to justify paying for a domain name.
+  desc: Some useful, some just funny and barely justify paying for a domain name.
   projects:
+
+  - title: Web Standards, daily news
+    desc: Web platform news with cute covers via RSS or social media.
+    url: https://web-standards.dev/
+    tags:
+    - En
+    - News
 
   - title: SVG vs PNG, silly comics
     desc: A single-frame comic that make you think about image formats since 2010.
     url: https://svgvspng.com/
     tags:
+    - En
     - SVG
 
   - title: Is Geolocation part of HTML5? Perhaps…
     desc: A question that didn’t age well, but back in 2010 I had to give it a definitive answer.
     url: https://isgeolocationpartofhtml5.com/
     tags:
+    - En
     - JS
 
   - title: '`<blink>` is back! But no one’s waiting'
     desc: In case you ever need to make your `<blink>` element work like it used to.
     url: https://blink-is-back.com/
     tags:
+    - En
     - HTML
 
 # Tools
