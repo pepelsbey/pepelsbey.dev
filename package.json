@@ -35,6 +35,10 @@
 		"pretty-data": "^0.40.0",
 		"remove-markdown": "^0.6.2",
 		"stylelint": "^16.24.0",
+		"stylelint-config-pepelsbey": "^1.0.1",
 		"stylelint-order": "^7.0.0"
+	},
+	"stylelint": {
+		"extends": ["stylelint-config-pepelsbey"]
 	}
 }

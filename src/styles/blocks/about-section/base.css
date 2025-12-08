@@ -27,8 +27,8 @@
 /* Skills */
 
 .about-section__skills {
-	column-count: 2;
 	column-gap: 20px;
+	column-count: 2;
 	margin: 0;
 	padding: 0;
 	list-style: none;
