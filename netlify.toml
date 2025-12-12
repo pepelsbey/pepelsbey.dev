@@ -1,3 +1,10 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "22"
+
 [[edge_functions]]
   path = "/feed/"
   function = "feed"
@@ -16,17 +23,21 @@
   for = "/*"
   [headers.values]
     X-Content-Type-Options = "nosniff"
-    Strict-Transport-Security = "max-age=63072000"
     Content-Security-Policy = """
       default-src 'self';
-      script-src 'self';
-      style-src 'self' 'unsafe-inline' fonts.googleapis.com;
-      font-src 'self' fonts.gstatic.com;
-      img-src 'self' data:;
-      object-src 'none';
       base-uri 'self';
+      connect-src 'self';
+      font-src 'self' fonts.gstatic.com;
       form-action 'self';
       frame-ancestors 'self';
+      img-src 'self' data:;
+      object-src 'none';
+      script-src 'self';
+      style-src 'self' 'unsafe-inline' fonts.googleapis.com;
+      upgrade-insecure-requests;
+      worker-src 'self';
       """
     Cross-Origin-Resource-Policy = "same-origin"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=63072000"
+    Cross-Origin-Opener-Policy = "same-origin"
