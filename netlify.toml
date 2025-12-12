@@ -1,5 +1,5 @@
 [[edge_functions]]
-  path = "/feed/*"
+  path = "/feed/"
   function = "feed"
 
 [[redirects]]

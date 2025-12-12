@@ -4,16 +4,17 @@ export default async function handler(request, context) {
 	const response = await context.next();
 
 	// Track asynchronously to not delay the response
-	context.waitUntil(trackRequest(request));
+	context.waitUntil(trackRequest(request, context));
 
 	return response;
 }
 
-async function trackRequest(request) {
+async function trackRequest(request, context) {
 	try {
 		const store = getStore('feed');
 		const today = new Date().toISOString().split('T')[0];
 		const userAgent = request.headers.get('user-agent') || 'unknown';
+		const ip = context.ip || 'unknown';
 
 		// Get current daily stats
 		const dailyKey = `daily:${today}`;
@@ -22,15 +23,20 @@ async function trackRequest(request) {
 		const stats = existingData || {
 			date: today,
 			totalRequests: 0,
-			userAgents: {},
+			clients: [],
 		};
 
 		// Increment counters
 		stats.totalRequests++;
 
-		// Track user agent (truncate to first 100 chars for storage)
-		const agentKey = userAgent.slice(0, 100);
-		stats.userAgents[agentKey] = (stats.userAgents[agentKey] || 0) + 1;
+		// Track unique client (IP + user agent combination)
+		const ua = userAgent.slice(0, 100);
+		const client = stats.clients.find((c) => c.ip === ip && c.ua === ua);
+		if (client) {
+			client.requests++;
+		} else {
+			stats.clients.push({ ip, ua, requests: 1 });
+		}
 
 		await store.setJSON(dailyKey, stats);
 

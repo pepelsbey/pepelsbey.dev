@@ -8,6 +8,11 @@ const dim = '\x1b[2m';
 const green = '\x1b[32m';
 const reset = '\x1b[0m';
 
+const dateFormat = new Intl.DateTimeFormat('en-US', {
+	month: 'short',
+	day: 'numeric',
+});
+
 // Collect stats for the last N days
 for (let i = 0; i < days; i++) {
 	const date = new Date();
@@ -22,24 +27,41 @@ for (let i = 0; i < days; i++) {
 		const data = JSON.parse(output);
 		stats.unshift(data);
 	} catch {
-		stats.unshift({ date: date.toISOString().split('T')[0], totalRequests: 0, userAgents: {} });
+		stats.unshift({ date: date.toISOString().split('T')[0], totalRequests: 0, clients: [] });
 	}
+}
+
+// Check if UA is a service (reports subscriber count)
+function isService(ua) {
+	return /\d+\s*subscribers?/i.test(ua);
 }
 
 // Parse subscriber count from user agent
-function getSubscribers(agent) {
-	const match = agent.match(/(\d+)\s*subscribers?/i);
+function getSubscribers(ua) {
+	const match = ua.match(/(\d+)\s*subscribers?/i);
 	return match ? parseInt(match[1]) : 1;
 }
 
-// Calculate subscribers per day (unique agents, max subscriber count)
+// Calculate subscribers per day
 function getDaySubscribers(day) {
-	const agentSubs = {};
-	for (const agent of Object.keys(day.userAgents)) {
-		const subs = getSubscribers(agent);
-		agentSubs[agent] = Math.max(agentSubs[agent] || 0, subs);
+	const serviceSubscribers = {};
+	const individualSubscribers = {};
+
+	for (const client of day.clients || []) {
+		if (isService(client.ua)) {
+			// Services: group by UA, take max subscribers
+			const subs = getSubscribers(client.ua);
+			serviceSubscribers[client.ua] = Math.max(serviceSubscribers[client.ua] || 0, subs);
+		} else {
+			// Individuals: group by IP, count as 1
+			individualSubscribers[client.ip] = 1;
+		}
 	}
-	return Object.values(agentSubs).reduce((a, b) => a + b, 0);
+
+	const fromServices = Object.values(serviceSubscribers).reduce((a, b) => a + b, 0);
+	const fromIndividuals = Object.values(individualSubscribers).reduce((a, b) => a + b, 0);
+
+	return fromServices + fromIndividuals;
 }
 
 // Add subscriber count to each day
@@ -56,9 +78,8 @@ console.log('RSS feed subscribers\n');
 for (const day of stats) {
 	const filled = Math.round((day.subscribers / maxSubscribers) * barWidth);
 	const bar = `${green}${'█'.repeat(filled)}${reset}${dim}${'░'.repeat(barWidth - filled)}${reset}`;
-	const d = new Date(day.date);
-	const date = `${dim}${d.toLocaleDateString('en-US', { month: 'short' })} ${d.getDate()}${reset}`.padEnd(6 + dim.length + reset.length);
-	console.log(`${date} ${bar} ${day.subscribers}`);
+	const label = `${dim}${dateFormat.format(new Date(day.date))}${reset}`.padEnd(6 + dim.length + reset.length);
+	console.log(`${label} ${bar} ${day.subscribers}`);
 }
 
 console.log();
