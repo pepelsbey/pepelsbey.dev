@@ -4,6 +4,7 @@
 	"scripts": {
 		"start": "eleventy --serve --quiet",
 		"build": "rm -rf dist && eleventy",
+		"stats": "node scripts/stats.js",
 		"test": "npm run editorconfig && npm run stylelint && npm run eslint",
 		"editorconfig": "editorconfig-checker",
 		"stylelint": "stylelint \"src/styles/**/*.css\"",
@@ -23,6 +24,7 @@
 		"@11ty/eleventy-img": "^6.0.4",
 		"@11ty/eleventy-plugin-rss": "^2.0.4",
 		"@minify-html/node": "^0.18.1",
+		"@netlify/blobs": "^10.4.3",
 		"@shikijs/markdown-it": "^3.19.0",
 		"@sindresorhus/slugify": "^3.0.0",
 		"editorconfig-checker": "^6.1.1",
@@ -39,6 +41,8 @@
 		"stylelint-order": "^7.0.0"
 	},
 	"stylelint": {
-		"extends": ["stylelint-config-pepelsbey"]
+		"extends": [
+			"stylelint-config-pepelsbey"
+		]
 	}
 }
