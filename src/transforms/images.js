@@ -1,7 +1,7 @@
-import { promises as fsp } from 'fs';
+import { promises as fsp } from 'node:fs';
 import Image from '@11ty/eleventy-img';
-import os from 'os';
-import path from 'path';
+import os from 'node:os';
+import path from 'node:path';
 import sharp from 'sharp';
 
 Image.concurrency = os.cpus().length;
