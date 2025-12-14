@@ -6,6 +6,8 @@ import sharp from 'sharp';
 
 Image.concurrency = os.cpus().length;
 
+const cache = '.cache/images';
+
 const baseConfig = {
 	extBlackList: ['svg'],
 	widths: [640, 960, 1280, 1920, 2560],
@@ -113,9 +115,13 @@ async function buildImage(image, imagesSourcePath, imagesOutputPrefix, window) {
 
 	const { width: originalWidth } = await sharp(originalLink).metadata();
 
+	const cacheOutputPath = path.join(
+		cache, imagesOutputPath.replace('dist/', '')
+	);
+
 	const options = {
 		urlPath: imagesSourcePrefix,
-		outputDir: imagesOutputPath,
+		outputDir: cacheOutputPath,
 		widths: [...baseConfig.widths, originalWidth],
 		formats: [...baseConfig.formats, ext],
 		filenameFormat: baseConfig.filenameFormat,

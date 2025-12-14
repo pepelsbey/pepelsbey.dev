@@ -2,6 +2,9 @@
   publish = "dist"
   command = "npm run build"
 
+[[plugins]]
+  package = "./netlify/plugins/cache"
+
 [build.environment]
   NODE_VERSION = "22"
 

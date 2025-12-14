@@ -10,6 +10,7 @@ import { load as yamlLoad } from 'js-yaml';
 import shikiHighlight from '@shikijs/markdown-it'
 import { execSync } from 'child_process';
 import fs from 'node:fs';
+import { cp } from 'node:fs/promises';
 
 import anchors from './src/transforms/anchors.js';
 import demos from './src/transforms/demos.js';
@@ -235,6 +236,15 @@ export default (config) => {
 		'src/robots.txt',
 		'src/articles/**/*.!(md|yml)',
 	].forEach((path) => config.addPassthroughCopy(path));
+
+	// Copy cached images to dist
+
+	config.on('eleventy.after', async () => {
+		const cacheDir = '.cache/images';
+		if (fs.existsSync(cacheDir)) {
+			await cp(cacheDir, 'dist', { recursive: true });
+		}
+	});
 
 	// Plugins
 
