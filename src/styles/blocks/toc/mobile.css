@@ -6,6 +6,16 @@
 		display: none;
 	}
 
+	/* Title */
+
+	.toc__title {
+		list-style: none;
+
+		&::-webkit-details-marker {
+			display:none;
+		}
+	}
+
 	/* List */
 
 	.toc__list {
