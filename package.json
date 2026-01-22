@@ -32,12 +32,12 @@
 		"eslint": "^9.39.2",
 		"globals": "^17.0.0",
 		"js-yaml": "^4.1.1",
-		"lightningcss": "^1.30.2",
+		"lightningcss": "^1.31.1",
 		"linkedom": "^0.18.12",
 		"pretty-data": "^0.40.0",
 		"remove-markdown": "^0.6.3",
 		"stylelint": "^17.0.0",
-		"stylelint-config-pepelsbey": "^1.0.2",
+		"stylelint-config-pepelsbey": "^1.0.3",
 		"stylelint-order": "^7.0.1"
 	},
 	"stylelint": {
