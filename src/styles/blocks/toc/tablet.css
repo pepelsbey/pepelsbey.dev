@@ -2,8 +2,20 @@
 
 	/* TOC */
 
+	.toc {
+		position: sticky;
+		top: 136px;
+		scroll-target-group: auto;
+	}
+
 	.toc--mobile {
 		display: none;
+	}
+
+	/* Link */
+
+	.toc__link:target-current {
+		color: var(--color-text-primary);
 	}
 
 }
