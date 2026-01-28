@@ -32,7 +32,7 @@
   projects:
 
   - title: Web Standards, daily news
-    desc: Web platform news with cute covers via RSS or social media.
+    desc: Curated web platform news with cute covers, delivered daily via RSS or social media.
     url: https://web-standards.dev/
     tags:
     - En
@@ -64,6 +64,13 @@
 - title: Tools
   desc: Handy little tools that I created for myself, but you might also find useful.
   projects:
+
+  - title: Stylelint config
+    desc: Sensible order for all existing CSS properties, always up-to-date.
+    url: https://github.com/pepelsbey/stylelint-config-pepelsbey
+    tags:
+    - CSS
+    - Linter
 
   - title: Shower, presentation engine
     desc: Presentation engine for people who enjoy writing HTML and CSS.
