@@ -9,6 +9,7 @@
 @import 'blocks/content/dark.css';
 @import 'blocks/intro/dark.css';
 @import 'blocks/lead/dark.css';
+@import 'blocks/toc/dark.css';
 @import 'blocks/project-feature/dark.css';
 @import 'blocks/project-section/dark.css';
 @import 'blocks/shiki/dark.css';

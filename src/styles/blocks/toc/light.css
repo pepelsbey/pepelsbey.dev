@@ -1,0 +1,5 @@
+/* TOC */
+
+.toc {
+	--toc-current-link: hsl(var(--color-titan));
+}

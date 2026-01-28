@@ -15,7 +15,11 @@
 	/* Link */
 
 	.toc__link:target-current {
+		text-decoration: none;
 		color: var(--color-text-primary);
+		border-radius: 2px;
+		background-color: var(--toc-current-link);
+		outline: 8px solid var(--toc-current-link);
 	}
 
 }
