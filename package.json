@@ -11,32 +11,32 @@
 		"eslint": "eslint"
 	},
 	"engines": {
-		"node": ">=22"
+		"node": ">=24"
 	},
 	"browserslist": [
-		"baseline widely available"
+		"baseline widely available, safari 15"
 	],
 	"dependencies": {
-		"focus-trap": "^7.8.0"
+		"focus-trap": "^8.0.0"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^3.1.2",
 		"@11ty/eleventy-img": "^6.0.4",
 		"@11ty/eleventy-plugin-rss": "^2.0.4",
 		"@minify-html/node": "^0.18.1",
-		"@netlify/blobs": "^10.5.0",
-		"@shikijs/markdown-it": "^3.21.0",
+		"@netlify/blobs": "^10.6.0",
+		"@shikijs/markdown-it": "^3.22.0",
 		"@sindresorhus/slugify": "^3.0.0",
 		"editorconfig-checker": "^6.1.1",
-		"esbuild": "^0.27.2",
-		"eslint": "^9.39.2",
-		"globals": "^17.0.0",
+		"esbuild": "^0.27.3",
+		"eslint": "^10.0.0",
+		"globals": "^17.3.0",
 		"js-yaml": "^4.1.1",
 		"lightningcss": "^1.31.1",
 		"linkedom": "^0.18.12",
 		"pretty-data": "^0.40.0",
 		"remove-markdown": "^0.6.3",
-		"stylelint": "^17.0.0",
+		"stylelint": "^17.1.1",
 		"stylelint-config-pepelsbey": "^1.0.3",
 		"stylelint-order": "^7.0.1"
 	},
