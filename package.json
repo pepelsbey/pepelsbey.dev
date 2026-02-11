@@ -23,6 +23,7 @@
 		"@11ty/eleventy": "^3.1.2",
 		"@11ty/eleventy-img": "^6.0.4",
 		"@11ty/eleventy-plugin-rss": "^2.0.4",
+		"@eslint/js": "^10.0.1",
 		"@minify-html/node": "^0.18.1",
 		"@netlify/blobs": "^10.6.0",
 		"@shikijs/markdown-it": "^3.22.0",
