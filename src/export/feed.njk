@@ -16,7 +16,7 @@ permalink: /feed/index.xml
 	{%- for article in collections.articles | reverse %}
 		<entry>
 			<title>{{ article.data.title | trim }}</title>
-			<link href="{{ url }}"/>
+			<link href="{{ global.domain }}{{ article.url }}"/>
 			<updated>{{ article.date | dateToRfc3339 }}</updated>
 			<id>{{ global.domain }}{{ article.url }}</id>
 			<content type="html">
