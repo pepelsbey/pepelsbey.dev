@@ -3,6 +3,8 @@
 /* Links */
 
 .content-inline {
+	hyphens: auto;
+
 	a {
 		color: var(--color-text-primary);
 
