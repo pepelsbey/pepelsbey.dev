@@ -20,7 +20,7 @@ permalink: /feed/index.xml
 			<updated>{{ article.date | dateToRfc3339 }}</updated>
 			<id>{{ global.domain }}{{ article.url }}</id>
 			<content type="html">
-				{{- article.templateContent | trim -}}
+				{{- article.templateContent | htmlToAbsoluteUrls(global.domain + article.url) | trim -}}
 			</content>
 		</entry>
 	{%- endfor %}
