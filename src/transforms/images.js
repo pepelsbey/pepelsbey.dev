@@ -25,12 +25,6 @@ const baseConfig = {
 		const name = path.basename(src, extension);
 		return `${name}-${width}.${format}`;
 	},
-	sharpAvifOptions: {
-		lossless: true,
-	},
-	sharpWebpOptions: {
-		lossless: true,
-	},
 }
 
 const sharpAvifOptions = {
@@ -63,6 +57,68 @@ const sharpWebpOptions = {
 	},
 };
 
+const colorSchemePattern = /@(light|dark)(?=\.)/;
+
+async function fileExists(filePath) {
+	try {
+		await fsp.stat(filePath);
+		return true;
+	} catch {
+		return false;
+	}
+}
+
+function getColorSchemeInfo(src) {
+	const match = src.match(colorSchemePattern);
+	if (!match) return null;
+
+	const scheme = match[1];
+	const altScheme = scheme === 'light' ? 'dark' : 'light';
+	const altSrc = src.replace(`@${scheme}`, `@${altScheme}`);
+
+	return { scheme, altScheme, altSrc };
+}
+
+function getImageOptions(imagesSourcePrefix, cacheOutputPath, ext, originalWidth) {
+	return {
+		urlPath: imagesSourcePrefix,
+		outputDir: cacheOutputPath,
+		widths: [...baseConfig.widths, originalWidth],
+		formats: [...baseConfig.formats, ext],
+		filenameFormat: baseConfig.filenameFormat,
+		sharpWebpOptions: sharpWebpOptions[ext] ? sharpWebpOptions[ext] : sharpWebpOptions.default,
+		sharpAvifOptions: sharpAvifOptions[ext] ? sharpAvifOptions[ext] : sharpAvifOptions.default,
+	};
+}
+
+function buildColorSchemePicture(lightMetadata, darkMetadata, imageAttributes, window) {
+	// Let eleventy-img handle the light (default) picture as usual
+	const lightHTML = Image.generateHTML(lightMetadata, imageAttributes);
+	const temp = window.document.createElement('div');
+	temp.innerHTML = lightHTML;
+	const picture = temp.firstElementChild;
+
+	// Build dark <source> elements and prepend them
+	const formats = Object.keys(darkMetadata);
+	const darkSources = formats.map((format) => {
+		const entries = darkMetadata[format];
+		const source = window.document.createElement('source');
+		source.setAttribute('media', '(prefers-color-scheme: dark)');
+		source.setAttribute('srcset', entries.map((e) => e.srcset).join(', '));
+		source.setAttribute('sizes', imageAttributes.sizes);
+		if (entries[0].sourceType) {
+			source.setAttribute('type', entries[0].sourceType);
+		}
+		return source;
+	});
+
+	for (const source of darkSources.reverse()) {
+		picture.prepend(source);
+	}
+
+	return picture;
+}
+
 export default function (window, content, outputPath) {
 	const articleContainer = window.document.getElementById('article-content');
 
@@ -90,20 +146,11 @@ async function buildImage(image, imagesSourcePath, imagesOutputPrefix, window) {
 		image.src
 	);
 
-	let imagePath = image.src.split('/');
+	const imagesSourcePrefix = path.dirname(image.src);
+	const imagesOutputPath = path.join(imagesOutputPrefix, imagesSourcePrefix);
 
-	imagePath.splice(-1);
-
-	const imagesSourcePrefix = imagePath.join('/');
-
-	imagePath.unshift(imagesOutputPrefix);
-
-	const imagesOutputPath = imagePath.join('/');
-
-	try {
-		await fsp.stat(originalLink);
-	} catch (error) {
-		console.warn(`Image ${originalLink} does not exist. ${error}`);
+	if (!await fileExists(originalLink)) {
+		console.warn(`Image ${originalLink} does not exist.`);
 		return;
 	}
 
@@ -119,15 +166,7 @@ async function buildImage(image, imagesSourcePath, imagesOutputPrefix, window) {
 		cache, imagesOutputPath.replace('dist/', '')
 	);
 
-	const options = {
-		urlPath: imagesSourcePrefix,
-		outputDir: cacheOutputPath,
-		widths: [...baseConfig.widths, originalWidth],
-		formats: [...baseConfig.formats, ext],
-		filenameFormat: baseConfig.filenameFormat,
-		sharpWebpOptions: sharpWebpOptions[ext] ? sharpWebpOptions[ext] : sharpWebpOptions.default,
-		sharpAvifOptions: sharpAvifOptions[ext] ? sharpAvifOptions[ext] : sharpAvifOptions.default,
-	};
+	const options = getImageOptions(imagesSourcePrefix, cacheOutputPath, ext, originalWidth);
 
 	const imageAttributes = Object.fromEntries(
 		[...image.attributes].map((attr) => [attr.name, attr.value])
@@ -135,6 +174,45 @@ async function buildImage(image, imagesSourcePath, imagesOutputPrefix, window) {
 
 	imageAttributes.sizes = imageAttributes.sizes || baseConfig.sizes;
 
+	// Check for color scheme variant
+	const schemeInfo = getColorSchemeInfo(image.src);
+
+	if (schemeInfo) {
+		const altOriginalLink = path.join(imagesSourcePath, schemeInfo.altSrc);
+
+		if (await fileExists(altOriginalLink)) {
+			const { width: altOriginalWidth } = await sharp(altOriginalLink).metadata();
+			const altOptions = getImageOptions(imagesSourcePrefix, cacheOutputPath, ext, altOriginalWidth);
+
+			const metadata = Image.statsSync(originalLink, options);
+			const altMetadata = Image.statsSync(altOriginalLink, altOptions);
+
+			// Light is always default, dark uses media query
+			const isLight = schemeInfo.scheme === 'light';
+			const [lightMetadata, darkMetadata] = isLight ? [metadata, altMetadata] : [altMetadata, metadata];
+			const [lightLink, darkLink] = isLight ? [originalLink, altOriginalLink] : [altOriginalLink, originalLink];
+			const [lightOptions, darkOptions] = isLight ? [options, altOptions] : [altOptions, options];
+
+			const picture = buildColorSchemePicture(
+				lightMetadata,
+				darkMetadata,
+				imageAttributes,
+				window,
+			);
+
+			image.replaceWith(picture);
+
+			// Trigger actual image generation for both variants
+			Image(lightLink, lightOptions);
+			Image(darkLink, darkOptions);
+
+			return;
+		}
+
+		console.warn(`Color scheme variant ${altOriginalLink} does not exist, falling back to single image.`);
+	}
+
+	// Default: single image, no color scheme
 	const metadata = Image.statsSync(originalLink, options);
 	const imageHTML = Image.generateHTML(metadata, imageAttributes);
 	const tempElement = window.document.createElement('div');
