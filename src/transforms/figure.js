@@ -5,16 +5,18 @@ export default function(window) {
 
 	if (!content) return;
 
-	const images = content.querySelectorAll('p > img');
+	const images = content.querySelectorAll('p > img, p > a > img');
 
 	for (const image of images) {
-		const paragraph = image.parentNode;
+		const link = image.parentNode.tagName === 'A' ? image.parentNode : null;
+		const wrapper = link || image;
+		const paragraph = wrapper.parentNode;
 		const figure = window.document.createElement('figure');
-		let sibling = image.nextSibling;
+		let sibling = wrapper.nextSibling;
 
 		image.setAttribute('loading', 'lazy');
 		image.setAttribute('decoding', 'async');
-		figure.append(image);
+		figure.append(wrapper);
 
 		if (sibling) {
 			const caption = window.document.createElement('figcaption');
