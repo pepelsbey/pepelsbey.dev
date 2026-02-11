@@ -193,6 +193,10 @@ export default (config) => {
 	config.addFilter('lastModified', (filePath) => {
 		try {
 			const lastModified = execSync(`git log -1 --format=%cd --date=iso ${filePath}`).toString().trim();
+			if (!lastModified) {
+				const stats = fs.statSync(filePath);
+				return stats.mtime;
+			}
 			return new Date(lastModified);
 		} catch (error) {
 			console.error(error);
