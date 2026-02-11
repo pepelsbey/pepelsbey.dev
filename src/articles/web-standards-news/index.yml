@@ -1,0 +1,16 @@
+title: 'Web Standards. Daily web platform news'
+desc: 'For almost 10 years we were publishing daily web platform news for the Russian-speaking community. I always wanted to do the same in English, and now it’s here. On September 9, 2025, I published the first news on Web Standards. In five months I hit the 100th'
+
+date: 2026-02-11
+
+tags:
+  - Project
+  - News
+
+toc:
+  - title: What’s inside
+  - title: How it works
+  - title: What’s next
+
+cover: true
+layout: article.njk
