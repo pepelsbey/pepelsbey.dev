@@ -4,7 +4,7 @@
 	"scripts": {
 		"start": "eleventy --serve --quiet",
 		"build": "rm -rf dist && eleventy",
-		"stats": "node scripts/stats.js",
+		"feed": "node scripts/feed.js",
 		"test": "npm run editorconfig && npm run stylelint && npm run eslint",
 		"editorconfig": "editorconfig-checker",
 		"stylelint": "stylelint \"src/styles/**/*.css\"",

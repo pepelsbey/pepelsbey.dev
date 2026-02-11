@@ -1,6 +1,17 @@
 import { execSync } from 'node:child_process';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const days = parseInt(process.argv[2]) || 7;
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const cacheDir = join(__dirname, '..', '.cache');
+const cacheFile = join(cacheDir, 'feed.json');
+
+const startDate = new Date(2025, 11, 12);
+const argument = process.argv[2];
+const days = argument === 'all'
+	? Math.floor((Date.now() - startDate.getTime()) / (1000 * 60 * 60 * 24))
+	: parseInt(argument) || 7;
 const stats = [];
 
 // ANSI colors
@@ -13,23 +24,88 @@ const dateFormat = new Intl.DateTimeFormat('en-US', {
 	day: 'numeric',
 });
 
+// Load cache
+function loadCache() {
+	try {
+		if (existsSync(cacheFile)) {
+			return JSON.parse(readFileSync(cacheFile, 'utf-8'));
+		}
+	} catch {
+		// Ignore cache errors
+	}
+	return {};
+}
+
+// Save cache
+function saveCache(cache) {
+	try {
+		if (!existsSync(cacheDir)) {
+			mkdirSync(cacheDir, { recursive: true });
+		}
+		writeFileSync(cacheFile, JSON.stringify(cache, null, '\t'));
+	} catch {
+		// Ignore cache errors
+	}
+}
+
+const cache = loadCache();
+const today = new Date().toISOString().split('T')[0];
+
+// Count how many days need fetching
+let toFetch = 0;
+for (let i = 0; i < days; i++) {
+	const date = new Date();
+	date.setDate(date.getDate() - i);
+	const dateKey = date.toISOString().split('T')[0];
+	const isToday = dateKey === today;
+	if (isToday || !cache[dateKey]) {
+		toFetch++;
+	}
+}
+
+let fetched = 0;
+
 // Collect stats for the last N days
 for (let i = 0; i < days; i++) {
 	const date = new Date();
 	date.setDate(date.getDate() - i);
-	const key = `daily:${date.toISOString().split('T')[0]}`;
+	const dateKey = date.toISOString().split('T')[0];
+	const blobKey = `daily:${dateKey}`;
+	const isToday = dateKey === today;
+
+	// Use cache for past days, always fetch today
+	if (!isToday && cache[dateKey]) {
+		stats.unshift(cache[dateKey]);
+		continue;
+	}
+
+	// Show progress when fetching multiple days
+	if (toFetch > 1) {
+		fetched++;
+		process.stdout.write(`\rFetching stats: ${fetched}/${toFetch}`);
+	}
 
 	try {
-		const output = execSync(`netlify blobs:get feed ${key}`, {
+		const output = execSync(`netlify blobs:get feed ${blobKey}`, {
 			encoding: 'utf-8',
 			stdio: ['pipe', 'pipe', 'pipe'],
 		});
 		const data = JSON.parse(output);
 		stats.unshift(data);
+
+		cache[dateKey] = data;
 	} catch {
-		stats.unshift({ date: date.toISOString().split('T')[0], totalRequests: 0, clients: [] });
+		stats.unshift({ date: dateKey, totalRequests: 0, clients: [] });
 	}
 }
+
+// Clear progress line
+if (toFetch > 1) {
+	process.stdout.write('\r' + ' '.repeat(30) + '\r');
+}
+
+// Save updated cache
+saveCache(cache);
 
 // Check if UA is a service (reports subscriber count)
 function isService(ua) {
