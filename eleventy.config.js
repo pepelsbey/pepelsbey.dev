@@ -1,4 +1,5 @@
 import { parseHTML } from 'linkedom';
+import slugify from '@sindresorhus/slugify';
 import * as esbuild from 'esbuild';
 import minifyHtml from '@minify-html/node';
 import markdownIt from 'markdown-it';
@@ -70,6 +71,10 @@ export default (config) => {
 	});
 
 	config.setLibrary('md', markdown);
+
+	config.addFilter('anchor', (value) => {
+		return slugify(value, { decamelize: false }).toLowerCase();
+	});
 
 	// HTML
 

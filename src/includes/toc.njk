@@ -3,14 +3,14 @@
 		<ol class="toc__list">
 			{% for first in toc %}
 				<li>
-					<a class="toc__link" href="#{{ first.title | slugify }}">
+					<a class="toc__link" href="#{{ first.title | anchor }}">
 						{{ first.title | safe }}
 					</a>
 					{% if first.items %}
 						<ol class="toc__nested">
 							{% for second in first.items %}
 								<li>
-									<a class="toc__link" href="#{{ second | slugify }}">
+									<a class="toc__link" href="#{{ second | anchor }}">
 										{{ second }}
 									</a>
 								</li>
