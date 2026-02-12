@@ -14,13 +14,22 @@ permalink: /feed/index.xml
 		<email>{{ global.email }}</email>
 	</author>
 	{%- for article in collections.articles | reverse %}
+		{%- if article.data.source %}
+			{%- set articleUrl = article.data.source.url %}
+			{%- set articleId = global.domain + '/articles/' + article.fileSlug + '/' %}
+		{%- else %}
+			{%- set articleUrl = global.domain + article.url %}
+			{%- set articleId = global.domain + article.url %}
+		{%- endif %}
 		<entry>
 			<title>{{ article.data.title | trim }}</title>
-			<link href="{{ global.domain }}{{ article.url }}"/>
+			<link href="{{ articleUrl }}"/>
 			<updated>{{ article.date | dateToRfc3339 }}</updated>
-			<id>{{ global.domain }}{{ article.url }}</id>
+			<id>{{ articleId }}</id>
 			<content type="html">
+				{%- if article.templateContent %}
 				{{- article.templateContent | htmlToAbsoluteUrls(global.domain + article.url) | trim -}}
+				{%- endif %}
 			</content>
 		</entry>
 	{%- endfor %}
