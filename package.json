@@ -17,7 +17,7 @@
 		"baseline widely available, safari 15"
 	],
 	"dependencies": {
-		"focus-trap": "^8.0.0"
+		"focus-trap": "^8.0.1"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^3.1.5",
