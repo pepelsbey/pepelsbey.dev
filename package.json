@@ -37,7 +37,7 @@
 		"linkedom": "^0.18.12",
 		"pretty-data": "^0.40.0",
 		"remove-markdown": "^0.6.3",
-		"stylelint": "^17.5.0",
+		"stylelint": "^17.6.0",
 		"stylelint-config-pepelsbey": "^1.2.0",
 		"stylelint-order": "^8.1.1"
 	},
