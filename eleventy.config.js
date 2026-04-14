@@ -1,6 +1,7 @@
 import { parseHTML } from 'linkedom';
 import slugify from '@sindresorhus/slugify';
 import * as esbuild from 'esbuild';
+import browserslistToEsbuild from 'browserslist-to-esbuild';
 import minifyHtml from '@minify-html/node';
 import markdownIt from 'markdown-it';
 import { bundle as lightningcssBundle, browserslistToTargets, Features } from 'lightningcss';
@@ -165,7 +166,7 @@ export default (config) => {
 
 			return async () => {
 				let { outputFiles } = await esbuild.build({
-					target: 'es2020',
+					target: browserslistToEsbuild(packageJson.browserslist),
 					entryPoints: [path],
 					minify: true,
 					bundle: true,
