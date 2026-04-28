@@ -17,7 +17,7 @@
 		"baseline widely available, safari 15"
 	],
 	"dependencies": {
-		"focus-trap": "^8.0.1"
+		"focus-trap": "^8.1.0"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^3.1.5",
@@ -38,7 +38,7 @@
 		"linkedom": "^0.18.12",
 		"pretty-data": "^0.40.0",
 		"remove-markdown": "^0.6.3",
-		"stylelint": "^17.8.0",
+		"stylelint": "^17.9.1",
 		"stylelint-config-pepelsbey": "^1.2.0",
 		"stylelint-order": "^8.1.1"
 	},
