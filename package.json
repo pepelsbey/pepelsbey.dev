@@ -17,7 +17,7 @@
 		"baseline widely available, safari 15"
 	],
 	"dependencies": {
-		"focus-trap": "^8.1.0"
+		"focus-trap": "^8.2.0"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^3.1.5",
@@ -31,14 +31,14 @@
 		"browserslist-to-esbuild": "^2.1.1",
 		"editorconfig-checker": "^6.1.1",
 		"esbuild": "^0.28.0",
-		"eslint": "^10.2.1",
-		"globals": "^17.5.0",
+		"eslint": "^10.3.0",
+		"globals": "^17.6.0",
 		"js-yaml": "^4.1.1",
 		"lightningcss": "^1.32.0",
 		"linkedom": "^0.18.12",
 		"pretty-data": "^0.40.0",
 		"remove-markdown": "^0.6.3",
-		"stylelint": "^17.9.1",
+		"stylelint": "^17.10.0",
 		"stylelint-config-pepelsbey": "^1.2.0",
 		"stylelint-order": "^8.1.1"
 	},
