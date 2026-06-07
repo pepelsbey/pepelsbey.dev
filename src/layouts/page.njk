@@ -45,6 +45,10 @@
 	<link rel="me" href="https://mastodon.social/@pepelsbey">
 	<meta name="fediverse:creator" content="@pepelsbey@mastodon.social">
 
+	{% if standard.config.enabled and standard.documents[page.url] %}
+		<link rel="site.standard.document" href="at://{{ standard.config.did }}/site.standard.document/{{ standard.documents[page.url] }}">
+	{% endif %}
+
 	<meta name="description" content="{{ desc | markdownRemove }}">
 	<meta name="generator" content="{{ eleventy.generator }}">
 

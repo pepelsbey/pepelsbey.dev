@@ -12,6 +12,7 @@ Special thanks to [@monochromer](https://github.com/monochromer) for Eleventy tr
 - Start local server: `npm start`
 - Build for production: `npm run build`
 - Lint code: `npm test`
+- Sync [standard.site](https://standard.site/) records: `npm run standard`
 
 ## License
 

@@ -1,0 +1,16 @@
+enabled: true
+
+# AT Protocol identity
+did: did:plc:onen6wik35u2kcychpqy2d56
+pds: https://bsky.social
+
+publication:
+  rkey: '3mnpvofk24z27'
+  name: Vadim Makeev
+  description: Frontend developer in love with the Web, browsers, bicycles, and podcasting
+  # site.standard.theme.basic — colors match `src/styles/colors/index.css`
+  theme:
+    accent:           '84 79% 71%'  # sulu
+    accentForeground: '243 45% 8%'  # ebony
+    background:       '0 0% 100%'   # white
+    foreground:       '243 45% 8%'  # ebony
