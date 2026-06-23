@@ -212,13 +212,14 @@ export default (config) => {
 	});
 
 	config.addFilter('dateLong', (value) => {
-		return value.toLocaleString('en', {
+		return new Date(value).toLocaleString('en', {
 			dateStyle: 'long',
 		});
 	});
 
 	config.addFilter('dateShort', (value) => {
-		const articleYear = value.getFullYear();
+		const date = new Date(value);
+		const articleYear = date.getFullYear();
 		const currentYear = new Date().getFullYear();
 		const dateFormat = articleYear < currentYear
 			? {
@@ -229,11 +230,11 @@ export default (config) => {
 				day: 'numeric',
 			};
 
-		return value.toLocaleString('en', dateFormat);
+		return date.toLocaleString('en', dateFormat);
 	});
 
 	config.addFilter('dateISO', (value) => {
-		return value.toISOString().split('T')[0];
+		return new Date(value).toISOString().split('T')[0];
 	});
 
 	// Passthrough copy
