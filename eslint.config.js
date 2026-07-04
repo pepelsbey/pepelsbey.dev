@@ -10,7 +10,7 @@ export default [
 	js.configs.recommended,
 
 	{
-		ignores: ['dist/**/*.js'],
+		ignores: ['dist/**/*.js', 'src/talks/**/*.js'],
 	},
 
 	{
