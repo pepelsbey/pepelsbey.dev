@@ -246,6 +246,7 @@ export default (config) => {
 		'src/images',
 		'src/robots.txt',
 		'src/articles/**/*.!(md|yml)',
+		'src/talks',
 	].forEach((path) => config.addPassthroughCopy(path));
 
 	// Copy cached images to dist
