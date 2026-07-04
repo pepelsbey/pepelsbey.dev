@@ -1,0 +1,62 @@
+/* Badge */
+
+.badge {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	width: 9em;
+	height: 9em;
+	overflow: hidden;
+	font-size: calc(
+		40px * var(--slide-scale)
+	);
+	visibility: hidden;
+
+	@media (width < 640px) {
+		width: 5.5em;
+		height: 5.5em;
+
+		span {
+			display: none;
+		}
+	}
+}
+
+/* Link */
+
+.badge a {
+	position: absolute;
+	right: -50%;
+	bottom: 50%;
+	left: -50%;
+	background-color: var(--color-blue);
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	line-height: 2;
+	transform: rotate(45deg);
+	transform-origin: 50% 100%;
+	visibility: visible;
+}
+
+/* Badge List */
+
+.shower.list .badge {
+	display: block;
+}
+
+/* Badge Full */
+
+.shower.full .badge {
+	display: none;
+}
+
+/* Badge Print */
+
+@media print {
+	.shower.list .badge,
+	.shower.full .badge {
+		display: none;
+	}
+}

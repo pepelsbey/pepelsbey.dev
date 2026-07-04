@@ -1,0 +1,51 @@
+/* Shower */
+
+@import 'shower-list.css' screen;
+@import 'shower-full.css' screen;
+@import 'shower-pointless.css' screen;
+@import 'shower-grid.css' screen;
+@import 'shower-print.css' print;
+
+@property --viewport-width {
+	syntax: "<length>";
+	inherits: true;
+	initial-value: 100vw;
+}
+
+@property --viewport-height {
+	syntax: "<length>";
+	inherits: true;
+	initial-value: 100vh;
+}
+
+.shower {
+	--viewport-width: 100vw;
+	--viewport-height: 100vh;
+
+	--slide-gap: 100px;
+	--slide-ratio: calc(16 / 9);
+	--slide-width: 1024px;
+	--slide-height: calc(
+		var(--slide-width) / var(--slide-ratio)
+	);
+	--slide-side: 100px;
+
+	--color-blue: #4b86c2;
+	--color-blue-lighter: #6799cb;
+	--color-red: #cc0000;
+	--color-yellow: #fafaa2;
+	--color-grey: #585a5e;
+	--color-fill: rgb(88 90 94 / 10%);
+	--color-line: rgb(88 90 94 / 50%);
+
+	--ribbon-size: 50px;
+	--progress-size: 10px;
+
+	margin: 0;
+	color: black;
+
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+	font: 25px/2 'PT Sans', sans-serif;
+	counter-reset: slide;
+}
