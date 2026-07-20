@@ -36,11 +36,11 @@
 		"eslint": "^10.7.0",
 		"globals": "^17.7.0",
 		"js-yaml": "^5.2.1",
-		"lightningcss": "^1.32.0",
+		"lightningcss": "^1.33.0",
 		"linkedom": "^0.18.13",
 		"pretty-data": "^0.40.0",
 		"remove-markdown": "^0.6.4",
-		"stylelint": "^17.14.0",
+		"stylelint": "^17.14.1",
 		"stylelint-config-pepelsbey": "^1.5.0",
 		"stylelint-order": "^8.1.1"
 	},
