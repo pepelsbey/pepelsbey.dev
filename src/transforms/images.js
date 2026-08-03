@@ -184,8 +184,8 @@ async function buildImage(image, imagesSourcePath, imagesOutputPrefix, window) {
 			const { width: altOriginalWidth } = await sharp(altOriginalLink).metadata();
 			const altOptions = getImageOptions(imagesSourcePrefix, cacheOutputPath, ext, altOriginalWidth);
 
-			const metadata = Image.statsSync(originalLink, options);
-			const altMetadata = Image.statsSync(altOriginalLink, altOptions);
+			const metadata = await Image(originalLink, { ...options, statsOnly: true });
+			const altMetadata = await Image(altOriginalLink, { ...altOptions, statsOnly: true });
 
 			// Light is always default, dark uses media query
 			const isLight = schemeInfo.scheme === 'light';
@@ -213,7 +213,7 @@ async function buildImage(image, imagesSourcePath, imagesOutputPrefix, window) {
 	}
 
 	// Default: single image, no color scheme
-	const metadata = Image.statsSync(originalLink, options);
+	const metadata = await Image(originalLink, { ...options, statsOnly: true });
 	const imageHTML = Image.generateHTML(metadata, imageAttributes);
 	const tempElement = window.document.createElement('div');
 
