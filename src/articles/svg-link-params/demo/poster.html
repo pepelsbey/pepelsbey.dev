@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Four parameters — Passing colors into SVG images — Vadim Makeev</title>
+	<style>
+		html, body {
+			height: 100%;
+		}
+
+		body {
+			margin: 0;
+			display: grid;
+			place-content: center;
+			background-color: #f1f0ff;
+		}
+
+		img {
+			display: block;
+			width: min(80vw, 80svh);
+			height: auto;
+			link-parameters:
+				param(--back, #cfa9bf),
+				param(--hair, #faa601),
+				param(--face, #99d2d7),
+				param(--dark, #73901a);
+		}
+	</style>
+</head>
+<body>
+	<img src="poster.svg" width="1026" height="1022" alt="Marilyn Monroe portrait in lilac, amber, and sky blue">
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>One parameter — Passing colors into SVG images — Vadim Makeev</title>
+	<style>
+		html, body {
+			height: 100%;
+		}
+
+		body {
+			margin: 0;
+			display: grid;
+			place-content: center;
+			background-color: #f1f0ff;
+		}
+
+		img {
+			display: block;
+			link-parameters: param(--color, #ff8052);
+		}
+	</style>
+</head>
+<body>
+	<img src="logo.svg" width="256" height="256" alt="Pepelsbey logo">
+</body>
+</html>

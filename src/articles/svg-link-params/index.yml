@@ -1,0 +1,19 @@
+title: 'One SVG, nine posters: CSS linked parameters'
+desc: 'An SVG placed as a content image or a background image has always been a styling dead end: you can put it on the page, but you can’t paint it. CSS Linked Parameters finally change that, and Firefox Nightly is the first browser to try. Let’s print a Warhol with it.'
+date: 2026-09-23
+tags:
+  - CSS
+  - SVG
+toc:
+  - title: The styling dead end
+  - title: Passing a color
+    items:
+      - The SVG side
+      - The CSS side
+  - title: Four plates, one poster
+  - title: Nine posters, one file
+  - title: The fallback
+  - title: Not there yet
+  - title: Worth the wait
+cover: true
+layout: article.njk

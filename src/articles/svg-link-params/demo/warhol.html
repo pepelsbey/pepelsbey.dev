@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Nine posters — Passing colors into SVG images — Vadim Makeev</title>
+	<style>
+		html, body {
+			height: 100%;
+		}
+
+		body {
+			margin: 0;
+			display: grid;
+			place-content: center;
+			background-color: #f1f0ff;
+		}
+
+		.poster {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 2vmin;
+		}
+
+		.poster__panel {
+			display: block;
+			width: min(29vw, 29svh);
+			height: auto;
+		}
+
+		.poster__panel--pink {
+			link-parameters:
+				param(--back, #f85983),
+				param(--hair, #ecef81),
+				param(--face, #edb3ac),
+				param(--dark, #322e2e);
+		}
+
+		.poster__panel--turquoise {
+			link-parameters:
+				param(--back, #4a9fac),
+				param(--hair, #d87205),
+				param(--face, #cba6bd),
+				param(--dark, #a09797);
+		}
+
+		.poster__panel--plum {
+			link-parameters:
+				param(--back, #a54f6d),
+				param(--hair, #724e44),
+				param(--face, #916c39),
+				param(--dark, #0d1d51);
+		}
+
+		.poster__panel--lilac {
+			link-parameters:
+				param(--back, #cfa9bf),
+				param(--hair, #faa601),
+				param(--face, #99d2d7),
+				param(--dark, #73901a);
+		}
+
+		.poster__panel--magenta {
+			link-parameters:
+				param(--back, #fd0b69),
+				param(--hair, #f5bda5),
+				param(--face, #fd3002),
+				param(--dark, #5773bb);
+		}
+
+		.poster__panel--mint {
+			link-parameters:
+				param(--back, #afdbbc),
+				param(--hair, #f8b84a),
+				param(--face, #c8a4bc),
+				param(--dark, #616364);
+		}
+
+		.poster__panel--grey {
+			link-parameters:
+				param(--back, #8f7269),
+				param(--hair, #9f8f7d),
+				param(--face, #8e8d8e),
+				param(--dark, #52778f);
+		}
+
+		.poster__panel--green {
+			link-parameters:
+				param(--back, #87ba5f),
+				param(--hair, #f0b427),
+				param(--face, #5a9759),
+				param(--dark, #af3e19);
+		}
+
+		.poster__panel--teal {
+			link-parameters:
+				param(--back, #348c97),
+				param(--hair, #afd3b9),
+				param(--face, #fc1184),
+				param(--dark, #609b7a);
+		}
+	</style>
+</head>
+<body>
+	<div class="poster">
+		<img class="poster__panel poster__panel--pink" src="poster.svg" width="1026" height="1022" alt="Marilyn Monroe portrait in pink and yellow">
+		<img class="poster__panel poster__panel--turquoise" src="poster.svg" width="1026" height="1022" alt="The same portrait in turquoise and orange">
+		<img class="poster__panel poster__panel--plum" src="poster.svg" width="1026" height="1022" alt="The same portrait in plum and navy">
+		<img class="poster__panel poster__panel--lilac" src="poster.svg" width="1026" height="1022" alt="The same portrait in lilac, amber, and sky blue">
+		<img class="poster__panel poster__panel--magenta" src="poster.svg" width="1026" height="1022" alt="The same portrait in magenta, orange, and blue">
+		<img class="poster__panel poster__panel--mint" src="poster.svg" width="1026" height="1022" alt="The same portrait in mint and amber">
+		<img class="poster__panel poster__panel--grey" src="poster.svg" width="1026" height="1022" alt="The same portrait in grey and slate blue">
+		<img class="poster__panel poster__panel--green" src="poster.svg" width="1026" height="1022" alt="The same portrait in green, amber, and brick red">
+		<img class="poster__panel poster__panel--teal" src="poster.svg" width="1026" height="1022" alt="The same portrait in teal and magenta">
+	</div>
+</body>
+</html>
