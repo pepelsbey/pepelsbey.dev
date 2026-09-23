@@ -203,8 +203,10 @@ async function buildImage(image, imagesSourcePath, imagesOutputPrefix, window) {
 			image.replaceWith(picture);
 
 			// Trigger actual image generation for both variants
-			Image(lightLink, lightOptions);
-			Image(darkLink, darkOptions);
+			await Promise.all([
+				Image(lightLink, lightOptions),
+				Image(darkLink, darkOptions),
+			]);
 
 			return;
 		}
@@ -221,5 +223,5 @@ async function buildImage(image, imagesSourcePath, imagesOutputPrefix, window) {
 
 	image.replaceWith(tempElement.firstElementChild);
 
-	Image(originalLink, options);
+	await Image(originalLink, options);
 }
