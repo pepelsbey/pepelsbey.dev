@@ -1,5 +1,5 @@
-/* Update */
+/* Note */
 
-.update {
-	--update-back: hsl(var(--color-sulu) / 40%);
+.note {
+	--note-back: hsl(var(--color-sulu) / 40%);
 }

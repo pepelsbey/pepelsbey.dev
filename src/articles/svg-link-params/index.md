@@ -68,7 +68,11 @@ That’s it. The `<img>` element is the linked resource, the property applies to
 
 The naming is a little confusing at first, I know. In `param(--color, #ff8052)`, the first argument is the parameter name and the second one is the value you’re passing. In `env(--color, #c1f07c)`, the first argument is the same name and the second one is the fallback. Same shape, different job: `param()` sends a value in, `env()` decides what to use when nothing arrives.
 
-⭐ The property is not inherited. Its initial value is `none`, and it applies to all elements and pseudo-elements, but you have to set it on the very element that carries the image. Putting it on a wrapper does nothing.
+<div class="note">
+
+The property is not inherited. Its initial value is `none`, and it applies to all elements and pseudo-elements, but you have to set it on the very element that carries the image. Putting it on a wrapper does nothing.
+
+</div>
 
 ## Four plates, one poster
 
@@ -105,7 +109,11 @@ img {
 	title="Marilyn Monroe portrait in lilac, amber, and sky blue."
 ></iframe>
 
-⭐ Notice that the eyeshadow and the lips change along with the background. They’re on the same plate in the print, so they’re on the same path in the trace, and one parameter paints all three.
+<div class="note">
+
+Notice that the eyeshadow and the lips change along with the background. They’re on the same plate in the print, so they’re on the same path in the trace, and one parameter paints all three.
+
+</div>
 
 ## Nine posters, one file
 
@@ -169,7 +177,11 @@ That makes this a rare kind of new CSS feature: the progressive enhancement is f
 
 If that feels familiar, it’s the same contract custom properties have had all along. `var(--brand, black)` falls back to black when `--brand` was never set, and `env(--brand, black)` falls back to black when nothing was passed in.
 
-⭐ Speaking of which: `@supports (link-parameters: param(--a, red))` does work in Nightly, if you want to serve a different layout to browsers that can actually tell the nine panels apart.
+<div class="note">
+
+Speaking of which: `@supports (link-parameters: param(--a, red))` does work in Nightly, if you want to serve a different layout to browsers that can actually tell the nine panels apart.
+
+</div>
 
 ## Not there yet
 

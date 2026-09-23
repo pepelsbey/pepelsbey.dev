@@ -14,7 +14,11 @@ body {
 }
 ```
 
-⭐ I’ll be using [native CSS nesting](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting) in all demos throughout this article. It works in all modern browsers and makes code a bit more compact, especially when it comes to media queries. But if you’re not familiar with CSS nesting, you can use this handy [Lightning CSS playground](https://lightningcss.dev/playground/#%7B%22minify%22%3Afalse%2C%22customMedia%22%3Atrue%2C%22cssModules%22%3Afalse%2C%22analyzeDependencies%22%3Afalse%2C%22targets%22%3A%7B%22chrome%22%3A6225920%7D%2C%22include%22%3A0%2C%22exclude%22%3A0%2C%22source%22%3A%22body%20%7B%5Cn%20%20background-color%3A%20%23000000%3B%5Cn%20%20color%3A%20%23ffffff%3B%5Cn%20%20%5Cn%20%20%40media%20(prefers-color-scheme%3A%20dark)%20%7B%5Cn%20%20%20%20background-color%3A%20%23000000%3B%5Cn%20%20%20%20color%3A%20%23ffffff%3B%5Cn%20%20%7D%5Cn%7D%22%2C%22visitorEnabled%22%3Afalse%2C%22visitor%22%3A%22%7B%5Cn%20%20Color(color)%20%7B%5Cn%20%20%20%20if%20(color.type%20%3D%3D%3D%20'rgb')%20%7B%5Cn%20%20%20%20%20%20color.g%20%3D%200%3B%5Cn%20%20%20%20%20%20return%20color%3B%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%7D%22%2C%22unusedSymbols%22%3A%5B%5D%2C%22version%22%3A%22local%22%7D) to figure out how it looks without nesting.
+<div class="note">
+
+I’ll be using [native CSS nesting](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting) in all demos throughout this article. It works in all modern browsers and makes code a bit more compact, especially when it comes to media queries. But if you’re not familiar with CSS nesting, you can use this handy [Lightning CSS playground](https://lightningcss.dev/playground/#%7B%22minify%22%3Afalse%2C%22customMedia%22%3Atrue%2C%22cssModules%22%3Afalse%2C%22analyzeDependencies%22%3Afalse%2C%22targets%22%3A%7B%22chrome%22%3A6225920%7D%2C%22include%22%3A0%2C%22exclude%22%3A0%2C%22source%22%3A%22body%20%7B%5Cn%20%20background-color%3A%20%23000000%3B%5Cn%20%20color%3A%20%23ffffff%3B%5Cn%20%20%5Cn%20%20%40media%20(prefers-color-scheme%3A%20dark)%20%7B%5Cn%20%20%20%20background-color%3A%20%23000000%3B%5Cn%20%20%20%20color%3A%20%23ffffff%3B%5Cn%20%20%7D%5Cn%7D%22%2C%22visitorEnabled%22%3Afalse%2C%22visitor%22%3A%22%7B%5Cn%20%20Color(color)%20%7B%5Cn%20%20%20%20if%20(color.type%20%3D%3D%3D%20'rgb')%20%7B%5Cn%20%20%20%20%20%20color.g%20%3D%200%3B%5Cn%20%20%20%20%20%20return%20color%3B%5Cn%20%20%20%20%7D%5Cn%20%20%7D%5Cn%7D%22%2C%22unusedSymbols%22%3A%5B%5D%2C%22version%22%3A%22local%22%7D) to figure out how it looks without nesting.
+
+</div>
 
 This approach is already a good start. But it only covers the simplest case and doesn’t allow users to choose a different color scheme for this specific website. Just like light color schemes hurt my eyes in the evening, many people are not comfortable with dark schemes or with particular ones that aren’t good for them. So, it’s all about user choice.
 
@@ -90,7 +94,11 @@ body {
 }
 ```
 
-⭐ By the way, I use `--color-back` and `--color-text` variables in my demos. It makes it easier to set colors even in a small demo, let alone a bigger project. But to make things easier to read, I chose to set colors directly in code samples.
+<div class="note">
+
+By the way, I use `--color-back` and `--color-text` variables in my demos. It makes it easier to set colors even in a small demo, let alone a bigger project. But to make things easier to read, I chose to set colors directly in code samples.
+
+</div>
 
 Here’s the three-position switch I often use. Along with “light” and “dark” options that force a certain scheme, there’s also the “auto” option that gives the control over the color scheme back to the OS, selected by default.
 
@@ -143,7 +151,11 @@ To make it work properly, you’ll need to decide where to store your global `co
 	title="Three-button switcher group: light, auto, dark. The auto button is selected."
 ></iframe>
 
-⭐ For a good UX, you’ll also need a way to store user preference somewhere in [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), so the users won’t have to switch it next time they visit or when opening a new tab. I’m sure you can figure it out on your own!
+<div class="note">
+
+For a good UX, you’ll also need a way to store user preference somewhere in [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), so the users won’t have to switch it next time they visit or when opening a new tab. I’m sure you can figure it out on your own!
+
+</div>
 
 One of the downsides of this approach is the browser support: the `light-dark()` CSS function has been available in all modern browsers since May 2024, which makes it “newly available” on the [Baseline](https://web-platform-dx.github.io/web-features/) scale. It will become “widely available” only around November 2026 or 30 months later. You can transpile it for older browsers using [Lightning CSS](https://lightningcss.dev/) or [PostCSS plugin](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-light-dark-function), but make sure you check the output and test it in an older browser. It might be a bit tricky at times.
 

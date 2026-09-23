@@ -1,7 +1,7 @@
-/* Update */
+/* Note */
 
-.update {
+.note {
 	padding: 20px;
 	border-radius: 20px;
-	background-color: var(--update-back);
+	background-color: var(--note-back);
 }
