@@ -2,6 +2,12 @@ A few years ago I went down the [SVG sprites](/articles/svg-sprites/) rabbit hol
 
 This is finally starting to change. There’s a new spec called [CSS Linked Parameters](https://drafts.csswg.org/css-link-params-1/) that lets you pass CSS values into a linked resource, and the linked resource decides what to do with them. Firefox Nightly [has been shipping an experimental implementation](https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Releases/153#:~:text=Updating%20attributes%20of%20external%20resources) since version 153, where the `layout.css.link-parameters.enabled` pref is on by default, and no other browser has anything, so it’s nowhere near production. But you can play with it today, and I found the perfect excuse to do so: printing an Andy Warhol.
 
+<div class="note">
+
+**Update:** Make that two engines. [Bigandy](https://indieweb.social/@bigandy/117325881565720106) tried the demos in Safari Technology Preview 253, where there’s a flag for it: Settings → Feature Flags → CSS → “CSS Linked Parameters”. Experimental and off by default, so the “nowhere near production” part stands.
+
+</div>
+
 ## The styling dead end
 
 Let’s recap the problem quickly. Here’s the same logo, placed in four different ways:
