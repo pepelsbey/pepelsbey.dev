@@ -5,12 +5,5 @@ tags:
   - CSS
   - JavaScript
   - Eleventy
-toc:
-  - title: Vanilla all the way
-  - title: Second pass
-  - title: Custom Handlers
-    items:
-      - CSS
-      - JavaScript
 cover: true
 layout: article.njk

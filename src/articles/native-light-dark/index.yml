@@ -4,12 +4,5 @@ date: 2025-01-06
 tags:
   - HTML
   - CSS
-toc:
-  - title: Setting color-scheme
-  - title: Switching color-scheme
-  - title: Linking a CSS scheme
-  - title: Switching CSS schemes
-  - title: One more thing
-  - title: Homework
 cover: true
 layout: article.njk

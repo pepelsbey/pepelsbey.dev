@@ -1,10 +1,10 @@
-{% if toc %}
+{% if toc | length %}
 	{% set list %}
 		<ol class="toc__list">
 			{% for first in toc %}
 				<li>
 					<a class="toc__link" href="#{{ first.title | anchor }}">
-						{{ first.title | safe }}
+						{{ first.title }}
 					</a>
 					{% if first.items %}
 						<ol class="toc__nested">

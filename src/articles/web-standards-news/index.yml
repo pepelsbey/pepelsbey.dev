@@ -7,10 +7,5 @@ tags:
   - Project
   - News
 
-toc:
-  - title: What’s inside
-  - title: How it works
-  - title: What’s next
-
 cover: true
 layout: article.njk

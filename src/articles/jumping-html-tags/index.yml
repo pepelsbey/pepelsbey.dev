@@ -4,24 +4,5 @@ date: 2023-03-29
 tags:
   - HTML
   - JavaScript
-toc:
-  - title: Basic nesting
-  - title: What the hell?
-    items:
-      - Jumping examples
-      - Product card
-  - title: DOM via JS
-  - title: DOM via frameworks
-    items:
-      - Care a lot
-      - Do what you tell them
-      - Like browsers
-      - Not quite
-  - title: Validate it
-    items:
-      - W3C HTML validator
-      - HTML-validate
-      - HTML Linters
-  - title: No, seriously
 cover: true
 layout: article.njk

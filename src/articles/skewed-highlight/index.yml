@@ -4,12 +4,5 @@ date: 2022-12-26
 tags:
   - HTML
   - CSS
-toc:
-  - title: Grotesk font
-    items:
-      - Subsetting
-  - title: Remarkable mark
-  - title: Skewed background
-  - title: Decoration break
 cover: true
 layout: article.njk
