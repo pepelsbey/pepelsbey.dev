@@ -1,0 +1,18 @@
+/* Code */
+
+.content {
+	--syntax-foreground: #c9d1d9;
+	--syntax-comment: #8b949e;
+	--syntax-keyword: #ff7b72;
+	--syntax-operator: #c9d1d9;
+	--syntax-string: #a5d6ff;
+	--syntax-constant: #79c0ff;
+	--syntax-function: #d2a8ff;
+	--syntax-type: #d2a8ff;
+	--syntax-variable: #ffa657;
+	--syntax-property: #79c0ff;
+	--syntax-tag: #7ee787;
+	--syntax-selector: #d2a8ff;
+	--syntax-inserted: #7ee787;
+	--syntax-deleted: #ff7b72;
+}

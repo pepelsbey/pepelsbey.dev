@@ -9,34 +9,46 @@ import { pd as prettyData } from 'pretty-data';
 import removeMarkdown from 'remove-markdown';
 import rss from '@11ty/eleventy-plugin-rss';
 import { load as yamlLoad } from 'js-yaml';
-import shikiHighlight from '@shikijs/markdown-it'
+import { getExternalLanguages, normalizeLanguage } from 'microlighter/grammar-dependencies.js';
 import { execSync } from 'node:child_process';
 import fs from 'node:fs';
 import { cp } from 'node:fs/promises';
+import { basename } from 'node:path';
 
 import anchors from './src/transforms/anchors.js';
 import demos from './src/transforms/demos.js';
 import figure from './src/transforms/figure.js';
 import images from './src/transforms/images.js';
+import { languageAliases } from './src/scripts/modules/languages.js';
 
 import packageJson from './package.json' with { type: 'json' };
 
-const markdown = new markdownIt({ html: true }).use(
-	await shikiHighlight({
-		defaultColor: false,
-		themes: {
-			dark: 'github-dark',
-			light: 'github-light',
-		},
-		transformers: [
-			{
-				pre(node) {
-					delete node.properties.tabindex;
-				},
-			},
-		],
-	}),
-);
+const markdown = new markdownIt({ html: true });
+
+markdown.renderer.rules.fence = (tokens, index) => {
+	const { content, info } = tokens[index];
+	const language = info.trim().split(/\s+/)[0];
+	const languageClass = language
+		? ` class="language-${markdown.utils.escapeHtml(language)}"`
+		: '';
+
+	return `<pre class="code"><code${languageClass}>${markdown.utils.escapeHtml(content)}</code></pre>`;
+};
+
+// Bundle only MicroLighter grammar that articles use
+
+const grammarStub = (grammars) => ({
+	name: 'grammar-stub',
+	setup(build) {
+		build.onLoad({ filter: /\/microlighter\/dist\/grammars\/[^/]+\.js$/ }, ({ path }) => {
+			if (grammars.has(basename(path, '.js'))) {
+				return;
+			}
+
+			return { contents: 'export default null;' };
+		});
+	},
+});
 
 export default (config) => {
 	// Collections
@@ -155,6 +167,42 @@ export default (config) => {
 
 	// JavaScript
 
+	const collectGrammars = async () => {
+		const fences = /^[\t ]*(?:`{3,}|~{3,})([^\s`]+)/gm;
+		const visited = new Set();
+		const grammars = new Set();
+
+		const addGrammar = async (language) => {
+			const name = normalizeLanguage(language, languageAliases);
+
+			if (visited.has(name)) {
+				return;
+			}
+
+			visited.add(name);
+
+			let grammar;
+
+			try {
+				({ default: grammar } = await import(`microlighter/grammars/${name}.js`));
+			} catch {
+				return;
+			}
+
+			grammars.add(name);
+
+			await Promise.all([...getExternalLanguages(grammar)].map(addGrammar));
+		};
+
+		const languages = fs.globSync(collections.articles)
+			.flatMap((file) => [...fs.readFileSync(file, 'utf8').matchAll(fences)])
+			.map(([, language]) => language);
+
+		await Promise.all(languages.map(addGrammar));
+
+		return grammars;
+	};
+
 	config.addTemplateFormats('js');
 
 	config.addExtension('js', {
@@ -171,6 +219,7 @@ export default (config) => {
 					minify: true,
 					bundle: true,
 					write: false,
+					plugins: [grammarStub(await collectGrammars())],
 				});
 
 				return outputFiles[0].text;
