@@ -202,12 +202,17 @@ export default (config) => {
 		return grammars;
 	};
 
+	const scripts = [
+		'./src/scripts/index.js',
+		'./src/scripts/color-scheme.js',
+	];
+
 	config.addTemplateFormats('js');
 
 	config.addExtension('js', {
 		outputFileExtension: 'js',
 		compile: async (content, path) => {
-			if (path !== './src/scripts/index.js') {
+			if (!scripts.includes(path)) {
 				return;
 			}
 
