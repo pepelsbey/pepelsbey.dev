@@ -1,8 +1,8 @@
 /* Pagination */
 
 .pagination {
-	--pagination-current-back: hsl(var(--color-sulu));
-	--pagination-current-text: hsl(var(--color-ebony));
+	--pagination-current-back: var(--color-sulu);
+	--pagination-current-text: var(--color-ebony);
 
 	display: flex;
 	column-gap: 8px;

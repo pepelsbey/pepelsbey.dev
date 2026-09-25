@@ -15,7 +15,7 @@
 		"node": ">=24"
 	},
 	"browserslist": [
-		"baseline widely available, safari 15"
+		"baseline widely available, not safari < 17.5, not ios_saf < 17.5"
 	],
 	"dependencies": {
 		"focus-trap": "^8.2.2"

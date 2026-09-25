@@ -1,6 +1,11 @@
 /* Project Section */
 
 .project-section {
+	--project-section-scribble-fill: light-dark(
+		var(--color-titan),
+		color-mix(in srgb, var(--color-manatee) 20%, transparent)
+	);
+
 	position: relative;
 	display: grid;
 	row-gap: 20px;

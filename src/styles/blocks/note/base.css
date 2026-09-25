@@ -1,6 +1,11 @@
 /* Note */
 
 .note {
+	--note-back: light-dark(
+		color-mix(in srgb, var(--color-sulu) 40%, transparent),
+		color-mix(in srgb, var(--color-lilac) 40%, transparent)
+	);
+
 	padding: 20px;
 	border-radius: 20px;
 	background-color: var(--note-back);

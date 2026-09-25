@@ -1,8 +1,10 @@
 /* Theme */
 
 .theme-switcher {
-	--theme-switcher-hover-back: hsl(var(--color-sulu));
-	--theme-switcher-hover-text: hsl(var(--color-ebony));
+	--theme-switcher-back: light-dark(var(--color-ebony), var(--color-white));
+	--theme-switcher-text: light-dark(var(--color-white), var(--color-ebony));
+	--theme-switcher-hover-back: var(--color-sulu);
+	--theme-switcher-hover-text: var(--color-ebony);
 
 	position: relative;
 	z-index: 1;

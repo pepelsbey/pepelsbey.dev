@@ -1,8 +1,9 @@
 /* Article Card */
 
 .article-card {
-	--article-card-type-text: hsl(var(--color-lilac));
-	--article-card-type-video: hsl(var(--color-coral));
+	--article-card-type-text: var(--color-lilac);
+	--article-card-type-video: var(--color-coral);
+	--article-card-box-back: light-dark(var(--color-titan), var(--color-steel));
 }
 
 /* Box */

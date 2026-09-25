@@ -1,8 +1,8 @@
 /* Menu */
 
 .menu {
-	--menu-current-back: hsl(var(--color-sulu));
-	--menu-current-text: hsl(var(--color-ebony));
+	--menu-current-back: var(--color-sulu);
+	--menu-current-text: var(--color-ebony);
 }
 
 /* List */

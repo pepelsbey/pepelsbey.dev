@@ -1,6 +1,11 @@
 /* About Section */
 
 .about-section {
+	--about-section-scribble-fill: light-dark(
+		var(--color-titan),
+		color-mix(in srgb, var(--color-manatee) 20%, transparent)
+	);
+
 	position: relative;
 	display: grid;
 	align-content: start;

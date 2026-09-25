@@ -1,16 +1,22 @@
 :root {
-	--color-white: 0 0% 100%;
-	--color-ebony: 243 45% 8%;
+	--color-white: hsl(0 0% 100%);
+	--color-ebony: hsl(243 45% 8%);
 
-	--color-titan: 247 100% 97%;
-	--color-steel: 250 20% 17%;
+	--color-titan: hsl(247 100% 97%);
+	--color-steel: hsl(250 20% 17%);
 
-	--color-grey: 240 7% 40%;
-	--color-manatee: 231 10% 59%;
+	--color-grey: hsl(240 7% 40%);
+	--color-manatee: hsl(231 10% 59%);
 
-	--color-lilac: 263 52% 64%;
-	--color-sulu: 84 79% 71%;
-	--color-coral: 16 100% 66%;
+	--color-lilac: hsl(263 52% 64%);
+	--color-sulu: hsl(84 79% 71%);
+	--color-coral: hsl(16 100% 66%);
 
-	--color-focus-ring: hsl(var(--color-lilac));
+	--color-focus-ring: var(--color-lilac);
+
+	--color-back-primary: light-dark(var(--color-white), var(--color-ebony));
+	--color-back-secondary: light-dark(var(--color-titan), var(--color-steel));
+
+	--color-text-primary: light-dark(var(--color-ebony), var(--color-white));
+	--color-text-secondary: light-dark(var(--color-grey), var(--color-manatee));
 }

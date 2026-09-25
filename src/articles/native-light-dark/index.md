@@ -137,7 +137,7 @@ switchButtons.forEach(button => {
 });
 ```
 
-As you can see, once we set `content="dark"` the browser switches to the last value in the `light-dark()` function and the other way around with the `light` one. This HTML’s `color-scheme` turned out not so silly after all!
+As you can see, once we set `content="dark"` the browser switches to the last value in the `light-dark()` function and the other way around with the `light` one. This HTML’s `color-scheme` turned out not so silly after all! You can check this method in action on this website. And if you happen to use Safari or Vivaldi browsers, you might notice something else changing while you switch the schemes.
 
 To make it work properly, you’ll need to decide where to store your global `color-scheme` value, so the script can force it. In this example, I chose to use the HTML one, so I removed the `color-scheme` property from CSS. But you can also keep it in CSS and force it via JavaScript like so:
 
@@ -245,7 +245,7 @@ In short, if we force the dark scheme, the `dark.css` gets `media="all"` instead
 	title="Three-button switcher group: light, auto, dark. The auto button is selected."
 ></iframe>
 
-Given that scheme files containing only variables are relatively small, and browsers download all CSS files anyway (only the priority differs), the switching happens seamlessly. You can check this method in action on this website. And if you happen to use Safari or Vivaldi browsers, you might notice something else changing while you switch the schemes.
+Given that scheme files containing only variables are relatively small, and browsers download all CSS files anyway (only the priority differs), the switching happens seamlessly.
 
 ## One more thing
 

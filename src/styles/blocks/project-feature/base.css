@@ -1,10 +1,14 @@
 /* Project Feature */
 
 .project-feature {
-	--project-feature-back-tools: hsl(var(--color-lilac));
-	--project-feature-back-podcasts: hsl(var(--color-sulu));
-	--project-feature-back-websites: hsl(var(--color-coral));
-	--project-feature-text-primary: hsl(var(--color-ebony));
+	--project-feature-back-tools: var(--color-lilac);
+	--project-feature-back-podcasts: var(--color-sulu);
+	--project-feature-back-websites: var(--color-coral);
+	--project-feature-text-primary: var(--color-ebony);
+	--project-feature-scribble-fill: light-dark(
+		var(--color-white),
+		color-mix(in srgb, var(--color-white) 60%, transparent)
+	);
 	--project-feature-scribble-margin: 8px;
 
 	position: relative;

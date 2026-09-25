@@ -1,8 +1,8 @@
 /* Action */
 
 .action {
-	--action-hover-back: hsl(var(--color-sulu));
-	--action-hover-text: hsl(var(--color-ebony));
+	--action-hover-back: var(--color-sulu);
+	--action-hover-text: var(--color-ebony);
 
 	display: inline-flex;
 	align-items: center;

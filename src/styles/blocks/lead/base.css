@@ -1,6 +1,12 @@
 /* Lead */
 
 .lead {
+	--lead-back: light-dark(var(--color-titan), var(--color-steel));
+	--lead-scribble-fill: light-dark(
+		color-mix(in srgb, var(--color-grey) 10%, transparent),
+		color-mix(in srgb, var(--color-manatee) 10%, transparent)
+	);
+
 	position: relative;
 	display: grid;
 	row-gap: 20px;

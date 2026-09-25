@@ -1,8 +1,8 @@
 /* Skip Link */
 
 .skip-link {
-	--skip-link-back: hsl(var(--color-sulu));
-	--skip-link-text: hsl(var(--color-ebony));
+	--skip-link-back: var(--color-sulu);
+	--skip-link-text: var(--color-ebony);
 
 	margin: 0;
 	background-color: var(--skip-link-back);

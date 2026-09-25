@@ -1,6 +1,12 @@
 /* Intro */
 
 .intro {
+	--intro-photo-back: light-dark(var(--color-sulu), var(--color-lilac));
+	--intro-scribble-fill: light-dark(
+		var(--color-titan),
+		color-mix(in srgb, var(--color-manatee) 20%, transparent)
+	);
+
 	position: relative;
 	display: grid;
 }

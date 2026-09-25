@@ -1,5 +1,9 @@
 /* TOC */
 
+.toc {
+	--toc-current-link: light-dark(var(--color-titan), var(--color-steel));
+}
+
 /* List */
 
 .toc__list {

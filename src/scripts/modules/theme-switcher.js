@@ -1,5 +1,4 @@
-const lightStyle = document.querySelector('link[rel=stylesheet][media*=prefers-color-scheme][media*=light]');
-const darkStyle = document.querySelector('link[rel=stylesheet][media*=prefers-color-scheme][media*=dark]');
+const colorScheme = document.querySelector('meta[name=color-scheme]');
 const lightTheme = document.querySelector('meta[name=theme-color][media*=prefers-color-scheme][media*=light]');
 const darkTheme = document.querySelector('meta[name=theme-color][media*=prefers-color-scheme][media*=dark]');
 const themeSwitcher = document.querySelector('.theme-switcher');
@@ -42,7 +41,7 @@ function setupScheme() {
 }
 
 function setScheme(scheme) {
-	switchMedia(scheme);
+	switchScheme(scheme);
 
 	if (scheme === 'auto') {
 		clearScheme();
@@ -51,7 +50,7 @@ function setScheme(scheme) {
 	}
 }
 
-function switchMedia(scheme) {
+function switchScheme(scheme) {
 	let lightMedia;
 	let darkMedia;
 
@@ -63,8 +62,7 @@ function switchMedia(scheme) {
 		darkMedia = (scheme === 'dark') ? 'all' : 'not all';
 	}
 
-	lightStyle.media = lightMedia;
-	darkStyle.media = darkMedia;
+	colorScheme.content = (scheme === 'auto') ? 'light dark' : scheme;
 
 	lightTheme.media = lightMedia;
 	darkTheme.media = darkMedia;

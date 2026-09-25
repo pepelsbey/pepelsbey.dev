@@ -128,8 +128,6 @@ export default (config) => {
 
 	const styles = [
 		'./src/styles/index.css',
-		'./src/styles/light.css',
-		'./src/styles/dark.css',
 	];
 
 	const processStyles = async (path) => {
@@ -139,6 +137,7 @@ export default (config) => {
 			sourceMap: false,
 			targets: browserslistToTargets(packageJson.browserslist),
 			include: Features.MediaQueries | Features.Nesting,
+			exclude: Features.LightDark,
 		});
 	};
 
