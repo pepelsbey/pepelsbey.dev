@@ -19,6 +19,7 @@ import anchors from './src/transforms/anchors.js';
 import demos from './src/transforms/demos.js';
 import figure from './src/transforms/figure.js';
 import images from './src/transforms/images.js';
+import urls from './src/transforms/urls.js';
 import { languageAliases } from './src/scripts/modules/languages.js';
 
 import packageJson from './package.json' with { type: 'json' };
@@ -108,6 +109,7 @@ export default (config) => {
 		demos,
 		figure,
 		images,
+		urls,
 	];
 
 	config.addTransform('html-transform', async (content, path) => {
