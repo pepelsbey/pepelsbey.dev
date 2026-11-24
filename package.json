@@ -18,7 +18,7 @@
 		"baseline widely available, not safari < 17.5, not ios_saf < 17.5"
 	],
 	"dependencies": {
-		"focus-trap": "^8.2.4"
+		"focus-trap": "^8.2.5"
 	},
 	"devDependencies": {
 		"@11ty/eleventy": "^3.1.8",
@@ -32,7 +32,7 @@
 		"colorjs.io": "^0.7.1",
 		"editorconfig-checker": "^7.0.0",
 		"esbuild": "^0.28.2",
-		"eslint": "^10.14.0",
+		"eslint": "^10.15.0",
 		"globals": "^17.14.0",
 		"js-yaml": "^5.5.0",
 		"lightningcss": "^1.33.0",
@@ -40,7 +40,7 @@
 		"microlighter": "^2.2.0",
 		"pretty-data": "^0.40.0",
 		"remove-markdown": "^0.8.0",
-		"stylelint": "^18.0.0",
+		"stylelint": "^18.1.0",
 		"stylelint-config-pepelsbey": "^1.6.0",
 		"stylelint-order": "^8.1.3"
 	},
